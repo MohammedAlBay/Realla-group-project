@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Gallery = () => {
+const Home = () => {
     return (
-        <div className={"gallery"}>
+        <div className={"home-gallery"}>
             <h1>Welcome to the Home Page</h1>
             <h1>Gallery should be here</h1>
 
@@ -10,4 +10,4 @@ const Gallery = () => {
     );
 };
 
-export default Gallery;
+export default Home;

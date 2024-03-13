@@ -137,9 +137,10 @@
 
 }
 
-.gallery{
+.home-gallery{
     background-color: #1E2127;
     height: 100vh;
     padding-top: 10rem;
     z-index: -1;
+    text-align: center;
 }
