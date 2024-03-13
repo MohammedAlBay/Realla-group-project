@@ -60,23 +60,20 @@
 
 
 }
-.login{
-   color:whitesmoke;
-    background-color: #ECAA16;
-    padding: 10px;
+.login {
+    color: whitesmoke;
+    background-color: #ecaa16;
+
     border-radius: 25px;
     width: 100px;
-
     font-size: 18px;
     margin-left: 20px;
-
 }
 
-.register{
-    color:whitesmoke;
-    border:  2px solid #ECAA16;
+.register {
+    color: whitesmoke;
+    border: 2px solid #ecaa16;
     border-radius: 25px;
-
     width: 100px;
     font-size: 18px;
     margin-left: 20px;
@@ -121,7 +118,7 @@
     color: #f0f3fd;
     letter-spacing: 1px;
     font-weight: 600;
-    width: 400px;
+    width: 600px;
 }
 
 #search:hover {
