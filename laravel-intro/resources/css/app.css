@@ -8,10 +8,13 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+
 }
 
 .header{
     background-color: #292F36;
+    overflow-x: hidden;
+
 }
 
 .logo {
@@ -86,6 +89,7 @@
     display: flex;
     align-items: center;
     padding: 60px 10% 0;
+
 }
 
 .home-content {
@@ -133,8 +137,13 @@
     right: 0rem;
     width: 100%;
     pointer-events: none;
+    bottom: 8rem;
+
 }
 
 .gallery{
-
+    background-color: #1E2127;
+    height: 100vh;
+    padding-top: 10rem;
+    z-index: -1;
 }
