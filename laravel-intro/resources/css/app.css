@@ -2,8 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
 
-div {
-    background-color: blue;
+.header{
+    background-color: #292F36;
+}
+
+.logo {
+   width: 80px;
+    height: 80px;
+    color: #333;
+    margin-bottom: 0.5rem;
+    margin-right: 10rem;
+}
+
+.navigation{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 10%;
+
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-right: 35px;
+    transition: 0.5s;
+    margin-left: 10px;
+    padding-left: 10px;
+    background: transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #FDB514;
+}
+
+.buttons{
+    display: flex;
+    padding: 10px 30%;
+
+
+}
+.login{
+   color:whitesmoke;
+    background-color: #ECAA16;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100px;
+
+    font-size: 18px;
+    margin-left: 20px;
+
+}
+
+.register{
+    color:whitesmoke;
+    border:  2px solid #ECAA16;
+    border-radius: 25px;
+
+    width: 100px;
+    font-size: 18px;
+    margin-left: 20px;
+
+}
+
+/*HEADER CONTENT*/
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    width: 4003px;
+    height: 235px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -2px;
+}
+
+.home-content h1 span {
+    color: #ECAA16;
+}
+
+#search {
+    display: inline-block;
+    padding: 11px 32px;
+    border-radius: 90px;
+    background: rgba(255, 252, 252, 0.18);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    color: #f0f3fd;
+    letter-spacing: 1px;
+    font-weight: 600;
+    width: 400px;
+}
+
+#search:hover {
+    color: #ECAA16;
+    background: rgba(140, 140, 140, 0.18);
+
+}
+
+.home-img img {
+    position: absolute;
+    top: 2rem;
+    bottom: 0rem;
+    right: 0rem;
+    width: 100%;
+    pointer-events: none;
+}
+
+.gallery{
 
 }
