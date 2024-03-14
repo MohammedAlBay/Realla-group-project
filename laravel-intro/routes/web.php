@@ -54,6 +54,10 @@ Route::get('/gallery', function () {
     return Inertia::render('GalleryPage');
 });
 
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+});
+
 Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 });

@@ -10,23 +10,30 @@ function Header() {
 
             <Navigation/>
 
-                <section className="home section">
+            <section className="home section">
 
-                    <div className="home-content">
+                <div className="home-content">
 
-                        <h1>The <span> smartest</span> way <br/>
-                            to connect</h1>
+                    <h1>The <span> smartest</span> way <br/>
+                        to connect</h1>
 
-                        <SearchBarGallery/>
+                    <SearchBarGallery/>
 
-                    </div>
+                </div>
 
-                    <div className="home-img">
-                        <img src="./images/home_page_background.png" alt="Bungalov"/>
-                    </div>
-                </section>
+                <div className="home-img">
+                    <img src="./images/home_page_background.png" alt="Bungalov"/>
+                </div>
+
+                <button href={'#'} className={"right-arrow"}>
+                    <i className='bx bxs-right-arrow-circle' style={{color: '#ecaa16'}}></i>
+
+                </button>
+            </section>
+
         </header>
-);
+
+    );
 }
 
 
