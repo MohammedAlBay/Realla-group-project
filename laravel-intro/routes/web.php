@@ -49,3 +49,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return Inertia::render('About');
 });
+
+Route::get('/gallery', function () {
+    return Inertia::render('GalleryPage');
+});
+
+Route::get('/login', function () {
+    return Inertia::render('LoginOptions');
+});
+
+Route::get('/register', function () {
+    return Inertia::render('Register');
+});

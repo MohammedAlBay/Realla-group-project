@@ -17,8 +17,7 @@
 }
 
 .logo {
-   width: 80px;
-    height: 80px;
+    width: 70px;
     color: #333;
     margin-bottom: 0.5rem;
     margin-right: 10rem;
@@ -62,7 +61,7 @@
 .login {
     color: whitesmoke;
     background-color: #ecaa16;
-
+    text-align: center;
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
@@ -76,6 +75,7 @@
     width: 100px;
     font-size: 18px;
     margin-left: 20px;
+    text-align: center;
 
 }
 
@@ -233,8 +233,6 @@
     transition: opacity 0.3s;
     margin-top: 2rem;
     margin:auto;
-
-
 }
 
 .card:hover .overlay button {
@@ -273,12 +271,11 @@
 }
 
 /*SEARCH BAR*/
-
 .search-bar-gallery {
     display: flex;
-    justify-content: center; /* Horizontally center the search bar */
+    justify-content: center;
     margin: auto;
-    max-width: 600px; /* Optionally limit the width */
+    max-width: 600px;
 }
 
 .input-container {
@@ -297,4 +294,24 @@
     transform: translateY(-50%);
     color: #ecaa16;
     font-size: 1.5rem;
+}
+
+.galleryPage{
+    background-color: #1E2127;
+    min-height: 100vh;
+    padding-top: 10rem;
+    z-index: -1;
+    text-align: center;
+    overflow-y: auto;
+    margin:auto;
+}
+
+.search-options {
+    margin-top: 3rem;
+}
+
+.search-options label {
+    padding: 2rem;
+    color: white;
+    font-size: 18px;
 }
