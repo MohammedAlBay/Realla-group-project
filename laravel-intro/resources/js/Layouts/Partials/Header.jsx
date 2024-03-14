@@ -2,6 +2,10 @@ import React from 'react';
 import Navigation from "@/Components/Navigation.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import 'boxicons/css/boxicons.min.css';
+import { Link } from '@inertiajs/react';
+
+
+
 
 
 function Header() {
@@ -9,6 +13,7 @@ function Header() {
         <header className="header">
 
             <Navigation/>
+
 
             <section className="home section">
 
@@ -25,10 +30,11 @@ function Header() {
                     <img src="./images/home_page_background.png" alt="Bungalov"/>
                 </div>
 
-                <button href={'#'} className={"right-arrow"}>
-                    <i className='bx bxs-right-arrow-circle' style={{color: '#ecaa16'}}></i>
-
-                </button>
+                <Link href="/mock-up-1">
+                    <button className="right-arrow">
+                        <i className='bx bxs-right-arrow-circle' style={{ color: '#ecaa16' }}></i>
+                    </button>
+                </Link>
             </section>
 
         </header>

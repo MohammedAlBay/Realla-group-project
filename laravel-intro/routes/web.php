@@ -65,3 +65,10 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return Inertia::render('Register');
 });
+
+Route::get('/mock-up-1', function () {
+    return Inertia::render('MockUp1');
+});
+Route::get('/mock-up', function () {
+    return Inertia::render('MockUp');
+});
