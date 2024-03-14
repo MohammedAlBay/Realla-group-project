@@ -1,13 +1,15 @@
 import React from 'react';
+import Gallery from "@/Pages/Gallery.jsx";
+import 'boxicons/css/boxicons.min.css';
 
-const Gallery = () => {
+const Home = () => {
     return (
-        <div className={"gallery"}>
-            <h1>Welcome to the Home Page</h1>
-            <h1>Gallery should be here</h1>
+        <div className={"home-gallery"}>
+
+            <Gallery />
 
         </div>
     );
 };
 
-export default Gallery;
+export default Home;

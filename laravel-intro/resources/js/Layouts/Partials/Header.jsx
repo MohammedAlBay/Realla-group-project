@@ -1,5 +1,8 @@
 import React from 'react';
 import Navigation from "@/Components/Navigation.jsx";
+import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
+import 'boxicons/css/boxicons.min.css';
+
 
 function Header() {
     return (
@@ -14,7 +17,7 @@ function Header() {
                         <h1>The <span> smartest</span> way <br/>
                             to connect</h1>
 
-                        <input id={"search"} placeholder={"Find your dream house now"}/>
+                        <SearchBarGallery/>
 
                     </div>
 
