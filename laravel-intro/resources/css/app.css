@@ -13,8 +13,11 @@
 
 .header{
     background-color: #292F36;
+    z-index: -1;
     overflow-x: hidden;
+    height: 60vh;
 }
+
 
 .logo {
     width: 70px;
@@ -26,24 +29,22 @@
 .navigation{
     position: fixed;
     top: 1rem;
-    right: 2rem;
+    right: 3rem;
     display: flex;
     align-items: center;
     z-index: 100;
     width: 100%;
     padding: 10px 10%;
-
-
 }
+
 
 .navbar a {
     font-size: 18px;
     color: whitesmoke;
     font-weight: 500;
-    margin-right: 35px;
+    margin-right: 45px;
     transition: 0.5s;
-    margin-left: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     background: transparent;
 }
 
@@ -55,8 +56,6 @@
 .buttons{
     display: flex;
     padding: 10px 30%;
-
-
 }
 .login {
     color: whitesmoke;
@@ -65,7 +64,7 @@
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
-    margin-left: 20px;
+    margin-left: 3rem;
 }
 
 .register {
@@ -74,7 +73,7 @@
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
-    margin-left: 20px;
+    margin-left: 1rem;
     text-align: center;
 
 }
@@ -85,7 +84,7 @@
     display: flex;
     align-items: center;
     padding: 60px 10% 0;
-
+    overflow-x: hidden;
 }
 
 .home-content {
@@ -118,23 +117,31 @@
     letter-spacing: 1px;
     font-weight: 600;
     width: 600px;
+
 }
 
 #search:hover {
     color: #ECAA16;
     background: rgba(140, 140, 140, 0.18);
-
 }
 
 .home-img img {
     position: absolute;
-    top: 2rem;
-    bottom: 0rem;
-    right: 0rem;
-    width: 100%;
+    top: 0rem;
+    right: -3.5rem;
+    max-width: 100%;
     pointer-events: none;
-    bottom: 8rem;
+    z-index: 10;
+}
 
+
+/* MOCK-UP RIGHT ARROW */
+.right-arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: 10rem;
+    z-index: 10;
+    font-size: 40px;
 }
 
 /* HOME GALLERY */
@@ -142,7 +149,7 @@
     background-color: #1E2127;
     min-height: 100vh;
     padding-top: 10rem;
-    z-index: -1;
+    z-index: 1;
     text-align: center;
     overflow-y: auto;
     margin:auto;
@@ -281,6 +288,8 @@
 .input-container {
     position: relative;
     align-items: center;
+    margin-bottom: 19rem;
+
 }
 
 .input-container input {
@@ -315,3 +324,207 @@
     color: white;
     font-size: 18px;
 }
+
+/* Media query for tablet and smartphone size */
+@media screen and (max-width: 768px) {
+
+    .header .h1 {
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        position:absolute;
+        right:0rem;
+    }
+
+    .hamburger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        transition: 0.4s;
+
+    }
+
+
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .change .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right:-4rem;
+    }
+
+    .logo {
+        margin-left: 3rem;
+    }
+
+    .header{
+        height: 44.5vh;
+    }
+
+    .header .home-content h1 {
+        width: 4003px;
+        height: 235px;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -2px;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+    }
+
+    .search-bar-gallery {
+        padding: 10px;
+        position: absolute;
+        top: 21rem;
+        left: 3rem;
+    }
+
+    #search {
+        width: 290px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .input-container i {
+        font-size: 20px;
+    }
+
+    .home-img img {
+        position: absolute;
+        top: 10rem;
+        right: -2rem;
+        max-width: 110%;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .navigation .buttons{
+        padding: 10px 0%;
+        position: relative;
+        right: 5rem;
+    }
+
+    .right-arrow {
+        position: absolute;
+        right: 2rem;
+        bottom: 26rem;
+        z-index: 10;
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .change .dark-overlay {
+        display: block;
+        font-size: large;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        position:absolute;
+        right:0rem;
+    }
+
+    .change .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right:-4rem;
+        font-size: 54px;
+    }
+
+    .header{
+        height: 53vh;
+    }
+
+    .header .home-content h1 {
+        width: 4003px;
+        height: 235px;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: -2px;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+    }
+
+    .search-bar-gallery {
+        padding: 10px;
+        position: absolute;
+        top: 13rem;
+        left: 3rem;
+    }
+
+    #search {
+        width: 250px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .input-container i {
+        font-size: 20px;
+    }
+
+
+    .home-img img {
+        position: absolute;
+        top: 16rem;
+        right: -1rem;
+        max-width: 135%;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .right-arrow {
+        position: absolute;
+        right: 2rem;
+        bottom: 17rem;
+        z-index: 10;
+        font-size: 40px;
+    }
+}
+
+

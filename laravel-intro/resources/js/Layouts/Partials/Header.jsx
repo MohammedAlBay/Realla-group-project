@@ -2,6 +2,10 @@ import React from 'react';
 import Navigation from "@/Components/Navigation.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import 'boxicons/css/boxicons.min.css';
+import { Link } from '@inertiajs/react';
+
+
+
 
 
 function Header() {
@@ -10,23 +14,32 @@ function Header() {
 
             <Navigation/>
 
-                <section className="home section">
 
-                    <div className="home-content">
+            <section className="home section">
 
-                        <h1>The <span> smartest</span> way <br/>
-                            to connect</h1>
+                <div className="home-content">
 
-                        <SearchBarGallery/>
+                    <h1>The <span> smartest</span> way <br/>
+                        to connect</h1>
 
-                    </div>
+                    <SearchBarGallery/>
 
-                    <div className="home-img">
-                        <img src="./images/home_page_background.png" alt="Bungalov"/>
-                    </div>
-                </section>
+                </div>
+
+                <div className="home-img">
+                    <img src="./images/home_page_background.png" alt="Bungalov"/>
+                </div>
+
+                <Link href="/mock-up-1">
+                    <button className="right-arrow">
+                        <i className='bx bxs-right-arrow-circle' style={{ color: '#ecaa16' }}></i>
+                    </button>
+                </Link>
+            </section>
+
         </header>
-);
+
+    );
 }
 
 
