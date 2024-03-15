@@ -14,7 +14,7 @@ function Navigation() {
 
             {/* Hamburger menu */}
             <div className={`hamburger-menu ${isOpen ? 'change' : ''}`} onClick={toggleMenu}>
-                <div className="bar"></div>
+                <div className="bar "></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 {/* Navigation links */}
