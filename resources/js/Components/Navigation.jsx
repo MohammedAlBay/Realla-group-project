@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+import React from 'react';
+
+function Navigation() {
+    return (
+        <div className="navigation">
+
+            <img src="./images/logo.svg" className="logo" alt="Logo"/>
+
+            <nav className="navbar">
+                <a href="#" className="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div className="buttons">
+                <button className="login">Login</button>
+                <hr/>
+                <button className="register">Register</button>
+            </div>
+
+=======
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
 
@@ -36,6 +58,7 @@ function Navigation() {
             <Link href="#" className="search-btn">
                 <i className='bx bx-search-alt' style={{color: '#ecaa16'}}></i>
             </Link>
+>>>>>>> main
         </div>
     );
 }

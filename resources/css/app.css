@@ -13,6 +13,14 @@
 
 .header{
     background-color: #292F36;
+<<<<<<< HEAD
+    overflow-x: hidden;
+}
+
+.logo {
+   width: 80px;
+    height: 80px;
+=======
     z-index: -1;
     overflow-x: hidden;
     height: 60vh;
@@ -21,6 +29,7 @@
 
 .logo {
     width: 70px;
+>>>>>>> main
     color: #333;
     margin-bottom: 0.5rem;
     margin-right: 10rem;
@@ -29,22 +38,40 @@
 .navigation{
     position: fixed;
     top: 1rem;
+<<<<<<< HEAD
+    right: 2rem;
+=======
     right: 3rem;
+>>>>>>> main
     display: flex;
     align-items: center;
     z-index: 100;
     width: 100%;
     padding: 10px 10%;
+<<<<<<< HEAD
+
+
+}
+
+=======
 }
 
 
+>>>>>>> main
 .navbar a {
     font-size: 18px;
     color: whitesmoke;
     font-weight: 500;
+<<<<<<< HEAD
+    margin-right: 35px;
+    transition: 0.5s;
+    margin-left: 10px;
+    padding-left: 10px;
+=======
     margin-right: 45px;
     transition: 0.5s;
     padding-left: 20px;
+>>>>>>> main
     background: transparent;
 }
 
@@ -56,15 +83,28 @@
 .buttons{
     display: flex;
     padding: 10px 30%;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
 }
 .login {
     color: whitesmoke;
     background-color: #ecaa16;
+<<<<<<< HEAD
+
+    border-radius: 25px;
+    width: 100px;
+    font-size: 18px;
+    margin-left: 20px;
+=======
     text-align: center;
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
     margin-left: 3rem;
+>>>>>>> main
 }
 
 .register {
@@ -73,8 +113,12 @@
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
+<<<<<<< HEAD
+    margin-left: 20px;
+=======
     margin-left: 1rem;
     text-align: center;
+>>>>>>> main
 
 }
 
@@ -84,7 +128,11 @@
     display: flex;
     align-items: center;
     padding: 60px 10% 0;
+<<<<<<< HEAD
+
+=======
     overflow-x: hidden;
+>>>>>>> main
 }
 
 .home-content {
@@ -117,16 +165,32 @@
     letter-spacing: 1px;
     font-weight: 600;
     width: 600px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 }
 
 #search:hover {
     color: #ECAA16;
     background: rgba(140, 140, 140, 0.18);
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 }
 
 .home-img img {
     position: absolute;
+<<<<<<< HEAD
+    top: 2rem;
+    bottom: 0rem;
+    right: 0rem;
+    width: 100%;
+    pointer-events: none;
+    bottom: 8rem;
+
+=======
     top: 0rem;
     right: -3.5rem;
     max-width: 100%;
@@ -142,6 +206,7 @@
     bottom: 10rem;
     z-index: 10;
     font-size: 40px;
+>>>>>>> main
 }
 
 /* HOME GALLERY */
@@ -149,7 +214,11 @@
     background-color: #1E2127;
     min-height: 100vh;
     padding-top: 10rem;
+<<<<<<< HEAD
+    z-index: -1;
+=======
     z-index: 1;
+>>>>>>> main
     text-align: center;
     overflow-y: auto;
     margin:auto;
@@ -240,6 +309,11 @@
     transition: opacity 0.3s;
     margin-top: 2rem;
     margin:auto;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
 }
 
 .card:hover .overlay button {
@@ -278,18 +352,30 @@
 }
 
 /*SEARCH BAR*/
+<<<<<<< HEAD
+
+.search-bar-gallery {
+    display: flex;
+    justify-content: center; /* Horizontally center the search bar */
+    margin: auto;
+    max-width: 600px; /* Optionally limit the width */
+=======
 .search-bar-gallery {
     display: flex;
     justify-content: center;
     margin: auto;
     max-width: 600px;
+>>>>>>> main
 }
 
 .input-container {
     position: relative;
     align-items: center;
+<<<<<<< HEAD
+=======
     margin-bottom: 19rem;
 
+>>>>>>> main
 }
 
 .input-container input {
@@ -303,6 +389,9 @@
     transform: translateY(-50%);
     color: #ecaa16;
     font-size: 1.5rem;
+<<<<<<< HEAD
+}
+=======
 }
 
 .galleryPage{
@@ -528,3 +617,4 @@
 }
 
 
+>>>>>>> main
