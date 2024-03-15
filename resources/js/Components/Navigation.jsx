@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import React from 'react';
 
 function Navigation() {
@@ -19,6 +22,8 @@ function Navigation() {
                 <button className="register">Register</button>
             </div>
 
+<<<<<<< HEAD
+=======
 =======
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
@@ -58,6 +63,7 @@ function Navigation() {
             <Link href="#" className="search-btn">
                 <i className='bx bx-search-alt' style={{color: '#ecaa16'}}></i>
             </Link>
+>>>>>>> main
 >>>>>>> main
         </div>
     );

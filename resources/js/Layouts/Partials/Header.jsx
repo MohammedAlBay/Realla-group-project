@@ -4,10 +4,13 @@ import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import 'boxicons/css/boxicons.min.css';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 import { Link } from '@inertiajs/react';
 
 
 
+>>>>>>> main
 >>>>>>> main
 
 
@@ -18,6 +21,9 @@ function Header() {
             <Navigation/>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
                 <section className="home section">
 
                     <div className="home-content">
@@ -35,6 +41,8 @@ function Header() {
                 </section>
         </header>
 );
+<<<<<<< HEAD
+=======
 =======
 
             <section className="home section">
@@ -62,6 +70,7 @@ function Header() {
         </header>
 
     );
+>>>>>>> main
 >>>>>>> main
 }
 
