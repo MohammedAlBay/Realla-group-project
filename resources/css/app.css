@@ -13,12 +13,29 @@
 
 .header{
     background-color: #292F36;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     overflow-x: hidden;
 }
 
 .logo {
    width: 80px;
     height: 80px;
+<<<<<<< HEAD
+=======
+=======
+    z-index: -1;
+    overflow-x: hidden;
+    height: 60vh;
+}
+
+
+.logo {
+    width: 70px;
+>>>>>>> main
+>>>>>>> main
     color: #333;
     margin-bottom: 0.5rem;
     margin-right: 10rem;
@@ -27,24 +44,56 @@
 .navigation{
     position: fixed;
     top: 1rem;
+<<<<<<< HEAD
     right: 2rem;
+=======
+<<<<<<< HEAD
+    right: 2rem;
+=======
+    right: 3rem;
+>>>>>>> main
+>>>>>>> main
     display: flex;
     align-items: center;
     z-index: 100;
     width: 100%;
     padding: 10px 10%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+}
+
+
+>>>>>>> main
+>>>>>>> main
 .navbar a {
     font-size: 18px;
     color: whitesmoke;
     font-weight: 500;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     margin-right: 35px;
     transition: 0.5s;
     margin-left: 10px;
     padding-left: 10px;
+<<<<<<< HEAD
+=======
+=======
+    margin-right: 45px;
+    transition: 0.5s;
+    padding-left: 20px;
+>>>>>>> main
+>>>>>>> main
     background: transparent;
 }
 
@@ -56,17 +105,39 @@
 .buttons{
     display: flex;
     padding: 10px 30%;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
+>>>>>>> main
 }
 .login {
     color: whitesmoke;
     background-color: #ecaa16;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
     margin-left: 20px;
+<<<<<<< HEAD
+=======
+=======
+    text-align: center;
+    border-radius: 25px;
+    width: 100px;
+    font-size: 18px;
+    margin-left: 3rem;
+>>>>>>> main
+>>>>>>> main
 }
 
 .register {
@@ -75,7 +146,16 @@
     border-radius: 25px;
     width: 100px;
     font-size: 18px;
+<<<<<<< HEAD
     margin-left: 20px;
+=======
+<<<<<<< HEAD
+    margin-left: 20px;
+=======
+    margin-left: 1rem;
+    text-align: center;
+>>>>>>> main
+>>>>>>> main
 
 }
 
@@ -85,7 +165,15 @@
     display: flex;
     align-items: center;
     padding: 60px 10% 0;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+    overflow-x: hidden;
+>>>>>>> main
+>>>>>>> main
 }
 
 .home-content {
@@ -118,16 +206,34 @@
     letter-spacing: 1px;
     font-weight: 600;
     width: 600px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+>>>>>>> main
 }
 
 #search:hover {
     color: #ECAA16;
     background: rgba(140, 140, 140, 0.18);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> main
 }
 
 .home-img img {
     position: absolute;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     top: 2rem;
     bottom: 0rem;
     right: 0rem;
@@ -135,6 +241,26 @@
     pointer-events: none;
     bottom: 8rem;
 
+<<<<<<< HEAD
+=======
+=======
+    top: 0rem;
+    right: -3.5rem;
+    max-width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+/* MOCK-UP RIGHT ARROW */
+.right-arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: 10rem;
+    z-index: 10;
+    font-size: 40px;
+>>>>>>> main
+>>>>>>> main
 }
 
 /* HOME GALLERY */
@@ -142,7 +268,15 @@
     background-color: #1E2127;
     min-height: 100vh;
     padding-top: 10rem;
+<<<<<<< HEAD
     z-index: -1;
+=======
+<<<<<<< HEAD
+    z-index: -1;
+=======
+    z-index: 1;
+>>>>>>> main
+>>>>>>> main
     text-align: center;
     overflow-y: auto;
     margin:auto;
@@ -233,8 +367,16 @@
     transition: opacity 0.3s;
     margin-top: 2rem;
     margin:auto;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
+>>>>>>> main
 }
 
 .card:hover .overlay button {
@@ -273,17 +415,39 @@
 }
 
 /*SEARCH BAR*/
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 .search-bar-gallery {
     display: flex;
     justify-content: center; /* Horizontally center the search bar */
     margin: auto;
     max-width: 600px; /* Optionally limit the width */
+<<<<<<< HEAD
+=======
+=======
+.search-bar-gallery {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 600px;
+>>>>>>> main
+>>>>>>> main
 }
 
 .input-container {
     position: relative;
     align-items: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    margin-bottom: 19rem;
+
+>>>>>>> main
+>>>>>>> main
 }
 
 .input-container input {
@@ -297,4 +461,236 @@
     transform: translateY(-50%);
     color: #ecaa16;
     font-size: 1.5rem;
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+
+.galleryPage{
+    background-color: #1E2127;
+    min-height: 100vh;
+    padding-top: 10rem;
+    z-index: -1;
+    text-align: center;
+    overflow-y: auto;
+    margin:auto;
+}
+
+.search-options {
+    margin-top: 3rem;
+}
+
+.search-options label {
+    padding: 2rem;
+    color: white;
+    font-size: 18px;
+}
+
+/* Media query for tablet and smartphone size */
+@media screen and (max-width: 768px) {
+
+    .header .h1 {
+        font-size: 15px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        position:absolute;
+        right:0rem;
+    }
+
+    .hamburger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        transition: 0.4s;
+
+    }
+
+
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .change .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right:-4rem;
+    }
+
+    .logo {
+        margin-left: 3rem;
+    }
+
+    .header{
+        height: 44.5vh;
+    }
+
+    .header .home-content h1 {
+        width: 4003px;
+        height: 235px;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -2px;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+    }
+
+    .search-bar-gallery {
+        padding: 10px;
+        position: absolute;
+        top: 21rem;
+        left: 3rem;
+    }
+
+    #search {
+        width: 290px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .input-container i {
+        font-size: 20px;
+    }
+
+    .home-img img {
+        position: absolute;
+        top: 10rem;
+        right: -2rem;
+        max-width: 110%;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .navigation .buttons{
+        padding: 10px 0%;
+        position: relative;
+        right: 5rem;
+    }
+
+    .right-arrow {
+        position: absolute;
+        right: 2rem;
+        bottom: 26rem;
+        z-index: 10;
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .change .dark-overlay {
+        display: block;
+        font-size: large;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        position:absolute;
+        right:0rem;
+    }
+
+    .change .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        right:-4rem;
+        font-size: 54px;
+    }
+
+    .header{
+        height: 53vh;
+    }
+
+    .header .home-content h1 {
+        width: 4003px;
+        height: 235px;
+        flex-shrink: 0;
+        color: #FFF;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: -2px;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+    }
+
+    .search-bar-gallery {
+        padding: 10px;
+        position: absolute;
+        top: 13rem;
+        left: 3rem;
+    }
+
+    #search {
+        width: 250px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .input-container i {
+        font-size: 20px;
+    }
+
+
+    .home-img img {
+        position: absolute;
+        top: 16rem;
+        right: -1rem;
+        max-width: 135%;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .right-arrow {
+        position: absolute;
+        right: 2rem;
+        bottom: 17rem;
+        z-index: 10;
+        font-size: 40px;
+    }
+}
+
+
+>>>>>>> main
+>>>>>>> main

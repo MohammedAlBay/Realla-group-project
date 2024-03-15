@@ -49,3 +49,26 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return Inertia::render('About');
 });
+
+Route::get('/gallery', function () {
+    return Inertia::render('GalleryPage');
+});
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+});
+
+Route::get('/login', function () {
+    return Inertia::render('LoginOptions');
+});
+
+Route::get('/register', function () {
+    return Inertia::render('Register');
+});
+
+Route::get('/mock-up-1', function () {
+    return Inertia::render('MockUp1');
+});
+Route::get('/mock-up', function () {
+    return Inertia::render('MockUp');
+});

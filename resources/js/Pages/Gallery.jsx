@@ -4,7 +4,6 @@ import 'boxicons/css/boxicons.min.css';
 const Gallery = () => {
     return (
         <div className="gallery">
-            <h1>Welcome to the Gallery Page</h1>
 
             <main className="main">
                 <div className="all-cards">
