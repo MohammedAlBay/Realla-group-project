@@ -1,0 +1,197 @@
+.MockUp3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    background-color: #F3F3F2;
+}
+
+/* Testimonials Section*/
+
+.testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+}
+
+
+/* Testimonial 1*/
+.testimonialsprofile-photos1 {
+    position: absolute;
+    left: 5rem;
+    bottom: 13rem;
+    z-index: 10;
+    max-width: 200px;
+}
+
+.testimonials1 {
+    border-radius: 5px;
+    border: 1px solid #F79D36;
+    background: #292F36;
+    color: white;
+    padding-top: 50px;
+    width: 349px;
+    height: 290px;
+    position: relative;
+    bottom:0;
+    margin: 20px;
+}
+
+
+.testimonials1 h3 {
+    color: #F79D36;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    top: 10px;
+}
+
+.testimonials1 p {
+    width: 334px;
+    height: 105px;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1rem;
+    position: relative;
+    top: 30px;
+}
+
+.stars {
+    width: 129px;
+    height: 20px;
+    color: white;
+    position: relative;
+    left: 10px;
+    top:-5px;
+}
+div.testimonial:hover {
+    border-radius: 5px;
+    background: linear-gradient(180deg, #FFB152 0%, #BA6300 100%);
+    background-blend-mode: darken;
+}
+
+div.testimonial:hover h3 {
+    color: white;
+}
+
+div.testimonial:hover p {
+    color: white;
+}
+
+div.testimonial:hover svg {
+    fill: white;
+}
+
+/* Testimonial 2*/
+.testimonials-profile-photos2 {
+    position: absolute;
+    left: 5rem;
+    bottom: 13rem;
+    z-index: 10;
+    max-width: 200px;
+}
+.testimonials2 {
+    border-radius: 5px;
+    border: 1px solid #F79D36;
+    background: #292F36;
+    padding-top: 50px;
+    color: white;
+    width: 349px;
+    height: 290px;
+    margin: 20px;
+    position: relative;
+    bottom:0;
+}
+
+.testimonials h3 {
+    color: #F79D36;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    top: 10px;
+}
+
+.testimonials2 p {
+    width: 334px;
+    height: 105px;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 30px;
+    padding: 1rem;
+}
+
+.stars svg {
+    fill: #F79D36;
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    position: relative;
+    left: 85px;
+    bottom: 40px;
+}
+
+
+.testimonial:hover .svg {
+    fill: white;
+}
+
+/* Testimonial 3*/
+.testimonials-profile-photos3 {
+    position: absolute;
+    left: 5rem;
+    bottom: 15rem;
+    z-index: 10;
+    max-width: 200px;
+}
+
+.testimonials3 {
+    border-radius: 5px;
+    border: 1px solid #F79D36;
+    background: #292F36;
+    color: white;
+    padding-top: 50px;
+    width: 349px;
+    height: 290px;
+    margin: 20px;
+    position: relative;
+    bottom:0;
+}
+
+.testimonials3 h3 {
+    color: #F79D36;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    top: 10px;
+}
+
+.testimonials3 p {
+    width: 334px;
+    height: 105px;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 30px;
+    padding: 1rem;
+}
