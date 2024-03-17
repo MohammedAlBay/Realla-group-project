@@ -3,6 +3,9 @@ body::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
 }
 
+body{
+    background-color: #1E2127;
+}
 .right-arrow {
     position: absolute;
     right: 2rem;
