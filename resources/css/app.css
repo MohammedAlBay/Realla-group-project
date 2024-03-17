@@ -8,19 +8,20 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+}
 
+body{
+    background-color: #292F36;
 }
 
 .header{
-    background-color: #292F36;
     z-index: -1;
     overflow-x: hidden;
-    height: 60vh;
+    height: 12vh;
 }
 
-
 .logo {
-    width: 70px;
+    width: 90px;
     color: #333;
     margin-bottom: 0.5rem;
     margin-right: 10rem;
@@ -36,7 +37,6 @@
     width: 100%;
     padding: 10px 10%;
 }
-
 
 .navbar a {
     font-size: 18px;
@@ -55,8 +55,9 @@
 
 .buttons{
     display: flex;
-    padding: 10px 30%;
+    padding: 10px 37%;
 }
+
 .login {
     color: whitesmoke;
     background-color: #ecaa16;
@@ -65,6 +66,7 @@
     width: 100px;
     font-size: 18px;
     margin-left: 3rem;
+    font-weight: bold;
 }
 
 .register {
@@ -75,20 +77,23 @@
     font-size: 18px;
     margin-left: 1rem;
     text-align: center;
-
+    font-weight: bold;
 }
 
-/*HEADER CONTENT*/
+/*LANDING CONTENT*/
 .home {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     padding: 60px 10% 0;
     overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #292F36;
 }
 
 .home-content {
     max-width: 600px;
+    margin-bottom: 13rem;
 }
 
 .home-content h1 {
@@ -117,7 +122,6 @@
     letter-spacing: 1px;
     font-weight: 600;
     width: 600px;
-
 }
 
 #search:hover {
@@ -127,19 +131,19 @@
 
 .home-img img {
     position: absolute;
-    top: 0rem;
-    right: -3.5rem;
+    top: 3rem;
+    right: 0rem;
     max-width: 100%;
     pointer-events: none;
     z-index: 10;
+    width: 88%;
 }
-
 
 /* MOCK-UP RIGHT ARROW */
 .right-arrow {
     position: absolute;
     right: 2rem;
-    bottom: 10rem;
+    bottom: 1rem;
     z-index: 10;
     font-size: 40px;
 }
@@ -148,12 +152,10 @@
 .home-gallery {
     background-color: #1E2127;
     min-height: 100vh;
-    padding-top: 10rem;
     z-index: 1;
     text-align: center;
-    overflow-y: auto;
     margin:auto;
-
+    margin-top: -16rem;
 }
 
 /* GALLERY */
@@ -169,6 +171,8 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem 10% 0;
+    position: relative;
+    top:15rem;
 }
 
 .card {
@@ -288,7 +292,8 @@
 .input-container {
     position: relative;
     align-items: center;
-    margin-bottom: 19rem;
+    position:relative;
+    bottom: 3rem;
 
 }
 
@@ -325,6 +330,10 @@
     font-size: 18px;
 }
 
+
+.MockUp{
+    overflow-x:hidden ;
+}
 /* Media query for tablet and smartphone size */
 @media screen and (max-width: 768px) {
 
@@ -377,11 +386,8 @@
         margin-left: 3rem;
     }
 
-    .header{
-        height: 44.5vh;
-    }
 
-    .header .home-content h1 {
+    .home-content h1 {
         width: 4003px;
         height: 235px;
         flex-shrink: 0;
@@ -526,5 +532,3 @@
         font-size: 40px;
     }
 }
-
-
