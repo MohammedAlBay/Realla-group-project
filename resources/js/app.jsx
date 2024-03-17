@@ -1,5 +1,3 @@
-import '../css/app.css';
-import 'boxicons/css/boxicons.min.css';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -19,9 +17,9 @@ createInertiaApp({
             <>
                 <Navigation />
                 <main className={"main"}>
-                <Header  />
-                <App {...props} />
-                <Footer />
+                    <Header />
+                    <App {...props} />
+                    <Footer />
                 </main>
             </>
         );
