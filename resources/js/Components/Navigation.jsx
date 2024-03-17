@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
+import Logo from "@/Components/Logo.jsx";
 
 function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ function Navigation() {
 
     return (
         <div className="navigation">
-            <img src="./images/realla_logo.png" className="logo" alt="Logo"/>
+            <Logo />
 
             {/* Hamburger menu */}
             <div className={`hamburger-menu ${isOpen ? 'change' : ''}`} onClick={toggleMenu}>

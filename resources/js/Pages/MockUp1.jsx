@@ -1,6 +1,7 @@
 import { gsap, Power4, Power2 } from "gsap";
 import React, { useEffect } from "react";
 import "../../css/gsap.css";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,7 @@ const MockUp1 = () => {
                 ease: Power4.easeOut,
             },
             {
-                selector: "#stocks",
+                selector: "#payment",
                 duration: 3,
                 scale: 0.9,
                 x: 530,
@@ -85,7 +86,6 @@ const MockUp1 = () => {
                 y: 0,
                 ease: Power2.easeOut,
             },
-
             {
                 selector: "#wallet",
                 duration: 3,
@@ -140,73 +140,73 @@ const MockUp1 = () => {
             pin: true,
             // markers: true
         });
-    }, []); // Run this effect only once on component mount
+    }, []);
 
     return (
         <div className="animation">
-            <section class="animation">
-                <img class="iphone" src="./images/apple.svg" alt="" />
+            <section className="animation">
+                <img className="iphone" src="./images/apple.svg" alt="" />
                 <img
                     id="app-store"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/appstore-widget.svg"
                     alt=""
                 />
                 <img
                     id="screen-time"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/screen-time-widget.svg"
                     alt=""
                 />
                 <img
                     id="weather"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/weather-widget.svg"
                     alt=""
                 />
                 <img
-                    id="stocks"
-                    class="widgets"
-                    src="https://assets.codepen.io/8292695/stocks-widget.svg"
+                    id="payment"
+                    className="widgets"
+                    src="./images/Payment_component.svg"
                     alt=""
                 />
                 <img
                     id="calendar"
-                    class="widgets"
-                    src="https://assets.codepen.io/8292695/calendar-widget.svg"
+                    className="widgets"
+                    src="./images/calender.svg"
                     alt=""
                 />
                 <img
                     id="fitness"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/fitness-widget.svg"
                     alt=""
                 />
                 <img
                     id="find-my"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/find-my-widget.svg"
                     alt=""
                 />
                 <img
                     id="sleep"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/sleep-widget.svg"
                     alt=""
                 />
                 <img
                     id="apple-tv"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/apple-tv.svg"
                     alt=""
                 />
                 <img
                     id="wallet"
-                    class="widgets"
+                    className="widgets"
                     src="https://assets.codepen.io/8292695/wallet.svg"
                     alt=""
                 />
-                <div id="socials" class="widgets">
+                <div id="socials" className="widgets">
                     <a
                         href="https://twitter.com/GibsonSMurray"
                         target="_blank"

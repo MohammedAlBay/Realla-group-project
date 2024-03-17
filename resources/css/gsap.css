@@ -1,12 +1,14 @@
-HTML CSS JSResult Skip Results Iframe body {
-    margin: 0;
-    background: #0d0d0d;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
 
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
+}
+
+.right-arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: -30rem;
+    z-index: 10;
+    font-size: 40px;
 }
 
 section {
@@ -16,11 +18,12 @@ section {
     align-items: center;
     height: 100vh;
     width: 100vw;
+
 }
 
 .iphone {
     position: absolute;
-    height: 600px;
+    height: 550px;
 }
 
 .widgets {
@@ -52,4 +55,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#payment{
+    width: 300px;
+}
+#calendar{
+    width: 500px;
+
 }

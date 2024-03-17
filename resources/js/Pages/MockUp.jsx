@@ -1,13 +1,26 @@
 import React from 'react';
 import 'boxicons/css/boxicons.min.css';
-import MockUp1 from '@/Pages/MockUp1.jsx'
+import MockUp1 from '@/Pages/MockUp1.jsx';
+import MockUp2 from '@/Pages/MockUp2.jsx';
+import RightArrow2 from "@/Components/RightArrow2.jsx";
 
 
-function MockUp1() {
+function MockUp() {
     return (
-            <MockUp1 />
+        <div style={{backgroundColor: '#292F36'}} className={"MockUp"}>
+            <br/>
+            <MockUp1/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <RightArrow2/>
+            <br/>
+            <MockUp2 />
+        </div>
     );
 }
 
-export default MockUp1;
-
+export default MockUp;
