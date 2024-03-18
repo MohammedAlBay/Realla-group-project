@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ContactInfo from '@/Components/ContactInfo';
+import '../../css/contact.css';
 
 export default function Contact() {
   // State to manage the user inputs
