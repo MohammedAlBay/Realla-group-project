@@ -28,6 +28,7 @@ const ForgotPassword = () => {
                         placeholder="Your Email"
                         className="border rounded-lg p-2 mt-2"
                     />
+                    <button type="submit" className="bg-yellow-500 text-yellow-500 py-2 px-4 rounded-lg">Reset Password</button>
                 </form>   
             </div>
         </div>
