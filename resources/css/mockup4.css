@@ -1,0 +1,159 @@
+.MockUp4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    background-color: #F3F3F2;
+}
+.block {
+    width: 100vw;
+    height: 350px;
+    background-color: #1E2127;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+
+.card1 {
+    border: 1px solid #F79D36;
+    background: #F79D36;
+    color: white;
+    padding-top: 50px;
+    width: 349px;
+    height: 290px;
+    margin: 20px;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.card1 h3 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.card1 li {
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+div.card:hover {
+    border-radius: 25px;
+    background: linear-gradient(180deg, #FFB152 0%, #BA6300 100%);
+    background-blend-mode: darken;
+}
+
+div.card:hover h3 {
+    color: white;
+}
+
+div.card:hover p {
+    color: white;
+}
+
+div.card:hover svg {
+    fill: white;
+}
+
+.card2 {
+    border: 1px solid #F79D36;
+    background: #ea7f04;
+    color: white;
+    padding-top: 50px;
+    width: 400px;
+    height: 390px;
+    margin: 30px;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+}
+
+.card2 h3 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 3rem;
+}
+
+.card2 li {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.card:hover .svg {
+    fill: white;
+}
+
+.card3 {
+    border: 1px solid #F79D36;
+    background: #F79D36;
+    color: white;
+    padding-top: 50px;
+    width: 349px;
+    height: 290px;
+    margin: 20px;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+}
+
+.card3 h3 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.card3 li {
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.subscribe {
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    height: 40px;
+    width: 100px;
+    margin: auto;
+}
+
+.subscribe:hover{
+    background-color: white;
+    color:#F79D36;
+}
