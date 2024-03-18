@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const LoginPanel = () => {
+const LoginPanelTenant = () => {
     // Define state variables to store form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ const LoginPanel = () => {
         <div className="flex bg-gray-900 text-white p-8">
             <div className="relative mr-8">
                 <div className="absolute inset-0 bg-gray-700 rounded-lg border-2 border-transparent"></div>
-                <img src="./images/LoginPanelImage.png" alt="LoginPanel" className="absolute inset-0 object-cover w-full h-full" />
+                <img src="./images/LoginPanelTenantImage.png" alt="LoginPanelTenant" className="absolute inset-0 object-cover w-full h-full" />
             </div>
             <div className="flex-grow">
                 <h2 className="text-2xl font-semibold mb-4">Welcome Back to REALLA!</h2>
@@ -64,4 +64,4 @@ const LoginPanel = () => {
     );
 };
 
-export default LoginPanel;
+export default LoginPanelTenant;
