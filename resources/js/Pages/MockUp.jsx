@@ -9,7 +9,7 @@ import MockUp4 from "@/Pages/MockUp4.jsx";
 
 function MockUp() {
     return (
-        <div  className={"MockUp"}>
+        <div  className={"MockUp"} style={{ overflowX: 'hidden' }}>
             <br/>
             <MockUp1/>
             <br/>
