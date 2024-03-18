@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="flex bg-gray-900 text-white p-8 rounded-lg">
+        <div className="flex bg-gray-900 text-white p-8">
             <div className="relative mr-8">
                 <div className="absolute inset-0 bg-gray-700 rounded-lg border-2 border-transparent"></div>
                 <img src="./images/ForgotYourPasswordImage.png" alt="ForgotYourPassword" className="absolute inset-0 object-cover w-full h-full" />

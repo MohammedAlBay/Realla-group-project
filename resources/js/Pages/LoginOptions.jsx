@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@inertiajs/react';
 
 const LoginOptions = () => {
     return (
@@ -9,9 +10,9 @@ const LoginOptions = () => {
             </div>
             <div className="flex flex-col justify-between">
                 <div className="flex flex-col"> {/* Adjusted to display buttons vertically */}
-                    <button className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8 mb-4">Login as Landlord</button>
+                    <Link href='/login' className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8 mb-4">Login as Landlord</Link>
                     <div style={{ marginBottom: '20px' }}></div> {/* Added space between buttons */}
-                    <button className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8">Login as Tenant</button>
+                    <Link href='/login' className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8">Login as Tenant</Link>
                 </div>
             </div>
         </div>

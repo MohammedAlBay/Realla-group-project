@@ -58,8 +58,16 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
 
-Route::get('/login', function () {
+Route::get('/loginoptions', function () {
     return Inertia::render('LoginOptions');
+});
+
+Route::get('/login', function () {
+    return Inertia::render('LoginPanel');
+});
+
+Route::get('/loginpassword', function () {
+    return Inertia::render('LoginPassword');
 });
 
 Route::get('/register', function () {
