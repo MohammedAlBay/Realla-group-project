@@ -62,8 +62,12 @@ Route::get('/loginoptions', function () {
     return Inertia::render('LoginOptions');
 });
 
-Route::get('/login', function () {
-    return Inertia::render('LoginPanel');
+Route::get('/loginlandlord', function () {
+    return Inertia::render('LoginPanelLandlord');
+});
+
+Route::get('/logintenant', function () {
+    return Inertia::render('LoginPanelTenant');
 });
 
 Route::get('/loginpassword', function () {
