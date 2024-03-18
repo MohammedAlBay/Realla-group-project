@@ -1,0 +1,119 @@
+/* CONTACT PAGE */
+.contact-container {
+  background-color: white;
+  padding: 20px;
+  color: black;
+}
+
+.contact-container h1 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #ECAA16;
+  text-align: center;
+}
+
+.contact-container p {
+  color: black;
+  text-align: center;
+}
+
+.contact-panel {
+  width: 80%;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-container {
+  background-color: #292F36;
+  border-radius: 10px;
+  padding: 30px;
+  width: 35%; /* Adjust width as needed */
+}
+
+.contact-form {
+  width: 75%; /* Adjust width as needed */
+  padding: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-right: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea {
+  border-radius: 8px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+.contact-form button {
+  background-color: #FDB514;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+/* ContactInfo component */
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #292F36;
+  color: #FFF;
+}
+
+.contact-info-header {
+  margin-bottom: 20px;
+} 
+
+.contact-info-header h2 {
+  color: #FFF;
+  text-align: left;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.contact-info-header p {
+  color: #FFF;
+  text-align: left;
+}
+
+.contact-info-main {
+  margin-bottom: 20px;
+}
+
+.contact-info-main li {
+  margin-bottom: 10px; /* Add margin between each list item */
+  display: flex;
+  align-items: center;
+}
+
+.contact-info-main li .icon {
+  margin-right: 5px; /* Add margin to the right side of the icons */
+}
+
+.social-media {
+  margin-top: 20px;
+}
