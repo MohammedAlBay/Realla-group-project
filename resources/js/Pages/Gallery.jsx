@@ -5,7 +5,7 @@ import PropertyList from "@/Components/PropertyList.jsx";
 const Gallery = () => {
     return (
         <div className="gallery">
-                    <PropertyList />
+            <PropertyList />
         </div>
     );
 };

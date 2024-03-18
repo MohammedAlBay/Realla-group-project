@@ -14,9 +14,11 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
+/*
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+*/
 
 //DATABASE
 Route::get('/properties', [PropertyController::class, 'index']);

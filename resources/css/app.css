@@ -121,7 +121,9 @@ body{
     color: #f0f3fd;
     letter-spacing: 1px;
     font-weight: 600;
-    width: 600px;
+    width: 650px;
+    margin-left: 2rem;
+
 }
 
 #search:hover {
@@ -147,11 +149,17 @@ body{
     z-index: 10;
     font-size: 40px;
 }
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
 
 /* HOME GALLERY */
 .home-gallery {
     background-color: #1E2127;
-    min-height: 100vh;
+    flex-grow: 1;
     z-index: 1;
     text-align: center;
     margin:auto;
@@ -161,7 +169,7 @@ body{
 /* GALLERY */
 .gallery{
     text-align: center;
-    height: 100vh;
+    margin-bottom: 2rem;
 }
 
 /* CARDS OF GALLERY-GALLERY PAGE */
@@ -171,8 +179,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem 10% 0;
-    position: relative;
-    top:15rem;
+    margin-top: 15rem;
 }
 
 .card {
@@ -218,6 +225,7 @@ body{
 .overlay h3{
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 28px;
 
 }
 .overlay h4{
@@ -278,9 +286,8 @@ body{
 }
 
 .card-location  i{
-    width: 30px;
-    height: 30px;
-
+    margin-top: 8px;
+    font-size: 25px;
 }
 
 /*SEARCH BAR*/
