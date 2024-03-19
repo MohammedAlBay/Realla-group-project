@@ -39,7 +39,7 @@ function Navigation() {
             window.removeEventListener('scroll', bgHeader);
             window.removeEventListener('resize', handleResize);
         };
-    }, []); 
+    }, []);
 
     return (
         <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
@@ -54,13 +54,13 @@ function Navigation() {
                                 <a href="/" className="nav__link">Home</a>
                             </li>
                             <li className="nav__item">
-                                <a href="/about" className="nav__link">About Me</a>
+                                <a href="/about" className="nav__link">About</a>
                             </li>
                             <li className="nav__item">
-                                <a href="/work" className="nav__link">Portfolio</a>
+                                <a href="/gallery" className="nav__link">Gallery</a>
                             </li>
                             <li className="nav__item">
-                                <a href="/contact" className="nav__link">Contact Me</a>
+                                <a href="/contact" className="nav__link">Contact</a>
                             </li>
                         </ul>
                     </div>
