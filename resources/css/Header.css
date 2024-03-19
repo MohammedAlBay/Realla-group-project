@@ -27,8 +27,12 @@
     width: 90px;
     transition: color 0.4s;
     margin-left: 2rem;
+    background-color: transparent;
 }
 
+.nav__logo{
+    background-color: transparent;
+}
 .nav__list {
     display: flex;
     gap: 3rem;
@@ -39,11 +43,13 @@
     list-style: none;
 }
 
+
 .nav__link {
     color: white;
     font-size: 18px;
     text-decoration: none;
     font-weight: 500;
+    background-color: transparent;
 }
 .nav__link:hover {
     color:orange;

@@ -9,6 +9,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+
 }
 
 html {
@@ -22,58 +23,9 @@ body{
     transition: background-color 0.4s;
 }
 
-
-/*
-.header{
-    z-index: -1;
-    overflow-x: hidden;
-    height: 10vh;
+a{
+    background-color: transparent!important;
 }
-
-
-
-.logo {
-    width: 90px;
-    color: #333;
-    margin-bottom: 0.5rem;
-    margin-right: 4rem;
-}
-
-.navigation{
-    position: fixed;
-    top: 1rem;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-}
-
-.navbar a {
-    font-size: 18px;
-    color: whitesmoke;
-    font-weight: 500;
-    margin-right: 55px;
-    transition: 0.5s;
-    background: transparent;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #FDB514;
-}
-.search-btn {
-    margin-left: auto;
-    padding: 0 25px;
-    color: #ecaa16;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-}
-
-*/
-
 /*LANDING CONTENT*/
 .home {
     height: 90vh;

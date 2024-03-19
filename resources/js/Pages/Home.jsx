@@ -9,6 +9,7 @@ const Home = () => {
         <Landing/>
         <div className={"home-gallery"}>
              <Gallery/>
+
          </div>
     </div>
 )

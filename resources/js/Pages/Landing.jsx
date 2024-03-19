@@ -4,6 +4,7 @@ import RightArrow from "@/Components/RightArrow.jsx";
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 
 
+
 const Landing = () => {
     return (
 <section className="home section">
@@ -20,6 +21,7 @@ const Landing = () => {
         <div className="home-img">
             <img src="./images/home_page 3.png" alt="Bungalov"/>
         </div>
+
         <RightArrow/>
 </section>
 

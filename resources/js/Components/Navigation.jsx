@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Logo from "@/Components/Logo.jsx";
 import '../../css/Header.css';
 import 'boxicons/css/boxicons.min.css';
+import { Link } from '@inertiajs/react';
+
 
 function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +13,6 @@ function Navigation() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleThemeToggle = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        localStorage.setItem('selected-theme', newTheme);
-    };
 
     useEffect(() => {
         const bgHeader = () => {
@@ -51,16 +48,16 @@ function Navigation() {
                     <div className="desktop-menu">
                         <ul className="nav__list">
                             <li className="nav__item">
-                                <a href="/" className="nav__link">Home</a>
+                                <Link href="/" className="nav__link">Home</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/about" className="nav__link">About</a>
+                                <Link href="/about" className="nav__link">About</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/gallery" className="nav__link">Gallery</a>
+                                <Link href="/gallery" className="nav__link">Gallery</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/contact" className="nav__link">Contact</a>
+                                <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -71,17 +68,17 @@ function Navigation() {
                     <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
                         <ul className="nav__list">
                             <li className="nav__item">
-                                <a href="/" className="nav__link" onClick={() => setIsMenuOpen(false)}>Home</a>
+                                <Link href="/" className="nav__link" onClick={() => setIsMenuOpen(false)}>Home</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/about" className="nav__link" onClick={() => setIsMenuOpen(false)}>About Me</a>
+                                <Link href="/about" className="nav__link" onClick={() => setIsMenuOpen(false)}>About Me</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/work" className="nav__link" onClick={() => setIsMenuOpen(false)}>Portfolio</a>
+                                <Link href="/work" className="nav__link" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
                             </li>
                             <li className="nav__item">
-                                <a href="/contact" className="nav__link" onClick={() => setIsMenuOpen(false)}>Contact
-                                    Me</a>
+                                <Link href="/contact" className="nav__link" onClick={() => setIsMenuOpen(false)}>Contact
+                                    Me</Link>
                             </li>
                             <div className="nav__actions">
                                 <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
