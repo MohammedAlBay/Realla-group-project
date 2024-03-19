@@ -7,8 +7,14 @@ import SearchOptionsGallery from "@/Components/SearchOptionsGallery.jsx";
 const GalleryPage = () => {
     return (
         <div className="galleryPage">
-            < SearchBarGallery />
-            < SearchOptionsGallery />
+            <div className={"SearchGallery"}>
+              <div className={"search-bar-gallery"}>
+                  < SearchBarGallery />
+              </div>
+
+                < SearchOptionsGallery />
+            </div>
+
             < Gallery />
         </div>
     );
