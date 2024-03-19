@@ -14,7 +14,7 @@ const Footer = () => {
          {/* Subscribe Section */}
         <div className="mb-6 md: mb-0">
           <input type="email" placeholder="Enter Your Email" className="text-gray-800 px-6 py-2 border border-gray-300 rounded-l-md focus:outline-none placeholder-yellow-500" />
-          <button className="px-6 py-2 rounded-r-md hover:bg-orange-500 focus:outline-none" style={{ backgroundColor: '#ecaa16' }}>Subscribe</button>
+          <button className="px-6 py-2 rounded-r-md hover:bg-orange-500 focus:outline-none" style={{ backgroundColor: '#fdb514' }}>Subscribe</button>
         </div>
 
         <div className="px-4 md:px-20 py-4 flex flex-col md:flex-row md:justify-between items-start">
@@ -54,7 +54,7 @@ const Footer = () => {
     </div>
 
         {/* Bottom Bar */}
-      <div className="flex justify-between items-center bg-yellow-500 py-2 px-4 md:px-40">
+      <div className="flex justify-between items-center bg-yellow-500 py-2 px-4 md:px-40"  style={{ backgroundColor: '#fdb514' }}>
         <div className="text-sm">
           Copyright © 2024 by Realla. All Rights Reserved.
         </div>
