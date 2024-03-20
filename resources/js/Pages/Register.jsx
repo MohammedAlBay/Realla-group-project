@@ -20,8 +20,8 @@ const Register = () => {
     };
 
     return (
-        <div className="flex bg-gray-900 text-white p-8 justify-between"> {/* Space between items */}
-            <div className="w-4/5 max-w-md ml-auto mr-20 mt-20 mb-20"> {/* Push to the right with ml-auto, and a bit to the left with mr-4 */}
+        <div className="flex bg-gray-900 text-white p-8 justify-between" style={{ backgroundColor: '#292F36' }}> {/* Space between items */}
+            <div className="w-4/5 max-w-md ml-auto mr-20 mt-32 mb-20"> {/* Push to the right with ml-auto, and a bit to the left with mr-4 */}
                 <div className="relative mr-8">
                     <div className="absolute inset-0"></div>
                     <img src="/images/RegisterImage.png" alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
