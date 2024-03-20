@@ -60,7 +60,7 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-
+                            <LoginRegisterButtons className="nav__item desktop" />
                         </ul>
                     </div>
                 )}
@@ -88,13 +88,11 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>Contact</Link>
                             </li>
 
-
-                            <LoginRegisterButtons className="nav__item"/>
-
                             <div className="nav__actions">
                                 <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
                             </div>
 
+                            <LoginRegisterButtons className="nav__item tablet" />
 
                         </ul>
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
@@ -109,7 +107,7 @@ function Navigation() {
                         <i className='bx bx-menu'></i>
                     </div>
                 )}
-                <LoginRegisterButtons className="nav__item" />
+
 
             </nav>
         </header>
