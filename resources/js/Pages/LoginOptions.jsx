@@ -3,16 +3,19 @@ import { Link } from '@inertiajs/react';
 
 const LoginOptions = () => {
     return (
-        <div className="flex bg-gray-900 text-white p-8">
-            <div className="relative mr-8">
-                <div className="absolute inset-0 bg-gray-700 rounded-lg border-2 border-transparent"></div>
-                <img src="./LoginOptionsImage.png" alt="LoginOptions" className="absolute inset-0 object-cover w-full h-full" />
+        <div className="flex bg-gray-900 text-white p-8 pt-6 h-screen" style={{ backgroundColor: '#292F36' }}>
+            <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}>
+                <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
             </div>
-            <div className="flex flex-col justify-between">
-                <div className="flex flex-col"> {/* Adjusted to display buttons vertically */}
-                    <button className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8 mb-4">Login as Landlord</button>
-                    <div style={{ marginBottom: '20px' }}></div> {/* Added space between buttons */}
-                    <button className="w-1962 h-223 flex-shrink-0 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-4 px-8">Login as Tenant</button>
+            <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '6rem' }}>
+                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-3/5 h-auto"/> 
+            </div>
+            <div className="relative w-2/3 mr-20">
+            </div>
+            <div className="flex justify-center items-center">
+                <div className="flex flex-col justify-center items-center mr-28">
+                    <button className="w-72 h-12 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">Login as Landlord</button>
+                    <button className="w-72 h-12 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">Login as Tenant</button>
                 </div>
             </div>
         </div>
@@ -20,4 +23,3 @@ const LoginOptions = () => {
 };
 
 export default LoginOptions;
-
