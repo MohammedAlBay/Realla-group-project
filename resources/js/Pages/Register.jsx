@@ -20,13 +20,13 @@ const Register = () => {
     };
 
     return (
-        <div className="flex bg-gray-900 text-white p-8 justify-center"> {/* Centering the content horizontally */}
-            <div className="w-full max-w-md"> {/* Limiting the width of the form */}
+        <div className="flex bg-gray-900 text-white p-8 justify-between"> {/* Space between items */}
+            <div className="w-4/5 max-w-md ml-auto mr-20 mt-20 mb-20"> {/* Push to the right with ml-auto, and a bit to the left with mr-4 */}
                 <div className="relative mr-8">
-                    <div className="absolute inset-0 bg-gray-700 rounded-lg border-2 border-transparent"></div>
-                    <img src="./images/RegisterImage.png" alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
+                    <div className="absolute inset-0"></div>
+                    <img src="/images/RegisterImage.png" alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
                 </div>
-                <div className="ml-8"> {/* Adding margin to the left to position the form content */}
+                <div>
                     <h2 className="text-2xl font-semibold mb-4">Create your Free Account</h2>
                     <p>Submit your data for registration</p>
                     <form onSubmit={handleSubmit} className="mt-4">
@@ -89,4 +89,3 @@ const Register = () => {
 };
 
 export default Register;
-
