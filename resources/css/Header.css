@@ -34,11 +34,21 @@
     background-color: transparent!important;
 }
 
+.buttons{
+    display: flex;
+    padding: 0px 0% 0 25%;
+    z-index: 100;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav__list {
     display: flex;
     gap: 3rem;
     flex-direction: row;
     justify-content: center;
+    margin-left: 3rem;
 
 }
 
@@ -82,7 +92,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 4rem;
+    padding-top: 0rem;
     transform: translateY(-100%);
     transition: transform 0.4s ease-in-out;
 }
@@ -121,16 +131,96 @@
         display: none;
     }
 
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
     .nav__toggle {
         display: flex;
     }
 
     .nav__list {
         display: flex;
-        gap: 3rem;
+        gap: 1rem;
         flex-direction: column;
         text-align: center;
+        margin-top: 0rem;
+        font-size: 4rem;
+        font-weight: bold;
     }
 
+    .dektop{
+        display:none;
+    }
+
+    .buttons{
+        position: relative;
+        bottom: 1rem;
+        right:6rem;
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__actions i{
+        font-size: 2rem;
+        color:orange;
+        position: relative;
+        left: 0;
+        bottom: 1.5rem;
+    }
+
+    .logo{
+        width: 90px;
+        transition: color 0.4s;
+        margin-left: 1rem;
+        background-color: transparent!important;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .buttons{
+        position: relative;
+        top: 1rem;
+        right: 3.5rem;
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav__list {
+        display: flex;
+        gap: 0rem;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0rem;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .nav__actions i{
+        font-size: 2rem;
+        color:orange;
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
 
 }

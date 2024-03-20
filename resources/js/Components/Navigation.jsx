@@ -3,6 +3,7 @@ import Logo from "@/Components/Logo.jsx";
 import '../../css/Header.css';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
+import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 
 
 function Navigation() {
@@ -59,6 +60,7 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
+                            <LoginRegisterButtons className="nav__item desktop" />
                         </ul>
                     </div>
                 )}
@@ -70,19 +72,35 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/" className="nav__link" onClick={() => setIsMenuOpen(false)}>Home</Link>
                             </li>
+
                             <li className="nav__item">
-                                <Link href="/about" className="nav__link" onClick={() => setIsMenuOpen(false)}>About Me</Link>
+                                <Link href="/" className="nav__link"
+                                      onClick={() => setIsMenuOpen(false)}>Home</Link>
                             </li>
+
                             <li className="nav__item">
-                                <Link href="/work" className="nav__link" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+                                <Link href="/about" className="nav__link"
+                                      onClick={() => setIsMenuOpen(false)}>About</Link>
                             </li>
+
                             <li className="nav__item">
-                                <Link href="/contact" className="nav__link" onClick={() => setIsMenuOpen(false)}>Contact
-                                    Me</Link>
+                                <Link href="/gallery" className="nav__link"
+                                      onClick={() => setIsMenuOpen(false)}>Gallery</Link>
                             </li>
+
+                            {/*
+                            <li className="nav__item">
+                                <Link href="/contact" className="nav__link"
+                                      onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                            </li>
+                            */}
+
                             <div className="nav__actions">
                                 <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
                             </div>
+
+                            <LoginRegisterButtons className="nav__item tablet"/>
+
                         </ul>
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
                             <i className='bx bx-x'></i>
@@ -96,6 +114,7 @@ function Navigation() {
                         <i className='bx bx-menu'></i>
                     </div>
                 )}
+
 
             </nav>
         </header>
