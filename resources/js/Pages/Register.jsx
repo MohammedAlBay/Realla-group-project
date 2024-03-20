@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import registrationImage from './RegisterImage.png';
-import Button from '../../Components/RegisterButton'; 
-import TextInput from '../../Components/RegisterTextInput'; 
-import Checkbox from '../../Components/RegisterCheckbox'; 
-import Navigation from '../../Components/Navigation'; 
+import Button from '../Components/RegisterButton'; 
+import TextInput from '../Components/RegisterTextInput'; 
+import Checkbox from '../Components/RegisterCheckbox'; 
 
 const Register = () => {
     // Define state variables to store form input values
@@ -22,14 +20,13 @@ const Register = () => {
     };
 
     return (
-        <div>
-            <Navigation />
-            <div className="flex bg-gray-900 text-white p-8 rounded-lg">
+        <div className="flex bg-gray-900 text-white p-8 justify-center"> {/* Centering the content horizontally */}
+            <div className="w-full max-w-md"> {/* Limiting the width of the form */}
                 <div className="relative mr-8">
                     <div className="absolute inset-0 bg-gray-700 rounded-lg border-2 border-transparent"></div>
-                    <img src={registrationImage} alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
+                    <img src="./images/RegisterImage.png" alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
                 </div>
-                <div>
+                <div className="ml-8"> {/* Adding margin to the left to position the form content */}
                     <h2 className="text-2xl font-semibold mb-4">Create your Free Account</h2>
                     <p>Submit your data for registration</p>
                     <form onSubmit={handleSubmit} className="mt-4">
@@ -57,17 +54,31 @@ const Register = () => {
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
-                        <Checkbox
-                            label="Register as Landlord"
-                            checked={isLandlord}
-                            onChange={(e) => setIsLandlord(e.target.checked)}
-                        />
-                        <Checkbox
-                            label="I agree to Realla Security and Privacy Policy"
-                            checked={agreeToPolicy}
-                            onChange={(e) => setAgreeToPolicy(e.target.checked)}
-                            required
-                        />
+                        <div className="mb-4">
+                            <label className="mr-4">Register as:</label>
+                            <div className="flex items-center">
+                                <Checkbox
+                                    label="Landlord"
+                                    checked={isLandlord}
+                                    onChange={(e) => setIsLandlord(e.target.checked)}
+                                />
+                                <div style={{ width: '2rem' }}></div> {/* Adjust the width as needed */}
+                                <Checkbox
+                                    label="Tenant"
+                                    checked={!isLandlord}
+                                    onChange={(e) => setIsLandlord(!e.target.checked)}
+                                />
+                            </div>
+                        </div>
+                        <div className="flex items-center mb-4">
+                            <Checkbox
+                                label={<span className="text-white">I agree to <span className="text-yellow-500">Realla Security</span> and <span className="text-yellow-500">Privacy Policy</span></span>}
+                                checked={agreeToPolicy}
+                                onChange={(e) => setAgreeToPolicy(e.target.checked)}
+                                required
+                                checkboxClassName="rounded-full" // Apply rounded corners to the checkbox
+                            />
+                        </div>
                         <Button type="submit">Get Started</Button>
                     </form>   
                     <p className="mt-4">I have an account? <a href="#" className="text-yellow-500">Login</a></p>
@@ -78,3 +89,4 @@ const Register = () => {
 };
 
 export default Register;
+
