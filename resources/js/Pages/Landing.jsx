@@ -13,7 +13,10 @@ const Landing = () => {
 
             <h1>The <span> smartest</span> way <br/>
                 to connect</h1>
-            <SearchBarGallery/>
+            <div className={"search-landing"}>
+                <SearchBarGallery/>
+            </div>
+
         </div>
 
 

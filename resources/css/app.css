@@ -147,6 +147,17 @@ body{
     margin-bottom: 2rem;
 }
 
+.galleryPage h1{
+    color: white;
+    font-size: 50px;
+    padding: 2rem;
+    font-weight: 600;
+}
+
+.gallery-card{
+    position: relative;
+    bottom: 13rem;
+}
 
 /* CARDS OF GALLERY-GALLERY PAGE */
 .all-cards {
@@ -267,32 +278,7 @@ body{
 }
 
 /*SEARCH BAR*/
-.search-bar-gallery {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: 600px;
-}
 
-.input-container {
-    position: relative;
-    align-items: center;
-    position:relative;
-    bottom: 6rem;
-}
-
-.input-container input {
-    padding-left: 2rem;
-}
-
-.input-container i {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    color: #ecaa16;
-    font-size: 1.5rem;
-}
 
 .galleryPage{
     background-color: #1E2127;
@@ -304,8 +290,50 @@ body{
     margin:auto;
 }
 
+.search-bar-gallery__page{
+    margin:0;
+    z-index: 10;
+    position: relative;
+    bottom: 0rem;
+    right: 0rem;
+}
+
+.gallery-page-icon{
+    position: relative;
+    right: 3rem;
+    top:0.3rem;
+    font-size: 24px;
+}
+
+.search-bar-gallery {
+    position: relative;
+    top: 9rem;
+    left: 8rem;
+    z-index: 10;
+}
+
+  .search-bar-gallery i {
+    font-size: 30px;
+    position: absolute;
+    top: 0.5rem;
+    left: 40rem;
+    z-index: 10;
+}
+
+  .search-landing{
+      position: relative;
+      bottom: 14rem;
+      right:10rem;
+      z-index: 10;
+      justify-content: center;
+  }
+
 .search-options {
     margin-top: 3rem;
+}
+
+.search-options input {
+    margin-right: 0.5rem;
 }
 
 .search-options label {
@@ -317,6 +345,7 @@ body{
 .MockUp{
     overflow-x:hidden ;
 }
+
 /* Media query for tablet and smartphone size */
 @media screen and (max-width: 768px) {
 
@@ -337,19 +366,23 @@ body{
 
     .search-bar-gallery {
         padding: 10px;
+        position: relative;
+        top: 3rem;
+        left: 5rem;
+    }
+
+    .search-bar-gallery i {
+        font-size: 30px;
         position: absolute;
-        top: 24rem;
-        left: 0rem;
+        top: 1rem;
+        left: 25rem;
+        z-index: 10;
     }
 
     #search {
         width: 400px;
         padding: 8px;
         font-size: 14px;
-    }
-
-    .input-container i {
-        font-size: 20px;
     }
 
     .home-img img {
@@ -401,9 +434,16 @@ body{
 
     .search-bar-gallery {
         padding: 10px;
+        position: relative;
+        top: 11rem;
+        left: 7rem;
+    }
+
+    .search-bar-gallery i {
+        font-size: 30px;
         position: absolute;
-        top: 26rem;
-        left: 0rem;
+        top: 1rem;
+        left: 19rem;
         z-index: 10;
     }
 
@@ -411,10 +451,6 @@ body{
         width: 300px;
         padding: 8px;
         font-size: 14px;
-    }
-
-    .input-container i {
-        font-size: 20px;
     }
 
     .home-img img {
