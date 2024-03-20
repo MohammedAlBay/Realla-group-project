@@ -4,9 +4,9 @@ import 'boxicons/css/boxicons.min.css';
 
 function Header() {
     return (
-        <header className="header">
+        <div>
             <Navigation/>
-        </header>
+        </div>
 
     );
 }

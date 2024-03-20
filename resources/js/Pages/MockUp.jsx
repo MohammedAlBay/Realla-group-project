@@ -1,5 +1,4 @@
 import React from 'react';
-import 'boxicons/css/boxicons.min.css';
 import MockUp1 from '@/Pages/MockUp1.jsx';
 import MockUp2 from '@/Pages/MockUp2.jsx';
 import RightArrow2 from "@/Components/RightArrow2.jsx";
@@ -23,6 +22,7 @@ function MockUp() {
             <MockUp3 />
             <MockUp2 />
             <MockUp4 />
+
         </div>
     );
 }
