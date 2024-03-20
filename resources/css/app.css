@@ -36,7 +36,6 @@ body{
 
 .home-content {
     max-width: 600px;
-    margin-bottom: 18rem;
 }
 
 .home-content h1 {
@@ -49,6 +48,7 @@ body{
     font-weight: 700;
     line-height: 80px;
     letter-spacing: -2px;
+    margin-bottom: 3rem;
 }
 
 .home-content h1 span {
@@ -66,20 +66,12 @@ body{
     font-weight: 600;
     width: 650px;
     margin-left: 2rem;
-
 }
 
 #search:hover {
     color: #ECAA16;
     background: rgba(140, 140, 140, 0.18);
 }
-
-.buttons{
-    display: flex;
-    padding: 0px 20%;
-    z-index: 100;
-}
-
 
 .login {
     color: whitesmoke;
@@ -146,7 +138,7 @@ body{
     z-index: 1;
     text-align: center;
     margin:auto;
-    margin-top: -16rem;
+    margin-top: -10rem;
 }
 
 /* GALLERY */
@@ -286,7 +278,7 @@ body{
     position: relative;
     align-items: center;
     position:relative;
-    bottom: 3rem;
+    bottom: 6rem;
 }
 
 .input-container input {
@@ -346,7 +338,7 @@ body{
     .search-bar-gallery {
         padding: 10px;
         position: absolute;
-        top: 21rem;
+        top: 24rem;
         left: 0rem;
     }
 
@@ -367,16 +359,6 @@ body{
         min-width: 120%;
         pointer-events: none;
         z-index: 10;
-    }
-
-    .buttons{
-        display: flex;
-        padding: 0px 10%;
-        z-index: 100;
-        margin:auto;
-        position: relative;
-        right: 2rem;
-        top: 2rem;
     }
 
     .search-btn{
@@ -413,14 +395,14 @@ body{
         line-height: 42px;
         letter-spacing: -2px;
         position: absolute;
-        top: 10rem;
+        top: 15rem;
         left: 3rem;
     }
 
     .search-bar-gallery {
         padding: 10px;
         position: absolute;
-        top: 20rem;
+        top: 26rem;
         left: 0rem;
         z-index: 10;
     }
@@ -429,16 +411,6 @@ body{
         width: 300px;
         padding: 8px;
         font-size: 14px;
-    }
-
-    .buttons{
-        display: flex;
-        padding: 0px 10%;
-        z-index: 100;
-        margin:auto;
-        position: relative;
-        top: 6rem;
-        left: -2.9rem;
     }
 
     .input-container i {
