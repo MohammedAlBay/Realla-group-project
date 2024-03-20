@@ -23,7 +23,7 @@
     left: 5rem;
     bottom: 13rem;
     z-index: 10;
-    max-width: 200px;
+    max-width: 50px;
 }
 
 .testimonials1 {
@@ -45,7 +45,7 @@
     text-align: center;
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 300;
     line-height: normal;
     position: relative;
     top: 10px;
@@ -96,7 +96,7 @@ div.testimonial:hover svg {
     left: 5rem;
     bottom: 13rem;
     z-index: 10;
-    max-width: 200px;
+    max-width: 50px;
 }
 .testimonials2 {
     border-radius: 5px;

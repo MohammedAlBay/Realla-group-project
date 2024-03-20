@@ -23,9 +23,6 @@ body{
     transition: background-color 0.4s;
 }
 
-a{
-    background-color: transparent!important;
-}
 /*LANDING CONTENT*/
 .home {
     height: 90vh;
@@ -81,7 +78,6 @@ a{
     display: flex;
     padding: 0px 20%;
     z-index: 100;
-
 }
 
 
@@ -380,7 +376,7 @@ a{
         margin:auto;
         position: relative;
         right: 2rem;
-        bottom: 3.5rem;
+        top: 2rem;
     }
 
     .search-btn{
@@ -441,7 +437,8 @@ a{
         z-index: 100;
         margin:auto;
         position: relative;
-        top: 1rem;
+        top: 6rem;
+        left: -2.9rem;
     }
 
     .input-container i {
