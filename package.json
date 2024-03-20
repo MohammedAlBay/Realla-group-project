@@ -20,6 +20,9 @@
         "vite": "^5.1.6"
     },
     "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/free-solid-svg-icons": "^6.5.1",
+        "@fortawesome/react-fontawesome": "^0.2.0",
         "@inertiajs/vue3": "^1.0.15",
         "boxicons": "^2.1.4",
         "gsap": "^3.12.5",

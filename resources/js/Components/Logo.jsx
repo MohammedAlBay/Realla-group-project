@@ -3,7 +3,7 @@ import { Link } from '@inertiajs/react';
 
 function Logo() {
     return (
-        <Link href="/">
+        <Link href="/" className="logo" >
             <img src="/images/realla_logo.png" className="logo" alt="Logo"/>
         </Link>
     );

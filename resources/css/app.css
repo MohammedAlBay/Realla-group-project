@@ -2,82 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #292F36;
-}
 
-.header{
-    z-index: -1;
     overflow-x: hidden;
-    height: 12vh;
-}
-
-.logo {
-    width: 90px;
-    color: #333;
-    margin-bottom: 0.5rem;
-    margin-right: 10rem;
-}
-
-.navigation{
-    position: fixed;
-    top: 1rem;
-    right: 3rem;
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    width: 100%;
-    padding: 10px 10%;
-}
-
-.navbar a {
-    font-size: 18px;
-    color: whitesmoke;
-    font-weight: 500;
-    margin-right: 45px;
-    transition: 0.5s;
-    padding-left: 20px;
-    background: transparent;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #FDB514;
-}
-
-.buttons{
-    display: flex;
-    padding: 10px 37%;
-}
-
-.login {
-    color: whitesmoke;
-    background-color: #ecaa16;
-    text-align: center;
-    border-radius: 25px;
-    width: 100px;
-    font-size: 18px;
-    margin-left: 3rem;
-    font-weight: bold;
-}
-
-.register {
-    color: whitesmoke;
-    border: 2px solid #ecaa16;
-    border-radius: 25px;
-    width: 100px;
-    font-size: 18px;
-    margin-left: 1rem;
-    text-align: center;
-    font-weight: bold;
+    background-color: #292F36;
+    transition: background-color 0.4s;
 }
 
 /*LANDING CONTENT*/
@@ -93,7 +36,6 @@ body{
 
 .home-content {
     max-width: 600px;
-    margin-bottom: 13rem;
 }
 
 .home-content h1 {
@@ -106,6 +48,7 @@ body{
     font-weight: 700;
     line-height: 80px;
     letter-spacing: -2px;
+    margin-bottom: 3rem;
 }
 
 .home-content h1 span {
@@ -121,13 +64,47 @@ body{
     color: #f0f3fd;
     letter-spacing: 1px;
     font-weight: 600;
-    width: 600px;
+    width: 650px;
+    margin-left: 2rem;
 }
 
 #search:hover {
     color: #ECAA16;
     background: rgba(140, 140, 140, 0.18);
 }
+
+.login {
+    color: whitesmoke;
+    background-color: #ecaa16;
+    text-align: center;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.register {
+    color: whitesmoke;
+    border: 2px solid #ecaa16;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
+
+.login:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
+
 
 .home-img img {
     position: absolute;
@@ -147,21 +124,39 @@ body{
     z-index: 10;
     font-size: 40px;
 }
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
 
 /* HOME GALLERY */
 .home-gallery {
     background-color: #1E2127;
-    min-height: 100vh;
+    flex-grow: 1;
     z-index: 1;
     text-align: center;
     margin:auto;
-    margin-top: -16rem;
+    margin-top: -10rem;
 }
 
 /* GALLERY */
 .gallery{
     text-align: center;
-    height: 100vh;
+    margin-bottom: 2rem;
+}
+
+.galleryPage h1{
+    color: white;
+    font-size: 50px;
+    padding: 2rem;
+    font-weight: 600;
+}
+
+.gallery-card{
+    position: relative;
+    bottom: 13rem;
 }
 
 /* CARDS OF GALLERY-GALLERY PAGE */
@@ -171,8 +166,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem 10% 0;
-    position: relative;
-    top:15rem;
+    margin-top: 15rem;
 }
 
 .card {
@@ -218,6 +212,7 @@ body{
 .overlay h3{
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 28px;
 
 }
 .overlay h4{
@@ -278,39 +273,12 @@ body{
 }
 
 .card-location  i{
-    width: 30px;
-    height: 30px;
-
+    margin-top: 8px;
+    font-size: 25px;
 }
 
 /*SEARCH BAR*/
-.search-bar-gallery {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: 600px;
-}
 
-.input-container {
-    position: relative;
-    align-items: center;
-    position:relative;
-    bottom: 3rem;
-
-}
-
-.input-container input {
-    padding-left: 2rem;
-}
-
-.input-container i {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    color: #ecaa16;
-    font-size: 1.5rem;
-}
 
 .galleryPage{
     background-color: #1E2127;
@@ -322,8 +290,50 @@ body{
     margin:auto;
 }
 
+.search-bar-gallery__page{
+    margin:0;
+    z-index: 10;
+    position: relative;
+    bottom: 0rem;
+    right: 0rem;
+}
+
+.gallery-page-icon{
+    position: relative;
+    right: 3rem;
+    top:0.3rem;
+    font-size: 24px;
+}
+
+.search-bar-gallery {
+    position: relative;
+    top: 9rem;
+    left: 8rem;
+    z-index: 10;
+}
+
+  .search-bar-gallery i {
+    font-size: 30px;
+    position: absolute;
+    top: 0.5rem;
+    left: 40rem;
+    z-index: 10;
+}
+
+  .search-landing{
+      position: relative;
+      bottom: 14rem;
+      right:10rem;
+      z-index: 10;
+      justify-content: center;
+  }
+
 .search-options {
     margin-top: 3rem;
+}
+
+.search-options input {
+    margin-right: 0.5rem;
 }
 
 .search-options label {
@@ -332,62 +342,12 @@ body{
     font-size: 18px;
 }
 
-
 .MockUp{
     overflow-x:hidden ;
 }
+
 /* Media query for tablet and smartphone size */
 @media screen and (max-width: 768px) {
-
-    .header .h1 {
-        font-size: 15px;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        position:absolute;
-        right:0rem;
-    }
-
-    .hamburger-menu .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff;
-        margin: 5px 0;
-        transition: 0.4s;
-
-    }
-
-
-    .change .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .change .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .change .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    .change .navbar {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 2rem;
-        right:-4rem;
-    }
-
-    .logo {
-        margin-left: 3rem;
-    }
-
 
     .home-content h1 {
         width: 4003px;
@@ -400,128 +360,104 @@ body{
         line-height: 60px;
         letter-spacing: -2px;
         position: absolute;
-        top: 12rem;
+        top: 10rem;
         left: 3rem;
     }
 
     .search-bar-gallery {
         padding: 10px;
+        position: relative;
+        top: 3rem;
+        left: 5rem;
+    }
+
+    .search-bar-gallery i {
+        font-size: 30px;
         position: absolute;
-        top: 21rem;
-        left: 3rem;
+        top: 1rem;
+        left: 25rem;
+        z-index: 10;
     }
 
     #search {
-        width: 290px;
+        width: 400px;
         padding: 8px;
         font-size: 14px;
     }
 
-    .input-container i {
-        font-size: 20px;
-    }
-
     .home-img img {
         position: absolute;
-        top: 10rem;
-        right: -2rem;
-        max-width: 110%;
+        top: 6.5rem;
+        right: 0rem;
+        min-width: 120%;
         pointer-events: none;
         z-index: 10;
     }
 
-    .navigation .buttons{
-        padding: 10px 0%;
-        position: relative;
-        right: 5rem;
+    .search-btn{
+        margin-right: 2rem;
     }
-
     .right-arrow {
         position: absolute;
         right: 2rem;
-        bottom: 26rem;
+        bottom: 24rem;
         z-index: 10;
         font-size: 40px;
     }
+    .home-gallery {
+        background-color: #1E2127;
+        flex-grow: 1;
+        z-index: 1;
+        text-align: center;
+        margin:auto;
+        margin-top: -29rem;
+    }
+
 }
 
 
 @media screen and (max-width: 576px) {
 
-    .dark-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-        display: none;
-    }
-
-    .change .dark-overlay {
-        display: block;
-        font-size: large;
-    }
-
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        position:absolute;
-        right:0rem;
-    }
-
-    .change .navbar {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 2rem;
-        right:-4rem;
-        font-size: 54px;
-    }
-
-    .header{
-        height: 53vh;
-    }
-
-    .header .home-content h1 {
+    .home-content h1 {
         width: 4003px;
         height: 235px;
-        flex-shrink: 0;
         color: #FFF;
-        font-size: 37px;
+        font-size: 39px;
         font-style: normal;
         font-weight: 700;
         line-height: 42px;
         letter-spacing: -2px;
         position: absolute;
-        top: 12rem;
+        top: 15rem;
         left: 3rem;
     }
 
     .search-bar-gallery {
         padding: 10px;
+        position: relative;
+        top: 11rem;
+        left: 7rem;
+    }
+
+    .search-bar-gallery i {
+        font-size: 30px;
         position: absolute;
-        top: 13rem;
-        left: 3rem;
+        top: 1rem;
+        left: 19rem;
+        z-index: 10;
     }
 
     #search {
-        width: 250px;
+        width: 300px;
         padding: 8px;
         font-size: 14px;
     }
 
-    .input-container i {
-        font-size: 20px;
-    }
-
-
     .home-img img {
         position: absolute;
-        top: 16rem;
-        right: -1rem;
-        max-width: 135%;
+        top: 26rem;
+        right: 0rem;
+        min-width: 140%;
         pointer-events: none;
         z-index: 10;
     }
@@ -529,8 +465,26 @@ body{
     .right-arrow {
         position: absolute;
         right: 2rem;
-        bottom: 17rem;
+        bottom: 2rem;
         z-index: 10;
         font-size: 40px;
+    }
+    .home-gallery {
+        background-color: #1E2127;
+        flex-grow: 1;
+        z-index: 1;
+        text-align: center;
+        margin:auto;
+        margin-top: -8rem;
+    }
+
+    .card {
+        position: relative;
+        right: 1rem;
+        overflow: hidden;
+        width: 350px;
+        height: 200px;
+        border-radius: 1.2rem;
+        cursor: pointer;
     }
 }
