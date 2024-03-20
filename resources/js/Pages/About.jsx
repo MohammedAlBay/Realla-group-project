@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
-    const headerImageUrl = '/pexels-max-vakhtbovycn-70314084.jpg'; 
+  
     const teamMembers = [
         {
             id: 1,
@@ -36,11 +36,12 @@ const About = () => {
     ];
   
     return (
+    
         <div className="bg-gray-900 text-white font-sans">
             
             {/* Header with Background Image */}
             <header className="relative h-96 w-full overflow-hidden">
-                <img src={headerImageUrl} alt="About Us" className="w-full h-full object-cover" />
+                <img src= './images/pexels-max-vakhtbovycn-70314084.jpg' alt="About Us" className="w-full h-full object-cover" />
 
             {/*About Us Box */}
                 <div className="absolute bottom-0 left-40 bg-orange-500 p-8 w-full md:w-1/2 lg:w-1/3 text-center rounded-lg" style={{ backgroundColor: '#f7931a' }}>
@@ -80,7 +81,7 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-24">
                     {teamMembers.map(member => (
-                        <div key={member.id} className="bg-white p-4 rounded-lg shadow-lg text-gray-800 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+                        <div key={member.id} className="p-4 rounded-lg shadow-lg text-gray-800 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"style={{ backgroundColor: '#878787' }}>
                             <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover" />
                             <h4 className="text-lg font-semibold">{member.name}</h4>
                             <p className="text-white-600">{member.position}</p>
