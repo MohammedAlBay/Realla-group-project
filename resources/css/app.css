@@ -469,4 +469,14 @@ body{
         margin:auto;
         margin-top: -13.5rem;
     }
+
+    .card {
+        position: relative;
+        right: 1rem;
+        overflow: hidden;
+        width: 350px;
+        height: 200px;
+        border-radius: 1.2rem;
+        cursor: pointer;
+    }
 }
