@@ -4,9 +4,16 @@ import "../../css/Dashboard.css"
 
 const DashboardTenantLanding = () => {
     return (
-        <div className="dashboard" >
+        <div className="dashboard">
+            <div className="header">
+                <div className="user-info">
+                    <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
+                    <span>User Name</span>
+                </div>
+            </div>
 
-            < DashboardTenant />
+
+            < DashboardTenant/>
 
 
             <div className="content">

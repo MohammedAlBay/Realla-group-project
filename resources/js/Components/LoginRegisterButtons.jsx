@@ -7,6 +7,7 @@ function LoginRegisterButtons() {
         <div className="buttons">
             <Link href="/login" className="login">Login</Link>
             <Link href="/register" className="register">Register</Link>
+
         </div>
 
     );

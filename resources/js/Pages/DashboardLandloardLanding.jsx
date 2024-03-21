@@ -8,7 +8,6 @@ const DashboardTenantLanding = () => {
 
             < DashboardLandloard />
 
-
             <div className="content">
 
             </div>
