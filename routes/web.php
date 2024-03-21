@@ -82,3 +82,6 @@ Route::get('/dashboard-landloard', function () {
     return Inertia::render('DashboardLandloardLanding');
 });
 
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});

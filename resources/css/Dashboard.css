@@ -7,7 +7,7 @@
 
 .sidebar {
     background-color: transparent;
-    width: 200px;
+    width: 4000px;
     padding: 100px;
     padding-top: 12rem;
     margin-right: auto;
@@ -47,7 +47,7 @@
 .sidebar-menu-link:hover {
     background-color: #FFF0CF;
 }
-
+/*
 .nav__list {
     display:none;
 }
@@ -59,6 +59,8 @@ footer {
 .nav {
     background-color: #1d2124;
 }
+*/
+
 
 .user-info {
     position: absolute;

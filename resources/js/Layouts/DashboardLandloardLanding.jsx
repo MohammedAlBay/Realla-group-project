@@ -1,12 +1,12 @@
 import React from 'react';
 import "../../css/Dashboard.css"
-import DashboardLandloard from "@/Components/DashboardLandloard.jsx";
+import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 
 const DashboardTenantLanding = () => {
     return (
         <div className="dashboard" >
 
-            < DashboardLandloard />
+            < DashboardLandloardBar />
 
             <div className="content">
 

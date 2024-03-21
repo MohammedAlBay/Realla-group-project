@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashboardLandloard = () => {
+const DashboardLandloardBar = () => {
     return (
         <div className="sidebar">
             <ul className="sidebar-menu">
@@ -57,5 +57,5 @@ const DashboardLandloard = () => {
         </div>
     );
 };
-export default DashboardLandloard;
+export default DashboardLandloardBar;
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import DashboardTenant from "@/Components/DashboardTenant.jsx";
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 import "../../css/Dashboard.css"
 
 const DashboardTenantLanding = () => {
     return (
         <div className="dashboard">
-            <div className="header">
+            <div className="header-user-name">
                 <div className="user-info">
                     <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
                     <span>User Name</span>
@@ -13,7 +13,7 @@ const DashboardTenantLanding = () => {
             </div>
 
 
-            < DashboardTenant/>
+            < DashboardTenantBar/>
 
 
             <div className="content">
