@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashboardLanding = () => {
+const DashboardTenant = () => {
     return (
             <div className="sidebar">
                 <ul className="sidebar-menu">
@@ -26,5 +26,5 @@ const DashboardLanding = () => {
             </div>
     );
 };
-export default DashboardLanding;
+export default DashboardTenant;
 
