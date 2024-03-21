@@ -21,18 +21,18 @@ const Footer = () => {
     
         {/* Contact Section */}
         <div className="mb-6 md:mb-0 ml-18">
-          <h3 className="text-yellow-400 font-bold mb-2">CONTACT</h3>
-          <p className="text-white-400 text-sm space-y-4">
-            <span className="flex items-center"><i className='bx bx-phone icon'></i>123 456 789</span>
-            <span className="flex items-center"><i className='bx bx-envelope icon'></i>info@realla.com</span>
-            <span className="flex items-center"><i className='bx bx-map icon'></i>9050 Gent, Belgium</span>
+          <h3 className="text-yellow-500 font-bold mb-2">CONTACT</h3>
+          <p className="text-white-500 text-sm space-y-4">
+            <span className="flex items-center"><i className='bx bx-phone icon text-yellow-500'></i>123 456 789</span>
+            <span className="flex items-center"><i className='bx bx-envelope icon text-yellow-500'></i>info@realla.com</span>
+            <span className="flex items-center"><i className='bx bx-map icon text-yellow-500'></i>9050 Gent, Belgium</span>
           </p>
         </div>
 
         {/* Links Section */}
         <div className="mb-6 md:mb-0 ml-16">
-          <h3 className="text-yellow-400 font-bold mb-2">LINKS</h3>
-          <ul className="text-white-400 text-sm space-y-3">
+          <h3 className="text-yellow-500 font-bold mb-2">LINKS</h3>
+          <ul className="text-white-500 text-sm space-y-3">
             <li><a href="#">About</a></li>
             <li><a href="#">Payments</a></li>
             <li><a href="#">Team</a></li>
@@ -42,8 +42,8 @@ const Footer = () => {
 
         {/* Help Section*/}
         <div className="mb-6 md:mb-0 ml-16">
-          <h3 className="text-yellow-400 font-bold mb-2">HELP</h3>
-          <ul className="text-white-400 text-sm space-y-3">
+          <h3 className="text-yellow-500 font-bold mb-2">HELP</h3>
+          <ul className="text-white-500 text-sm space-y-3">
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Cookies</a></li>
