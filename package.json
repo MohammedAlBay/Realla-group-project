@@ -27,6 +27,7 @@
         "boxicons": "^2.1.4",
         "gsap": "^3.12.5",
         "react-router-dom": "^6.22.3",
+        "tinycircleslider": "^2.0.8",
         "webpack": "^5.90.3"
     }
 }
