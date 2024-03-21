@@ -4,8 +4,8 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import Header from './Layouts/Partials/Header.jsx';
 import Footer from './Layouts/Partials/Footer.jsx';
 import Navigation from './Components/Navigation.jsx';
-import DashboardLandloardLanding from "@/Layouts/DashboardLandloardLanding.jsx";
-import DashboardTenantLanding from "@/Layouts/DashboardTenantLanding.jsx";
+import DashboardLandloardLanding from "@/Pages/DashboardLandloardLanding.jsx";
+import DashboardTenantLanding from "@/Pages/DashboardTenantLanding.jsx";
 import Home from "@/Pages/Home.jsx";
 
 
@@ -28,11 +28,10 @@ createInertiaApp({
             dashboardComponent = <Home />;
         }
 
-
         root.render(
             <>
                 {/* Render navigation only if it's not the dashboard page */}
-                {!dashboardComponent && <Navigation />}
+                {dashboardComponent !== null && <Navigation />}
                 <main className={"main"}>
                     <Header />
                     <App {...props} />
