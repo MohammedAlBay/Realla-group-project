@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import "../../css/Dashboard.css"
 
 const CircularSliderCarousel = () => {
     const [active, setActive] = useState(0);
@@ -12,25 +13,26 @@ const CircularSliderCarousel = () => {
 
     ];
 
+
     const rotateAdd = 360 / items.length;
 
     const nextSlider = () => {
         const nextActive = (active + 1) % items.length;
         setActive(nextActive);
-        setRotate(rotate + rotateAdd);
+        setRotate(rotate - rotateAdd);
     };
 
     const prevSlider = () => {
         const prevActive = (active - 1 + items.length) % items.length;
         setActive(prevActive);
-        setRotate(rotate - rotateAdd);
+        setRotate(rotate + rotateAdd);
     };
 
     return (
         <div className="circular-slider-carousel">
-            <button id="prev" style={{fontSize:`50px`, position: `relative`, top:`75rem`, right: `30rem` }} onClick={prevSlider}><FaAngleLeft /></button>
+            <button id="prev" style={{fontSize:`50px` }} onClick={prevSlider}><FaAngleLeft /></button>
             <div className="slider">
-                <div className="title" style={{width:`200px`, position: `relative`, top:`40rem` }}>Slider Menu!</div>
+                <div className="title" >Welcome User!</div>
                 <div className="images" style={{ transform: `translate(-50%, -50%) rotate(${rotate}deg)` }}>
                     {items.map((item, index) => (
                         <div className={`item ${index === active ? 'active' : ''}`} style={{ '--i': index + 1 }} key={index}>
@@ -48,7 +50,7 @@ const CircularSliderCarousel = () => {
                     ))}
                 </div>
             </div>
-            <button id="next" style={{fontSize:`50px`, position: `relative`, bottom:`70rem`, left: `35rem` }} onClick={nextSlider}><FaAngleRight /></button>
+            <button id="next" onClick={nextSlider}><FaAngleRight /></button>
         </div>
     );
 };
