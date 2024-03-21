@@ -1,12 +1,12 @@
 import React from 'react';
-import DashboardTenant from "@/Components/DashboardTenant.jsx";
 import "../../css/Dashboard.css"
+import DashboardLandloard from "@/Components/DashboardLandloard.jsx";
 
-const DashboardLanding = () => {
+const DashboardTenantLanding = () => {
     return (
         <div className="dashboard" >
 
-            < DashboardTenant />
+            < DashboardLandloard />
 
 
             <div className="content">
@@ -15,5 +15,5 @@ const DashboardLanding = () => {
         </div>
     );
 };
-export default DashboardLanding;
+export default DashboardTenantLanding;
 
