@@ -49,22 +49,29 @@
     transition: background-color 0.3s ease;
 }
 
-.sidebar-menu-link:hover {
-    background-color: #fddd95;
-}
-/*
-.nav__list {
-    display:none;
-}
-
-footer {
-    display:none;
+.sidebar-menu-content:hover {
+    background-color: rgba(73, 81, 91, 0.84);
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 2rem;
 }
 
-.nav {
-    background-color: #1d2124;
+.sidebar-menu-link:hover{
+    color: white;
 }
-*/
+    /*
+    .nav__list {
+        display:none;
+    }
+
+    footer {
+        display:none;
+    }
+
+    .nav {
+        background-color: #1d2124;
+    }
+    */
 
 
 .user-info {

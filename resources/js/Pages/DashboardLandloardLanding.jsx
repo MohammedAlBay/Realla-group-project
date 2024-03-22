@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../css/Dashboard.css"
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
+import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 
 
 const DashboardTenantLanding = () => {
@@ -19,10 +20,10 @@ const DashboardTenantLanding = () => {
 
             */}
 
-            <CircularSliderCarousel />
 
+            <DashboardLandloardBar />
             <div className="content">
-
+                <CircularSliderCarousel />
             </div>
         </div>
     );

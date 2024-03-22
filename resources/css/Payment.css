@@ -261,6 +261,7 @@ Payment
     left: 190px;
 }
 
+
 .card-form {
     width: 100%;
     position: relative;
@@ -383,6 +384,8 @@ button:focus { outline:0; }
     opacity: 1;
     right: 0;
 }
+
+
 
 /*--------------------
 Credit Card Background

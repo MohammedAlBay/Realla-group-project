@@ -86,17 +86,22 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+Route::get('/search', function () {
+    return Inertia::render('MockUp');
+});
 
 /*DASHBOARD TENANT*/
+Route::get('/dashboard-tenant', function () {
+    return Inertia::render('DashboardTenantLanding');
+});
+
 Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
 
 
 
-Route::get('/dashboard-tenant', function () {
-    return Inertia::render('DashboardTenantLanding');
-});
+
 
 
 

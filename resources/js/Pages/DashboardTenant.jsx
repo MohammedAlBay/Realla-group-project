@@ -12,7 +12,6 @@ const DashboardTenant = () => {
             <DashboardTenantBar />
 
 
-
             < DashboardTenantLanding />
             < PayNow />
 
