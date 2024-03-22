@@ -140,18 +140,15 @@ Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
 });
 
-<<<<<<< HEAD
 /*ERROR*/
 
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
 
-=======
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
->>>>>>> bc908442c4f66a37f64d885a76ac3584e69a67f7
 
 Route::get('/searchresults', function () {
     return Inertia::render('searchresults');
