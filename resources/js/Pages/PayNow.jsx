@@ -40,7 +40,7 @@ const PayNow = () => {
                     <h5>Shipping</h5>
                     <h4>€ 9.50</h4>
                     <h5 className='total'>Total</h5>
-                    <h1>€ 167.50</h1>
+                    <h1>€ 167.50  </h1>
                 </div>
                 <h2>Payment</h2>
                 <div id='payment' className='payment'>
