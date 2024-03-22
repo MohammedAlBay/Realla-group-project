@@ -1,7 +1,8 @@
 import React from 'react';
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import RightArrow from "@/Components/RightArrow.jsx";
-import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
+
+
 
 
 
@@ -15,6 +16,8 @@ const Landing = () => {
                 to connect</h1>
             <div className={"search-landing"}>
                 <SearchBarGallery/>
+
+
             </div>
 
         </div>

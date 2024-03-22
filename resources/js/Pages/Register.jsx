@@ -20,15 +20,15 @@ const Register = () => {
     };
 
     return (
-        <div className="flex bg-gray-900 text-white p-8 justify-between" style={{ backgroundColor: '#292F36' }}> {/* Space between items */}
-            <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}> {/* Set width to 2/3 of the page and added margin to push image more to the left */}
-                <div style={{ position: 'relative', width: '500px', height: '625px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
-            </div>
-            <div className="w-4/5 max-w-md ml-auto mr-20 mt-32 mb-20"> {/* Push to the right with ml-auto, and a bit to the left with mr-4 */}
-                <div className="relative mr-8">
-                    <div className="absolute inset-0"></div>
-                    <img src="/images/RegisterImage.png" alt="Registration" className="absolute inset-0 object-cover w-full h-full" />
+        <div className="flex bg-gray-900 text-white p-8 justify-between" style={{ backgroundColor: '#292F36' }}>
+            <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}>
+                <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}>
                 </div>
+                <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '-7rem' }}>
+                    <img src="/images/RegisterImage.png" alt="LoginOptions" className="object-cover w-auto h-4/5"/> 
+                </div>
+            </div>
+            <div className="w-4/5 max-w-md ml-auto mr-20 mt-24 mb-20">
                 <div>
                     <h2 className="text-2xl font-semibold mb-4">Create your Free Account</h2>
                     <p>Submit your data for registration</p>
@@ -65,7 +65,7 @@ const Register = () => {
                                     checked={isLandlord}
                                     onChange={(e) => setIsLandlord(e.target.checked)}
                                 />
-                                <div style={{ width: '2rem' }}></div> {/* Adjust the width as needed */}
+                                <div style={{ width: '2rem' }}></div>
                                 <Checkbox
                                     label="Tenant"
                                     checked={!isLandlord}
@@ -79,7 +79,7 @@ const Register = () => {
                                 checked={agreeToPolicy}
                                 onChange={(e) => setAgreeToPolicy(e.target.checked)}
                                 required
-                                checkboxClassName="rounded-full" // Apply rounded corners to the checkbox
+                                checkboxClassName="rounded-full"
                             />
                         </div>
                         <Button type="submit">Get Started</Button>

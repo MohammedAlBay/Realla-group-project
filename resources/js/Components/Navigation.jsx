@@ -60,7 +60,11 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-                            <LoginRegisterButtons className="nav__item desktop" />
+
+                            <li className="nav__item">
+                                <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
+                            </li>
+                            <LoginRegisterButtons className="nav__item desktop"/>
                         </ul>
                     </div>
                 )}
@@ -69,9 +73,6 @@ function Navigation() {
                 {!isDesktop && (
                     <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
                         <ul className="nav__list">
-                            <li className="nav__item">
-                                <Link href="/" className="nav__link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                            </li>
 
                             <li className="nav__item">
                                 <Link href="/" className="nav__link"
@@ -88,12 +89,12 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>Gallery</Link>
                             </li>
 
-                            {/*
+
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link"
                                       onClick={() => setIsMenuOpen(false)}>Contact</Link>
                             </li>
-                            */}
+
 
                             <div className="nav__actions">
                                 <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
