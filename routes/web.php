@@ -110,5 +110,11 @@ Route::get('/paynow', function () {
 });
 
 
+/*ERROR*/
+
+Route::get('/{any}', function () {
+    return Inertia::render('CustomErrorPage');
+})->where('any','.*');
+
 
 

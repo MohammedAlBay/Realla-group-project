@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Error = () => {
+const CustomErrorPage = () => {
     return (
         <div className="bg-gray-900 flex items-center justify-center min-h-screen px-4">
             <div className="text-center">
@@ -17,4 +17,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default CustomErrorPage;
