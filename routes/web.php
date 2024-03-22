@@ -90,6 +90,10 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+Route::get('/search', function () {
+    return Inertia::render('SearchResults');
+});
+
 
 /*DASHBOARDS*/
 Route::get('/dashboard-tenant', function () {
@@ -112,7 +116,4 @@ Route::get('/test', function () {
 Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
-
-
-
 
