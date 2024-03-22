@@ -1,11 +1,14 @@
 import React from 'react';
 import "../../css/Payment.css"
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 
 
 const PayNow = () => {
     return (
         <div className="paynow">
+            <DashboardTenantBar />
+
             <div className='subject'><span> Payment</span>
                 <strong>Payment Panel</strong>
             </div>

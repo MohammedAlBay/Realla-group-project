@@ -1,11 +1,13 @@
 import React from 'react';
 import "../../css/Dashboard.css"
-import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
+import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
+
 
 const DashboardTenantLanding = () => {
     return (
         <div className="dashboard">
 
+            {/*
             <div className="header-user-name">
 
                 <div className="user-info">
@@ -15,7 +17,9 @@ const DashboardTenantLanding = () => {
                 </div>
             </div>
 
-            < DashboardLandloardBar/>
+            */}
+
+            <CircularSliderCarousel />
 
             <div className="content">
 

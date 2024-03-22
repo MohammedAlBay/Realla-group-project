@@ -88,16 +88,23 @@ Route::get('/mock-up', function () {
 
 
 /*DASHBOARD TENANT*/
-Route::get('/dashboard-tenant', function () {
-    return Inertia::render('DashboardTenantLanding');
-});
-
-Route::get('/dashboard-tenant', function () {
+Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
 
 
+
+Route::get('/dashboard-tenant', function () {
+    return Inertia::render('DashboardTenantLanding');
+});
+
+
+
 /*DASHBOARD LANDLOARD */
+Route::get('/landloard', function () {
+    return Inertia::render('DashboardLandloard');
+});
+
 Route::get('/dashboard-landloard', function () {
     return Inertia::render('DashboardLandloardLanding');
 });
