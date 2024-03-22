@@ -74,9 +74,11 @@ Route::get('/register', function () {
     return Inertia::render('Register');
 });
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
+Route::get('/forgot-password', function () {
+    return Inertia::render('ForgotPassword');
 });
+
+
 
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
@@ -86,8 +88,13 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+<<<<<<< HEAD
+Route::get('/search', function () {
+    return Inertia::render('SearchResults');
+=======
 Route::get('/property', function () {
     return Inertia::render('MyPropertyPage');
+>>>>>>> main
 });
 
 
@@ -113,6 +120,14 @@ Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
+Route::get('/mailbox-landlord', function () {
+    return Inertia::render('MailboxLandlord');
+});
 
+Route::get('/mailbox-tenant', function () {
+    return Inertia::render('MailboxTenant');
+});
 
-
+Route::get('/searchresults', function () {
+    return Inertia::render('searchresults');
+});
