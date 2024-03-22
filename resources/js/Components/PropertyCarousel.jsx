@@ -6,10 +6,28 @@ const MyPropertyCarousel = () => {
   return (
     <Carousel>
       <div>
-        <img src="..\images\abby-rurenko-uOYak90r4L0-unsplash.jpg" alt="Property room 1" />
+        <img src="..\images\PropertyInterior\front-yard.avif" alt="View of the front yard of the property" />
       </div>
       <div>
-        <img src="" alt="Property room 2" />
+        <img src="..\images\PropertyInterior\entrance.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\living-room.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\kitchen.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\dining-room.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\bedroom1.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\attic.avif" alt="View of the entrance of the property" />
+      </div>
+      <div>
+        <img src="..\images\PropertyInterior\back-yard.avif" alt="View of the entrance of the property" />
       </div>
       {/* Add more images as needed */}
     </Carousel>
