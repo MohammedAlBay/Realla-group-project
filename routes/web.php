@@ -88,8 +88,13 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+<<<<<<< HEAD
 Route::get('/search', function () {
     return Inertia::render('SearchResults');
+=======
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
+>>>>>>> main
 });
 
 
