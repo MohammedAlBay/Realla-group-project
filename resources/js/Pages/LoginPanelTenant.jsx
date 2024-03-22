@@ -15,7 +15,7 @@ const LoginPanelTenant = () => {
 
     return (
         <div className="flex bg-gray-900 text-white p-8">
-            <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}> {/* Set width to 2/3 of the page and added margin to push image more to the left */}
+            <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}>
                 <div style={{ position: 'relative', width: '500px', height: '625px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
             </div>            
             <div className="flex-grow">
@@ -47,8 +47,6 @@ const LoginPanelTenant = () => {
                         <div className="flex items-center">
                             <input
                                 type="checkbox"
-                                checked={isLandlord}
-                                onChange={(e) => setIsLandlord(e.target.checked)}
                                 className="mr-2"
                             />
                             <label>Remember Me</label>
@@ -60,10 +58,11 @@ const LoginPanelTenant = () => {
                 <p className="mt-4">Don’t have an account? <a href="#" className="text-yellow-500">Register</a></p>
             </div>
             <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '10.5rem' }}>
-                <img src="/images/LoginPanelTenantImage.png" alt="LoginOptions" className="object-cover w-1/2 h-auto"/> 
+                <img src="/images/LoginPanelTenantImage.png" alt="LoginPanelTenantImage" className="object-cover w-1/2 h-auto"/> 
             </div>
         </div>
     );
 };
 
 export default LoginPanelTenant;
+

@@ -60,7 +60,7 @@ const LoginPanelLandlord = () => {
                 <p className="mt-4">Don’t have an account? <a href="#" className="text-yellow-500">Register</a></p>
             </div>
             <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '10.5rem' }}>
-                <img src="/images/LoginPanelLandlordImage.png" alt="LoginOptions" className="object-cover w-1/2 h-auto"/> 
+                <img src="/images/LoginPanelLandlordImage.png" alt="LoginPanelLandlordImage" className="object-cover w-1/2 h-auto"/> 
             </div>
         </div>
     );
