@@ -9,43 +9,39 @@ const PayNow = () => {
         <div className="paynow">
             <DashboardTenantBar />
 
-            <div className='subject'><span> Payment</span>
-                <strong>Payment Panel</strong>
-            </div>
-
             <div className='checkout'>
                 <div className='order'>
-                    <h2 className="payment-text">Checkout</h2>
-                    <h5 className="payment-text">Order #0101</h5>
+                    <h2 className="payment-text">Current Rental Fee</h2>
+                    <h5 className="payment-text"> 01.01.2024</h5>
                     <ul className='order-list'>
                         <li>
                             <img
                                 src=''
                                 alt=''/>
-                            <h4 className="payment-text">Text</h4>
-                            <h5 className="payment-text">€110</h5>
+                            <h4 className="payment-text">Monthly Charges</h4>
+                            <h5 className="payment-text">€60</h5>
                         </li>
                         <li>
                             <img
                                 src=''
                                 alt=''/>
-                            <h4 className="payment-text">Text</h4>
-                            <h5 className="payment-text">€28</h5>
+                            <h4 className="payment-text">Parking</h4>
+                            <h5 className="payment-text">€50</h5>
                         </li>
                         <li>
                             <img
                                 src=''
                                 alt=''/>
-                            <h4 className="payment-text">Text</h4>
+                            <h4 className="payment-text">Cleaning Services</h4>
                             <h5 className="payment-text">€20</h5>
                         </li>
                     </ul>
-                    <h5 className="payment-text">Shipping</h5>
+                    <h5 className="payment-text">Trash</h5>
                     <h4 className="payment-text">€ 9.50</h4>
                     <h5 className='total'>Total</h5>
-                    <h1 className="payment-text">€ 167.50  </h1>
+                    <h1 className="payment-text">€ 850</h1>
                 </div>
-                <h2>Payment</h2>
+                <h2>Pay Now</h2>
                 <div id='payment' className='payment'>
                     <div className='card'>
                         <div className='card-content'>
