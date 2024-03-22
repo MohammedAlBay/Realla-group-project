@@ -62,8 +62,20 @@ Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 });
 
+Route::get('/login-landlord', function () {
+    return Inertia::render('LoginPanelLandlord');
+});
+
+Route::get('/login-tenant', function () {
+    return Inertia::render('LoginPanelTenant');
+});
+
 Route::get('/register', function () {
     return Inertia::render('Register');
+});
+
+Route::get('/searchresults', function () {
+    return Inertia::render('searchresults');
 });
 
 Route::get('/mock-up-1', function () {

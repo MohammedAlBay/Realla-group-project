@@ -2,7 +2,7 @@ import React from 'react';
 import PropertyList from './PropertyList';
 import "../../css/app.css";
 
-const ResultsPage = () => {
+const SearchResults = () => {
     return (
         <div className="results-page">
             <h1>Property Search Results</h1>
@@ -11,4 +11,4 @@ const ResultsPage = () => {
     );
 };
 
-export default ResultsPage;
+export default SearchResults;
