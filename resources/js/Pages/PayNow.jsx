@@ -1,48 +1,45 @@
 import React from 'react';
 import "../../css/Payment.css"
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 
 
 const PayNow = () => {
     return (
         <div className="paynow">
-            <div className='subject'><span> Payment</span>
-                <strong>Payment Panel</strong>
-            </div>
+            <DashboardTenantBar />
 
             <div className='checkout'>
                 <div className='order'>
-                    <h2>Checkout</h2>
-                    <h5>Order #0101</h5>
+                    <h2 className="payment-text">Current Rental Fee</h2>
+                    <h5 className="payment-text"> 01.01.2024</h5>
                     <ul className='order-list'>
                         <li>
-                            <img
-                                src=''
-                                alt=''/>
-                            <h4>Text</h4>
-                            <h5>€110</h5>
+                            <i className='bx bxs-pie-chart' style={{color: '#FDB414'}}></i>
+                            <h4 className="payment-text">Monthly Fee</h4>
+                            <h5 className="payment-text">€600</h5>
                         </li>
                         <li>
-                            <img
-                                src=''
-                                alt=''/>
-                            <h4>Text</h4>
-                            <h5>€28</h5>
+                            <i className='bx bxs-pie-chart-alt' style={{color: '#FDB414'}}></i>
+                            <h4 className="payment-text">Monthly Charges
+                            </h4>
+                            <h5 className="payment-text">€ 65</h5>
                         </li>
                         <li>
-                            <img
-                                src=''
-                                alt=''/>
-                            <h4>Text</h4>
-                            <h5>€20</h5>
+                        <i className='bx bxs-parking' style={{color: '#FDB414'}}></i>
+                            <h4 className="payment-text">Parking</h4>
+                            <h5 className="payment-text">€50</h5>
                         </li>
                     </ul>
-                    <h5>Shipping</h5>
-                    <h4>€ 9.50</h4>
+                    <div className="cleaning-services">
+                        <h5 className="payment-text">Cleaning Services</h5>
+                        <h4 className="payment-text">€ 9.50</h4>
+                    </div>
+
                     <h5 className='total'>Total</h5>
-                    <h1>€ 167.50  </h1>
+                    <h1 className="payment-text">€ 850</h1>
                 </div>
-                <h2>Payment</h2>
+                <h2>Payment Panel </h2>
                 <div id='payment' className='payment'>
                     <div className='card'>
                         <div className='card-content'>
@@ -51,15 +48,29 @@ const PayNow = () => {
                                  xmlnsXlink='http://www.w3.org/1999/xlink'>
                                 {/* Add your SVG paths here */}
                             </svg>
-                            <h5>Card Number</h5>
+                            <h5 className="payment-text">Card Number</h5>
                             <h6 id='label-cardnumber'>0000 0000 0000 0000</h6>
                             <h5>Expiration<span>CVC</span></h5>
                             <h6 id='label-cardexpiration'>00 / 0000<span>000</span></h6>
                         </div>
                         <div className='wave'></div>
                     </div>
-                    <div className='card-form'>
-                        {/* Your card form elements */}
+                    <div className="card-form">
+                        <div className="input-group">
+                            <label htmlFor="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456"/>
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="expiration">Expiration (MM/YY)</label>
+                            <input type="text" id="expiration" name="expiration" placeholder="MM/YY"/>
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="CVV"/>
+                        </div>
+                        <div className="input-group">
+                            <button type="submit" value="Submit" className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
+                        </div>
                     </div>
                 </div>
             </div>

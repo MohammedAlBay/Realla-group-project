@@ -9,6 +9,7 @@ import DashboardTenantLanding from "@/Pages/DashboardTenantLanding.jsx";
 import Home from "@/Pages/Home.jsx";
 
 
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
