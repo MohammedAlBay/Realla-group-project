@@ -117,3 +117,10 @@ Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
+Route::get('/mailbox-landlord', function () {
+    return Inertia::render('MailboxLandlord');
+});
+
+Route::get('/mailbox-tenant', function () {
+    return Inertia::render('MailboxTenant');
+});
