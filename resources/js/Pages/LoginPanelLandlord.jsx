@@ -37,13 +37,6 @@ const LoginPanelLandlord = () => {
                         placeholder="Password"
                         className="border rounded-lg p-2 mt-2"
                     />
-                    <input
-                        type="password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        placeholder="Confirm Password"
-                        className="border rounded-lg p-2 mt-2"
-                    />
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center">
                             <input

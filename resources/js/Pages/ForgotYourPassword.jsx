@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@inertiajs/react';
 
 const ForgotPassword = () => {
     // Define state variables to store form input values
@@ -31,7 +32,7 @@ const ForgotPassword = () => {
                 </form>   
             </div>
             <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '10.5rem' }}>
-                <img src="/images/ForgotYourPasswordImage.png" alt="LoginOptions" className="object-cover w-1/2 h-auto"/> 
+                <img src="/images/ForgotYourPasswordImage.png" alt="ForgotPassword" className="object-cover w-1/2 h-auto"/> 
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ const Register = () => {
                     <form onSubmit={handleSubmit} className="mt-4">
                         <TextInput
                             label="Full Name"
-                            type="text"
+                            type="name"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
                         />

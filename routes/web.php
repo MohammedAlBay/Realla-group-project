@@ -74,6 +74,10 @@ Route::get('/register', function () {
     return Inertia::render('Register');
 });
 
+Route::get('/forgot-password', function () {
+    return Inertia::render('ForgotPassword');
+});
+
 Route::get('/searchresults', function () {
     return Inertia::render('searchresults');
 });

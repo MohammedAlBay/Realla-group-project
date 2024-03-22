@@ -43,12 +43,6 @@ const LoginPanelTenant = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <TextInput
-                            label="Confirm Password"
-                            type="password"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                        />
                         <div className="flex items-center justify-between mb-4">
                             <Checkbox
                                 label="Remember Me"
