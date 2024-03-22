@@ -81,6 +81,8 @@ Route::get('/searchresults', function () {
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
+
 Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
+
