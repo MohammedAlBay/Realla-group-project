@@ -1,11 +1,11 @@
 import React from "react";
-import MyPropertyCarousel from '../Components/MyPropertyCarousel';
+import PropertyCarousel from '../Components/PropertyCarousel';
 
 const MyPropertyPage = () => {
   return (
     <div>
       <h1>This is My property's detail page</h1>
-      <MyPropertyCarousel />
+      <PropertyCarousel />
     </div>
   );
 }
