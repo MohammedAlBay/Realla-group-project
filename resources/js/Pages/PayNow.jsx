@@ -57,7 +57,38 @@ const PayNow = () => {
                     </div>
                     <div className='card-form'>
                         {/* Your card form elements */}
+                        <p className='field'>
+                            <svg id='i-cardfront' xmlns="http://www.w3.org/2000/svg"
+                                 xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                 viewBox="0 0 512 512" style={{enableBackground: 'new 0 0 28 28'}} xmlSpace="preserve"
+                                 width="28px" height="28px">
+                                {/* SVG Paths */}
+                            </svg>
+                            <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567'
+                                   pattern='\d*' title='Card Number'/>
+                        </p>
+                        <p className='field space'>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+                                 version="1.1"
+                                 id="i-calendar" x="0px" y="0px" viewBox="0 0 191.259 191.259"
+                                 style={{enableBackground: 'new 0 0 191.259 191.259'}} xmlSpace="preserve" width="28px"
+                                 height="28px">
+                                {/* SVG Paths */}
+                            </svg>
+                            <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY"
+                                   pattern="\d*" title='Card Expiration Date'/>
+                        </p>
+                        <p className='field'>
+                            <svg id='i-cardback' xmlns="http://www.w3.org/2000/svg"
+                                 xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                 viewBox="0 0 512 512" style={{enableBackground: 'new 0 0 28 28'}} xmlSpace="preserve"
+                                 width="28px" height="28px">
+                                {/* SVG Paths */}
+                            </svg>
+                            {/* Other card back inputs */}
+                        </p>
 
+                        <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
 
                     </div>
                 </div>
@@ -65,8 +96,8 @@ const PayNow = () => {
 
         </div>
 
-)
-;
+    )
+        ;
 };
 
 export default PayNow;

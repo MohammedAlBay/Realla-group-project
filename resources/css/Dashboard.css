@@ -7,12 +7,11 @@
 }
 
 .sidebar {
-    background-color: transparent;
-    width: 500px;
-    padding: 100px;
-    padding-top: 12rem;
-    margin-right: auto;
+    width: 400px;
+    margin-right: auto ;
     display: flex;
+    padding-left: 4rem;
+    padding-top: 3rem;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
@@ -21,15 +20,19 @@
 
 .sidebar-menu {
     list-style: none;
-    padding: 10px;
+
 }
 
 .sidebar-menu-item {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+
 }
 
 .sidebar-menu-item i {
    font-size: 25px;
+
+    margin-right: 1rem;
+
 }
 .sidebar-menu-content {
     display: flex;
@@ -47,7 +50,7 @@
 }
 
 .sidebar-menu-link:hover {
-    background-color: #FFF0CF;
+    background-color: #fddd95;
 }
 /*
 .nav__list {

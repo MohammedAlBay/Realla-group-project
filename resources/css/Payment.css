@@ -74,9 +74,9 @@ h4 {
 }
 
  h5 {
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 700;
-    color: #c9d6de;
+    color: #d0b16a;
     letter-spacing: 1px;
     text-align: left;
     text-transform: uppercase;
@@ -135,9 +135,9 @@ h6 > span {
     top: 0rem;
     right: 0rem;
     bottom: 0rem;
-    width: 70vw;
+    width: 60vw;
     height: 94%;
-    background: rgba(37,44,65,1);
+    background: #444D57;
     border-radius:   0 0 0 15%   ;
     overflow-y: hidden;
     z-index: 0;
@@ -328,15 +328,15 @@ input[type=text]:focus {
 button:focus { outline:0; }
 
 .button-cta {
-    width: 100%;
+    width: 70%;
     height: 65px;
     position: absolute;
     float: right;
-    right: 0px;
+    right: 3.5rem;
     bottom: -68px;
     padding: 10px 20px;
-    background-color: #f1404b;
-    border: 1px solid #f1404b;
+    background-color: #FDB414;
+    border: 1px solid #FDB414;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -351,8 +351,8 @@ button:focus { outline:0; }
 }
 
 .button-cta:hover {
-    background: rgba(193,14,26,1);
-    border: 1px solid rgba(193,14,26,1);
+    background:orangered;
+    border: 1px solid orangered;
 }
 
 .button-cta span {
@@ -392,7 +392,7 @@ Credit Card Background
     height: 300px;
     width: 300px;
     position: relative;
-    background: #780910;
+    background: orange;
     z-index: -1;
 }
 
