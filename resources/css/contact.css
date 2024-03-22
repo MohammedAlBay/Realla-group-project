@@ -1,54 +1,84 @@
 /* CONTACT PAGE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
 .contact-container {
-  background-color: white;
-  padding: 20px;
-  color: black;
+  background-color: #292F36;
 }
 
 .contact-container h1 {
-  font-size: xx-large;
+  font-size: 40px;
   font-weight: bold;
   color: #ECAA16;
   text-align: center;
 }
 
 .contact-container p {
-  color: black;
+  font-size: 24px;
+  color: #FFF;
   text-align: center;
 }
 
 .contact-panel {
-  width: 80%;
-  margin: 10px auto;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px;
   display: flex;
+  max-width: 60%;
+  margin: 10px auto;
+  background-color: #FFF;
+  border-radius: 9px;
+  padding: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info-container {
-  background-color: #292F36;
-  border-radius: 10px;
-  padding: 30px;
-  width: 35%; /* Adjust width as needed */
-}
-
 .contact-form {
+  display: grid;
   width: 75%; /* Adjust width as needed */
-  padding: 20px;
+  padding: 10px;
+  font-size: 16px;
+  justify-content: space-evenly;
 }
 
-.contact-form .form-group {
+.form-group-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 10px; /* Add some spacing between grid items */
+}
+
+.form-group-input div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-direction: column; /* Align label and input vertically */
 }
 
-.form-group label {
-  display: block;
-  margin-right: 5px;
+.form-group-options {
+  display: inline-block;
+  margin: 10px 0px;
+}
+
+.form-group-options p {
+  color: #000;
+  text-align: start;
+  font-size: 16px;
+  margin: 5px 0px;
+}
+
+.form-group-options label {
+  margin: 0px 10px;
+}
+
+.form-group-area {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+
+.form-group-button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .contact-form input[type="text"],
@@ -56,32 +86,57 @@
   border-radius: 8px;
   padding: 10px;
   width: 100%;
-  margin-bottom: 10px;
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  color: #FDB514;
+  background-color: rgb(55 65 81 / 0);
+  border-width: 1px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FDB514;
+  outline-color: none;
+  box-shadow: none;
 }
 
 .contact-form textarea {
   border-radius: 8px;
   padding: 10px;
-  width: 80%;
-  margin-bottom: 10px;
-  height: 200px;
+  width: 100%;
+  margin: 10px 0;
+  height: 100px;
 }
 
-.contact-form button {
+#send-button {
   background-color: #FDB514;
-  color: black;
+  color: #000;
   border: none;
   border-radius: 8px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   cursor: pointer;
+  grid-column: 3;
+  align-self: end;
 }
 
 /* ContactInfo component */
 .contact-info-container {
   display: flex;
   flex-direction: column;
-  background-color: #292F36;
+  background-color: #1E2127;
+  border-radius: 8px 0 0 8px;
   color: #FFF;
+  padding: 30px;
+  width: 40%; /* Adjust width as needed */
+  justify-content: space-between;
 }
 
 .contact-info-header {
@@ -89,31 +144,31 @@
 } 
 
 .contact-info-header h2 {
+  font-size: 24px;
   color: #FFF;
   text-align: left;
   font-weight: 700;
-  font-size: larger;
 }
 
 .contact-info-header p {
+  font-size: 16px;
   color: #FFF;
   text-align: left;
 }
 
-.contact-info-main {
-  margin-bottom: 20px;
-}
-
 .contact-info-main li {
-  margin-bottom: 10px; /* Add margin between each list item */
+  margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
-.contact-info-main li .icon {
+.contact-info-main li i {
   margin-right: 5px; /* Add margin to the right side of the icons */
+  font-size: 20px;
 }
 
-.social-media {
-  margin-top: 20px;
+.social-media-links {
+  margin-top: 10px;
+  font-size: 30px;
+  display: inline-flex;
 }

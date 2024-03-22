@@ -30,50 +30,51 @@ export default function Contact() {
         <ContactInfo />
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group-input">
-            <label htmlFor="firstName">First Name:</label><br />
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-            />
+            <div>
+              <label htmlFor="firstName">First Name:</label><br />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="lastName">Last Name:</label><br />
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phoneNumber">Phone Number:</label><br />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
-          <div className="form-group-input">
-            <label htmlFor="lastName">Last Name:</label><br />
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group-input">
-            <label htmlFor="email">Email:</label><br />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group-input">
-            <label htmlFor="phoneNumber">Phone Number:</label><br />
-            <input
-              type="text"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
           <div className="form-group-options">
             <p>Select a subject:</p>
             <input 
@@ -101,7 +102,6 @@ export default function Contact() {
             />
             <label htmlFor="cb4">Other</label>
           </div>
-
           <div className="form-group-area">
             <label htmlFor="message">Message:</label>
             <textarea
@@ -112,7 +112,9 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <button type="submit">Send Message</button>
+          <div className="form-group-button">
+            <button type="submit" id="send-button">Send Message</button>
+          </div>
         </form>
       </div>
     </div>
