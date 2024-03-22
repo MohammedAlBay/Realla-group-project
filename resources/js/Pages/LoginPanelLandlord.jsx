@@ -5,6 +5,7 @@ const LoginPanelLandlord = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [isLandlord, setIsLandlord] = useState(false); // Define isLandlord state
 
     // Handle form submission
     const handleSubmit = (event) => {
@@ -14,9 +15,9 @@ const LoginPanelLandlord = () => {
     };
 
     return (
-        <div className="flex bg-gray-900 text-white p-8">
+        <div className="flex bg-gray-900 text-white p-8 justify-between" style={{ backgroundColor: '#292F36' }}>
             <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}> {/* Set width to 2/3 of the page and added margin to push image more to the left */}
-                <div style={{ position: 'relative', width: '500px', height: '625px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
+                <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
             </div>            
             <div className="flex-grow">
                 <h2 className="text-2xl font-semibold mb-4">Welcome Back to REALLA!</h2>
