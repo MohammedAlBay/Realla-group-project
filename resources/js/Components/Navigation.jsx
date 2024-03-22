@@ -61,6 +61,9 @@ function Navigation() {
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
 
+                            <li className="nav__item">
+                                <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
+                            </li>
                             <LoginRegisterButtons className="nav__item desktop"/>
                         </ul>
                     </div>

@@ -86,3 +86,29 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+
+/*DASHBOARDS*/
+Route::get('/dashboard-tenant', function () {
+    return Inertia::render('DashboardTenantLanding');
+});
+
+Route::get('/dashboard-landloard', function () {
+    return Inertia::render('DashboardLandloardLanding');
+});
+
+
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
+
+
+/*PAYMENT*/
+
+
+Route::get('/paynow', function () {
+    return Inertia::render('PayNow');
+});
+
+
+
+
