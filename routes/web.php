@@ -78,9 +78,7 @@ Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
 });
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
-});
+
 
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
@@ -123,4 +121,8 @@ Route::get('/mailbox-landlord', function () {
 
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
+});
+
+Route::get('/searchresults', function () {
+    return Inertia::render('searchresults');
 });
