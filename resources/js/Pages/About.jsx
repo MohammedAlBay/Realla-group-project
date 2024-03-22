@@ -83,10 +83,7 @@ const About = () => {
             </div>
       
 
-
-
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
                     {teamMembers.map(member => (
                         <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"style={{ backgroundColor: '#444d57' }}>
                             <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover" />
