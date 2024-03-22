@@ -62,13 +62,53 @@ Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 });
 
+Route::get('/login-landlord', function () {
+    return Inertia::render('LoginPanelLandlord');
+});
+
+Route::get('/login-tenant', function () {
+    return Inertia::render('LoginPanelTenant');
+});
+
 Route::get('/register', function () {
     return Inertia::render('Register');
+});
+
+Route::get('/searchresults', function () {
+    return Inertia::render('searchresults');
 });
 
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
+
 Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
+
+
+/*DASHBOARDS*/
+Route::get('/dashboard-tenant', function () {
+    return Inertia::render('DashboardTenantLanding');
+});
+
+Route::get('/dashboard-landloard', function () {
+    return Inertia::render('DashboardLandloardLanding');
+});
+
+
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
+
+
+/*PAYMENT*/
+
+
+Route::get('/paynow', function () {
+    return Inertia::render('PayNow');
+});
+
+
+
+
