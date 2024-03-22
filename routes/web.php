@@ -74,9 +74,11 @@ Route::get('/register', function () {
     return Inertia::render('Register');
 });
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
+Route::get('/forgot-password', function () {
+    return Inertia::render('ForgotPassword');
 });
+
+
 
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
@@ -86,10 +88,40 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+<<<<<<< HEAD
+Route::get('/search', function () {
+    return Inertia::render('MockUp');
+});
+=======
+<<<<<<< HEAD
+Route::get('/search', function () {
+    return Inertia::render('SearchResults');
+=======
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
+>>>>>>> main
+});
 
-/*DASHBOARDS*/
+>>>>>>> main
+
+/*DASHBOARD TENANT*/
 Route::get('/dashboard-tenant', function () {
     return Inertia::render('DashboardTenantLanding');
+});
+
+Route::get('/tenant', function () {
+    return Inertia::render('DashboardTenant');
+});
+
+
+
+
+
+
+
+/*DASHBOARD LANDLOARD */
+Route::get('/landloard', function () {
+    return Inertia::render('DashboardLandloard');
 });
 
 Route::get('/dashboard-landloard', function () {
@@ -97,6 +129,7 @@ Route::get('/dashboard-landloard', function () {
 });
 
 
+/* TEST */
 Route::get('/test', function () {
     return Inertia::render('Test');
 });
@@ -104,17 +137,27 @@ Route::get('/test', function () {
 
 /*PAYMENT*/
 
-
 Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
+Route::get('/mailbox-landlord', function () {
+    return Inertia::render('MailboxLandlord');
+});
 
+<<<<<<< HEAD
 /*ERROR*/
 
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
 
+=======
+Route::get('/mailbox-tenant', function () {
+    return Inertia::render('MailboxTenant');
+});
+>>>>>>> bc908442c4f66a37f64d885a76ac3584e69a67f7
 
-
+Route::get('/searchresults', function () {
+    return Inertia::render('searchresults');
+});

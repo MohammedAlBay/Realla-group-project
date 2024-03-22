@@ -10,6 +10,7 @@ import Home from "@/Pages/Home.jsx";
 import CustomErrorPage from './Pages/CustomErrorPage.jsx';
 
 
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({

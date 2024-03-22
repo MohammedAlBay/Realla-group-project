@@ -26,7 +26,10 @@
         "@inertiajs/vue3": "^1.0.15",
         "boxicons": "^2.1.4",
         "gsap": "^3.12.5",
+        "jquery": "^3.7.1",
+        "react-easy-swipe": "^0.0.23",
         "react-icons": "^5.0.1",
+        "react-responsive-carousel": "^3.2.23",
         "react-router-dom": "^6.22.3",
         "tinycircleslider": "^2.0.8",
         "webpack": "^5.90.3"
