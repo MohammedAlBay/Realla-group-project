@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from '@inertiajs/react';
 
 const ForgotPassword = () => {
     // Define state variables to store form input values
