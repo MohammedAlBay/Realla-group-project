@@ -86,6 +86,10 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
+});
+
 
 /*DASHBOARDS*/
 Route::get('/dashboard-tenant', function () {
