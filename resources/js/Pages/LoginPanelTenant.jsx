@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Button from '../Components/RegisterButton'; 
 import TextInput from '../Components/RegisterTextInput'; 
 import Checkbox from '../Components/RegisterCheckbox'; 
+import { Link } from '@inertiajs/react'; 
 
 const LoginPanelTenant = () => {
     // Define state variables to store form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
     // Handle form submission
@@ -49,11 +49,12 @@ const LoginPanelTenant = () => {
                                 checked={rememberMe}
                                 onChange={(e) => setRememberMe(e.target.checked)}
                             />
-                            <a href="#" className="text-white">Forgot Password?</a>
+                            {/* Use the Link component for navigation */}
+                            <Link href="/forgot-password" className="text-white">Forgot Password?</Link>
                         </div>
                         <Button type="submit">Login</Button>
                     </form>   
-                    <p className="mt-4">Don’t have an account? <a href="#" className="text-yellow-500">Register</a></p>
+                    <p className="mt-4">Don’t have an account? <Link href="/register" className="text-yellow-500">Register</Link></p>
                 </div>
             </div>
         </div>
