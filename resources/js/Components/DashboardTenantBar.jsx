@@ -18,10 +18,10 @@ const DashboardTenantBar = () => {
                         </div>
                     </li>
                     <li className="sidebar-menu-item">
-                        <div className="sidebar-menu-content">
+                        <Link href="/mailbox-tenant" className="sidebar-menu-content">
                             <i className='bx bxs-message-detail' style={{color: '#FDB414'}}></i>
                             <a href="#" className="sidebar-menu-link">Message</a>
-                        </div>
+                        </Link>
                     </li>
                     <li className="sidebar-menu-item">
                         <div className="sidebar-menu-content">
