@@ -34,6 +34,8 @@ html {
 }
 
 
+
+
 /*--------------------
 Text
 ---------------------*/
@@ -42,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
 }
 
-h1 {
+h1.payment-text {
     font-size: 42px;
     color: #6d819c;
     text-align: left;
@@ -103,9 +105,7 @@ h6 > span {
     margin-left: 64px;
 }
 
-/*--------------------
-Checkout
----------------------*/
+/*Checkout*/
 
 .checkout {
     width: 670px;
@@ -194,6 +194,12 @@ ul.order-list li:hover > h4 {
     margin-top: 8px;
 }
 
+ i {
+     float:left;
+     font-size: 25px;
+     margin: 1rem 3rem;
+}
+
 ul.order-list li > h5 {
     margin-top: 0px;
     text-align: right;
@@ -210,6 +216,7 @@ ul.order-list li:hover > h5 {
     margin-top: 3px;
     display: block;
 }
+
 
 /*--------------------
 Payment
