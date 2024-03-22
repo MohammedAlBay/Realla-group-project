@@ -26,8 +26,9 @@ html {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #e1e1e1;
 }
-
+/*
 body {
     background: rgba(37,44,65,1);
     background: -moz-linear-gradient(top, rgba(37,44,65,1) 0%, rgba(37,44,65,1) 60%, rgba(221,223,230,1) 60%, rgba(221,223,230,1) 100%);
@@ -38,6 +39,7 @@ body {
     background: linear-gradient(to bottom, rgba(37,44,65,1) 0%, rgba(37,44,65,1) 60%, rgba(221,223,230,1) 60%, rgba(221,223,230,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252c41', endColorstr='#dddfe6', GradientType=0 );
 }
+*/
 
 .paynow{
     height: 100vh;
@@ -45,7 +47,10 @@ body {
     align-items: center;
     background-color: transparent;
     margin: 0;
+    overflow-y: hidden;
 }
+
+
 
 .subject {
     font-family: 'Playfair Display', serif;
@@ -68,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
 }
 
-h1 {
+h1.payment-text {
     font-size: 42px;
     color: #6d819c;
     text-align: left;
@@ -97,7 +102,7 @@ h4 {
     line-height: 2;
 }
 
-h5 {
+ h5 {
     font-size: 11px;
     font-weight: 700;
     color: #c9d6de;
@@ -106,7 +111,7 @@ h5 {
     text-transform: uppercase;
 }
 
-h5 > span {
+.payment-text h5 > span {
     margin-left: 87px;
 }
 
@@ -152,6 +157,21 @@ Checkout
     -webkit-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
     -moz-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
     box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+}
+
+
+.paynow::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 65vw;
+    height: 95%;
+    background: rgba(37,44,65,1);
+    border-radius:   0 0 0 20%   ;
+    overflow-y: hidden;
+    z-index: 0;
 }
 
 .order {
