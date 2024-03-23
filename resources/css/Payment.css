@@ -266,12 +266,12 @@ Payment
     width: 100%;
     position: relative;
     float: right;
-    padding: 15px 35px;
+    padding: 15px 25px;
 }
 
 .card-form > p.field {
     height: 48px;
-    padding: 2px 10px;
+    padding: 8px 10px;
     margin-bottom: 2px;
     background-color: #f4f5f9;
     border: 1px solid #d2d4de;
@@ -293,6 +293,7 @@ input[type=text] {
     font-size: 18px;
     font-weight: 400;
     z-index: 0;
+
 }
 
 input[type=text]:focus {
@@ -320,10 +321,12 @@ input[type=text]:focus {
 
 #cardcvc {
     width: 60px;
+
 }
 
 .space {
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 button:focus { outline:0; }

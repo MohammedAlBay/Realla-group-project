@@ -56,21 +56,25 @@ const PayNow = () => {
                         <div className='wave'></div>
                     </div>
                     <div className="card-form">
-                        <div className="input-group">
-                            <label htmlFor="card-number">Card Number</label>
-                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456"/>
+                        <div className='card-form'>
+                            <p className='field'>
+
+                                <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567'
+                                       pattern='\d*' title='Card Number'/>
+                            </p>
+                            <p className='field space'>
+
+                                <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY"
+                                       pattern="\d*" title='Card Expiration Date'/>
+                            </p>
+                            <p className='field space'>
+
+                                <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
+                                       title='CVC Code'/>
+                            </p>
+                            <button className='button-cta' title='Confirm your purchase'><span>PURCHASE</span></button>
                         </div>
-                        <div className="input-group">
-                            <label htmlFor="expiration">Expiration (MM/YY)</label>
-                            <input type="text" id="expiration" name="expiration" placeholder="MM/YY"/>
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="CVV"/>
-                        </div>
-                        <div className="input-group">
-                            <button type="submit" value="Submit" className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
-                        </div>
+
                     </div>
                 </div>
             </div>

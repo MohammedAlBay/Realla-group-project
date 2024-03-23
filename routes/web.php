@@ -88,21 +88,8 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
-<<<<<<< HEAD
-Route::get('/search', function () {
-    return Inertia::render('MockUp');
-});
-=======
-<<<<<<< HEAD
-Route::get('/search', function () {
-    return Inertia::render('SearchResults');
-=======
-Route::get('/property', function () {
-    return Inertia::render('MyPropertyPage');
->>>>>>> main
-});
 
->>>>>>> main
+
 
 /*DASHBOARD TENANT*/
 Route::get('/dashboard-tenant', function () {
@@ -141,6 +128,7 @@ Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
+
 Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
 });
@@ -151,4 +139,8 @@ Route::get('/mailbox-tenant', function () {
 
 Route::get('/searchresults', function () {
     return Inertia::render('searchresults');
+});
+
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
 });
