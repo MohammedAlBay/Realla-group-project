@@ -56,24 +56,23 @@ const PayNow = () => {
                         <div className='wave'></div>
                     </div>
                     <div className="card-form">
-                        <div className='card-form'>
-                            <p className='field'>
 
+                            <p className='field'>
+                                <i className='bx bx-credit-card-front' id="i-cardfront"></i>
                                 <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567'
                                        pattern='\d*' title='Card Number'/>
                             </p>
                             <p className='field space'>
-
+                                <i className='bx bx-calendar' id="i-calendar"></i>
                                 <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY"
                                        pattern="\d*" title='Card Expiration Date'/>
                             </p>
                             <p className='field space'>
-
+                                <i className='bx bxs-credit-card-front' id="i-cardback"></i>
                                 <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
                                        title='CVC Code'/>
                             </p>
                             <button className='button-cta' title='Confirm your purchase'><span>PURCHASE</span></button>
-                        </div>
 
                     </div>
                 </div>

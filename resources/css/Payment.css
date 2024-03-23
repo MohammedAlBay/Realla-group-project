@@ -261,7 +261,6 @@ Payment
     left: 190px;
 }
 
-
 .card-form {
     width: 100%;
     position: relative;
@@ -276,7 +275,6 @@ Payment
     background-color: #f4f5f9;
     border: 1px solid #d2d4de;
     display: inline-block;
-
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
@@ -293,7 +291,7 @@ input[type=text] {
     font-size: 18px;
     font-weight: 400;
     z-index: 0;
-
+    vertical-align: middle;
 }
 
 input[type=text]:focus {
@@ -307,8 +305,11 @@ input[type=text]:focus {
 
 #i-cardfront, #i-cardback, #i-calendar {
     position: relative;
-    top: 8px;
+    top: 1px;
     z-index: 1;
+    color: #dddfe6;
+    margin: 0;
+    vertical-align: middle;
 }
 
 #cardnumber {
@@ -321,14 +322,12 @@ input[type=text]:focus {
 
 #cardcvc {
     width: 60px;
-
 }
 
 .space {
     margin-right: 10px;
     margin-top: 10px;
 }
-
 button:focus { outline:0; }
 
 .button-cta {
