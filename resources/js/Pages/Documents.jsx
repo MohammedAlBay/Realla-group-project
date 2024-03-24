@@ -44,7 +44,7 @@ const DocumentsPage = () => {
 
     return (
         <div className="body">
-            <DashboardTenantBar />
+
         <div className="documents flex justify-center items-center grid">
             <section>
                 <ul className='indexes'>
@@ -58,7 +58,7 @@ const DocumentsPage = () => {
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
                                        pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
+                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
 
                     </li>
@@ -66,21 +66,21 @@ const DocumentsPage = () => {
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
                                        pdfUrl="https://legaltemplates.net/wp-content/uploads/electrical-service-contract.pdf"/>
-                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
+                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                     <li className='tab'>
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
                                        pdfUrl="./images/energieovernamedocument.pdf"/>
-                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
+                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                     <li className='tab'>
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
                                        pdfUrl="./images/samplewaterpurchase.pdf"/>
-                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
+                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                 </ul>

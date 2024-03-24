@@ -10,7 +10,7 @@ const DashboardTenantLanding = () => {
     return (
         <div className="dashboard">
 
-            <DashboardTenantBar />
+
 
             <div className="content">
                  <CircularSliderCarousel />

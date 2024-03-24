@@ -7,10 +7,18 @@ const DashboardTenantBar = () => {
                 <ul className="sidebar-menu">
 
                     <li className="sidebar-menu-item">
-                        <div className="sidebar-menu-content">
+                        <Link href="/dashboard-tenant" className="sidebar-menu-content">
+                            <i className='bx bxs-dashboard' style={{color: '#FDB414'}}/>
+                            <a href="#" className="sidebar-menu-link">Home</a>
+                        </Link>
+                    </li>
+
+
+                    <li className="sidebar-menu-item">
+                        <Link href="/gallery" className="sidebar-menu-content">
                             <i className='bx bxs-compass' style={{color: '#FDB414'}}/>
                             <a href="#" className="sidebar-menu-link">Explore</a>
-                        </div>
+                        </Link>
                     </li>
 
 
