@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../css/Documents.css';
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
-import PdfViewer from '@/Components/PdfViewer';
+import PdfViewer from '@/Components/PdfViewer.jsx';
 
 const DocumentsPage = () => {
     useEffect(() => {
@@ -56,13 +56,9 @@ const DocumentsPage = () => {
                 <ul className='tabs'>
                     <li className='tab'>
                         <article className='tab-content'>
-                            <h3>Midnight Station</h3>
-
-                            <PdfViewer pdfUrl="./images/Residential-Real-Estate-Purchase-Agreement.pdf" />
+                            <PdfViewer className="tab-image" pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf" />
                             <button>Read More</button>
                         </article>
-                        <div className='tab-image'><img src='https://picsum.photos/id/345/1000/600'
-                                                        alt='Midnight Station'/></div>
                     </li>
                     {/* Repeat for other tabs */}
                 </ul>

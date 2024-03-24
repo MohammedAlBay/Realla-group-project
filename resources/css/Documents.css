@@ -1,7 +1,7 @@
 
 :root {
-    --primary: rgb(211,38,38);
-    --overlay: rgba(211,38,38,0.6);
+    --primary: #FDB414;
+    --overlay: #bd8300;
 }
 
 body,
@@ -33,7 +33,7 @@ html {
     width: 60vw;
     height: 94%;
     background: #444D57;
-    border-radius:   0 0 0 15%   ;
+    border-radius: 0 0 0 15%   ;
     overflow-y: hidden;
     z-index: 0;
 }
@@ -92,17 +92,16 @@ html {
     transform: translateY(-5rem);
 
     & h3 {
-        font-family: helvetica;
+
         font-weight: 900;
         font-size: 1rem;
         border-bottom: 1.5px solid white;
         padding-bottom: 1rem;
     }
 
-    & p {
-        font-family: helvetica;
-        font-weight: 100;
-        line-height: 2;
+    & .pdf {
+
+        margin-bottom: 2rem;
         color: rgba(255,255,255,0.7);
     }
 
