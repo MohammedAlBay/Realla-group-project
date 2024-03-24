@@ -100,7 +100,20 @@ Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
 
+/*PAYMENT*/
 
+Route::get('/paynow', function () {
+    return Inertia::render('PayNow');
+});
+
+Route::get('/payment-history', function () {
+    return Inertia::render('PaymentHistory');
+});
+
+/*DOCUMENTS*/
+Route::get('/documents', function () {
+    return Inertia::render('Documents');
+});
 
 
 
@@ -122,21 +135,6 @@ Route::get('/test', function () {
 });
 
 
-/*PAYMENT*/
-
-Route::get('/paynow', function () {
-    return Inertia::render('PayNow');
-});
-
-Route::get('/payment-history', function () {
-    return Inertia::render('PaymentHistory');
-});
-
-
-/*DOCUMENTS*/
-Route::get('/documents', function () {
-    return Inertia::render('Documents');
-});
 
 Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');

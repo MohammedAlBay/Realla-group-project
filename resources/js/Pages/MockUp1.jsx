@@ -160,7 +160,7 @@ const MockUp1 = () => {
                 <img
                     id="weather"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/weather-widget.svg"
+                    src="./images/documents.svg"
                     alt=""
                 />
                 <img
