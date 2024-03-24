@@ -128,6 +128,11 @@ Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
+Route::get('/payment-history', function () {
+    return Inertia::render('PaymentHistory');
+});
+
+
 
 Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
