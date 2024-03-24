@@ -23,12 +23,10 @@ const PropertyList = () => {
     }, []);
 
     return (
-
-
             <div className="all-cards">
                 {properties.map(property => (
                     <div key={property.id} className="card">
-                        <img src={`/${property.image_path}`} alt={property.location}/>
+                        <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
                         <div className="overlay">
 
                             <div className="card-text">

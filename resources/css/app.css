@@ -177,6 +177,7 @@ body{
     margin: 2rem;
     border-radius: 1.2rem;
     cursor: pointer;
+
 }
 
 .card img {
@@ -184,6 +185,7 @@ body{
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
+
 }
 
 
@@ -193,7 +195,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: rgba(41, 47, 54, 0.63);
     color: #fff;
     padding: 1rem;
     box-sizing: border-box;
