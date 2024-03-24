@@ -133,6 +133,10 @@ Route::get('/payment-history', function () {
 });
 
 
+/*DOCUMENTS*/
+Route::get('/documents', function () {
+    return Inertia::render('Documents');
+});
 
 Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
