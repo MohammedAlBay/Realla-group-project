@@ -254,7 +254,7 @@ ul.order-list li:hover > h5 {
 
 .card-content {
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     position: relative;
     float: left;
     z-index: 1;
@@ -264,6 +264,8 @@ ul.order-list li:hover > h5 {
     position: relative;
     margin-top: -20px;
     left: 190px;
+    font-size: 70px;
+    color: white;
 }
 
 .card-form {
@@ -333,6 +335,15 @@ input[type=text]:focus {
     margin-right: 10px;
     margin-top: 10px;
 }
+
+
+
+#label-cardexpiration span {
+    position: absolute;
+    left: 7rem;
+
+}
+
 button:focus { outline:0; }
 
 .button-cta {

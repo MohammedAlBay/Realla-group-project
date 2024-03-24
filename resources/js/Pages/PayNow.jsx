@@ -5,15 +5,19 @@ import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 const PayNow = () => {
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
     const [expirationDate, setExpirationDate] = useState('00 / 0000');
+    const [cvv, setCvv] = useState('000');
 
-    
     const updateCardNumber = (event) => {
         setCardNumber(event.target.value);
     }
 
-
     const updateExpirationDate = (event) => {
-        setExpirationDate(event.target.value);
+        const value = event.target.value;
+        setExpirationDate(value);
+    }
+
+    const updateCvv = (event) => {
+        setCvv(event.target.value);
     }
 
     return (
@@ -54,15 +58,12 @@ const PayNow = () => {
                 <div id='payment' className='payment'>
                     <div className='card'>
                         <div className='card-content'>
-                            <svg id='logo-visa' enableBackground='new 0 0 50 70' height='70px' version='1.1'
-                                 viewBox='0 0 50 50' width='70px' xmlSpace='preserve' xmlns='http://www.w3.org/2000/svg'
-                                 xmlnsXlink='http://www.w3.org/1999/xlink'>
 
-                            </svg>
+                            <i className='bx bxl-visa' id='logo-visa'></i>
                             <h5 className="cardtext">Card Number</h5>
                             <h6 id='label-cardnumber'>{cardNumber}</h6>
                             <h5 className="cardtext">Expiration<span>CVC</span></h5>
-                            <h6 id='label-cardexpiration'>{expirationDate}<span>000</span></h6>
+                            <h6 id='label-cardexpiration'>{expirationDate}<span>{cvv}</span></h6>
                         </div>
                         <div className='wave'></div>
                     </div>
@@ -83,7 +84,7 @@ const PayNow = () => {
                         <p className='field space'>
                             <i className='bx bxs-credit-card-front' id="i-cardback"></i>
                             <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
-                                   title='CVC Code'/>
+                                   title='CVC Code' onChange={updateCvv} />
                         </p>
 
                         <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
