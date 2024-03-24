@@ -56,11 +56,33 @@ const DocumentsPage = () => {
                 <ul className='tabs'>
                     <li className='tab'>
                         <article className='tab-content'>
-                            <PdfViewer className="tab-image" pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf" />
-                            <button>Read More</button>
+                            <PdfViewer className="tab-image"
+                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
+                            <button className="update-doc"><span>Edit</span></button>
+                        </article>
+
+                    </li>
+                    <li className='tab'>
+                        <article className='tab-content'>
+                            <PdfViewer className="tab-image"
+                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
+                            <button className="update-doc"><span>Edit</span></button>
                         </article>
                     </li>
-                    {/* Repeat for other tabs */}
+                    <li className='tab'>
+                        <article className='tab-content'>
+                            <PdfViewer className="tab-image"
+                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
+                            <button className="update-doc"><span>Edit</span></button>
+                        </article>
+                    </li>
+                    <li className='tab'>
+                        <article className='tab-content'>
+                            <PdfViewer className="tab-image"
+                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
+                            <button className="update-doc"><span>Edit</span></button>
+                        </article>
+                    </li>
                 </ul>
             </section>
         </div>

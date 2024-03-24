@@ -71,13 +71,16 @@ html {
 .tab {
     position: absolute;
     display: flex;
-    width: 530px;
-    height: 425px;
+    width: 500px;
+    height: 505px;
     opacity: 0;
     background-color: #1E2127;
     overflow: hidden;
     padding: 1rem;
     border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4rem;
 }
 
 .tab-content {
@@ -105,15 +108,71 @@ html {
         color: rgba(255,255,255,0.7);
     }
 
-    & button {
-        width: fit-content;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        font-size: 0.7rem;
-        padding: 0.75rem 1rem;
-        cursor: pointer;
-    }
+
+}
+.tab-content button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+button.update-doc{
+    width: 35%;
+    height: 39px;
+    padding: 10px 20px;
+    background-color: rgba(37,44,65,0.32);
+    border: 1px solid #FDB414;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #f4f5f9;
+    z-index: -1;
+    margin: auto;
+
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button.update-doc:hover {
+    background:#FDB414;
+    border: 1px solid #FDB414;
+}
+
+button.update-doc span {
+    display: inline-block;
+    position: relative;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button.update-doc span:after {
+    content: '→';
+    color: #f4f5f9;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+
+}
+
+button.update-doc:hover span {
+    padding-right: 45px;
+}
+
+button.update-doc:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 @keyframes content {
