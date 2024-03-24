@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../css/Documents.css';
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import PdfViewer from '@/Components/PdfViewer';
 
 const DocumentsPage = () => {
     useEffect(() => {
@@ -38,25 +40,25 @@ const DocumentsPage = () => {
         return () => {
             window.removeEventListener('click', activate);
         };
-    }, []); 
+    }, []);
 
     return (
         <div className="body">
+            <DashboardTenantBar />
         <div className="documents flex justify-center items-center grid">
             <section>
                 <ul className='indexes'>
-                    <li data-index='0'>01</li>
-                    <li data-index='1'>02</li>
-                    <li data-index='2'>03</li>
-                    <li data-index='3'>04</li>
+                    <li data-index='0'>Contract</li>
+                    <li data-index='1'>Electric Contract</li>
+                    <li data-index='2'>Gas Contract</li>
+                    <li data-index='3'>Water Contract</li>
                 </ul>
                 <ul className='tabs'>
                     <li className='tab'>
                         <article className='tab-content'>
                             <h3>Midnight Station</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas nihil sequi doloribus
-                                obcaecati. Aut vel, recusandae ipsa voluptate blanditiis nemo magnam sit modi architecto
-                                officia maiores magni. Necessitatibus, iste aut.</p>
+
+                            <PdfViewer pdfUrl="./images/Residential-Real-Estate-Purchase-Agreement.pdf" />
                             <button>Read More</button>
                         </article>
                         <div className='tab-image'><img src='https://picsum.photos/id/345/1000/600'
