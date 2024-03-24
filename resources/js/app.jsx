@@ -4,7 +4,6 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import Header from './Layouts/Partials/Header.jsx';
 import Footer from './Layouts/Partials/Footer.jsx';
 
-
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
