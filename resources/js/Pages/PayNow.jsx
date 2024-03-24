@@ -98,7 +98,6 @@ const PayNow = () => {
                 </div>
 
             </div>
-            <button className="payment-history-btn">Payment History</button>
 
         </div>
     );
