@@ -272,7 +272,7 @@ ul.order-list li:hover > h5 {
     width: 100%;
     position: relative;
     float: right;
-    padding: 15px 25px;
+    padding: 15px 40px;
 }
 
 .card-form > p.field {
@@ -337,21 +337,80 @@ input[type=text]:focus {
 }
 
 
-
 #label-cardexpiration span {
     position: absolute;
     left: 7rem;
-
 }
 
 button:focus { outline:0; }
 
-.button-cta {
-    width: 70%;
-    height: 65px;
+
+.button-cta-2{
+    width: 45%;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: rgba(37,44,65,0.32);
+    border: 1px solid #FDB414;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #f4f5f9;
+    z-index: -1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button-cta-2:hover {
+    background:#FDB414;
+    border: 1px solid #FDB414;
+}
+
+.button-cta-2 span {
+    display: inline-block;
+    position: relative;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button-cta-2 span:after {
+    content: '→';
+    color: #f4f5f9;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+
+}
+
+.button-cta-2:hover span {
+    padding-right: 45px;
+}
+
+.button-cta-2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+.button-cta  {
+    width: 55%;
+    height: 55px;
     position: absolute;
     float: right;
-    right: 3.5rem;
+    right: 5.5rem;
     bottom: -68px;
     padding: 10px 20px;
     background-color: #FDB414;
@@ -392,7 +451,8 @@ button:focus { outline:0; }
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -40px;
+    right: -30px;
+
 }
 
 .button-cta:hover span {
@@ -406,9 +466,7 @@ button:focus { outline:0; }
 
 
 
-/*--------------------
-Credit Card Background
----------------------*/
+/*Credit Card Background*/
 
 .wave {
     height: 300px;
@@ -451,9 +509,7 @@ Credit Card Background
     top: -70%;
 }
 
-/*--------------------
-Payment Notification
----------------------*/
+/*Payment Notification*/
 
 .paid {
     z-index: 0;
@@ -471,9 +527,7 @@ Payment Notification
     color: #3ac569;
 }
 
-/*--------------------
-Credits
----------------------*/
+/*Credits*/
 
 .icon-credits {
     width: 100%;

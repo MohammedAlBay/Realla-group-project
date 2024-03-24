@@ -54,7 +54,9 @@ const PayNow = () => {
                     <h5 className='total'>Total</h5>
                     <h1 className="payment-text">€ 850</h1>
                 </div>
-                <h2 className="payment-text">Payment Panel </h2>
+
+                <button className='button-cta-2' title='Confirm your purchase'><span>PAYMENT HISTORY</span></button>
+
                 <div id='payment' className='payment'>
                     <div className='card'>
                         <div className='card-content'>
@@ -84,14 +86,17 @@ const PayNow = () => {
                         <p className='field space'>
                             <i className='bx bxs-credit-card-front' id="i-cardback"></i>
                             <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
-                                   title='CVC Code' onChange={updateCvv} />
+                                   title='CVC Code' onChange={updateCvv}/>
                         </p>
 
                         <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
 
                     </div>
                 </div>
+
             </div>
+            <button className="payment-history-btn">Payment History</button>
+
         </div>
     );
 };

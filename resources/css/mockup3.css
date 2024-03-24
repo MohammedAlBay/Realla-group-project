@@ -23,7 +23,7 @@
     left: 5rem;
     bottom: 13rem;
     z-index: 10;
-    max-width: 50px;
+    max-width: 200px;
 }
 
 .testimonials1 {
@@ -96,7 +96,7 @@ div.testimonial:hover svg {
     left: 5rem;
     bottom: 13rem;
     z-index: 10;
-    max-width: 50px;
+    max-width: 200px;
 }
 .testimonials2 {
     border-radius: 5px;

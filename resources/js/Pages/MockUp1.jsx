@@ -1,7 +1,6 @@
 import { gsap, Power4, Power2 } from "gsap";
 import React, { useEffect } from "react";
 import "../../css/gsap.css";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -170,6 +169,7 @@ const MockUp1 = () => {
                     src="./images/Payment_component.svg"
                     alt=""
                 />
+
                 <img
                     id="calendar"
                     className="widgets"
