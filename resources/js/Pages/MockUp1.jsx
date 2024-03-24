@@ -154,7 +154,7 @@ const MockUp1 = () => {
                 <img
                     id="screen-time"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/screen-time-widget.svg"
+                    src="./images/payment-history.svg"
                     alt=""
                 />
                 <img
