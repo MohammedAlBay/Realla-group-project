@@ -49,10 +49,9 @@ const PaymentHistory = () => {
                             <h5 className="payment-text">paid</h5>
                         </li>
                     </ul>
-
                 </div>
                 <div id='payment' className='payment'>
-                    <img src="./images/real-estate-right.png"/>
+                    <img src="./images/real-estate-right.png" alt="right side image"/>
                 </div>
             </div>
 

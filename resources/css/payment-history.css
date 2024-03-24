@@ -120,7 +120,7 @@ h6 > span {
     position: absolute;
     top: 49%;
     left: 72%;
-    background-color: #292F36;
+    background-color: #1E2127;
     overflow: hidden;
 
     -webkit-transform: translate(-50%, -50%);
@@ -174,7 +174,7 @@ ul.order-list {
 
 ul.order-list li {
     height: 60px;
-    margin-left: -40px;
+    margin-left: -80px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }
@@ -251,3 +251,13 @@ ul.order-list li:hover > .paynow-link {
 }
 
 
+.payment {
+    z-index: 0;
+    width: 370px;
+    position: relative;
+    float: right;
+}
+
+.payment img {
+    width: 370px;
+}

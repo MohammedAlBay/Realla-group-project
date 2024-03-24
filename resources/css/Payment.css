@@ -88,7 +88,7 @@ h5.cardtext > span {
 }
 
 h5.total {
-    margin-top: 20px;
+    margin-top: 10px;
     color: #c9d6de;
 }
 
@@ -115,7 +115,7 @@ h6 > span {
     position: absolute;
     top: 49%;
     left: 72%;
-    background-color: #292F36;
+    background-color: #1E2127;
     overflow: hidden;
 
     -webkit-transform: translate(-50%, -50%);
@@ -168,7 +168,7 @@ ul.order-list {
 
 ul.order-list li {
     height: 60px;
-    margin-left: -40px;
+    margin-left: -80px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }
@@ -402,11 +402,11 @@ button:focus { outline:0; }
 
 .button-cta  {
     width: 55%;
-    height: 55px;
+    height: 50px;
     position: absolute;
     float: right;
     right: 5.5rem;
-    bottom: -68px;
+    bottom: -50px;
     padding: 10px 20px;
     background-color: #FDB414;
     border: 1px solid #FDB414;
