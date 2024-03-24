@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../../css/Payment.css";
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import {Link} from "@inertiajs/react";
 
 const PayNow = () => {
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
@@ -55,7 +56,9 @@ const PayNow = () => {
                     <h1 className="payment-text">€ 850</h1>
                 </div>
 
-                <button className='button-cta-2' title='Confirm your purchase'><span>PAYMENT HISTORY</span></button>
+                <Link href="/payment-history">
+                <button className='button-cta-2' title='See your payment history'><span>PAYMENT HISTORY</span></button>
+                </Link>
 
                 <div id='payment' className='payment'>
                     <div className='card'>

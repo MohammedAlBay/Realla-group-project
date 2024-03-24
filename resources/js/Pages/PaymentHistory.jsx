@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../../css/Payment.css";
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
