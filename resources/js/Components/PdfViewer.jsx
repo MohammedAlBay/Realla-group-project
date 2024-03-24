@@ -29,27 +29,29 @@ const PdfViewer = ({ pdfUrl }) => {
     ).toString();
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Document
                 file={pdfUrl}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
-
                 <Page
                     pageNumber={pageNumber}
-                    width={300}
+                    width={330}
                     height={200}
                 />
             </Document>
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>
-            <button onClick={goToPrevPage} disabled={pageNumber <= 1}>
-                Previous Page
-            </button>
-            <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
-                Next Page
-            </button>
+            <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '1rem'}}>
+                <button className="previous-button" onClick={goToPrevPage} disabled={pageNumber <= 1}>
+                    Previous Page
+                </button>
+                <p>
+                    Page {pageNumber} of {numPages}
+                </p>
+                <button className="next-button" onClick={goToNextPage} disabled={pageNumber >= numPages}>
+                    Next Page
+                </button>
+            </div>
+
         </div>
     );
 };

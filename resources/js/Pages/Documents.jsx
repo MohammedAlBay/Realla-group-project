@@ -19,7 +19,7 @@ const DocumentsPage = () => {
         };
 
         const showTab = (i) => {
-            indexes[i].style.borderColor = 'rgba(211,38,38,0.6)';
+            indexes[i].style.borderColor = 'orange';
             tabs[i].style.opacity = 1;
             tabs[i].style.zIndex = 5;
             tabs[i].classList.add('active');
@@ -58,29 +58,29 @@ const DocumentsPage = () => {
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
                                        pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span>Edit</span></button>
+                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
 
                     </li>
                     <li className='tab'>
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
-                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span>Edit</span></button>
+                                       pdfUrl="https://legaltemplates.net/wp-content/uploads/electrical-service-contract.pdf"/>
+                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                     <li className='tab'>
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
-                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span>Edit</span></button>
+                                       pdfUrl="./images/energieovernamedocument.pdf"/>
+                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                     <li className='tab'>
                         <article className='tab-content'>
                             <PdfViewer className="tab-image"
-                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span>Edit</span></button>
+                                       pdfUrl="./images/samplewaterpurchase.pdf"/>
+                            <button className="update-doc"><span><i class='bx bx-edit-alt' ></i>Edit</span></button>
                         </article>
                     </li>
                 </ul>
