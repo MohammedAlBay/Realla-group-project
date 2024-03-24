@@ -166,7 +166,7 @@ const MockUp1 = () => {
                 <img
                     id="payment"
                     className="widgets"
-                    src="./images/Payment_component.svg"
+                    src="./images/payment.svg"
                     alt=""
                 />
 
