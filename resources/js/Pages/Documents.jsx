@@ -44,7 +44,7 @@ const DocumentsPage = () => {
 
     return (
         <div className="body">
-        < DashboardTenantBar />
+
         <div className="documents flex justify-center items-center grid">
             <section>
                 <ul className='indexes'>

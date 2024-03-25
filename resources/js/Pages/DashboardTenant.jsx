@@ -10,11 +10,18 @@ import Gallery from "@/Pages/Gallery.jsx";
 
 
 const DashboardTenant = () => {
+
     return (
-        <Router>
             <div className="dashboard">
                 <DashboardTenantBar />
+                <Router>
                 <div className="content">
+                   <div>
+                       <button>
+
+                       </button>
+                   </div>
+
                     <Routes>
                         <Route exact path="/dashboard-tenant" component={DashboardTenantLanding} />
                         <Route path="/gallery" component={Gallery} />
@@ -23,8 +30,8 @@ const DashboardTenant = () => {
                         <Route path="/documents" component={Documents} />
                     </Routes>
                 </div>
+                </Router>
             </div>
-        </Router>
     );
 };
 
