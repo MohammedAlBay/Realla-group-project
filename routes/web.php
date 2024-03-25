@@ -78,8 +78,6 @@ Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
 });
 
-
-
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
@@ -88,41 +86,66 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
+});
+
 Route::get('/search', function () {
     return Inertia::render('SearchResults');
 });
 
 
-/*DASHBOARDS*/
+/*DASHBOARD TENANT*/
 Route::get('/dashboard-tenant', function () {
     return Inertia::render('DashboardTenantLanding');
 });
 
-Route::get('/dashboard-landloard', function () {
-    return Inertia::render('DashboardLandloardLanding');
+Route::get('/tenant', function () {
+    return Inertia::render('DashboardTenant');
 });
-
-
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
 /*PAYMENT*/
-
 
 Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
-Route::get('/mailbox-landlord', function () {
-    return Inertia::render('MailboxLandlord');
+Route::get('/payment-history', function () {
+    return Inertia::render('PaymentHistory');
+});
+
+/*DOCUMENTS*/
+Route::get('/documents', function () {
+    return Inertia::render('Documents');
 });
 
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
+
+
+
+/*DASHBOARD LANDLOARD */
+Route::get('/dashboard-landloard', function () {
+    return Inertia::render('DashboardLandloardLanding');
+});
+
+Route::get('/landloard', function () {
+    return Inertia::render('DashboardLandloard');
+});
+
+Route::get('/mailbox-landlord', function () {
+    return Inertia::render('MailboxLandlord');
+});
+
+
+
+/*ERROR PAGE*/
+Route::get('/{any}', function () {
+    return Inertia::render('CustomErrorPage');
+})->where('any','.*');
+
+
+Route::get('/test', function () {
+    return Inertia::render('Test');
 });
