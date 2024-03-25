@@ -140,12 +140,12 @@
 
 
 #prev,
-#next {
+#next, .mouse-icon {
     position: absolute;
     border: none;
-    right: -160%;
+    top: 10rem;
+    right: -85%;
     transform: translateX(-50%);
-    font-size: 100px;
     font-family: cursive;
     background-color: transparent;
     color: #fff;
@@ -155,15 +155,20 @@
 }
 
 #prev{
-
+    right: -20.2rem;
+    top: 31%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 
 #next {
-    top: 50%;
+    top: 48%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
-
     left: unset;
+}
+
+.mouse-icon{
+    top: 40%;
+    right: -17rem;
 }
 
 #next:hover,
