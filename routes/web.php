@@ -78,8 +78,6 @@ Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
 });
 
-
-
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
@@ -116,37 +114,10 @@ Route::get('/documents', function () {
 });
 
 
+Route::get('/{any}', function () {
+    return Inertia::render('CustomErrorPage');
+})->where('any','.*');
 
-
-
-/*DASHBOARD LANDLOARD */
-Route::get('/landloard', function () {
-    return Inertia::render('DashboardLandloard');
-});
-
-Route::get('/dashboard-landloard', function () {
-    return Inertia::render('DashboardLandloardLanding');
-});
-
-
-/* TEST */
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
-
-Route::get('/mailbox-landlord', function () {
-    return Inertia::render('MailboxLandlord');
-});
-
-Route::get('/mailbox-tenant', function () {
-    return Inertia::render('MailboxTenant');
-});
-
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
-});
 
 Route::get('/property', function () {
     return Inertia::render('MyPropertyPage');

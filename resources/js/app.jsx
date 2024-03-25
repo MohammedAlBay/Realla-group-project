@@ -3,6 +3,10 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import Header from './Layouts/Partials/Header.jsx';
 import Footer from './Layouts/Partials/Footer.jsx';
+import CustomErrorPage from './Pages/CustomErrorPage.jsx';
+
+
+
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
