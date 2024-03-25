@@ -13,7 +13,7 @@ const ReportProblem = () => {
     <div className="container mx-auto mt-10">
       <div className="bg-orange-300 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
         <h2 className="text-xl font-bold text-gray-700 mb-4">Report a Problem</h2>
-        {/* Carousel placeholder */}
+        
         {/* Form */}
         <form onSubmit={submitProblem} className="bg-white p-6 rounded-lg shadow-lg">
           <div className="mb-4">
