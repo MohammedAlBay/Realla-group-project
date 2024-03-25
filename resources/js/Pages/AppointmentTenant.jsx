@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Header from './Header';
+import AppointmentTenantHeader from  "@/Layouts/AppointmentTenantHeader.jsx"
 import Form from './Form';
 import Todo from './Todo';
-import CalendarComponent from './CalendarComponent';
-import YourComponent from './YourComponent';
+
 import { BiCalendar, BiCheckSquare } from 'react-icons/bi';
-import { BsFillGearFill } from 'react-icons/bs';
+
 
 const LSKEY = 'MyTodoApp';
 
@@ -56,6 +55,7 @@ function App() {
                 }}
             >
                 <AppointmentTenantHeader />
+
                 <Routes>
                     <Route
                         path="/appointment-tenant"
@@ -92,12 +92,7 @@ function App() {
                             Calendar
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/gsap">
-                            <BsFillGearFill size={30} style={{ marginRight: '10px' }} />
-                            GSAP
-                        </Link>
-                    </li>
+
                 </ul>
             </nav>
         </>
