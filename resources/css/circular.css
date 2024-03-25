@@ -19,10 +19,10 @@
 .slider::before{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     content: '';
-    top: 1rem;
-    left: 19rem;
+    top: 0rem;
+    left: 22rem;
     border-radius: 50% 0% 0% 50%;
     background-color: #1E2127;
     overflow: hidden;
@@ -32,7 +32,7 @@
 .title{
     position: absolute;
     top: 10%;
-    right: -16px;
+    right: -50px;
     text-align: right;
     color: #fff;
     line-height: .9em;
@@ -144,7 +144,7 @@
     position: absolute;
     border: none;
     top: 10rem;
-    right: -85%;
+    right: -90%;
     transform: translateX(-50%);
     font-family: cursive;
     background-color: transparent;
@@ -155,12 +155,13 @@
 }
 
 #prev{
-    right: -20.2rem;
+    right: -22rem;
     top: 31%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 
 #next {
+    right: -22rem;
     top: 48%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
     left: unset;
@@ -168,7 +169,7 @@
 
 .mouse-icon{
     top: 40%;
-    right: -17rem;
+    right: -18.8rem;
 }
 
 #next:hover,
