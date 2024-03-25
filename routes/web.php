@@ -78,8 +78,6 @@ Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
 });
 
-
-
 Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
@@ -155,3 +153,9 @@ Route::get('/mailbox-tenant', function () {
 Route::get('/searchresults', function () {
     return Inertia::render('searchresults');
 });
+
+/*ERROR*/
+
+Route::get('/{any}', function () {
+    return Inertia::render('CustomErrorPage');
+})->where('any','.*');
