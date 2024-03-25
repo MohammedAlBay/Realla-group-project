@@ -8,20 +8,20 @@
 .slider {
     position: relative;
     width: 205%;
-    height: 103vh;
+    height: 120vh;
     border-radius:  50% 0% 0% 50%;
     background-image: linear-gradient(to right, #292F36, #292F36);
-    top: -4.5rem;
+    top: -5rem;
     left: 15rem;
-    overflow: hidden;
+
 }
 
 .slider::before{
     position: absolute;
     width: 100%;
-    height: 110vh;
+    height: 90vh;
     content: '';
-    top: 0rem;
+    top: 3rem;
     left: 22rem;
     border-radius: 50% 0% 0% 50%;
     background-color: #1E2127;
@@ -36,26 +36,26 @@
     text-align: right;
     color: #fff;
     line-height: .9em;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-right: 1rem;
 }
 .title img {
     width: 50%;
+    overflow-x: hidden;
 }
 .images{
-    width: 1100px;
-    height: 130vh;
     position: absolute;
-    bottom: 1.5rem;
-    left: 49.5%;
+    width: 1100px;
+    height: 110vh;
+    bottom: 9.5rem;
+    left: 65%;
     --rotate: 0deg;
     transform: translate(-50%, 50%) rotate(var(--rotate));
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     outline: 3px dashed #f5cc7f;
     outline-offset: -100px;
-    padding: 2rem;
-    overflow: hidden;
+    padding: 4rem;
 }
 
 .images .item{
@@ -65,21 +65,19 @@
     --rotate: 0deg;
     transform: translate(-50%, 0);
     width: 1100px;
-    height: 130vh;
+    height: 110vh;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     outline: 3px dashed #f5cc7f;
     outline-offset: -100px;
-    overflow-y: hidden;
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .images .item img{
-    height:350px;
-    position: relative;
-    right: -25rem;
-    top: 15rem;
-    overflow: hidden;
+    height:250px;
+    position: absolute;
+    bottom: 20rem;
+    right: -14rem;
 }
 
 .content{
@@ -91,11 +89,11 @@
     width: 350px;
 }
 .content h1{
-    color: #E88735;
-    font-size: 50px;
+    color: #e5dbc9;
+    font-size: 45px;
     position: relative;
-    top: 10rem;
-    right: 35rem;
+    top: 18.5rem;
+    right: 28rem;
 }
 
 .content button{
@@ -107,8 +105,8 @@
     border: none;
     float: left;
     position: relative;
-    top: 10rem;
-    right: 22rem;
+    top: 15rem;
+    right: 13.5rem;
     z-index: 100;
 }
 .content .item{
@@ -148,28 +146,28 @@
     transform: translateX(-50%);
     font-family: cursive;
     background-color: transparent;
-    color: #fff;
+    color: #292F36;
     font-weight: bold;
     opacity: 0.3;
     z-index: 100;
 }
 
 #prev{
-    right: -22rem;
+    right: -22.2rem;
     top: 31%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 
 #next {
-    right: -22rem;
-    top: 48%;
+    right: -22.2rem;
+    top: 47%;
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
     left: unset;
 }
 
 .mouse-icon{
     top: 40%;
-    right: -18.8rem;
+    right: -18.4rem;
 }
 
 #next:hover,

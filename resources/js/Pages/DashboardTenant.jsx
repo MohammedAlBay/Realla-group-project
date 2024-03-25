@@ -7,6 +7,7 @@ import PayNow from "@/Pages/PayNow.jsx";
 import Mailbox from "@/Pages/MailboxTenant";
 import Documents from "@/Pages/Documents.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
+import AppointmentTenant from "@/Pages/AppointmentTenant.jsx";
 
 
 const DashboardTenant = () => {
@@ -14,6 +15,7 @@ const DashboardTenant = () => {
     return (
             <div className="dashboard">
                 <DashboardTenantBar />
+                <AppointmentTenant />
                 <Router>
                 <div className="content">
                    <div>
@@ -28,6 +30,7 @@ const DashboardTenant = () => {
                         <Route path="/pay-now" component={PayNow} />
                         <Route path="/mailbox" component={Mailbox} />
                         <Route path="/documents" component={Documents} />
+                        <Route path="/appointment-tenant" component={AppointmentTenant} />
                     </Routes>
                 </div>
                 </Router>

@@ -36,10 +36,10 @@ const DashboardTenantBar = () => {
                         </Link>
                     </li>
                     <li className="sidebar-menu-item">
-                        <div className="sidebar-menu-content">
+                        <Link  href="/appointment-tenant" className="sidebar-menu-content">
                             <i className='bx bx-calendar' style={{color: '#FDB414'}}></i>
                             <a href="#" className="sidebar-menu-link">Appointment</a>
-                        </div>
+                        </Link>
                     </li>
                     <li className="sidebar-menu-item">
                         <Link href="/paynow" className="sidebar-menu-content">

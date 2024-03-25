@@ -138,18 +138,16 @@ Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
 });
 
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
 
+Route::get('/appointment-tenant', function () {
+    return Inertia::render('AppointmentTenant');
+});
 
 /*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
-
-
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
-
 
