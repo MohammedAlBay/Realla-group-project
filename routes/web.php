@@ -87,17 +87,7 @@ Route::get('/mock-up', function () {
 });
 
 
-Route::get('/search', function () {
-    return Inertia::render('MockUp');
-});
 
-Route::get('/search', function () {
-    return Inertia::render('SearchResults');
-});    
-
-Route::get('/property', function () {
-    return Inertia::render('PropertyDetails');
-});
 
 /*DASHBOARD TENANT*/
 Route::get('/dashboard-tenant', function () {
@@ -108,48 +98,27 @@ Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
 
-
-
-
-
-
-
-/*DASHBOARD LANDLOARD */
-Route::get('/landloard', function () {
-    return Inertia::render('DashboardLandloard');
-});
-
-Route::get('/dashboard-landloard', function () {
-    return Inertia::render('DashboardLandloardLanding');
-});
-
-
-/* TEST */
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
 /*PAYMENT*/
 
 Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
-Route::get('/mailbox-landlord', function () {
-    return Inertia::render('MailboxLandlord');
+Route::get('/payment-history', function () {
+    return Inertia::render('PaymentHistory');
 });
 
-/*ERROR*/
+/*DOCUMENTS*/
+Route::get('/documents', function () {
+    return Inertia::render('Documents');
+});
+
 
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
 
-Route::get('/mailbox-tenant', function () {
-    return Inertia::render('MailboxTenant');
-});
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
 });
