@@ -140,12 +140,3 @@ Route::get('/mailbox-landlord', function () {
 
 
 
-/*ERROR PAGE*/
-Route::get('/{any}', function () {
-    return Inertia::render('CustomErrorPage');
-})->where('any','.*');
-
-
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
