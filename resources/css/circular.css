@@ -15,15 +15,13 @@
     background-image: linear-gradient(to right, #292F36, #292F36);
     top: -9rem;
     left: 18rem;
-
-
 }
 .slider::before{
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 106vh;
     content: '';
-    top: 1rem;
+    top: 2.5rem;
     left: 23.5rem;
     border-radius: 50% 0% 0% 50%;
     background-color: #1E2127;
@@ -31,8 +29,8 @@
 }
 .title{
     position: absolute;
-    top: 15%;
-    right: -8%;
+    top: 17%;
+    right: -13%;
     text-align: right;
     color: #fff;
     width: 50%;
@@ -40,21 +38,19 @@
     text-shadow: 3px 5px 0px #478860;
     line-height: .9em;
     overflow-x: hidden;
-
 }
 .images{
     position: absolute;
-    bottom: 0%;
-    left: 50%;
+    bottom: 8%;
+    left: 52%;
     --rotate: 0deg;
     transform: translate(-50%, 50%) rotate(var(--rotate));
-    width: 1300px;
-    height: 1300px;
+    width: 1200px;
+    height: 1100px;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     outline: 3px dashed #fff5;
     outline-offset: -100px;
-
 }
 .images .item{
     position: absolute;
@@ -62,16 +58,20 @@
     left: 50%;
     --rotate: 0deg;
     transform: translate(-50%, 0);
-    width: 1300px;
-    height: 1300px;
+    width: 1200px;
+    height: 1100px;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     outline: 3px dashed #fff5;
     outline-offset: -100px;
+
 }
 
 .images .item img{
-    height: 420px;
+    height:350px;
+    position: relative;
+    right: 10rem;
+    top: 10rem;
 }
 
 .content{
@@ -79,17 +79,18 @@
     position: absolute;
     top: 10%;
     left: 50%;
-    text-align: justify;
+    text-align: end;
     width: 350px;
 
 }
 .content h1{
     color: #E88735;
-    font-size: xxx-large;
+    font-size: 50px;
     position: relative;
     top: 10rem;
     right: 35rem;
     z-index: 100;
+
 }
 
 .content button{

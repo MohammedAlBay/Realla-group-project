@@ -7,7 +7,7 @@ const CircularSliderCarousel = () => {
     const [rotate, setRotate] = useState(0);
     const items = [
         { src: './images/1.jpg', title: 'REPORT A PROBLEM' },
-        { src: './images/2.jpg', title: 'MAKE A APPOINTMENT' },
+        { src: './images/2.jpg', title: 'MAKE AN APPOINTMENT' },
         { src: './images/4.jpg', title: 'SEE YOUR DOCUMENTS' },
         { src: './images/5.jpg', title: 'MANAGE YOUR PAYMENT'},
     ];
@@ -33,7 +33,7 @@ const CircularSliderCarousel = () => {
                 <div className="title" >
                     <img src="./images/real-estate-right.png"/>
                 </div>
-                <div className="images" style={{ transform: `translate(-50%, -50%) rotate(${rotate}deg)` }}>
+                <div className="images" style={{ transform: `translate(-37%, 16%) rotate(${rotate}deg)` }}>
                     {items.map((item, index) => (
                         <div className={`item ${index === active ? 'active' : ''}`} style={{ '--i': index + 1 }} key={index}>
                             <img src={item.src} alt={`Product ${index + 1}`} />
@@ -44,7 +44,6 @@ const CircularSliderCarousel = () => {
                     {items.map((item, index) => (
                         <div className={`item ${index === active ? 'active' : ''}`} key={index}>
                             <h1>{item.title}</h1>
-                            <div className="des">{item.description}</div>
                             <button>See more</button>
                         </div>
                     ))}
