@@ -136,13 +136,6 @@ Route::get('/mailbox-landlord', function () {
 });
 
 
-/*ERROR*/
-
-Route::get('/{any}', function () {
-    return Inertia::render('CustomErrorPage');
-})->where('any','.*');
-
-
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
@@ -156,3 +149,10 @@ Route::get('/searchresults', function () {
 Route::get('/reportproblem', function () {
     return Inertia::render('ReportProblem');
 });
+
+/*ERROR*/
+
+Route::get('/{any}', function () {
+    return Inertia::render('CustomErrorPage');
+})->where('any','.*');
+

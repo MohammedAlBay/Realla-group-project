@@ -1,12 +1,12 @@
 import React from 'react';
-import { Inertia } from '@inertiajs/inertia';
+
 
 const ReportProblem = () => {
   const [problem, setProblem] = React.useState('');
 
   const submitProblem = (e) => {
     e.preventDefault();
-    Inertia.post('/report-problem', { problem });
+    Link.post('/report-problem', { problem });
   };
 
   return (
