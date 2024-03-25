@@ -147,7 +147,7 @@ Route::get('/appointment-tenant', function () {
 });
 
 Route::get('/calendar', function () {
-    return Inertia::render('Calender');
+    return Inertia::render('CalendarTenant');
 });
 
 /*ERROR PAGE*/
