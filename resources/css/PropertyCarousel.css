@@ -5,3 +5,23 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
+
+.carousel-root {
+  padding-top: 5rem;
+  background-color: #292F36;
+  height: 100vh;
+}
+.carousel .slide {
+  height: auto;
+  width: auto;
+}
+
+.thumbs {
+  display: none;
+}
+
+.carousel .slide img {
+  width: 100vw;
+  height: 400px;
+  object-fit: fill;
+}
