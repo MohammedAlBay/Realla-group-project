@@ -87,7 +87,7 @@ Route::get('/mock-up', function () {
 });
 
 Route::get('/property', function () {
-    return Inertia::render('MyPropertyPage');
+    return Inertia::render('PropertyDetails');
 });
 
 Route::get('/search', function () {
