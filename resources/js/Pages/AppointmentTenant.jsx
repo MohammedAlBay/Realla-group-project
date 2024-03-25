@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import AppointmentTenantHeader from  "@/Layouts/AppointmentTenantHeader.jsx"
-import Form from './Form';
-import Todo from './Todo';
-
+import Form from '@/Components/Form.jsx';
+import Todo from '@/Components/Todo.jsx';
+import Calender from '@/Components/Calender.jsx';
 import { BiCalendar, BiCheckSquare } from 'react-icons/bi';
 
 
@@ -74,7 +74,7 @@ function App() {
                             </>
                         }
                     />
-                    <Route path="/calendar" element={<Calendar todos={todos} />} />
+                    <Route path="/calendar" element={<Calender todos={todos} />} />
 
                 </Routes>
             </div>
