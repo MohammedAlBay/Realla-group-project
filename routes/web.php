@@ -146,6 +146,10 @@ Route::get('/appointment-tenant', function () {
     return Inertia::render('AppointmentTenant');
 });
 
+Route::get('/calendar', function () {
+    return Inertia::render('Calender');
+});
+
 /*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
