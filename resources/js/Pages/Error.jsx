@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomErrorPage = () => {
+const Error = () => {
     return (
         <div className="bg-gray-900 flex items-center justify-center min-h-screen px-4">
             <div className="text-center">
@@ -11,10 +11,10 @@ const CustomErrorPage = () => {
                     </div>
                 </div>
                 <p className="text-2xl text-yellow-400 mb-8">Oops! Page not found.</p>
-                <a href="/" className="text-lg text-blue-500 hover:underline">Go back home</a>
+                <a href="/" className="text-lg text-gray-500 hover:underline">Go back home</a>
             </div>
         </div>
     );
 };
 
-export default CustomErrorPage;
+export default Error;
