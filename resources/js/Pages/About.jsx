@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import "../../css/about.css"
+import "../../css/about.css";
+import { Link } from '@inertiajs/react';
 
 const About = () => {
    
@@ -54,7 +55,7 @@ const About = () => {
                         been so easy.
                     </p>
                     <p className="mt-6">Still looking for a property to rent or let?</p>
-                    <p className="mt-6">Check out the <a href="#" className="text-white underline">Find a Home</a></p>
+                    <p className="mt-6">Check out the <Link href="/Gallery" className="text-white underline">Find a Home</Link></p>
                 </div>
 
             {/* Right Side Text with Checkmarks */}

@@ -1,0 +1,263 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e1e1e1;
+}
+
+.paynow{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.subject {
+    font-family: 'Playfair Display', serif;
+    color: rgba(255,255,255,0.02);
+    font-size: 180px;
+    font-size: 16vw;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    z-index: -1;
+}
+
+
+
+
+/*--------------------
+Text
+---------------------*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+h1.payment-text {
+    font-size: 42px;
+    color: #6d819c;
+    text-align: left;
+}
+
+h2.payment-text {
+    font-size: 28px;
+    letter-spacing: -2px;
+    color: #6d819c;
+    text-align: center;
+    line-height: 2.8;
+}
+
+h4.payment-text {
+    font-size: 16px;
+    color: #7495aa;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 2;
+}
+
+h5.card-details {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c9d6de;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h5.cardtext {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c9d6de;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h5.payment-text{
+    color: #FDB414;
+}
+
+h5.cardtext > span {
+    margin-left: 87px;
+}
+
+h5.total {
+    margin-top: 20px;
+    color: #c9d6de;
+}
+
+h6 {
+    font-family: 'PT Mono';
+    font-size: 18px;
+    font-weight: 400;
+    color: #f4f5f9;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+
+h6 > span {
+    margin-left: 94px;
+}
+
+/*Checkout*/
+
+.checkout {
+    width: 670px;
+    height: 485px;
+    position: absolute;
+    top: 49%;
+    left: 72%;
+    background-color: #1E2127;
+    overflow: hidden;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+
+    -webkit-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+    -moz-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+    box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+}
+
+
+.paynow::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 60vw;
+    height: 94%;
+    background: #444D57;
+    border-radius:   0 0 0 15%   ;
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+.order {
+    width: 300px;
+    height: 485px;
+    padding: 0 30px;
+    float: left;
+    background-color: #f4f5f9;
+    z-index: 1;
+
+    -webkit-box-shadow: 0 15px 24px rgba(37,44,65,0.16);
+    -moz-box-shadow: 0 15px 24px rgba(37,44,65,0.16);
+    box-shadow: 0 15px 24px rgba(37,44,65,0.16);
+}
+
+ul.order-list {
+    width: 100%;
+    height: 405px;
+    list-style: none;
+    overflow-y: scroll;
+    padding-right: 12px;
+    margin-top: 1rem;
+}
+
+ul.order-list li {
+    height: 60px;
+    margin-left: -80px;
+    overflow: hidden;
+    border-bottom: 1px solid #e9ebf2;
+}
+
+ul.order-list li > img {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+ul.order-list li > h4 {
+    margin-top: 16px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: right;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.order-list li:hover > h4 {
+    margin-top: 8px;
+}
+
+.list .fee {
+    float:left;
+    font-size: 25px;
+    margin: 1rem 3rem;
+    color: #FDB414;
+}
+
+.list .current-fee{
+    float:left;
+    font-size: 25px;
+    margin: 1rem 3rem;
+    color: orangered;
+}
+
+ul.order-list li > h5 {
+    margin-top: 0px;
+    text-align: right;
+    display: none;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.order-list li:hover > h5 {
+    margin-top: 3px;
+    display: block;
+}
+
+ul.order-list li > .paynow-link {
+    margin-top: 0px;
+    text-align: right;
+    display: none;
+    color: #FDB414;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ul.order-list li:hover > .paynow-link {
+    margin-top: 3px;
+    display: block;
+    color: orangered;
+}
+
+
+.payment {
+    z-index: 0;
+    width: 370px;
+    position: relative;
+    float: right;
+}
+
+.payment img {
+    width: 370px;
+}
