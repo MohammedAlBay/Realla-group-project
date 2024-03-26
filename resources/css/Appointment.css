@@ -44,3 +44,12 @@
     -moz-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
     box-shadow: 0 30px 48px rgba(37,44,65,0.32);
 }
+
+
+/*FORM */
+.add-button{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
