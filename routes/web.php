@@ -150,6 +150,11 @@ Route::get('/calendar', function () {
     return Inertia::render('CalendarTenant');
 });
 
+/*REPORT PROBLEM*/
+Route::get('/reportproblem', function () {
+    return Inertia::render('ReportProblem');
+});
+
 /*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
