@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,7 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 /*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -87,7 +89,7 @@ Route::get('/mock-up', function () {
 });
 
 Route::get('/property', function () {
-    return Inertia::render('PropertyDetails');
+    return Inertia::render('MyPropertyPage');
 });
 
 Route::get('/search', function () {
@@ -138,18 +140,24 @@ Route::get('/mailbox-landlord', function () {
     return Inertia::render('MailboxLandlord');
 });
 
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
 
+Route::get('/appointment-tenant', function () {
+    return Inertia::render('AppointmentTenant');
+});
+
+Route::get('/calendar', function () {
+    return Inertia::render('CalendarTenant');
+});
+
+/*REPORT PROBLEM*/
+Route::get('/reportproblem', function () {
+    return Inertia::render('ReportProblem');
+});
 
 /*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
-
-
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
-
-
