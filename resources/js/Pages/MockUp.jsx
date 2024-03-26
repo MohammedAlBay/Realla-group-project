@@ -8,7 +8,7 @@ import MockUp4 from "@/Pages/MockUp4.jsx";
 
 function MockUp() {
     return (
-        <div  className={"MockUp"} style={{ overflowX: 'hidden' }}>
+        <div  className={"MockUp"} style={{ overflowX: 'hidden', backgroundColor: '#e1e1e1', }}>
             <br/>
             <MockUp1/>
             <br/>
@@ -17,10 +17,8 @@ function MockUp() {
             <br/>
             <br/>
             <br/>
-            <RightArrow2/>
-            <br/>
+                <MockUp2 />
             <MockUp3 />
-            <MockUp2 />
             <MockUp4 />
 
         </div>

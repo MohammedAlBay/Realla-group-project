@@ -33,12 +33,7 @@ html {
     z-index: -1;
 }
 
-
-
-
-/*--------------------
-Text
----------------------*/
+/*Text*/
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     line-height: 1.4;
@@ -50,7 +45,7 @@ h1.payment-text {
     text-align: left;
 }
 
-h2 {
+h2.payment-text {
     font-size: 28px;
     letter-spacing: -2px;
     color: #6d819c;
@@ -58,14 +53,7 @@ h2 {
     line-height: 2.8;
 }
 
-h3 {
-    font-size: 16px;
-    color: #dddfe6;
-    letter-spacing: 1px;
-    text-align: left;
-}
-
-h4 {
+h4.payment-text {
     font-size: 16px;
     color: #7495aa;
     letter-spacing: 1px;
@@ -73,21 +61,35 @@ h4 {
     line-height: 2;
 }
 
- h5 {
+ h5.card-details {
+     font-size: 15px;
+     font-weight: 700;
+     color: #c9d6de;
+     letter-spacing: 1px;
+     text-align: left;
+     text-transform: uppercase;
+}
+
+h5.cardtext {
     font-size: 15px;
     font-weight: 700;
-    color: #d0b16a;
+    color: #c9d6de;
     letter-spacing: 1px;
     text-align: left;
     text-transform: uppercase;
 }
 
-h5 > span {
+ h5.payment-text{
+     color: #FDB414;
+ }
+
+h5.cardtext > span {
     margin-left: 87px;
 }
 
 h5.total {
-    margin-top: 20px;
+    margin-top: 10px;
+    color: #c9d6de;
 }
 
 h6 {
@@ -102,7 +104,7 @@ h6 {
 }
 
 h6 > span {
-    margin-left: 64px;
+    margin-left: 94px;
 }
 
 /*Checkout*/
@@ -112,8 +114,8 @@ h6 > span {
     height: 485px;
     position: absolute;
     top: 49%;
-    left: 70%;
-    background-color: #dddfe6;
+    left: 72%;
+    background-color: #1E2127;
     overflow: hidden;
 
     -webkit-transform: translate(-50%, -50%);
@@ -166,7 +168,7 @@ ul.order-list {
 
 ul.order-list li {
     height: 60px;
-    margin-left: -40px;
+    margin-left: -80px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }
@@ -194,7 +196,7 @@ ul.order-list li:hover > h4 {
     margin-top: 8px;
 }
 
- i {
+ .list i {
      float:left;
      font-size: 25px;
      margin: 1rem 3rem;
@@ -218,9 +220,7 @@ ul.order-list li:hover > h5 {
 }
 
 
-/*--------------------
-Payment
----------------------*/
+/*Payment*/
 
 .payment {
     z-index: 0;
@@ -249,7 +249,7 @@ Payment
 
 .card-content {
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     position: relative;
     float: left;
     z-index: 1;
@@ -259,30 +259,30 @@ Payment
     position: relative;
     margin-top: -20px;
     left: 190px;
+    font-size: 70px;
+    color: white;
 }
-
 
 .card-form {
     width: 100%;
     position: relative;
     float: right;
-    padding: 15px 35px;
+    padding: 15px 40px;
 }
 
 .card-form > p.field {
     height: 48px;
-    padding: 2px 10px;
+    padding: 8px 10px;
     margin-bottom: 2px;
     background-color: #f4f5f9;
     border: 1px solid #d2d4de;
     display: inline-block;
-
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
 
-input[type=text] {
+.card-form input[type=text] {
     height: 32px;
     position: relative;
     padding: 0px 10px 0px 6px;
@@ -293,6 +293,7 @@ input[type=text] {
     font-size: 18px;
     font-weight: 400;
     z-index: 0;
+    vertical-align: middle;
 }
 
 input[type=text]:focus {
@@ -306,8 +307,11 @@ input[type=text]:focus {
 
 #i-cardfront, #i-cardback, #i-calendar {
     position: relative;
-    top: 8px;
+    top: 1px;
     z-index: 1;
+    color: #dddfe6;
+    margin: 0;
+    vertical-align: middle;
 }
 
 #cardnumber {
@@ -324,20 +328,89 @@ input[type=text]:focus {
 
 .space {
     margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+#label-cardexpiration span {
+    position: absolute;
+    left: 7rem;
 }
 
 button:focus { outline:0; }
 
-.button-cta {
-    width: 70%;
-    height: 65px;
+
+.button-cta-2{
+    width: 45%;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: rgba(37,44,65,0.32);
+    border: 1px solid #FDB414;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #f4f5f9;
+    z-index: -1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button-cta-2:hover {
+    background:#FDB414;
+    border: 1px solid #FDB414;
+}
+
+.button-cta-2 span {
+    display: inline-block;
+    position: relative;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button-cta-2 span:after {
+    content: '→';
+    color: #f4f5f9;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+
+}
+
+.button-cta-2:hover span {
+    padding-right: 45px;
+}
+
+.button-cta-2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+.button-cta  {
+    width: 55%;
+    height: 50px;
     position: absolute;
     float: right;
-    right: 3.5rem;
-    bottom: -68px;
+    right: 5.5rem;
+    bottom: -50px;
     padding: 10px 20px;
     background-color: #FDB414;
     border: 1px solid #FDB414;
+    border-radius: 25px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -373,7 +446,8 @@ button:focus { outline:0; }
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -40px;
+    right: -30px;
+
 }
 
 .button-cta:hover span {
@@ -387,9 +461,7 @@ button:focus { outline:0; }
 
 
 
-/*--------------------
-Credit Card Background
----------------------*/
+/*Credit Card Background*/
 
 .wave {
     height: 300px;
@@ -432,9 +504,7 @@ Credit Card Background
     top: -70%;
 }
 
-/*--------------------
-Payment Notification
----------------------*/
+/*Payment Notification*/
 
 .paid {
     z-index: 0;
@@ -452,9 +522,7 @@ Payment Notification
     color: #3ac569;
 }
 
-/*--------------------
-Credits
----------------------*/
+/*Credits*/
 
 .icon-credits {
     width: 100%;

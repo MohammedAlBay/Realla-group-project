@@ -9,6 +9,7 @@
 
 .contact-container {
   background-color: #292F36;
+  padding-top: 8rem;
 }
 
 .contact-container h1 {
@@ -26,11 +27,11 @@
 
 .contact-panel {
   display: flex;
-  max-width: 60%;
-  margin: 10px auto;
+  max-width: 40%;
+  margin: 20px auto;
   background-color: #FFF;
-  border-radius: 9px;
-  padding: 0px;
+  border-radius: 8px;
+  padding: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -132,10 +133,10 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   background-color: #1E2127;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   color: #FFF;
   padding: 30px;
-  width: 40%; /* Adjust width as needed */
+  width: 45%; /* Adjust width as needed */
   justify-content: space-between;
 }
 

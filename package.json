@@ -17,18 +17,22 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.1",
-        "vite": "^5.1.6"
+        "vite": "^5.2.6"
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^6.5.1",
         "@fortawesome/free-solid-svg-icons": "^6.5.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
+        "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/vue3": "^1.0.15",
         "boxicons": "^2.1.4",
         "gsap": "^3.12.5",
         "jquery": "^3.7.1",
+        "moment": "^2.30.1",
+        "react-big-calendar": "^1.11.2",
         "react-easy-swipe": "^0.0.23",
         "react-icons": "^5.0.1",
+        "react-pdf": "^7.7.1",
         "react-responsive-carousel": "^3.2.23",
         "react-router-dom": "^6.22.3",
         "tinycircleslider": "^2.0.8",

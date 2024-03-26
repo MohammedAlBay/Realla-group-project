@@ -1,0 +1,223 @@
+
+:root {
+    --primary: #FDB414;
+    --overlay: #bd8300;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e1e1e1;
+}
+
+.body {
+    color: rgba(255,255,255,0.85);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.body::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 60vw;
+    height: 94%;
+    background: #444D57;
+    border-radius: 0 0 0 15%   ;
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+.documents {
+    display: grid;
+    place-items: center;
+    width: 800px;
+    height: 700px;
+    font: 0.7rem impact,sans-serif;
+
+    & section {
+        display: flex;
+        margin-bottom: 25%;
+
+        margin-right: 35rem;
+
+    }
+}
+
+
+.indexes, .tabs { list-style-type: none; z-index: 1 }
+
+.indexes {
+    font-size: 1rem;
+
+    & li {
+        padding: 1rem;
+        border: 1px solid transparent;
+        cursor: pointer;
+
+    }
+}
+
+.tabs { position: relative; }
+
+.tab {
+    position: absolute;
+    display: flex;
+    width: 500px;
+    height: 555px;
+    opacity: 0;
+    background-color: #1E2127;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -7rem;
+}
+
+.tab-content {
+    position: relative;
+    z-index: 5;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(-5rem);
+
+    & h3 {
+
+        font-weight: 900;
+        font-size: 1rem;
+        border-bottom: 1.5px solid white;
+        padding-bottom: 1rem;
+    }
+
+    & .pdf {
+
+        margin-bottom: 2rem;
+        color: rgba(255,255,255,0.7);
+    }
+    &  button.next-button, button.previous-button {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        font-size: 0.7rem;
+        cursor: pointer;
+        width: 100px;
+    }
+
+
+}
+
+
+button.update-doc{
+    width: 44%;
+    height: 35px;
+    padding: 10px 20px;
+    background-color: rgba(37,44,65,0.32);
+    border: 1px solid #FDB414;
+    border-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #f4f5f9;
+    z-index: -1;
+    margin: auto;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button.update-doc:hover {
+    background:#FDB414;
+    border: 1px solid #FDB414;
+}
+
+button.update-doc span {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button.update-doc span:after {
+    content: '→';
+    color: #f4f5f9;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+
+}
+
+button.update-doc:hover span {
+    padding-right: 45px;
+}
+
+button.update-doc:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+@keyframes content {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-image {
+    position: absolute;
+    right: 1rem;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transform: translateX(2rem);
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--overlay);
+        mix-blend-mode: multiply;
+    }
+
+    & img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+}
+
+@keyframes image {
+    100% {
+        opacity: 1;
+        width: 300px;
+        transform: translateX(0);
+    }
+}
+
+.active .tab          { opacity: 1; z-index: 5; border-color: orange; }
+.active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
+.active .tab-image    { animation: image 1s ease-out forwards; }
