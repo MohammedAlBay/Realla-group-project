@@ -13,7 +13,7 @@ export default function Form({ onAddTodo }) {
 
         onAddTodo(newTodo);
 
-        // Clear input fields after adding todo
+
         inputRef.current.value = "";
         setTodoText("");
         setFromDate("");
@@ -21,7 +21,7 @@ export default function Form({ onAddTodo }) {
     }
 
     return (
-        <div className="flex space-x-6 mb-7 mt-7 ml-3">
+        <div className="flex space-x-6 mb-7 mt-7 justify-center">
             <input
                 type="text"
                 ref={inputRef}

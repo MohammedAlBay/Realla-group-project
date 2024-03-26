@@ -22,13 +22,13 @@ function CalendarTenant() {
 
     return (
         <div>
-            {/* Render the calendar */}
+           
             <Calendar
                 localizer={localizer}
                 events={events}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: 500 }}
+                style={{ height: 500, width: 750, backgroundColor: 'white', color: 'darkgray' }}
             />
         </div>
     );
