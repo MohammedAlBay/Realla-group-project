@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Logo from "@/Components/Logo.jsx";
-import '../../css/Header.css';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
-
 
 function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +11,6 @@ function Navigation() {
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
 
     useEffect(() => {
         const bgHeader = () => {
@@ -40,87 +37,68 @@ function Navigation() {
     }, []);
 
     return (
-        <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
-            <nav className="nav container">
-                <Logo className="nav__logo"/>
+        <nav className={`nav container ${isMenuOpen ? 'bg-header' : ''}`}>
+            <Logo className="nav__logo"/>
 
-                {/* Desktop Menu */}
-                {isDesktop && (
-                    <div className="desktop-menu">
-                        <ul className="nav__list">
-                            <li className="nav__item">
-                                <Link href="/" className="nav__link">Home</Link>
-                            </li>
-                            <li className="nav__item">
-                                <Link href="/about" className="nav__link">About</Link>
-                            </li>
-                            <li className="nav__item">
-                                <Link href="/gallery" className="nav__link">Gallery</Link>
-                            </li>
-                            <li className="nav__item">
-                                <Link href="/contact" className="nav__link">Contact</Link>
-                            </li>
+            {/* Desktop Menu */}
+            {isDesktop && (
+                <div className="desktop-menu">
+                    <ul className="nav__list flex gap-12 items-center">
+                        <li className="nav__item">
+                            <Link href="/" className="nav__link text-white">Home</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/about" className="nav__link text-white">About</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/gallery" className="nav__link text-white">Gallery</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/contact" className="nav__link text-white">Contact</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/dashboard-tenant" className="nav__link text-white">Dashboard</Link>
+                        </li>
+                        <LoginRegisterButtons className="nav__item desktop"/>
+                    </ul>
+                </div>
+            )}
 
-                            <li className="nav__item">
-                                <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
-                            </li>
-                            <LoginRegisterButtons className="nav__item desktop"/>
-                        </ul>
-                    </div>
-                )}
-
-                {/* Mobile and Tablet Menu */}
-                {!isDesktop && (
-                    <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
-                        <ul className="nav__list">
-
-                            <li className="nav__item">
-                                <Link href="/" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>Home</Link>
-                            </li>
-
-                            <li className="nav__item">
-                                <Link href="/about" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>About</Link>
-                            </li>
-
-                            <li className="nav__item">
-                                <Link href="/gallery" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-                            </li>
-
-
-                            <li className="nav__item">
-                                <Link href="/contact" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>Contact</Link>
-                            </li>
-
-
-                            <div className="nav__actions">
-                                <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
-                            </div>
-
-                            <LoginRegisterButtons className="nav__item tablet"/>
-
-                        </ul>
-                        <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
-                            <i className='bx bx-x'></i>
+            {/* Mobile and Tablet Menu */}
+            {!isDesktop && (
+                <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
+                    <ul className="nav__list flex flex-col items-center gap-12">
+                        <li className="nav__item">
+                            <Link href="/" className="nav__link text-white" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/about" className="nav__link text-white" onClick={() => setIsMenuOpen(false)}>About</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/gallery" className="nav__link text-white" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
+                        </li>
+                        <li className="nav__item">
+                            <Link href="/contact" className="nav__link text-white" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                        </li>
+                        <div className="nav__actions">
+                            <i className='bx bx-search-alt text-orange-500'></i>
                         </div>
+                        <LoginRegisterButtons className="nav__item tablet"/>
+                    </ul>
+                    <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
+                        <i className='bx bx-x text-orange-500'></i>
                     </div>
-                )}
+                </div>
+            )}
 
-                {/* Hamburger Menu Toggle */}
-                {!isDesktop && (
-                    <div className="nav__toggle" id="nav-toggle" onClick={handleMenuToggle}>
-                        <i className='bx bx-menu'></i>
-                    </div>
-                )}
-
-
-            </nav>
-        </header>
+            {/* Hamburger Menu Toggle */}
+            {!isDesktop && (
+                <div className="nav__toggle" id="nav-toggle" onClick={handleMenuToggle}>
+                    <i className='bx bx-menu text-orange-500'></i>
+                </div>
+            )}
+        </nav>
     );
 }
 
 export default Navigation;
-
