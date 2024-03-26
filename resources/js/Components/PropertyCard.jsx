@@ -26,7 +26,7 @@ const PropertyList = () => {
     const limitedProperties = properties.slice(0, 6);
 
     return (
-        <main className="main">
+        <main>
             {limitedProperties.map(property => (
                 <PropertyCard key={property.id} property={property}/>
             ))}

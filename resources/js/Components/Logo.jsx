@@ -3,8 +3,8 @@ import { Link } from '@inertiajs/react';
 
 function Logo() {
     return (
-        <Link href="/" className="logo" >
-            <img src="/images/realla_logo.png" className="logo" alt="Logo"/>
+        <Link href="/" className="flex items-center ml-4">
+            <img src="/images/realla_logo.png" className="h-12 md:h-auto md:w-24" alt="Logo"/>
         </Link>
     );
 }

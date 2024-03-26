@@ -68,37 +68,6 @@ body{
     background: rgba(140, 140, 140, 0.18);
 }
 
-.login {
-    color: whitesmoke;
-    background-color: #ecaa16;
-    text-align: center;
-    border-radius: 25px;
-    width: 150px;
-    font-size: 18px;
-    margin-left: 2rem;
-    font-weight: bold;
-}
-
-.register {
-    color: whitesmoke;
-    border: 2px solid #ecaa16;
-    border-radius: 25px;
-    width: 150px;
-    font-size: 18px;
-    margin-left: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
-
-.register:hover{
-    background-color: whitesmoke;
-    color: #ecaa16;
-}
-
-.login:hover{
-    background-color: whitesmoke;
-    color: #ecaa16;
-}
 
 
 .home-img img {
