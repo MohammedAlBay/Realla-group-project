@@ -2,6 +2,7 @@ import React from 'react';
 import Gallery from "@/Pages/Gallery.jsx";
 import Landing from "@/Pages/Landing.jsx";
 import 'boxicons/css/boxicons.min.css';
+import '../../css/Home.css';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
         <Landing/>
         <div className={"home-gallery"}>
              <Gallery/>
+
          </div>
     </div>
 )

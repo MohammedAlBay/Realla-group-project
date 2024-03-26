@@ -13,6 +13,7 @@ const PropertyList = () => {
                     throw new Error('Failed to fetch properties');
                 }
                 const data = await response.json();
+                console.log('Fetched properties:', data);
                 setProperties(data);
             } catch (error) {
                 console.error('Error fetching properties:', error);
@@ -22,19 +23,13 @@ const PropertyList = () => {
         fetchProperties();
     }, []);
 
+    const limitedProperties = properties.slice(0, 6);
+
     return (
         <main className="main">
-
-
-                {properties.map(property => (
-
-
-                        <PropertyCard key={property.id} property={property}/>
-
-
-                ))}
-
-
+            {limitedProperties.map(property => (
+                <PropertyCard key={property.id} property={property}/>
+            ))}
         </main>
     );
 };

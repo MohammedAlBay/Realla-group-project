@@ -1,0 +1,9 @@
+
+.section{
+    z-index: -2;
+    position: relative;
+}
+
+.block{
+    z-index: 10;
+}
