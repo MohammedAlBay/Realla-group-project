@@ -6,8 +6,8 @@ function AppointmentTenant() {
     return (
         <div className="container-appointment">
             <div className="card-appointment">
-                <h1> Appointment Tenant page </h1>
-                {/* Render the CalendarTenant component */}
+                <h1>Make a appointment</h1>
+                <input placeholder="write a note..."/>
                 <CalendarTenant />
             </div>
         </div>
