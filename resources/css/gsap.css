@@ -1,26 +1,25 @@
-
-body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+.animation{
+    height: 110vh;
+    width: 100vw;
 }
 
-body{
-    background-color: #1E2127;
-}
 .right-arrow {
     position: absolute;
     right: 2rem;
     bottom: -30rem;
     z-index: 10;
     font-size: 40px;
+    border: none;
+    background-color: transparent;
 }
 
-section {
+ .animation section {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+     width: 100vw;
 }
 
 .iphone {
@@ -34,30 +33,6 @@ section {
     scale: 0;
 }
 
-#socials {
-    background: linear-gradient(#ff348b, #e30217);
-    border-radius: 30px;
-    aspect-ratio: 1;
-    height: 140px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-a {
-    text-decoration: none;
-    font-size: 30px;
-    font-family: sans-serif;
-    background-color: white;
-    aspect-ratio: 1;
-    height: 50px;
-    border-radius: 100%;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #payment{
     width: 300px;

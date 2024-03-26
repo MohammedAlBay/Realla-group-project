@@ -32,7 +32,7 @@ const CircularSliderCarousel = () => {
             <i className='bx bxs-mouse-alt mouse-icon' style={{color: '#292F36', fontSize: '40px'}}></i>
             <div className="slider">
                 <div className="title">
-                    <img src="./images/real-estate-right.png"/>
+
                 </div>
 
 
