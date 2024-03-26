@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "@inertiajs/react";
+import '../../css/Home.css';
 
 
 function LoginRegisterButtons() {

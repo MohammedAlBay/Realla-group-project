@@ -28,18 +28,23 @@ const CircularSliderCarousel = () => {
 
     return (
         <div className="circular-slider-carousel">
-            <button id="prev" style={{fontSize:`50px` }} onClick={prevSlider}><FaAngleLeft /></button>
+            <button id="prev" style={{fontSize: `50px`}} onClick={prevSlider}><FaAngleLeft/></button>
+            <i className='bx bxs-mouse-alt mouse-icon' style={{color: '#292F36', fontSize: '40px'}}></i>
             <div className="slider">
-                <div className="title" >
-                    <img src="./images/real-estate-right.png"/>
+                <div className="title">
+
                 </div>
-                <div className="images" style={{ transform: `translate(-37%, 16%) rotate(${rotate}deg)` }}>
+
+
+                <div className="images" style={{transform: `translate(-37%, 16%) rotate(${rotate}deg)`}}>
                     {items.map((item, index) => (
-                        <div className={`item ${index === active ? 'active' : ''}`} style={{ '--i': index + 1 }} key={index}>
-                            <img src={item.src} alt={`Product ${index + 1}`} />
+                        <div className={`item ${index === active ? 'active' : ''}`} style={{'--i': index + 1}}
+                             key={index}>
+                            <img src={item.src} alt={`Product ${index + 1}`}/>
                         </div>
                     ))}
                 </div>
+
                 <div className="content">
                     {items.map((item, index) => (
                         <div className={`item ${index === active ? 'active' : ''}`} key={index}>
@@ -48,8 +53,9 @@ const CircularSliderCarousel = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
-            <button id="next" style={{fontSize:`50px` }} onClick={nextSlider}><FaAngleRight /></button>
+            <button id="next" style={{fontSize: `50px`}} onClick={nextSlider}><FaAngleRight/></button>
         </div>
     );
 };

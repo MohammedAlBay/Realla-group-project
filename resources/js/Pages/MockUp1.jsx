@@ -1,5 +1,5 @@
-import { gsap, Power4, Power2 } from "gsap";
 import React, { useEffect } from "react";
+import { gsap, Power4, Power2 } from "gsap";
 import "../../css/gsap.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -173,7 +173,7 @@ const MockUp1 = () => {
                 <img
                     id="calendar"
                     className="widgets"
-                    src="./images/calender.svg"
+                    src="./images/calendar.svg"
                     alt=""
                 />
                 <img
@@ -206,18 +206,7 @@ const MockUp1 = () => {
                     src="https://assets.codepen.io/8292695/wallet.svg"
                     alt=""
                 />
-                <div id="socials" className="widgets">
-                    <a
-                        href="https://twitter.com/GibsonSMurray"
-                        target="_blank"
-                        title="𝕏 account"
-                    >
-                        <span>𝕏</span>
-                    </a>
-                    <a href="https://haptic.app/" target="_blank" title="inspiration">
-                        <span>✰</span>
-                    </a>
-                </div>
+
             </section>
         </div>
     );
