@@ -61,8 +61,15 @@ a {
 
 #payment{
     width: 300px;
+    margin-top: 3rem;
 }
 #calendar{
     width: 500px;
+}
 
+#screen-time{
+    width: 300px;
+}
+#weather {
+    width: 300px;
 }

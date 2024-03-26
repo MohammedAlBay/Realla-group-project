@@ -1,7 +1,6 @@
 import { gsap, Power4, Power2 } from "gsap";
 import React, { useEffect } from "react";
 import "../../css/gsap.css";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,21 +154,22 @@ const MockUp1 = () => {
                 <img
                     id="screen-time"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/screen-time-widget.svg"
+                    src="./images/payment-history.svg"
                     alt=""
                 />
                 <img
                     id="weather"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/weather-widget.svg"
+                    src="./images/documents.svg"
                     alt=""
                 />
                 <img
                     id="payment"
                     className="widgets"
-                    src="./images/Payment_component.svg"
+                    src="./images/payment.svg"
                     alt=""
                 />
+
                 <img
                     id="calendar"
                     className="widgets"
