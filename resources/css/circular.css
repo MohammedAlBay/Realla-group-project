@@ -1,77 +1,69 @@
 
 .circular-slider-carousel{
-    width: 100vh;
+    width: 110%;
     height: 100vh;
     position: relative;
     right: 20rem;
-
-
 }
-.slider{
-    position: relative;
-    width: 110%;
-    height: 130vh;
-    border-radius:  50% 0% 0% 50%;
-    background-image: linear-gradient(to right, #292F36, #292F36);
-    top: -9rem;
-    left: 18rem;
-}
-.slider::before{
+.slider {
     position: absolute;
     width: 100%;
-    height: 106vh;
-    content: '';
-    top: 2.5rem;
-    left: 23.5rem;
-    border-radius: 50% 0% 0% 50%;
-    background-color: #1E2127;
-    overflow-y: hidden;
+    height: 100vh;
+    bottom: 8rem;
+    left: 42rem;
 }
+
+
 .title{
     position: absolute;
-    top: 17%;
-    right: -13%;
+    top: 20%;
+    right: 0rem;
     text-align: right;
     color: #fff;
-    width: 50%;
-    font-family: 'Pacifico', cursive;
-    text-shadow: 3px 5px 0px #478860;
     line-height: .9em;
     overflow-x: hidden;
+    margin-right: 1rem;
+    z-index: 999;
+}
+.title img {
+    width: 90%;
+    overflow-x: hidden;
+    z-index: 999;
 }
 .images{
     position: absolute;
-    bottom: 8%;
-    left: 52%;
+    width: 900px;
+    height: 650px;
+    bottom: 17%;
+    left: 55%;
     --rotate: 0deg;
     transform: translate(-50%, 50%) rotate(var(--rotate));
-    width: 1200px;
-    height: 1100px;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
-    outline: 3px dashed #fff5;
-    outline-offset: -100px;
+    outline: 3px dashed #f5cc7f;
+
 }
+
 .images .item{
     position: absolute;
     bottom: 0%;
     left: 50%;
     --rotate: 0deg;
     transform: translate(-50%, 0);
-    width: 1200px;
-    height: 1100px;
+    width: 900px;
+    height: 650px;
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
-    outline: 3px dashed #fff5;
-    outline-offset: -100px;
+    outline: 3px dashed #f5cc7f;
+
 
 }
 
 .images .item img{
-    height:350px;
-    position: relative;
-    right: 10rem;
-    top: 10rem;
+    height:250px;
+    position: absolute;
+    bottom: 13rem;
+    right: -19rem;
 }
 
 .content{
@@ -81,29 +73,26 @@
     left: 50%;
     text-align: end;
     width: 350px;
-
 }
 .content h1{
-    color: #E88735;
-    font-size: 50px;
+    color: #e5dbc9;
+    font-size: 45px;
     position: relative;
-    top: 10rem;
-    right: 35rem;
-    z-index: 100;
-
+    top: 19rem;
+    right: 28rem;
 }
 
 .content button{
     margin-top: 30px;
     padding: 10px 30px;
     border-radius: 20px;
-    background-color: #E88735;
+    background-color: #f8b61b;
     color: #fff;
     border: none;
     float: left;
     position: relative;
-    top: 10rem;
-    right: 22rem;
+    top: 18rem;
+    right: 13.5rem;
     z-index: 100;
 }
 .content .item{
@@ -135,26 +124,38 @@
 
 
 #prev,
-#next{
+#next, .mouse-icon {
     position: absolute;
     border: none;
-    top: 35%;
-    right: 0;
-    font-size: 100px;
+    top: 13rem;
+    left: 230%;
+    transform: translateX(-50%);
     font-family: cursive;
     background-color: transparent;
-    color: #fff;
+    color: #8ca8c5;
     font-weight: bold;
     opacity: 0.3;
+    z-index: 100;
 }
 
-#next{
-    right: unset;
-    left: 45rem;
+#prev{
+    top: 7rem;
+    left: 228%;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 
+#next {
+    top: 15rem;
+    left: 228%;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+
+}
+
+.mouse-icon{
+left: 230%;
+}
 
 #next:hover,
-#prev:hover{
-    opacity: 1
+#prev:hover {
+    opacity: 1;
 }

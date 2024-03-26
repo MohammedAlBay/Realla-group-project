@@ -1,0 +1,66 @@
+.container-appointment {
+    color: rgba(255,255,255,0.85);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.container-appointment::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 60vw;
+    height: 94%;
+    background: #444D57;
+    border-radius: 0 0 0 15%   ;
+    overflow-y: hidden;
+    z-index: 0;
+
+}
+.container-appointment h1 {
+    color:red;
+}
+.card-appointment {
+    width: 770px;
+    height: 620px;
+    position: absolute;
+    top: 50%;
+    left: 71%;
+    background-color: #1E2127;
+    overflow: hidden;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+
+    -webkit-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+    -moz-box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+    box-shadow: 0 30px 48px rgba(37,44,65,0.32);
+}
+
+
+/*FORM */
+.add-button{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.rbc-day-bg + .rbc-today {
+    background-color: rgba(68, 77, 87, 0.66);
+}
+
+.calendar-container {
+    margin-left: 10px;
+    margin-top: 40px;
+
+}

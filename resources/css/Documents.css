@@ -48,7 +48,8 @@ html {
     & section {
         display: flex;
         margin-bottom: 25%;
-        margin-left: 30%;
+
+        margin-right: 35rem;
 
     }
 }
@@ -63,6 +64,7 @@ html {
         padding: 1rem;
         border: 1px solid transparent;
         cursor: pointer;
+
     }
 }
 
