@@ -5,6 +5,12 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+
+use App\Http\Controllers\ProfileController;
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +21,7 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 /*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -86,16 +93,12 @@ Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
-Route::get('/search', function () {
-    return Inertia::render('MockUp');
+Route::get('/property', function () {
+    return Inertia::render('MyPropertyPage');
 });
 
 Route::get('/search', function () {
     return Inertia::render('SearchResults');
-});
-
-Route::get('/property', function () {
-    return Inertia::render('MyPropertyPage');
 });
 
 
@@ -107,42 +110,51 @@ Route::get('/dashboard-tenant', function () {
 Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
-
-
-/*DASHBOARD LANDLOARD */
-Route::get('/landloard', function () {
-    return Inertia::render('DashboardLandloard');
-});
-
-Route::get('/dashboard-landloard', function () {
-    return Inertia::render('DashboardLandloardLanding');
-});
-
-
-/* TEST */
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
-
-
 /*PAYMENT*/
 
 Route::get('/paynow', function () {
     return Inertia::render('PayNow');
 });
 
-Route::get('/mailbox-landlord', function () {
-    return Inertia::render('MailboxLandlord');
+Route::get('/payment-history', function () {
+    return Inertia::render('PaymentHistory');
 });
 
+/*DOCUMENTS*/
+Route::get('/documents', function () {
+    return Inertia::render('Documents');
+});
 
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
 
 
-Route::get('/searchresults', function () {
-    return Inertia::render('searchresults');
+
+
+/*DASHBOARD LANDLOARD */
+Route::get('/dashboard-landloard', function () {
+    return Inertia::render('DashboardLandloardLanding');
+});
+
+Route::get('/landloard', function () {
+    return Inertia::render('DashboardLandloard');
+});
+
+Route::get('/mailbox-landlord', function () {
+    return Inertia::render('MailboxLandlord');
+});
+
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/appointment-tenant', function () {
+    return Inertia::render('AppointmentTenant');
+});
+
+Route::get('/calendar', function () {
+    return Inertia::render('CalendarTenant');
 });
 
 /*REPORT PROBLEM*/
@@ -150,9 +162,7 @@ Route::get('/reportproblem', function () {
     return Inertia::render('ReportProblem');
 });
 
-/*ERROR*/
-
+/*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
 })->where('any','.*');
-
