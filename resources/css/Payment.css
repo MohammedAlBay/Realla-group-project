@@ -1,8 +1,4 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 
 body,
 html {
@@ -210,8 +206,10 @@ ul.order-list li:hover > h5 {
 .payment {
     z-index: 0;
     width: 370px;
-    position: relative;
     float: right;
+    position: relative;
+    top: 4rem;
+
 }
 
 .card {
@@ -236,7 +234,9 @@ ul.order-list li:hover > h5 {
     width: 100%;
     padding: 10px 20px;
     position: relative;
+
     float: left;
+
     z-index: 1;
 }
 
@@ -329,20 +329,20 @@ button:focus { outline:0; }
 
 
 .button-cta-2{
-    width: 60%;
-    height: 50px;
+    width: 89%;
+    height: 45px;
     padding: 10px 20px;
     background-color: rgba(37,44,65,0.32);
     border: 1px solid #FDB414;
     border-radius: 25px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     color: #6d819c;
     z-index: -1;
     margin-bottom: 1rem;
-    margin-left: 4.5rem;
-    margin-top: 2rem;
+
+    margin-top: 1rem;
 
 
     -webkit-transition: all 0.3s;
@@ -372,7 +372,7 @@ button:focus { outline:0; }
 
 .button-cta  {
     width: 55%;
-    height: 50px;
+    height: 40px;
     position: absolute;
     float: right;
     right: 5.5rem;
@@ -386,6 +386,7 @@ button:focus { outline:0; }
     font-size: 24px;
     color: #f4f5f9;
     z-index: -1;
+    text-align: center;
 
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -402,6 +403,7 @@ button:focus { outline:0; }
 .button-cta span {
     display: inline-block;
     position: relative;
+    bottom: 9px;
 
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;

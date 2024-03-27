@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../../css/Appointment.css";
 import CalendarTenant from '@/Pages/CalendarTenant';
 import FormCalendar from '@/Components/FormCalender.jsx';
-import EditAppointments from '@/Pages/EditAppointments.jsx'; // Import the new component
+import EditAppointments from '@/Pages/EditAppointments.jsx';
 
 function AppointmentTenant() {
     const [editMode, setEditMode] = useState(false);

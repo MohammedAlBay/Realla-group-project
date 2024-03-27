@@ -1,59 +1,42 @@
 import React from 'react';
-import "../../css/payment-history.css";
-import {Link} from "@inertiajs/react";
-import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import '../../css/payment-history.css'
 
-const PaymentHistory = () => {
+const PaymentHistory = ({ updateOrderList }) => {
 
+    const paymentHistoryData = [
+        // Sample payment history data
+        { date: '01.04.2024', fee: '€ 850', status: 'pay now' },
+        { date: '01.03.2024', fee: '€ 850', status: 'paid' },
+        { date: '01.02.2024', fee: '€ 850', status: 'paid' },
+        { date: '01.01.2024', fee: '€ 850', status: 'paid' },
+        { date: '01.12.2023', fee: '€ 850', status: 'paid' },
+        // Add more payment history data as needed
+    ];
+
+
+    const handleClick = (item) => {
+        // Update the order list with the clicked payment history item
+        const newOrderList = [
+            { title: 'Date', value: item.date },
+            { title: 'Fee', value: item.fee },
+            { title: 'Status', value: item.status }
+            // Add more fields as needed
+        ];
+        updateOrderList(newOrderList);
+    };
 
     return (
-        <div className="paynow">
-
-            <div className='checkout'>
-                <div className='order'>
-                    <h2 className="payment-text">Payment History</h2>
-
-                    <ul className='order-list'>
-                        <li className="list">
-                            <p className="current-fee">€ 850</p>
-                            <h4 className="payment-text">01.04.2024</h4>
-
-                            <Link href="/paynow" className="paynow-link">pay now</Link>
-
-                        </li>
-                        <li className="list">
-                            <p className="fee">€ 850</p>
-                            <h4 className="payment-text">01.03.2024
-                            </h4>
-                            <h5 className="payment-text">paid</h5>
-                        </li>
-                        <li className="list">
-                            <p className="fee">€ 850</p>
-                            <h4 className="payment-text">01.03.2024</h4>
-                            <h5 className="payment-text">paid</h5>
-                        </li>
-                        <li className="list">
-                            <p className="fee">€ 850</p>
-                            <h4 className="payment-text">01.02.2024</h4>
-                            <h5 className="payment-text">paid</h5>
-                        </li>
-                        <li className="list">
-                            <p className="fee">€ 850</p>
-                            <h4 className="payment-text">01.01.2024</h4>
-                            <h5 className="payment-text">paid</h5>
-                        </li>
-                        <li className="list">
-                            <p className="fee">€ 850</p>
-                            <h4 className="payment-text">01.01.2024</h4>
-                            <h5 className="payment-text">paid</h5>
-                        </li>
-                    </ul>
-                </div>
-                <div id='payment' className='payment'>
-                    <img src="./images/real-estate-right.png" alt="right side image"/>
-                </div>
-            </div>
-
+        <div className="payment-history">
+            <ul className='order-list'>
+                {/* Render payment history items */}
+                {paymentHistoryData.map((item, index) => (
+                    <li key={index} className="list" onClick={() => handleClick(item)}>
+                        <p className="fee">{item.fee}</p>
+                        <h4 className="payment-text">{item.date}</h4>
+                        <h5 className="payment-text">{item.status}</h5>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import '../../css/Payment.css';
-import PaymentHistory from '@/Pages/PaymentHistory';
+import PaymentHistory from './PaymentHistory';
 
 const PayNow = () => {
-    const [showPaymentHistory, setShowPaymentHistory] = useState(false); // State to control the visibility of payment history
+    const [orderList, setOrderList] = useState([]);
+    const [showPaymentHistory, setShowPaymentHistory] = useState(false);
 
-    // Function to toggle the visibility of payment history
+
+    const updateOrderList = (newOrderList) => {
+        setOrderList(newOrderList);
+    };
+
+
     const togglePaymentHistory = () => {
         setShowPaymentHistory(!showPaymentHistory);
-    }
+    };
+
 
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
     const [expirationDate, setExpirationDate] = useState('00 / 0000');
@@ -29,10 +36,18 @@ const PayNow = () => {
 
     return (
         <div className="paynow">
+
+
             <div className='checkout'>
                 <div className='order'>
-                    <h2 className="payment-text">Current Rental Fee</h2>
-                    <h5 className="card-details"> 01.01.2024</h5>
+
+                    <h2 className="button-cta-2" onClick={togglePaymentHistory}><span>See Payment History</span></h2>
+
+                    {showPaymentHistory && (
+                        <PaymentHistory updateOrderList={updateOrderList} />
+                    )}
+
+                    <h5 className="card-details"> Current Fee</h5>
                     <ul className='order-list'>
                         <li className="list">
                             <i className='bx bxs-pie-chart' style={{ color: '#FDB414' }}></i>
@@ -56,14 +71,11 @@ const PayNow = () => {
                     </div>
                     <h5 className='total'>Total</h5>
                     <h1 className="payment-text">€ 850</h1>
+
                 </div>
 
                 <div id='payment' className='payment'>
-                    {/* Button to toggle payment history */}
-                    <h2 className="button-cta-2" onClick={togglePaymentHistory}><span>See Payment History</span></h2>
 
-                    {/* Conditionally render PaymentHistory component based on state */}
-                    {showPaymentHistory && <PaymentHistory />}
 
 
                     <div className='card'>
@@ -94,8 +106,11 @@ const PayNow = () => {
                         </p>
                         <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     );
 };
