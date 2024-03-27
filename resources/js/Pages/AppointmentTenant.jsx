@@ -5,30 +5,36 @@ import FormCalendar from '@/Components/FormCalender.jsx';
 import EditAppointments from '@/Pages/EditAppointments.jsx'; // Import the new component
 
 function AppointmentTenant() {
-    const [editMode, setEditMode] = useState(false); // State to track edit mode
-    const [appointments, setAppointments] = useState([]); // State to store appointments
+    const [editMode, setEditMode] = useState(false);
+    const [appointments, setAppointments] = useState([]);
 
-    // Function to add a new appointment
     const handleAddAppointment = (newAppointment) => {
         setAppointments([...appointments, newAppointment]);
     };
 
-    // Function to toggle edit mode and show/hide edit appointments component
     const handleEditAppointments = () => {
         setEditMode(!editMode);
+    };
+
+    const handleDeleteAppointment = (index) => {
+        const updatedAppointments = appointments.filter((_, i) => i !== index);
+        setAppointments(updatedAppointments);
+    };
+
+    const handleCancel = () => {
+        setEditMode(false); // Set edit mode to false to close the edit appointments component
     };
 
     return (
         <div className="container-appointment">
             <div className="card-appointment">
-                {/* Conditional rendering of components based on edit mode */}
                 {!editMode ? (
                     <>
                         <FormCalendar onAddAppointment={handleAddAppointment} onEditAppointments={handleEditAppointments} />
                         <CalendarTenant appointments={appointments} />
                     </>
                 ) : (
-                    <EditAppointments appointments={appointments} onCancel={handleEditAppointments} />
+                    <EditAppointments appointments={appointments} onDelete={handleDeleteAppointment} onCancel={handleCancel} />
                 )}
             </div>
         </div>

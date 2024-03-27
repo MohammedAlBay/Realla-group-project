@@ -10,6 +10,7 @@ import Mailbox from "@/Pages/MailboxTenant";
 import Documents from "@/Pages/Documents.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
 import AppointmentTenant from "@/Pages/AppointmentTenant.jsx";
+import ReportProblem from "@/Pages/ReportProblem.jsx";
 
 const DashboardTenant = () => {
     // State to track the current page
@@ -27,10 +28,12 @@ const DashboardTenant = () => {
                 return <DashboardTenantLanding />;
             case 'gallery':
                 return <Gallery />;
-            case 'pay-now':
-                return <PayNow />;
-            case 'mailbox':
+            case 'reportproblem':
+                return <ReportProblem />;
+            case 'mailbox-tenant':
                 return <Mailbox />;
+            case 'paynow':
+                return <PayNow />;
             case 'documents':
                 return <Documents />;
             case 'appointment-tenant':
