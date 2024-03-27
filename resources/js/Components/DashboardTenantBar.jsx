@@ -51,14 +51,14 @@ import React from 'react';
                     <li className="sidebar-menu-item">
                         <button onClick={() => onPageChange('follow-up-problems-tenant')} className="sidebar-menu-content">
                             <i className='bx bx-loader-circle' style={{color: '#FDB414'}}></i>
-                            <span href="#" className="sidebar-menu-link">Follow up problems</span>
+                            <span className="sidebar-menu-link">Follow up problems</span>
                          </button>
                     </li>
 
                     <li className="sidebar-menu-item">
                           <button onClick={() => onPageChange('tenant-profile')} className="sidebar-menu-content">
                              <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
-                             <span href="#" className="sidebar-menu-link">My Profile</span>
+                             <span className="sidebar-menu-link">My Profile</span>
                           </button>
                    </li>
             </ul>
