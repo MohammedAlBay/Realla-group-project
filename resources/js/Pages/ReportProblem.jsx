@@ -37,66 +37,36 @@ const problems = [
           <h1 className="text-2xl font-bold text-center mb-6">Report a Problem</h1>
   
           <div className="flex items-center justify-between">
-            <button
-              onClick={prevProblem}
-              className="p-2 rounded-full bg-gray-700 text-gray-300"
-              aria-label="Previous problem"
-            >
-              &lt;
-            </button>
+            <button onClick={prevProblem} className="p-2 rounded-full bg-gray-700 text-gray-300" aria-label="Previous problem">&lt;</button>
   
             {/* Carousel */}
             <div className="flex overflow-x-auto space-x-4">
               {problems.map((problem, index) => (
-                <div
-                  key={problem.id}
-                  className={`p-4 rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-700'}`}
-                >
+                <div key={problem.id} className={`p-4 rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-700'}`}>
                   <img src={problem.src} alt={problem.alt} className="w-16 h-16 object-cover" />
                 </div>
               ))}
             </div>
   
-            <button
-              onClick={nextProblem}
-              className="p-2 rounded-full bg-gray-700 text-gray-300"
-              aria-label="Next problem"
-            >
-              &gt;
-            </button>
+            <button onClick={nextProblem} className="p-2 rounded-full bg-gray-700 text-gray-300" aria-label="Next problem">&gt;</button>
           </div>
   
           {/* Input form */}
           <form onSubmit={handleSubmit} className="mt-6">
             <div className="mb-4">
-              <textarea
-                id="problem"
-                value={problemDescription}
-                onChange={(e) => setProblemDescription(e.target.value)}
-                rows="4"
-                className="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400 text-gray-200"
-                placeholder="Provide a detailed description of the problem."
-              ></textarea>
+              <textarea id="problem" value={problemDescription} onChange={(e) => setProblemDescription(e.target.value)} rows="4" className="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400 text-gray-200" placeholder="Provide a detailed description of the problem."></textarea>
             </div>
-            <div className="flex space-x-4">
-              <button
-                type="submit"
-                className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg"
-              >
-                Send
+            
+            <div className="flex justify-end space-x-6">
+              <button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">Send</button>
+              <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">Follow up</button>
+
+            <div className="flex items-center">
+              <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-12 h-12 flex items-center justify-center" aria-label="Add a photo">
+                <span className="text-xl">+</span>
               </button>
-              <button
-              type="button"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg"
-            >
-              Follow up Problems
-            </button>
-            <button
-              type="button"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg"
-            >
-              Choose a photo
-            </button>
+                <span className="text-white font-bold ml-3 mt-1">Add a photo</span>
+            </div>
             </div>
           </form>
         </div>
