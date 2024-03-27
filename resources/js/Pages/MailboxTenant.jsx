@@ -6,6 +6,7 @@ import DashboardLandlordBar from '@/Components/DashboardTenantBar.jsx';
 
 const MailboxTenant = () => {
     const [selectedPerson, setSelectedPerson] = useState(null);
+    
 
     return (
         <div className="relative bg-gray-200 h-screen flex justify-end items-center">
