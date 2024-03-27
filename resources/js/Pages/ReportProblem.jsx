@@ -1,77 +1,103 @@
 import React, { useState } from 'react';
-import '../../css/app.css'
+import '../../css/app.css';
 
 const problems = [
-    
-    { id: 1, icon: '', label: 'Heating Issue' },
-    { id: 2, icon: '', label: 'Electricity Issue' },
-    { id: 3, icon: '', label: 'Plumbing Issue' },
-    { id: 4, icon: '', label: 'Leaks Issue' },
-    { id: 5, icon: '', label: 'Security Issue' },
-    { id: 6, icon: '', label: 'Network Issue' },
-    { id: 7, icon: '', label: 'Appliances Issue' },
-    { id: 8, icon: '', label: 'Pests Issue' },
-  ];
-  
-  const ReportProblem = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [problemDescription, setProblemDescription] = useState('');
-  
-    const nextProblem = () => {
-      setActiveIndex((index) => (index + 1) % problems.length);
-    };
-  
-    const prevProblem = () => {
-      setActiveIndex((index) => (index === 0 ? problems.length - 1 : index - 1));
-    };
-  
-    // Function to handle form submission
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // Handle the submit action
-    };
-  
-    return (
-      <div className="min-h-screen bg-gray-800 p-6 flex flex-col items-center justify-center">
-        <div className="bg-gray-900 text-gray-200 p-6 rounded-lg w-full max-w-4xl">
-          <h1 className="text-2xl font-bold text-center mb-6">Report a Problem</h1>
-  
-          <div className="flex items-center justify-between">
-            <button onClick={prevProblem} className="p-2 rounded-full bg-gray-700 text-gray-300" aria-label="Previous problem">&lt;</button>
-  
-            {/* Carousel */}
-            <div className="flex overflow-x-auto space-x-4">
-              {problems.map((problem, index) => (
-                <div key={problem.id} className={`p-4 rounded-full ${index === activeIndex ? 'bg-yellow-500' : 'bg-gray-700'}`}>
-                  <img src={problem.src} alt={problem.alt} className="w-16 h-16 object-cover" />
-                </div>
-              ))}
-            </div>
-  
-            <button onClick={nextProblem} className="p-2 rounded-full bg-gray-700 text-gray-300" aria-label="Next problem">&gt;</button>
-          </div>
-  
-          {/* Input form */}
-          <form onSubmit={handleSubmit} className="mt-6">
-            <div className="mb-4">
-              <textarea id="problem" value={problemDescription} onChange={(e) => setProblemDescription(e.target.value)} rows="4" className="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400 text-gray-200" placeholder="Provide a detailed description of the problem."></textarea>
-            </div>
-            
-            <div className="flex justify-end space-x-6">
-              <button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">Send</button>
-              <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">Follow up</button>
+  { id: 1, icon: '/images/temperature.png', alt: 'Heating' },
+  { id: 2, icon: '/images/smart-house.png', alt: 'Electricity' },
+  { id: 3, icon: '/images/wash-basin.png', alt: 'Plumbing' },
+  { id: 4, icon: '/images/alert.png', alt: 'Alert' },
+  { id: 5, icon: '/images/face-scan.png', alt: 'Security Issue' },
+  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Appliances Issue' },
+  { id: 7, icon: '/images/solar-cell.png', alt: 'Solar panel' },
+  { id: 8, icon: '/images/smarthome.png', alt: 'Network ' },
+  { id: 9, icon: '/images/air-conditioner.png', alt: 'Cooling' },
+  { id: 10, icon: '/images/garage.png', alt: 'Garage' },
+  { id: 11, icon: '/images/camera.png', alt: 'Camera' },
+  { id: 12, icon: '/images/toilet.png', alt: 'Leak' },
+];
 
-            <div className="flex items-center">
-              <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-12 h-12 flex items-center justify-center" aria-label="Add a photo">
-                <span className="text-xl">+</span>
-              </button>
-                <span className="text-white font-bold ml-3 mt-1">Add a photo</span>
-            </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    );
+const ReportProblem = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const problemsPerPage = 4;
+
+  const indexOfLastProblem = (currentPage + 1) * problemsPerPage;
+  const indexOfFirstProblem = indexOfLastProblem - problemsPerPage;
+  const currentProblems = problems.slice(indexOfFirstProblem, indexOfLastProblem);
+
+  const goToNextPage = () => {
+    setCurrentPage((prevPage) => {
+    
+      if (indexOfLastProblem >= problems.length) {
+        return 0;
+      } else {
+        return prevPage + 1;
+      }
+    });
   };
   
-  export default ReportProblem;
+  const goToPrevPage = () => {
+    setCurrentPage((prevPage) => {
+     
+      if (prevPage === 0) {
+        return Math.ceil(problems.length / problemsPerPage) - 1;
+      } else {
+        return prevPage - 1;
+      }
+    });
+  };
+  
+  const [problemDescription, setProblemDescription] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle submit action 
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-700 p-6 flex flex-col items-center justify-center" style={{ backgroundColor: '#1e2127' }}>
+      <div className="bg-gray-600 text-gray-200 p-10 rounded-lg w-full max-w-4xl" style={{ backgroundColor: '#444D57' }}>
+        <h1 className="text-2xl font-bold text-center mb-8">Report a Problem</h1>
+
+        {/* Carousel */}
+        <div className="flex items-center justify-center mb-6">
+          <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-500" style={{ backgroundColor: '#fdb514' }} aria-label="Previous problem">&lt;</button>
+
+          {/* Carousel Items */}
+          <div className="flex justify-center space-x-4 mx-16">
+            {currentProblems.map((problem, index) => (
+              <div key={problem.id} className="flex-shrink-0 w-28 h-28 m-2 rounded-full bg-gray-700 flex flex-col items-center justify-center">
+                <img src={problem.icon} alt={problem.label} className="w-full h-full object-cover" />
+                <span className="text-sm text-white">{problem.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-500" style={{ backgroundColor: '#fdb514' }} aria-label="Next problem">&gt;</button>
+        </div>
+
+    <form onSubmit={handleSubmit} className="mt-12">
+        <div className="mb-10 mx-8 px-6">
+            <textarea id="problem" value={problemDescription} onChange={(e) => setProblemDescription(e.target.value)} rows="4" className="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400 text-gray-600" placeholder="Provide a detailed description of the problem..."></textarea>
+        </div>
+
+        <div className="flex justify-between items-center w-full">
+  
+        <div className="flex items-center mx-14 mt-[-24px]">
+          <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#fdb514' }} aria-label="Add a photo">
+            <span className="text-xl">+</span>
+          </button>
+            <span className="text-white font-bold ml-4">Add a photo</span>
+        </div>
+
+        <div className="flex space-x-4 mx-14 mt-[-24px]">
+          <button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
+          <button type="button" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    </div>
+  );
+};
+
+export default ReportProblem;
