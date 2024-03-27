@@ -2,10 +2,10 @@ import React from 'react';
 
 function EditAppointments({ appointments, onCancel, onDelete }) {
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="edit-appointments bg-gray-100 p-8 rounded-lg shadow-md">
+        <div className="flex justify-center items-center mt-6">
+            <div className="edit-appointments bg-gray-100 p-8 rounded-lg shadow-md ">
                 <h2 className="text-2xl font-bold mb-4 text-gray-500">Manage Your Appointments</h2>
-                <ul className="mb-4">
+                <ul className="mb-4 ">
                     {appointments.map((appointment, index) => (
                         <li key={index} className="mb-4 text-gray-800">
                             <span className="font-semibold">{appointment.title}</span>

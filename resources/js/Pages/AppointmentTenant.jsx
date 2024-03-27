@@ -9,17 +9,17 @@ function AppointmentTenant() {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        // Retrieve appointments from local storage when component mounts
+
         const storedAppointments = JSON.parse(localStorage.getItem('appointments'));
         if (storedAppointments) {
             setAppointments(storedAppointments);
         }
-    }, []); // Empty dependency array ensures this effect runs only once when component mounts
+    }, []);
 
     useEffect(() => {
-        // Save appointments to local storage whenever appointments state changes
+
         localStorage.setItem('appointments', JSON.stringify(appointments));
-    }, [appointments]); // Dependency array ensures this effect runs whenever appointments state changes
+    }, [appointments]);
 
 
     const handleAddAppointment = (newAppointment) => {
@@ -36,7 +36,7 @@ function AppointmentTenant() {
     };
 
     const handleCancel = () => {
-        setEditMode(false); // Set edit mode to false to close the edit appointments component
+        setEditMode(false);
     };
 
     return (
