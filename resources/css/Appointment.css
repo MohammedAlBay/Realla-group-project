@@ -5,26 +5,12 @@
     align-items: center;
     background-color: #e1e1e1;
     margin: 0;
-
-}
-
-.container-appointment::before {
-    content: "";
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-    bottom: 0rem;
-    width: 60vw;
-    height: 94%;
-    background: #444D57;
-    border-radius: 0 0 0 15%   ;
-    overflow-y: hidden;
-    z-index: 0;
 }
 
 .container-appointment h1 {
     color:red;
 }
+
 .card-appointment {
     width: 770px;
     height: 620px;

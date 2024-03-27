@@ -8,7 +8,6 @@ const PaymentHistory = () => {
 
     return (
         <div className="paynow">
-            <DashboardTenantBar/>
 
             <div className='checkout'>
                 <div className='order'>

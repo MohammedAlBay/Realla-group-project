@@ -23,7 +23,7 @@ const PayNow = () => {
 
     return (
         <div className="paynow">
-            <DashboardTenantBar/>
+
 
             <div className='checkout'>
                 <div className='order'>
@@ -56,11 +56,14 @@ const PayNow = () => {
                     <h1 className="payment-text">€ 850</h1>
                 </div>
 
+
                 <Link href="/payment-history">
-                <button className='button-cta-2' title='See your payment history'><span>PAYMENT HISTORY</span></button>
+                    <button  href="/payment-history" className='button-cta-2' title='See your payment history'><span>PAYMENT HISTORY</span></button>
                 </Link>
 
                 <div id='payment' className='payment'>
+
+
                     <div className='card'>
                         <div className='card-content'>
 
