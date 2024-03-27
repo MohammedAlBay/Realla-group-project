@@ -37,7 +37,7 @@ const DashboardTenantLanding = () => {
             case 'appointment-tenant':
                 return <AppointmentTenant />;
             default:
-                return < CircularSliderCarousel  />;
+                return <CircularSliderCarousel  />;
         }
     };
 

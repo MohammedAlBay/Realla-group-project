@@ -6,7 +6,7 @@ const DashboardLandloardBar = ({ onPageChange }) => {
         <div className="sidebar">
             <ul className="sidebar-menu">
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('dashboard-tenant')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('dashboard-landloard')} className="sidebar-menu-content">
                         <i className='bx bxs-dashboard' style={{color: '#FDB414'}}/>
                         <span className="sidebar-menu-link">Home</span>
                     </button>

@@ -5,12 +5,12 @@ const PaymentHistory = ({ updateOrderList }) => {
 
     const paymentHistoryData = [
         // Sample payment history data
-        { date: '01.04.2024', fee: '€ 850', status: 'pay now' },
+        { date: '01.05.2024', fee: '€ 850', status: 'pay before 01/05' },
+        { date: '01.04.2024', fee: '€ 850', status: 'paid' },
         { date: '01.03.2024', fee: '€ 850', status: 'paid' },
         { date: '01.02.2024', fee: '€ 850', status: 'paid' },
         { date: '01.01.2024', fee: '€ 850', status: 'paid' },
         { date: '01.12.2023', fee: '€ 850', status: 'paid' },
-        // Add more payment history data as needed
     ];
 
 
