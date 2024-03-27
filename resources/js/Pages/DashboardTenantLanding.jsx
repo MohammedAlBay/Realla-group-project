@@ -36,6 +36,10 @@ const DashboardTenantLanding = () => {
                 return <Documents />;
             case 'appointment-tenant':
                 return <AppointmentTenant />;
+            case 'follow-up-problems-tenant':
+                return <FollowUpTenant />;
+            case 'profile-tenant':
+                return <ProfileTenant />;
             default:
                 return <CircularSliderCarousel  />;
         }

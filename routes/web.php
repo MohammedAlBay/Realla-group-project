@@ -105,6 +105,8 @@ Route::get('/dashboard-tenant', function () {
 Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
+
+
 /*PAYMENT*/
 
 Route::get('/paynow', function () {
@@ -123,8 +125,6 @@ Route::get('/documents', function () {
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
-
-
 
 
 /*DASHBOARD LANDLOARD */

@@ -6,7 +6,6 @@ import '../../css/Appointment.css'
 import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 import MailboxLandlord from "@/Pages/MailboxLandlord.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
-import AppointmentLandoard from "@/Pages/AppointmentLandloard.jsx";
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 
 const DashboardLandloardLanding = () => {
