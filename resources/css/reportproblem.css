@@ -1,0 +1,23 @@
+.container {
+    color: rgba(255,255,255,0.85);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 60vw;
+    height: 94%;
+    background: #444D57;
+    border-radius: 0 0 0 15%   ;
+    overflow-y: hidden;
+    z-index: 0;
+}
