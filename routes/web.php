@@ -5,7 +5,6 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,10 +38,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
 */
-
-
 
 Route::get('/', function () {
     return Inertia::render('Home');
@@ -105,6 +101,7 @@ Route::get('/dashboard-tenant', function () {
 Route::get('/tenant', function () {
     return Inertia::render('DashboardTenant');
 });
+
 /*PAYMENT*/
 
 Route::get('/paynow', function () {
@@ -123,9 +120,6 @@ Route::get('/documents', function () {
 Route::get('/mailbox-tenant', function () {
     return Inertia::render('MailboxTenant');
 });
-
-
-
 
 /*DASHBOARD LANDLOARD */
 Route::get('/dashboard-landloard', function () {
