@@ -9,8 +9,6 @@ const SearchBarGallery = () => {
                 <button>
                     <i className='bx bx-search-alt' style={{color: '#ecaa16'}}></i>
                 </button>
-
-
         </div>
     )
         ;

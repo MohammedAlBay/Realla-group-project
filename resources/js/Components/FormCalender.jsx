@@ -1,18 +1,15 @@
 import React, { useRef, useState } from "react";
-import '../../css/app.css'
+import '../../css/app.css';
 
-
-export default function Form({ onAddTodo }) {
+export default function FormCalendar({ onAddAppointment }) {
     const inputRef = useRef();
     const [todoText, setTodoText] = useState("");
     const [fromDate, setFromDate] = useState("");
     const [toDate, setToDate] = useState("");
 
     function clickHandler() {
-        const newTodo = { text: todoText, fromDate, toDate };
-
-        onAddTodo(newTodo);
-
+        const newAppointment = { title: todoText, start: new Date(fromDate), end: new Date(toDate) };
+        onAddAppointment(newAppointment);
 
         inputRef.current.value = "";
         setTodoText("");
