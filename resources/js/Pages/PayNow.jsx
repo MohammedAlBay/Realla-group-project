@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
-import '../../css/Payment.css'
-import { Link } from "@inertiajs/react";
+import '../../css/Payment.css';
+import PaymentHistory from '@/Pages/PaymentHistory';
 
 const PayNow = () => {
+    const [showPaymentHistory, setShowPaymentHistory] = useState(false); // State to control the visibility of payment history
+
+    // Function to toggle the visibility of payment history
+    const togglePaymentHistory = () => {
+        setShowPaymentHistory(!showPaymentHistory);
+    }
+
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
     const [expirationDate, setExpirationDate] = useState('00 / 0000');
     const [cvv, setCvv] = useState('000');
@@ -52,10 +59,12 @@ const PayNow = () => {
                 </div>
 
                 <div id='payment' className='payment'>
+                    {/* Button to toggle payment history */}
+                    <h2 className="button-cta-2" onClick={togglePaymentHistory}><span>See Payment History</span></h2>
 
-                    <Link href="/payment-history">
-                        <h2 className=" button-cta-2"><span>See Payment History</span></h2>
-                    </Link>
+                    {/* Conditionally render PaymentHistory component based on state */}
+                    {showPaymentHistory && <PaymentHistory />}
+
 
                     <div className='card'>
                         <div className='card-content-payment'>
