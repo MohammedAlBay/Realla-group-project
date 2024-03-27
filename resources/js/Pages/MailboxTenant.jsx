@@ -12,11 +12,15 @@ const MailboxTenant = () => {
                 <div style={{ padding: '20px' }}>
                     <h3 style={{ marginTop: '10px', marginLeft: '10px' }}>Message</h3>
                 </div>
-                <div class="message-role">Landlord</div>
+                <div class="message-role">Gardener</div>
                 <div class="message-role">11:15 AM</div>
                 <div class="message-role">Subject</div>
 
-                <div class="message-role">Gardener</div>
+                <div class="message-role">Cleaner</div>
+                <div class="message-role">11:15 AM</div>
+                <div class="message-role">Subject</div>
+
+                <div class="message-role">Landlord</div>
                 <div class="message-role">11:15 AM</div>
                 <div class="message-role">Subject</div>
 
