@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import "../../css/Appointment.css";
 import CalendarTenant from '@/Pages/CalendarTenant';
 import FormCalendar from '@/Components/FormCalender.jsx';
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 function AppointmentTenant() {
     const [appointments, setAppointments] = useState([]);
@@ -27,6 +28,7 @@ function AppointmentTenant() {
 
     return (
         <div className="container-appointment">
+            <DashboardTenantBar />
             <div className="card-appointment">
                 <FormCalendar onAddAppointment={addAppointment} />
                 <CalendarTenant appointments={appointments} />

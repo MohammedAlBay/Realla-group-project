@@ -45,7 +45,6 @@
 
 .sidebar-menu-item i {
    font-size: 25px;
-
     margin-right: 1rem;
 
 }
@@ -65,14 +64,17 @@
 }
 
 .sidebar-menu-content:hover {
-    background-color: rgba(73, 81, 91, 0.84);
-    border-radius: 10px;
-    width: 300px;
+    width: 230px;
     margin-left: 2rem;
+    text-align: center;
+    color: white;
 }
 
 .sidebar-menu-link:hover{
     color: white;
+    background-color: rgba(73, 81, 91, 0.84);
+    border-radius: 10px;
+
 }
     /*
     .nav__list {

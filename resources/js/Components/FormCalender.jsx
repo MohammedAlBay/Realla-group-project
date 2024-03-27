@@ -1,4 +1,3 @@
-// FormCalendar.jsx
 import React, { useRef, useState } from "react";
 import '../../css/app.css';
 
@@ -46,6 +45,12 @@ export default function FormCalendar({ onAddAppointment }) {
                 className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800"
             >
                 Add
+            </button>
+            <button
+
+                className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800"
+            >
+                <i className='bx bxs-edit-alt'></i>
             </button>
         </div>
     );
