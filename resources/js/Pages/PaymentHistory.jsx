@@ -27,7 +27,7 @@ const PaymentHistory = ({ updateOrderList }) => {
 
     return (
         <div className="payment-history">
-            <ul className='order-list'>
+            <ul className='orderlist'>
                 {/* Render payment history items */}
                 {paymentHistoryData.map((item, index) => (
                     <li key={index} className="list" onClick={() => handleClick(item)}>

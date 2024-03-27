@@ -84,7 +84,7 @@ h6 > span {
 /*Checkout*/
 
 
-ul.order-list {
+ul.orderlist {
     width: 100%;
     height: 800px;
     list-style: none;
@@ -93,20 +93,20 @@ ul.order-list {
     margin-top: 1rem;
 }
 
-ul.order-list li {
+ul.orderlist li {
     height: 60px;
     margin-left: -70px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }
 
-ul.order-list li > img {
+ul.orderlist li > img {
     width: 60px;
     height: 80px;
     float: left;
 }
 
-ul.order-list li > h4 {
+ul.orderlist li > h4 {
     margin-top: 16px;
     line-height: 1;
     letter-spacing: 1px;
@@ -119,7 +119,7 @@ ul.order-list li > h4 {
     transition: all 0.3s;
 }
 
-ul.order-list li:hover > h4 {
+ul.orderlist li:hover > h4 {
     margin-top: 8px;
 }
 
@@ -137,7 +137,7 @@ ul.order-list li:hover > h4 {
     color: orangered;
 }
 
-ul.order-list li > h5 {
+ul.orderlist li > h5 {
     margin-top: 0px;
     text-align: right;
     display: none;
@@ -149,12 +149,12 @@ ul.order-list li > h5 {
     transition: all 0.3s;
 }
 
-ul.order-list li:hover > h5 {
+ul.orderlist li:hover > h5 {
     margin-top: 3px;
     display: block;
 }
 
-ul.order-list li > .paynow-link {
+ul.orderlist li > .paynow-link {
     margin-top: 0px;
     text-align: right;
     display: none;
@@ -165,7 +165,7 @@ ul.order-list li > .paynow-link {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-ul.order-list li:hover > .paynow-link {
+ul.orderlist li:hover > .paynow-link {
     margin-top: 3px;
     display: block;
     color: orangered;
