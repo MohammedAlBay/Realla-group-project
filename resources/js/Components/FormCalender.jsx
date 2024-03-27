@@ -53,7 +53,7 @@ export default function FormCalendar({ onAddAppointment, onEditAppointments }) {
                 Add
             </button>
             <button
-                onClick={handleEditClick}
+                onClick={handleEditClick} // Handle click on edit button
                 className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800"
             >
                 <i className='bx bxs-edit-alt'></i>

@@ -1,4 +1,5 @@
 // CalendarTenant.jsx
+
 import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
@@ -7,7 +8,7 @@ import '../../css/Appointment.css';
 
 const localizer = momentLocalizer(moment);
 
-function CalendarTenant({ appointments }) {
+function CalendarTenant({ appointments, onAppointmentClick }) {
     // Event style function to customize event content color
     const eventStyleGetter = (event, start, end, isSelected) => {
         const style = {
@@ -30,6 +31,7 @@ function CalendarTenant({ appointments }) {
                 endAccessor="end"
                 eventPropGetter={eventStyleGetter}
                 style={{ height: 500, width: 750, backgroundColor: 'white', color: 'darkgray' }}
+                onSelectEvent={(event) => onAppointmentClick(event)} // Handle click on appointment
             />
         </div>
     );

@@ -1,37 +1,46 @@
 // AppointmentTenant.jsx
-import React, { useEffect, useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import "../../css/Appointment.css";
 import CalendarTenant from '@/Pages/CalendarTenant';
 import FormCalendar from '@/Components/FormCalender.jsx';
-import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import EditAppointments from '@/Pages/EditAppointments.jsx';
 
 function AppointmentTenant() {
     const [appointments, setAppointments] = useState([]);
 
-
     useEffect(() => {
-        const storedAppointments = localStorage.getItem('appointments');
+        // Retrieve appointments from local storage when component mounts
+        const storedAppointments = JSON.parse(localStorage.getItem('appointments'));
         if (storedAppointments) {
-            setAppointments(JSON.parse(storedAppointments));
+            setAppointments(storedAppointments);
         }
-    }, []);
+    }, []); // Empty dependency array ensures this effect runs only once when component mounts
 
+    const handleAddAppointment = (newAppointment) => {
+        const updatedAppointments = [...appointments, newAppointment];
+        setAppointments(updatedAppointments);
+        // Store appointments in local storage
+        localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
+    };
 
-    useEffect(() => {
-        localStorage.setItem('appointments', JSON.stringify(appointments));
-    }, [appointments]);
+    const handleEditAppointments = (editedAppointments) => {
+        setAppointments(editedAppointments);
+        // Update appointments in local storage
+        localStorage.setItem('appointments', JSON.stringify(editedAppointments));
+    };
 
-
-    const addAppointment = (newAppointment) => {
-        setAppointments([...appointments, newAppointment]);
+    const handleAppointmentClick = (clickedAppointment) => {
+        // Implement logic to remove or update clicked appointment
+        // You can open a modal for editing or prompt for confirmation before deletion
+        console.log("Clicked appointment:", clickedAppointment);
     };
 
     return (
         <div className="container-appointment">
-            <DashboardTenantBar />
             <div className="card-appointment">
-                <FormCalendar onAddAppointment={addAppointment} />
-                <CalendarTenant appointments={appointments} />
+                <FormCalendar onAddAppointment={handleAddAppointment} />
+                <CalendarTenant appointments={appointments} onAppointmentClick={handleAppointmentClick} />
             </div>
         </div>
     );
