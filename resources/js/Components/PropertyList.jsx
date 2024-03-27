@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'boxicons/css/boxicons.min.css';
-import "../../css/app.css";
+import "../../css/Home.css";
 
 const PropertyList = () => {
     const [properties, setProperties] = useState([]);
@@ -25,7 +25,7 @@ const PropertyList = () => {
     return (
             <div className="all-cards">
                 {properties.map(property => (
-                    <div key={property.id} className="card">
+                    <div key={property.id} className="card-real-estates">
                         <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
                         <div className="overlay">
 

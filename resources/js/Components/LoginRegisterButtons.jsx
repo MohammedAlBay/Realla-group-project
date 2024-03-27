@@ -1,24 +1,13 @@
 import React from 'react';
-import {Link} from "@inertiajs/react";
-import '../../css/Home.css';
-
+import { Link } from '@inertiajs/react';
+import '../../css/Header.css'
 
 function LoginRegisterButtons() {
     return (
-        <div className="buttons">
-            <Link href="/login" className="login">Login</Link>
-            <Link href="/register" className="register">Register</Link>
-
-            {/* <div className="header-user-name">
-                <div className="user-info">
-                    <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
-                    <span>User Name</span>
-                </div>
-            </div>
-            */}
-
+        <div className="buttons flex flex-col md:flex-row md:items-center md:ml-8">
+            <Link href="/login" className="login-button">Login</Link>
+            <Link href="/register" className="register-button mt-2 md:mt-0 md:ml-4">Register</Link>
         </div>
-
     );
 }
 

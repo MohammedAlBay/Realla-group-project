@@ -1,23 +1,26 @@
 import React, { useRef, useState } from "react";
-import '../../css/app.css'
+import '../../css/app.css';
 
-
-export default function Form({ onAddTodo }) {
+export default function FormCalendar({ onAddAppointment, onEditAppointments }) {
     const inputRef = useRef();
     const [todoText, setTodoText] = useState("");
     const [fromDate, setFromDate] = useState("");
     const [toDate, setToDate] = useState("");
+    const [editMode, setEditMode] = useState(false); // New state to track edit mode
 
     function clickHandler() {
-        const newTodo = { text: todoText, fromDate, toDate };
-
-        onAddTodo(newTodo);
-
+        const newAppointment = { title: todoText, start: new Date(fromDate), end: new Date(toDate) };
+        onAddAppointment(newAppointment);
 
         inputRef.current.value = "";
         setTodoText("");
         setFromDate("");
         setToDate("");
+    }
+
+    function handleEditClick() {
+        setEditMode(!editMode); // Toggle edit mode
+        onEditAppointments(editMode); // Pass the current edit mode state to parent
     }
 
     return (
@@ -48,6 +51,12 @@ export default function Form({ onAddTodo }) {
                 className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800"
             >
                 Add
+            </button>
+            <button
+                onClick={handleEditClick} // Handle click on edit button
+                className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800"
+            >
+                <i className='bx bxs-edit-alt'></i>
             </button>
         </div>
     );
