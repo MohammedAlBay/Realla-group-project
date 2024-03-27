@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PropertyCard from './PropertyCard';
-import "../../css/app.css"
+import PropertyCard from './PropertyCard.jsx';
+import "../../css/Home.css"
+
 
 const PropertyList = () => {
     const [properties, setProperties] = useState([]);
@@ -26,11 +27,11 @@ const PropertyList = () => {
     const limitedProperties = properties.slice(0, 6);
 
     return (
-        <main>
+        <div>
             {limitedProperties.map(property => (
                 <PropertyCard key={property.id} property={property}/>
             ))}
-        </main>
+        </div>
     );
 };
 

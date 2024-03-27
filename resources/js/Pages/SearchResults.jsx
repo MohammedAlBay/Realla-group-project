@@ -1,5 +1,5 @@
 import React from 'react';
-import PropertyList from '@/Components/PropertyList';
+import PropertyList from '@/Components/PropertyList.jsx';
 import "../../css/app.css";
 
 const SearchResults = () => {

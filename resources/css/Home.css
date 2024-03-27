@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-
 }
 
 html {
@@ -12,7 +11,9 @@ html {
 }
 
 body{
-
+    background-color: #292F36;
+}
+.home-page{
     overflow-x: hidden;
     background-color: #292F36;
     transition: background-color 0.4s;
@@ -68,6 +69,37 @@ body{
     background: rgba(140, 140, 140, 0.18);
 }
 
+.login {
+    color: whitesmoke;
+    background-color: #ecaa16;
+    text-align: center;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.register {
+    color: whitesmoke;
+    border: 2px solid #ecaa16;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
+
+.login:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
 
 
 .home-img img {
@@ -133,7 +165,7 @@ body{
     margin-top: 15rem;
 }
 
-.card {
+.card-real-estates {
     position: relative;
     overflow: hidden;
     width: 500px;
@@ -144,7 +176,7 @@ body{
 
 }
 
-.card img {
+.card-real-estates img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -171,7 +203,7 @@ body{
 
 }
 
-.card:hover .overlay {
+.card-real-estates:hover .overlay {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -209,7 +241,7 @@ body{
     margin:auto;
 }
 
-.card:hover .overlay button {
+.card-real-estates:hover .overlay button {
     display: block;
 }
 
@@ -444,13 +476,23 @@ body{
         margin-top: -8rem;
     }
 
-    .card {
-        position: relative;
-        right: 1rem;
+    .all-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 10% 0;
+        margin-top: 15rem;
+    }
+
+    .card-real-estates {
         overflow: hidden;
-        width: 350px;
-        height: 200px;
+        width: 500px;
+        height: 280px;
         border-radius: 1.2rem;
         cursor: pointer;
+        margin: auto;
+        margin-top: 3rem;
+
     }
 }
