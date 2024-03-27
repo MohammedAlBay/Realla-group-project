@@ -1,5 +1,3 @@
-// DashboardTenantBar.js
-
 import React from 'react';
 
 
@@ -49,7 +47,22 @@ import React from 'react';
                             <span className="sidebar-menu-link">Appointments</span>
                         </button>
                     </li>
-
+                    {/*
+            <li className="sidebar-menu-item">
+                <div className="sidebar-menu-content">
+                    <i className='bx bx-loader-circle' style={{color: '#FDB414'}}></i>
+                    <a href="#" className="sidebar-menu-link">Follow up problems</a>
+                </div>
+            </li>
+            */}
+                    {/*
+            <li className="sidebar-menu-item">
+                <div className="sidebar-menu-content">
+                    <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
+                    <a href="#" className="sidebar-menu-link">My Profile</a>
+                </div>
+            </li>
+            */}
 
             </ul>
         </div>

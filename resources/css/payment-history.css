@@ -135,21 +135,6 @@ h6 > span {
     box-shadow: 0 30px 48px rgba(37,44,65,0.32);
 }
 
-
-.paynow::before {
-    content: "";
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-    bottom: 0rem;
-    width: 60vw;
-    height: 94%;
-    background: #444D57;
-    border-radius:   0 0 0 15%   ;
-    overflow-y: hidden;
-    z-index: 0;
-}
-
 .order {
     width: 300px;
     height: 485px;
@@ -174,7 +159,7 @@ ul.order-list {
 
 ul.order-list li {
     height: 60px;
-    margin-left: -80px;
+    margin-left: -70px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }

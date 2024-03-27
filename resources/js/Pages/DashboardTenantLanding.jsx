@@ -1,9 +1,9 @@
-// DashboardTenant.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import '../../css/app.css'
 import "../../css/Dashboard.css";
+import '../../css/Appointment.css'
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
-
 import PayNow from "@/Pages/PayNow.jsx";
 import Mailbox from "@/Pages/MailboxTenant";
 import Documents from "@/Pages/Documents.jsx";
@@ -13,15 +13,13 @@ import ReportProblem from "@/Pages/ReportProblem.jsx";
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 
 const DashboardTenantLanding = () => {
-    // State to track the current page
+
     const [currentPage, setCurrentPage] = useState('dashboard-tenant');
 
-    // Function to handle page change
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
-    // Render the current page/component based on the state
     const renderPage = () => {
         switch (currentPage) {
             case 'dashboard-tenant':

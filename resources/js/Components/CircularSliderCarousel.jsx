@@ -45,7 +45,7 @@ const CircularSliderCarousel = () => {
                     ))}
                 </div>
 
-                <div className="content">
+                <div className="content-circular">
                     {items.map((item, index) => (
                         <div className={`item ${index === active ? 'active' : ''}`} key={index}>
                             <h1>{item.title}</h1>
