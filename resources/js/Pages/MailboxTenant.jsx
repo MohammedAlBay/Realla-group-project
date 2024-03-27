@@ -32,6 +32,10 @@ const MailboxTenant = () => {
                 <div class="message-role">11:15 AM</div>
                 <div class="message-role">Subject</div>
 
+                <div class="message-role">Electrician</div>
+                <div class="message-role">11:15 AM</div>
+                <div class="message-role">Subject</div>
+
                 <div>
                     {/* Other content goes here */}
                 </div>
