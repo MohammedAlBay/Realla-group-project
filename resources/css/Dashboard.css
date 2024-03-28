@@ -7,6 +7,11 @@
     overflow-x: hidden;
 }
 
+.content {
+    width: 60vw;
+    height: 94%;
+
+}
 
 .dashboard::before {
     content: "";
@@ -23,7 +28,7 @@
 }
 
 .sidebar {
-    width: 400px;
+    width: 300px;
     margin-right: auto ;
     display: flex;
     padding-left: 4rem;
@@ -31,6 +36,7 @@
     flex-direction: column;
     justify-content: center;
     z-index: 1;
+
 }
 
 .sidebar-menu {
@@ -40,7 +46,6 @@
 
 .sidebar-menu-item {
     margin-bottom: 7px;
-
 }
 
 .sidebar-menu-item i {

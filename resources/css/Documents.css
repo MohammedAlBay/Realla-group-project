@@ -25,7 +25,6 @@ html {
 }
 
 
-
 .documents {
     display: grid;
     place-items: center;
@@ -36,8 +35,7 @@ html {
     & section {
         display: flex;
         margin-bottom: 25%;
-
-        margin-right: 35rem;
+        margin-right: 30rem;
 
     }
 }
@@ -52,7 +50,6 @@ html {
         padding: 1rem;
         border: 1px solid transparent;
         cursor: pointer;
-
     }
 }
 
@@ -66,11 +63,12 @@ html {
     opacity: 0;
     background-color: #1E2127;
     overflow: hidden;
-    padding: 1rem;
+    padding:1rem;
     border-radius: 25px;
     align-items: center;
     justify-content: center;
     margin-top: -7rem;
+    margin-left: 1rem;
 }
 
 .tab-content {
