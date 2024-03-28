@@ -82,7 +82,7 @@ const Register = () => {
                                 checkboxClassName="rounded-full"
                             />
                         </div>
-                        <Button type="submit">Get Started</Button>
+                        <Button type="submit" className="rounded-full">Get Started</Button>
                     </form>   
                     <p className="mt-4">I have an account? <a href="#" className="text-yellow-500">Login</a></p>
                 </div>
