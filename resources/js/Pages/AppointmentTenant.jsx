@@ -3,6 +3,7 @@ import "../../css/Appointment.css";
 import CalendarTenant from '@/Pages/CalendarTenant';
 import FormCalendar from '@/Components/FormCalender.jsx';
 import EditAppointments from '@/Pages/EditAppointments.jsx';
+import ReminderTenant from "@/Pages/ReminderTenant.jsx";
 
 function AppointmentTenant() {
     const [editMode, setEditMode] = useState(false);
@@ -44,6 +45,7 @@ function AppointmentTenant() {
             <div className="card-appointment">
                 {!editMode ? (
                     <>
+
                         <FormCalendar onAddAppointment={handleAddAppointment} onEditAppointments={handleEditAppointments} />
                         <CalendarTenant appointments={appointments} />
                     </>

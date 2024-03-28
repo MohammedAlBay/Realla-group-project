@@ -181,9 +181,6 @@ body{
     margin: 0;
     transition: bottom 0.3s;
 }
-.dashboard-gallery .overlay:hover .card-text {
-
-}
 
 .dashboard-gallery .overlay button {
     display: none;

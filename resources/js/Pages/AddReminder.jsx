@@ -1,38 +1,48 @@
 import React, { useState } from 'react';
 
-const AddReminder = ({ onAddReminder }) => {
+const AddReminder = ({ onAddReminder, onClose, onCancel }) => {
     const [reminderText, setReminderText] = useState('');
     const [reminderDeadline, setReminderDeadline] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Validation and other logic can be added here
+
         const newReminder = {
             text: reminderText,
             deadline: reminderDeadline,
-            statement: 'Not paid!' // Default statement, you can modify this as needed
+            statement: 'Not paid!'
         };
-        // Pass the new reminder to the parent component
+
         onAddReminder(newReminder);
-        // Reset the form fields
+
         setReminderText('');
         setReminderDeadline('');
     };
 
+
     return (
-        <div>
-            <h2>Add New Reminder</h2>
-            <form onSubmit={handleSubmit}>
+        <div className='add-new'>
+
+
+            <h2 className="reminder-heading-new">Add New Reminder</h2>
+
+            <form className='reminder-form' onSubmit={handleSubmit}>
                 <div>
-                    <label>Reminder Text:</label>
-                    <input type="text" value={reminderText} onChange={(e) => setReminderText(e.target.value)} />
+                    <input type="text" placeholder='Write here...' value={reminderText}
+                           onChange={(e) => setReminderText(e.target.value)}/>
                 </div>
                 <div>
-                    <label>Deadline:</label>
-                    <input type="date" value={reminderDeadline} onChange={(e) => setReminderDeadline(e.target.value)} />
+                    <input type="date" value={reminderDeadline} onChange={(e) => setReminderDeadline(e.target.value)}/>
                 </div>
-                <button type="submit">Add Reminder</button>
+                <button type="submit"
+                        className="bg-green-600 text-white font-bold py-2 px-4 ml-6 mt-2 mr-2 rounded hover:bg-orange-800">Add
+                </button>
+
+                <button onClick={onCancel}
+                        className="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-800">Close
+                </button>
             </form>
+
         </div>
     );
 };
