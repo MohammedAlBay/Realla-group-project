@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import "../../css/circular.css"
+import ReminderTenant from "@/Pages/ReminderTenant.jsx";
 
 const CircularSliderCarousel = () => {
     const [active, setActive] = useState(0);
@@ -28,6 +29,7 @@ const CircularSliderCarousel = () => {
 
     return (
         <div className="circular-slider-carousel">
+            < ReminderTenant />
             <button id="prev" style={{fontSize: `50px`}} onClick={prevSlider}><FaAngleLeft/></button>
             <i className='bx bxs-mouse-alt mouse-icon' style={{color: '#292F36', fontSize: '40px'}}></i>
             <div className="slider">

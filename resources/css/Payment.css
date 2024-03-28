@@ -215,6 +215,7 @@ ul.order-list li:hover > h5 {
     width: 300px;
     height: 178px;
     position: relative;
+    bottom: 1rem;
     margin: 0 auto;
     background-color: #f1404b;
     overflow: hidden;
@@ -477,24 +478,19 @@ button:focus { outline:0; }
 
 /*Payment Notification*/
 
-.paid {
+.success-message{
     z-index: 0;
     width: 370px;
     position: relative;
+    bottom: 40px;
     float: right;
-    padding: 30px;
     text-align: center;
-    display: none;
-}
-
-.paid > h2 {
-    line-height: 1;
-    margin-top: 10px;
+    font-weight: bold;
     color: #3ac569;
+    background-color: rgba(245, 245, 245, 0.2);
 }
 
 /*Credits*/
-
 .icon-credits {
     width: 100%;
     position: absolute;

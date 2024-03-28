@@ -95,7 +95,7 @@ ul.orderlist {
 
 ul.orderlist li {
     height: 60px;
-    margin-left: -70px;
+    margin-left: -60px;
     overflow: hidden;
     border-bottom: 1px solid #e9ebf2;
 }

@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import '../../css/Payment.css';
-import PaymentHistory from './PaymentHistory';
+import PaymentHistory from '@/Pages/PaymentHistory';
+
 
 const PayNow = () => {
+
     const [orderList, setOrderList] = useState([]);
     const [showPaymentHistory, setShowPaymentHistory] = useState(false);
+
+    const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
+
+    // Function to handle payment and show success message
+    const handlePayment = () => {
+        // Perform payment logic here, and then set isPaymentSuccess to true
+        setIsPaymentSuccess(true);
+    };
+
 
 
     const updateOrderList = (newOrderList) => {
         setOrderList(newOrderList);
     };
 
-
     const togglePaymentHistory = () => {
         setShowPaymentHistory(!showPaymentHistory);
     };
-
 
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
     const [expirationDate, setExpirationDate] = useState('00 / 0000');
@@ -33,6 +42,8 @@ const PayNow = () => {
     const updateCvv = (event) => {
         setCvv(event.target.value);
     }
+
+
 
     return (
         <div className="paynow">
@@ -75,9 +86,12 @@ const PayNow = () => {
                 </div>
 
                 <div id='payment' className='payment'>
-
-
-
+                    {/* Success message */}
+                    {isPaymentSuccess && (
+                        <div className="success-message">
+                            <p>Payment Successful!</p>
+                        </div>
+                    )}
                     <div className='card'>
                         <div className='card-content-payment'>
                             <i className='bx bxl-visa' id='logo-visa'></i>
@@ -104,15 +118,17 @@ const PayNow = () => {
                             <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
                                    title='CVC Code' onChange={updateCvv}/>
                         </p>
-                        <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
+                        <button className='button-cta' onClick={handlePayment}><span>PAY NOW</span></button>
+
+
+
                     </div>
 
                 </div>
-
             </div>
-
         </div>
     );
 };
 
 export default PayNow;
+

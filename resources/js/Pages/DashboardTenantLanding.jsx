@@ -20,12 +20,13 @@ const DashboardTenantLanding = () => {
         setCurrentPage(page);
     };
 
+    const isGalleryWithinDashboard = true;
     const renderPage = () => {
         switch (currentPage) {
             case 'dashboard-tenant':
                 return <CircularSliderCarousel/>;
             case 'gallery':
-                return <Gallery />;
+                return <Gallery isDashboardGallery={isGalleryWithinDashboard} />;
             case 'reportproblem':
                 return <ReportProblem />;
             case 'mailbox-tenant':

@@ -1,0 +1,28 @@
+/* ReminderPanel.css */
+.reminder-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.reminder-box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reminder-text {
+    font-weight: bold;
+}
+
+.reminder-deadline {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.reminder-statement {
+    margin-top: 5px;
+    font-size: 14px;
+}
