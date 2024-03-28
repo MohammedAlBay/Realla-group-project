@@ -21,7 +21,7 @@ const ReminderTenant = () => {
                     <div className="reminder-statement">{reminder.statement}</div>
                 </div>
             ))}
-            <h4 className="add-new-reminder"> Add new <i className='bx bxs-add-to-queue'></i></h4>
+            <button className="add-new-reminder"> Add new <i className='bx bxs-add-to-queue'></i></button>
         </div>
     );
 };
