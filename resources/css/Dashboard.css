@@ -4,12 +4,13 @@
     align-items: center;
     background-color: #e1e1e1;
     margin: 0;
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .content {
     width: 60vw;
-    height: 94%;
+    height: 75%;
+    overflow: auto;
 }
 
 .dashboard::before {

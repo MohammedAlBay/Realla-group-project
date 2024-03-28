@@ -3,15 +3,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: rgba(255, 255, 255, 0.68);
+    background-color: rgba(255, 255, 255, 0.45);
     width: 14%;
     position: absolute;
-    right: 37rem;
-    bottom: 5rem;
+    right: 34rem;
+    bottom: 8rem;
     justify-self: center;
     justify-content: center;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 10px;
     z-index: 1;
     transition: all 0.3s ease;
 }
@@ -101,8 +101,8 @@
 @media only screen and (max-width: 768px) {
     .reminder-panel {
         width: 40%;
-        height: 60%;/* Adjust width for smaller screens */
-        right: 7%; /* Adjust left position for smaller screens */
-        top: -3rem; /* Adjust top position for smaller screens */
+        height: 60%;
+        right: 7%;
+        top: -3rem;
     }
 }

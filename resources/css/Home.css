@@ -154,12 +154,12 @@ body{
     flex-wrap: wrap;
     padding: 1px;
     margin-top: 2rem;
-    height: 200px;
+    height: 150px;
 }
 
 .dashboard-gallery .card-real-estates {
     position: relative;
-    left: 0.2rem;
+    left: 1rem;
     overflow: hidden;
     width: 350px;
     height: 300px;
