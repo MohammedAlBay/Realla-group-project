@@ -151,6 +151,11 @@ Route::get('/reportproblem', function () {
     return Inertia::render('ReportProblem');
 });
 
+/*FOLLOW UP*/
+Route::get('/followup', function () {
+    return Inertia::render('FollowUp');
+});
+
 /*ERROR PAGE*/
 Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
