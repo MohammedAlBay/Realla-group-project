@@ -11,14 +11,14 @@ const LoginOptions = () => {
                 <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-3/5 h-auto" style={{ marginTop: '-4rem' }}/> 
             </div>
             <div className="flex justify-center items-center">
-                <div className="flex flex-col justify-center items-center mr-28" style={{ zIndex: '2' }}> {/* Ensure this div is above the image */}
-                    <button className="w-72 h-12 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
-                        <Link href="/login-landlord">Login as Landlord</Link>
-                    </button>
-                    <button className="w-72 h-12 rounded-lg border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
-                        <Link href="/login-tenant">Login as Tenant</Link>
-                    </button>                
-                </div>
+            <div className="flex flex-col justify-center items-center mr-28" style={{ zIndex: '2' }}> {/* Ensure this div is above the image */}
+                <button className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
+                    <Link href="/login-landlord">Login as Landlord</Link>
+                </button>
+                <button className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
+                    <Link href="/login-tenant">Login as Tenant</Link>
+                </button>                
+            </div>
             </div>
         </div>
     );
