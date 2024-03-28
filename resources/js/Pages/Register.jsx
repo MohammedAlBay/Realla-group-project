@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Button from '../Components/RegisterButton'; 
-import TextInput from '../Components/RegisterTextInput'; 
-import Checkbox from '../Components/RegisterCheckbox'; 
+import Button from '../Components/RegisterButton';
+import TextInput from '../Components/RegisterTextInput';
+import Checkbox from '../Components/RegisterCheckbox';
 
 const Register = () => {
     // Define state variables to store form input values
@@ -13,10 +13,37 @@ const Register = () => {
     const [agreeToPolicy, setAgreeToPolicy] = useState(false);
 
     // Handle form submission
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Registration logic
-        console.log('Form submitted');
+        try {
+            const response = await fetch("/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    fullName,
+                    email,
+                    password,
+                    isLandlord
+                })
+            });
+            if (response.ok) {
+                alert("Registration successful!");
+                // Reset form fields after successful registration
+                setFullName('');
+                setEmail('');
+                setPassword('');
+                setConfirmPassword('');
+                setIsLandlord(false);
+                setAgreeToPolicy(false);
+            } else {
+                throw new Error("Registration failed");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Registration failed. Please try again.");
+        }
     };
 
     return (
@@ -25,7 +52,7 @@ const Register = () => {
                 <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}>
                 </div>
                 <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '-7rem' }}>
-                    <img src="/images/RegisterImage.png" alt="LoginOptions" className="object-cover w-auto h-4/5"/> 
+                    <img src="/images/RegisterImage.png" alt="LoginOptions" className="object-cover w-auto h-4/5"/>
                 </div>
             </div>
             <div className="w-4/5 max-w-md ml-auto mr-20 mt-24 mb-20">
@@ -83,7 +110,7 @@ const Register = () => {
                             />
                         </div>
                         <Button type="submit">Get Started</Button>
-                    </form>   
+                    </form>
                     <p className="mt-4">I have an account? <a href="#" className="text-yellow-500">Login</a></p>
                 </div>
             </div>
