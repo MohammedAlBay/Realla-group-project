@@ -47,6 +47,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect('dashboard-tenant');
+        return redirect('/dashboard-tenant');
     }
 }
