@@ -278,6 +278,7 @@ body{
     color:#ECAA16;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .overlay .card-text{
     margin: 0;
