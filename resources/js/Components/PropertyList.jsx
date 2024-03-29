@@ -23,6 +23,18 @@ const PropertyList = () => {
         fetchProperties();
     }, []);
 
+    const [bookmarkedProperties, setBookmarkedProperties] = useState(new Set());
+
+    const toggleBookmark = (id) => {
+        const updatedBookmarks = new Set(bookmarkedProperties);
+        if (updatedBookmarks.has(id)) {
+            updatedBookmarks.delete(id);
+        } else {
+            updatedBookmarks.add(id);
+        }
+        setBookmarkedProperties(updatedBookmarks);
+    };
+
     return (
             <div className="all-cards">
                 {properties.map(property => (
