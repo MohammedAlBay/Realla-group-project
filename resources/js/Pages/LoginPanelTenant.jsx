@@ -50,7 +50,7 @@ const LoginPanelTenant = () => {
                                 onChange={(e) => setRememberMe(e.target.checked)}
                             />
                             {/* Use the Link component for navigation */}
-                            <Link href="/forgot-password" className="text-white">Forgot Password?</Link>
+                            <Link href="/forgot-password" className="text-white -mt-4">Forgot Password?</Link>
                         </div>
                         <Button type="submit">Login</Button>
                     </form>   
