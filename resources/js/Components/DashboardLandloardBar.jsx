@@ -54,7 +54,7 @@ const DashboardLandloardBar = ({ onPageChange }) => {
                 </li>
 
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('profile-landloard')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('profile-landlord')} className="sidebar-menu-content">
                         <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
                         <span className="sidebar-menu-link">My Profile</span>
                     </button>

@@ -7,6 +7,7 @@ import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 import MailboxLandlord from "@/Pages/MailboxLandlord.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
+import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
 
 const DashboardLandloardLanding = () => {
 
@@ -32,8 +33,8 @@ const DashboardLandloardLanding = () => {
                 return <FindTenant />;
             case 'follow-up-landloard':
                 return <FollowUpProblemLandloard />;
-            case 'profile-landloard':
-                return <ProfileLandloard />;
+            case 'profile-landlord':
+                return <ProfileLandlord />;
             default:
                 return <CircularSliderCarousel  />;
         }

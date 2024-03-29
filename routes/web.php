@@ -183,6 +183,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/reportproblem', function () {
         return Inertia::render('ReportProblem');
     });
+    Route::get('/profile-landlord', function () {
+         return Inertia::render('ProfileLandlord');
+    });
+
     /*
 });
 */
