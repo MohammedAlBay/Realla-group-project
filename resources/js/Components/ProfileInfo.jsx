@@ -33,8 +33,8 @@ const ProfileInfo = () => {
           <div className="dropdown">
             <button className="dropdown-button" onClick={toggleDropdown}>&#8226;&#8226;&#8226;</button>
             <div className="dropdown-content" id="myDropdown">
-              <Link href="/edit-profile" className="profile-dropdown-links"><i class='bx bxs-edit-alt' style={{color:'#fdb514'}}></i>Edit Profile</Link>
-              <Link href="/documents" className="profile-dropdown-links"><i class='bx bxs-file' style={{color:'#fdb514'}}></i>Documents</Link>
+              <Link href="/edit-profile" className="profile-dropdown-links"><i className="bx bxs-edit-alt" style={{color:'#fdb514'}}></i>Edit Profile</Link>
+              <Link href="/documents" className="profile-dropdown-links"><i className="bx bxs-file" style={{color:'#fdb514'}}></i>Documents</Link>
             </div>
           </div>
           <div className="contact-info">
@@ -44,7 +44,7 @@ const ProfileInfo = () => {
             </div>
             <div className="contact-mail">
               <p><i className='bx bxs-envelope' style={{color:'#fdb514'}}></i>Example@example.com</p>
-              <small class="data-description">Email</small>
+              <small className="data-description">Email</small>
             </div>
             <div className="contact-number">
               <p><i className='bx bxs-phone' style={{color:'#fdb514'}}></i>0123 456 789</p>
