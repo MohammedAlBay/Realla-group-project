@@ -4,6 +4,7 @@ import '../../css/Header.css';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
+import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 
 
 function Navigation() {
@@ -58,10 +59,7 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-
-                            <li className="nav__item">
-                                <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
-                            </li>
+                            
                             <LoginRegisterButtons className="desktop"/>
                         </ul>
                     </div>
@@ -87,9 +85,8 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>Contact</Link>
                             </li>
 
-
                             <div className="nav__actions">
-                                <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
+                                <SearchBarGallery />
                             </div>
 
                             <LoginRegisterButtons className="nav__item tablet"/>
