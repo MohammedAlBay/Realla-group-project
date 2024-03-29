@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from '@inertiajs/react';
 import 'boxicons/css/boxicons.min.css';
 import "../../css/Home.css";
-
-const PropertyList = () => {
+const PropertyList = ({ searchQuery }) => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
@@ -35,9 +34,13 @@ const PropertyList = () => {
         setBookmarkedProperties(updatedBookmarks);
     };
 
+    const filteredProperties = properties.filter(property =>
+        searchQuery && property.location.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
             <div className="all-cards">
-                {properties.map(property => (
+                {filteredProperties.map(property => (
                     <div key={property.id} className="card-real-estates">
                         <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
                         <div className="overlay">

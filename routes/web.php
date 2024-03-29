@@ -101,7 +101,7 @@ Route::get('/property/{id}', function () {
     return Inertia::render('PropertyDetails');
 });
 
-Route::get('/search', function () {
+Route::get('/search-results', function () {
     return Inertia::render('SearchResults');
 });
 
