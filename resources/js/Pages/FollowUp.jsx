@@ -11,9 +11,9 @@ const timelineData = [
 
 const FollowUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen" style={{ backgroundColor: '#292f36' }}>
+    <div className="flex relative justify-center items-center min-h-screen" style={{ backgroundColor: '#292f36' }}>
       <div className="w-full max-w-4xl rounded-lg p-14" style={{ backgroundColor: '#444D57', minHeight: '500px' }}>
-        <h2 className="text-2xl font-bold text-center text-white mb-32">Follow The Reported Problem</h2>
+        <h2 className="text-2xl font-bold text-center text-white mb-24">Follow The Reported Problem</h2>
         <div className="relative">
           <div className="absolute w-full h-1" style={{ top: '50%', backgroundColor: '#292f36' }} />
           <div className="flex justify-between items-center">
@@ -36,8 +36,8 @@ const FollowUp = () => {
         {/* Buttons */}
         <div className="flex justify-end mt-40 space-x-8">
           
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-14 rounded-lg" style={{ backgroundColor: '#fdb514' }} onClick={() => window.history.back()}>Back</button>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#fdb514' }} onClick={() => { /* Handle see details action */ }}>See Details</button>
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-14 rounded-lg" style={{ backgroundColor: '#fdb514' }} onClick={() => {on cancel}}>Back</button>
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#fdb514' }} onClick={() => {  }}>See Details</button>
         </div>
       </div>
     </div>

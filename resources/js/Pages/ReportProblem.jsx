@@ -54,7 +54,7 @@ const ReportProblem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-700 p-6 flex flex-col items-center justify-center" style={{ backgroundColor: '#1e2127' }}>
+    <div className="min-h-screen bg-gray-700 p-6 flex flex-col items-center justify-center relative" style={{ backgroundColor: '#1e2127' }}>
       <div className="bg-gray-600 text-gray-200 p-10 rounded-lg w-full max-w-4xl" style={{ backgroundColor: '#444D57' }}>
         <h1 className="text-2xl font-bold text-center mb-8">Report a Problem</h1>
 
