@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from '@inertiajs/react';
 import 'boxicons/css/boxicons.min.css';
 import "../../css/Home.css";
 
@@ -37,8 +38,9 @@ const PropertyList = () => {
                                 <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
                             </div>
 
-
-                            <button>View Details</button>
+                            <Link href={`/property/${property.id}`}>
+                                <button>View Details</button>
+                            </Link>
 
                             <div className="card-mini-text">
                                 <p>{property.rooms} Rooms</p>
