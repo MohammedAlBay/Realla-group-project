@@ -17,7 +17,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return Inertia::render('Auth/Register');
     }
 
     /**
@@ -42,6 +42,6 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('dashboard-tenant'); // Change 'dashboard' to your desired route after registration
+        return redirect()->route('dashboard-tenant');
     }
 }
