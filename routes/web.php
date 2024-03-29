@@ -101,12 +101,6 @@ Route::get('/mock-up', function () {
 Route::get('/property/{id}', function () {
     return Inertia::render('PropertyDetails');
 });
-/*
-Route::get('/search-results', function () {
-    return Inertia::render('SearchResults');
-});
-*/
-// routes/web.php
 
 Route::get('/search-results', [SearchResultsController::class, 'index']);
 

@@ -54,9 +54,7 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/about" className="nav__link">About</Link>
                             </li>
-                            <li className="nav__item">
-                                <Link href="/gallery" className="nav__link">Gallery</Link>
-                            </li>
+
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
@@ -83,12 +81,6 @@ function Navigation() {
                                 <Link href="/about" className="nav__link"
                                       onClick={() => setIsMenuOpen(false)}>About</Link>
                             </li>
-
-                            <li className="nav__item">
-                                <Link href="/gallery" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-                            </li>
-
 
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link"
