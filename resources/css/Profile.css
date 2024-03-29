@@ -8,31 +8,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.container {
-  /* color: rgba(255,255,255,0.85);
-  height: 100vh;
-  align-items: center;
-  background-color: transparent;
-  margin: 0;
-  overflow-y: hidden; */
-  /* position: relative; */
-  margin-top: 10rem;
-}
-
-/* .container::before {
-  content: "";
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  bottom: 0rem;
-  width: 60vw;
-  height: 94%;
-  background: #444D57;
-  border-radius: 0 0 0 15%   ;
-  overflow-y: hidden;
-  z-index: 0;
-} */
-
 .profile-heading {
   font-size: 28px;
   font-weight: 700;
@@ -93,15 +68,15 @@
   position: relative;
   top: 30px;
   right: 75px;
-  width: 150px; /* Adjust as needed */
-  height: 150px; /* Adjust as needed */
-  border-radius: 50%; /* Makes it circular */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   overflow: hidden;
   border: 2px solid #FDB514;
 }
 
 .profile-avatar img {
-  width: 100%; /* Ensures the image fills the container */
+  width: 100%;
   height: auto;
 }
 
@@ -180,5 +155,6 @@
 
 .contact-number,
 .contact-mail {
-  grid-row: 2/2; /* Place on the second row */
+  grid-row: 2/2;
 }
+
