@@ -20,14 +20,14 @@ const DashboardLandloardBar = ({ onPageChange }) => {
                 </li>
 
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('mailbox-landloard')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('mailbox-landlord')} className="sidebar-menu-content">
                         <i className='bx bxs-message-detail' style={{color: '#FDB414'}}></i>
                         <span className="sidebar-menu-link">Message</span>
                     </button>
                 </li>
 
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('appointment-landloard')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('appointment-landlord')} className="sidebar-menu-content">
                         <i className='bx bx-calendar' style={{color: '#FDB414'}}></i>
                         <span className="sidebar-menu-link">Appointments</span>
                     </button>
@@ -47,14 +47,14 @@ const DashboardLandloardBar = ({ onPageChange }) => {
         </button>
     </li>
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('follow-up-problems-tenant')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('follow-up-landloard')} className="sidebar-menu-content">
                         <i className='bx bx-loader-circle' style={{color: '#FDB414'}}></i>
                         <span className="sidebar-menu-link">Follow up problems</span>
                     </button>
                 </li>
 
                 <li className="sidebar-menu-item">
-                    <button onClick={() => onPageChange('tenant-profile')} className="sidebar-menu-content">
+                    <button onClick={() => onPageChange('profile-landloard')} className="sidebar-menu-content">
                         <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
                         <span className="sidebar-menu-link">My Profile</span>
                     </button>

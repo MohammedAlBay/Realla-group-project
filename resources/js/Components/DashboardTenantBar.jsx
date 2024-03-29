@@ -49,14 +49,14 @@ import React from 'react';
                     </li>
 
                     <li className="sidebar-menu-item">
-                        <button onClick={() => onPageChange('follow-up-problems-tenant')} className="sidebar-menu-content">
+                        <button onClick={() => onPageChange('followup')} className="sidebar-menu-content">
                             <i className='bx bx-loader-circle' style={{color: '#FDB414'}}></i>
                             <span className="sidebar-menu-link">Follow up problems</span>
                          </button>
                     </li>
 
                     <li className="sidebar-menu-item">
-                          <button onClick={() => onPageChange('tenant-profile')} className="sidebar-menu-content">
+                          <button onClick={() => onPageChange('profile-tenant')} className="sidebar-menu-content">
                              <i className='bx bxs-user-circle' style={{color: '#FDB414'}}></i>
                              <span className="sidebar-menu-link">My Profile</span>
                           </button>

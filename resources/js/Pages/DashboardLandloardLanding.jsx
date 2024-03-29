@@ -22,17 +22,17 @@ const DashboardLandloardLanding = () => {
                 return <CircularSliderCarousel/>;
             case 'gallery':
                 return <Gallery />;
-            case 'mailbox-landloard':
+            case 'mailbox-landlord':
                 return <MailboxLandlord />;
-            case 'appointment-tenant':
-                return <AppointmentTenant />;
+            case 'appointment-landlord':
+                return <AppointmentLandloard/>;
             case 'search-real-estate':
                 return <FindRealEstate />;
             case 'search-tenant':
                 return <FindTenant />;
             case 'follow-up-landloard':
                 return <FollowUpProblemLandloard />;
-            case 'landloard-profile':
+            case 'profile-landloard':
                 return <ProfileLandloard />;
             default:
                 return <CircularSliderCarousel  />;

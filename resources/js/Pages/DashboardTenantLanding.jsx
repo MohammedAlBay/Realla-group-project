@@ -9,6 +9,8 @@ import Documents from "@/Pages/Documents.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
 import AppointmentTenant from "@/Pages/AppointmentTenant.jsx";
 import ReportProblem from "@/Pages/ReportProblem.jsx";
+import FollowUp from '@/Pages/FollowUp';
+import ProfileTenant from '@/Pages/ProfileTenant'
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 
 const DashboardTenantLanding = () => {
@@ -37,8 +39,8 @@ const DashboardTenantLanding = () => {
                 return <Documents />;
             case 'appointment-tenant':
                 return <AppointmentTenant />;
-            case 'follow-up-problems-tenant':
-                return <FollowUpTenant />;
+            case 'followup':
+                return <FollowUp />;
             case 'profile-tenant':
                 return <ProfileTenant />;
             default:
