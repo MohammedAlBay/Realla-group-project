@@ -35,6 +35,7 @@ const Register = () => {
                    value={data.password_confirmation} onChange={(e) => setData('password_confirmation', e.target.value)}
                    placeholder="Confirm Password"/>
             <button type="submit" disabled={processing}>Register</button>
+            
             <br/>
             <br/>
             <br/>
