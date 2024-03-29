@@ -22,7 +22,6 @@ function EditAppointments({ appointments, onCancel, onDelete }) {
         </div>
     );
 }
-
 function formatDate(date) {
     const options = {
         weekday: 'long',

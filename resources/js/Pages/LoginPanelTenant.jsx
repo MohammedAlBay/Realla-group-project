@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import Button from '../Components/RegisterButton'; 
-import TextInput from '../Components/RegisterTextInput'; 
-import Checkbox from '../Components/RegisterCheckbox'; 
-import { Link } from '@inertiajs/react'; 
+import Button from '../Components/RegisterButton';
+import TextInput from '../Components/RegisterTextInput';
+import Checkbox from '../Components/RegisterCheckbox';
+import { Link } from '@inertiajs/react';
+import { usePage } from '@inertiajs/inertia-react'; // Adjusted import
+
 
 const LoginPanelTenant = () => {
+    const { useHistory } = usePage(); // Adjusted usage of useHistory
+
     // Define state variables to store form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,6 +19,14 @@ const LoginPanelTenant = () => {
         event.preventDefault();
         // Login logic
         console.log('Form submitted');
+        // Redirect to dashboard or desired page after successful login
+        history.push('/dashboard-tenant'); // Replace '/dashboard' with the actual path
+    };
+
+    // Function to handle click on the "Forgot Password?" link
+    const handleForgotPasswordClick = () => {
+        // Redirect to the forgot password page
+        history.push('/forgot-password'); // Replace '/forgot-password' with the actual path
     };
 
     return (
@@ -23,7 +35,7 @@ const LoginPanelTenant = () => {
                 <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}>
                 </div>
                 <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '-2rem' }}>
-                    <img src="/images/LoginPanelTenantImage.png" alt="LoginOptions" className="object-cover w-auto h-4/5"/> 
+                    <img src="/images/LoginPanelTenantImage.png" alt="LoginOptions" className="object-cover w-auto h-4/5"/>
                 </div>
             </div>
             <div className="w-4/5 max-w-md ml-auto mr-20 mt-24 mb-20">
@@ -49,11 +61,11 @@ const LoginPanelTenant = () => {
                                 checked={rememberMe}
                                 onChange={(e) => setRememberMe(e.target.checked)}
                             />
-                            {/* Use the Link component for navigation */}
-                            <Link href="/forgot-password" className="text-white -mt-4">Forgot Password?</Link>
+                            {/* Use onClick event to handle click on "Forgot Password?" link */}
+                            <button type="button" className="text-white -mt-4" onClick={handleForgotPasswordClick}>Forgot Password?</button>
                         </div>
                         <Button type="submit">Login</Button>
-                    </form>   
+                    </form>
                     <p className="mt-4">Don’t have an account? <Link href="/register" className="text-yellow-500">Register</Link></p>
                 </div>
             </div>
