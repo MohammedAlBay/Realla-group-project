@@ -1,9 +1,31 @@
 import React, { useState } from 'react';
-import "../../css/Payment.css";
-import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
-import {Link} from "@inertiajs/react";
+import '../../css/Payment.css';
+import PaymentHistory from '@/Pages/PaymentHistory';
+
 
 const PayNow = () => {
+
+    const [orderList, setOrderList] = useState([]);
+    const [showPaymentHistory, setShowPaymentHistory] = useState(false);
+
+    const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
+
+    // Function to handle payment and show success message
+    const handlePayment = () => {
+        // Perform payment logic here, and then set isPaymentSuccess to true
+        setIsPaymentSuccess(true);
+    };
+
+
+
+    const updateOrderList = (newOrderList) => {
+        setOrderList(newOrderList);
+    };
+
+    const togglePaymentHistory = () => {
+        setShowPaymentHistory(!showPaymentHistory);
+    };
+
     const [cardNumber, setCardNumber] = useState('0000 0000 0000 0000');
     const [expirationDate, setExpirationDate] = useState('00 / 0000');
     const [cvv, setCvv] = useState('000');
@@ -21,28 +43,35 @@ const PayNow = () => {
         setCvv(event.target.value);
     }
 
+
+
     return (
         <div className="paynow">
-            <DashboardTenantBar/>
+
 
             <div className='checkout'>
                 <div className='order'>
-                    <h2 className="payment-text">Current Rental Fee</h2>
-                    <h5 className="card-details"> 01.01.2024</h5>
+
+                    <h2 className="button-cta-2" onClick={togglePaymentHistory}><span>See Payment History</span></h2>
+
+                    {showPaymentHistory && (
+                        <PaymentHistory updateOrderList={updateOrderList} />
+                    )}
+
+                    <h5 className="card-details"> Current Fee</h5>
                     <ul className='order-list'>
                         <li className="list">
-                            <i className='bx bxs-pie-chart' style={{color: '#FDB414'}}></i>
+                            <i className='bx bxs-pie-chart' style={{ color: '#FDB414' }}></i>
                             <h4 className="payment-text">Monthly Fee</h4>
                             <h5 className="payment-text">€600</h5>
                         </li>
                         <li className="list">
-                            <i className='bx bxs-pie-chart-alt' style={{color: '#FDB414'}}></i>
-                            <h4 className="payment-text">Monthly Charges
-                            </h4>
+                            <i className='bx bxs-pie-chart-alt' style={{ color: '#FDB414' }}></i>
+                            <h4 className="payment-text">Monthly Charges</h4>
                             <h5 className="payment-text">€ 65</h5>
                         </li>
                         <li className="list">
-                            <i className='bx bxs-parking' style={{color: '#FDB414'}}></i>
+                            <i className='bx bxs-parking' style={{ color: '#FDB414' }}></i>
                             <h4 className="payment-text">Parking</h4>
                             <h5 className="payment-text">€50</h5>
                         </li>
@@ -51,19 +80,20 @@ const PayNow = () => {
                         <h5 className="total">Cleaning Services</h5>
                         <h4 className="payment-text">€ 9.50</h4>
                     </div>
-
                     <h5 className='total'>Total</h5>
                     <h1 className="payment-text">€ 850</h1>
+
                 </div>
 
-                <Link href="/payment-history">
-                <button className='button-cta-2' title='See your payment history'><span>PAYMENT HISTORY</span></button>
-                </Link>
-
                 <div id='payment' className='payment'>
+                    {/* Success message */}
+                    {isPaymentSuccess && (
+                        <div className="success-message">
+                            <p>Payment Successful!</p>
+                        </div>
+                    )}
                     <div className='card'>
-                        <div className='card-content'>
-
+                        <div className='card-content-payment'>
                             <i className='bx bxl-visa' id='logo-visa'></i>
                             <h5 className="cardtext">Card Number</h5>
                             <h6 id='label-cardnumber'>{cardNumber}</h6>
@@ -73,34 +103,32 @@ const PayNow = () => {
                         <div className='wave'></div>
                     </div>
                     <div className="card-form">
-
                         <p className='field'>
                             <i className='bx bx-credit-card-front' id="i-cardfront"></i>
                             <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567'
                                    pattern='\d*' title='Card Number' onChange={updateCardNumber}/>
                         </p>
-
                         <p className='field space'>
                             <i className='bx bx-calendar' id="i-calendar"></i>
                             <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY"
                                    pattern="\d*" title='Card Expiration Date' onChange={updateExpirationDate}/>
                         </p>
-
                         <p className='field space'>
                             <i className='bx bxs-credit-card-front' id="i-cardback"></i>
                             <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*"
                                    title='CVC Code' onChange={updateCvv}/>
                         </p>
+                        <button className='button-cta' onClick={handlePayment}><span>PAY NOW</span></button>
 
-                        <button className='button-cta' title='Confirm your purchase'><span>PAY NOW</span></button>
+
 
                     </div>
+
                 </div>
-
             </div>
-
         </div>
     );
 };
 
 export default PayNow;
+

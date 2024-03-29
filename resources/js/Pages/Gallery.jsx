@@ -1,15 +1,15 @@
 import React from 'react';
-import 'boxicons/css/boxicons.min.css';
 import PropertyList from "@/Components/PropertyList.jsx";
 import '../../css/Home.css'
 
-const Gallery = () => {
+const Gallery = ({ isDashboardGallery }) => {
+    const galleryClassName = isDashboardGallery ? 'dashboard-gallery' : 'gallery';
+
     return (
-        <div className="gallery">
-            <PropertyList />
+        <div className={galleryClassName}>
+            <PropertyList/>
         </div>
     );
 };
 
 export default Gallery;
-

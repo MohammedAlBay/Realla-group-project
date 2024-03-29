@@ -4,9 +4,8 @@
     align-items: center;
     background-color: #e1e1e1;
     margin: 0;
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
-
 
 .dashboard::before {
     content: "";
@@ -17,14 +16,22 @@
     width: 60vw;
     height: 94%;
     background: #444D57;
-    border-radius:   0 0 0 15%   ;
+    border-radius: 0 0 0 15%;
     overflow-y: hidden;
     z-index: 0;
 }
 
+.content {
+    width: 60vw;
+    height: 75%;
+    overflow: auto;
+}
+
+
+
 .sidebar {
-    width: 400px;
-    margin-right: auto ;
+    width: 300px;
+    margin-right: auto;
     display: flex;
     padding-left: 4rem;
     padding-top: 3rem;
@@ -35,23 +42,20 @@
 
 .sidebar-menu {
     list-style: none;
-
 }
 
 .sidebar-menu-item {
     margin-bottom: 7px;
-
 }
 
 .sidebar-menu-item i {
-   font-size: 25px;
+    font-size: 25px;
     margin-right: 1rem;
-
 }
+
 .sidebar-menu-content {
     display: flex;
     align-items: center;
-
 }
 
 .sidebar-menu-link {
@@ -70,26 +74,11 @@
     color: white;
 }
 
-.sidebar-menu-link:hover{
+.sidebar-menu-link:hover {
     color: white;
     background-color: rgba(73, 81, 91, 0.84);
     border-radius: 10px;
-
 }
-    /*
-    .nav__list {
-        display:none;
-    }
-
-    footer {
-        display:none;
-    }
-
-    .nav {
-        background-color: #1d2124;
-    }
-    */
-
 
 .user-info {
     position: absolute;
@@ -105,32 +94,40 @@
     margin-right: 4rem;
 }
 
-.user-info i{
+.user-info i {
     font-size: 25px;
     margin-right: 10px;
 }
 
-/*circular slider*/
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
 
-/*
-.images .item img {
-    height: 200px;
+    .content {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding-left: 2rem;
+        padding-top: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .user-info {
+        top: 10px;
+        right: 10px;
+    }
+
+    .sidebar-menu-item i {
+        font-size: 20px;
+    }
+
+    .sidebar-menu-link {
+        padding: 10px;
+    }
 }
 
-
-.content {
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 80%;
-}
-
-#next button {
-    bottom: 20rem;
-}
-
-*/
 
