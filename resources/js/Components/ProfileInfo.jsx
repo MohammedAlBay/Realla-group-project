@@ -4,6 +4,15 @@ import { Link } from '@inertiajs/react';
 
 const ProfileInfo = () => {
 
+  function toggleDropdown() {
+    var dropdownContent = document.getElementById("myDropdown");
+    if (dropdownContent.style.display === "grid") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "grid";
+    }
+  }
+
   return (
     <div className="container">
       <div className="profile-section">
@@ -22,7 +31,7 @@ const ProfileInfo = () => {
             <p className="timestamp">Joined 6 months ago</p>
           </div>
           <div className="dropdown">
-            <button className="dropdown-button">&#8226;&#8226;&#8226;</button>
+            <button className="dropdown-button" onClick={toggleDropdown}>&#8226;&#8226;&#8226;</button>
             <div className="dropdown-content" id="myDropdown">
               <Link href="/edit-profile" className="profile-dropdown-links"><i class='bx bxs-edit-alt' style={{color:'#fdb514'}}></i>Edit Profile</Link>
               <Link href="/documents" className="profile-dropdown-links"><i class='bx bxs-file' style={{color:'#fdb514'}}></i>Documents</Link>
