@@ -50,6 +50,10 @@ const PropertyList = () => {
                                 <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
                             </div>
 
+                            <button onClick={() => toggleBookmark(property.id)}>
+                            {bookmarkedProperties.has(property.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                            </button>
+
                             <Link href={`/property/${property.id}`}>
                                 <button>View Details</button>
                             </Link>
