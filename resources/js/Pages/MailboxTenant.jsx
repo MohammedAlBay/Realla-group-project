@@ -8,7 +8,7 @@ const MailboxTenant = () => {
 
     return (
         <div className="relative h-screen flex justify-start items-start">
-            <div className="mr-8 mt-12 w-9/12 h-2/3 flex-shrink-0 rounded-xl bg-white shadow-lg relative" style={{ width: '90%', boxShadow: '0 12px 16px rgba(0.1, 0.1, 0.1, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08)' }}>
+            <div className="mr-8 mt-10 w-9/12 h-2/3 flex-shrink-0 rounded-xl bg-white shadow-lg relative" style={{ width: '90%', boxShadow: '0 12px 16px rgba(0.1, 0.1, 0.1, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08)' }}>
                 <div style={{ padding: '20px' }}>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <h3 style={{ marginLeft: '10px', fontSize: '1.3rem', marginRight: '10px' }}>Message</h3>
