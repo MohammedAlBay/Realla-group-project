@@ -9,7 +9,8 @@
 
 .contact-container {
   background-color: #292F36;
-  padding-top: 8rem;
+  padding-top: 5rem;
+  height: 100vh;
 }
 
 .contact-container h1 {
@@ -32,7 +33,6 @@
   background-color: #FFF;
   border-radius: 8px;
   padding: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
