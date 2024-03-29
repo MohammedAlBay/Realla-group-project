@@ -7,3 +7,33 @@
     z-index: 10;
     width: 45%;
 }
+
+.text-dashboard-landing {
+    z-index: 100;
+    color: #e0e0e0;
+    position: relative;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    float:left;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.text-dashboard-landing span{
+    z-index: 100;
+    color: orange;
+    position: relative;
+    text-align: center;
+}
+
+.address-dashboard-landing {
+    z-index: 100;
+    color: #e0e0e0;
+    position: relative;
+    text-align: center;
+    font-weight: 800;
+    font-size: 15px;
+    float:left;
+    margin-left: 6rem;
+}

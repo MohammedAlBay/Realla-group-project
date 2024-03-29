@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../../css/app.css'
-import "../../css/Dashboard.css";
-import '../../css/Appointment.css'
+import '../../css/Documents.css';
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 import PayNow from "@/Pages/PayNow.jsx";
 import Mailbox from "@/Pages/MailboxTenant";

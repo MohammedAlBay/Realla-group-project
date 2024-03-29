@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -72,9 +73,15 @@ Route::get('/login-tenant', function () {
     return Inertia::render('LoginPanelTenant');
 });
 
-Route::get('/register', function () {
-    return Inertia::render('Register');
+Route::middleware('guest')->group(function () {
+    // Show registration form
+    Route::get('register', [RegisteredUserController::class, 'create'])
+        ->name('register');
+
+    // Handle registration form submission
+    Route::post('register', [RegisteredUserController::class, 'store']);
 });
+
 
 Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');

@@ -7,12 +7,6 @@
     overflow-y: scroll;
 }
 
-.content {
-    width: 60vw;
-    height: 75%;
-    overflow: auto;
-}
-
 .dashboard::before {
     content: "";
     position: absolute;
@@ -26,6 +20,14 @@
     overflow-y: hidden;
     z-index: 0;
 }
+
+.content {
+    width: 60vw;
+    height: 75%;
+    overflow: auto;
+}
+
+
 
 .sidebar {
     width: 300px;

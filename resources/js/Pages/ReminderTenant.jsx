@@ -1,16 +1,17 @@
+// ReminderPanel.jsx
 import React, { useState } from 'react';
 import AddReminder from './AddReminder';
 import "../../css/ReminderPanel.css";
 
-const ReminderPanel = () => {
+const ReminderPanel = ({ onClose }) => {
 
     const [reminders, setReminders] = useState([
         { id: 1, text: "Pay gas bill", deadline: "2024-05-15", statement: "Not paid!" },
-
+        { id: 2, text: "Call landlord", deadline: "2024-04-08", statement: "It's over" },
 
     ]);
 
-    const [editMode, setEditMode] = useState(false); // State variable for edit mode
+    const [editMode, setEditMode] = useState(false);
 
     const handleAddReminder = (newReminder) => {
 
@@ -47,11 +48,19 @@ const ReminderPanel = () => {
 
                 </div>
             ))}
-            {editMode ? (
-                <AddReminder onAddReminder={handleAddReminder} onCancel={handleCancel} />
-            ) : (
-                <button onClick={handleToggleEditMode} className="bg-white text-yellow-500 font-bold py-2 px-4 rounded hover:bg-yellow-500  hover:text-white">Add Reminder</button>
-            )}
+            <div className='flex max-w-100 m-auto'>
+                {editMode ? (
+                    <AddReminder onAddReminder={handleAddReminder} onCancel={handleCancel}/>
+                ) : (
+
+                    <button onClick={handleToggleEditMode}
+                            className="bg-white text-yellow-500 font-bold mr-3 py-2 px-1 w-40 m-auto rounded hover:bg-yellow-500  hover:text-white">Add
+                        Reminder</button>
+                )}
+                <button onClick={onClose}
+                        className="bg-yellow-500 text-white font-bold w-40 m-auto py-2 px-4 rounded hover:bg-orange-800">Close
+                </button>
+            </div>
         </div>
     );
 };
