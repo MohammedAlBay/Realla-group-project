@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from '@inertiajs/react';
 import 'boxicons/css/boxicons.min.css';
 import "../../css/Home.css";
 
@@ -22,6 +23,18 @@ const PropertyList = () => {
         fetchProperties();
     }, []);
 
+    const [bookmarkedProperties, setBookmarkedProperties] = useState(new Set());
+
+    const toggleBookmark = (id) => {
+        const updatedBookmarks = new Set(bookmarkedProperties);
+        if (updatedBookmarks.has(id)) {
+            updatedBookmarks.delete(id);
+        } else {
+            updatedBookmarks.add(id);
+        }
+        setBookmarkedProperties(updatedBookmarks);
+    };
+
     return (
             <div className="all-cards">
                 {properties.map(property => (
@@ -37,8 +50,13 @@ const PropertyList = () => {
                                 <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
                             </div>
 
+                            <button onClick={() => toggleBookmark(property.id)}>
+                            {bookmarkedProperties.has(property.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                            </button>
 
-                            <button>View Details</button>
+                            <Link href={`/property/${property.id}`}>
+                                <button>View Details</button>
+                            </Link>
 
                             <div className="card-mini-text">
                                 <p>{property.rooms} Rooms</p>

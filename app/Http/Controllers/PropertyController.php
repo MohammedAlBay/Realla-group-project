@@ -12,6 +12,17 @@ class PropertyController extends Controller
         return response()->json($properties);
     }
 
+    public function show($id)
+    {
+        $property = Property::find($id);
+        
+        if (!$property) {
+            return response()->json(['message' => 'Property not found'], 404);
+        }
+        
+        return response()->json($property);
+    }
+    
     public function store(Request $request)
     {
         $validatedData = $request->validate([
