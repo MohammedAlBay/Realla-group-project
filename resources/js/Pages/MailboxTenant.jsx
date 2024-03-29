@@ -14,7 +14,7 @@ const MailboxTenant = () => {
                         <h3 style={{ marginLeft: '10px', fontSize: '1.3rem', marginRight: '10px' }}>Message</h3>
                         <Button text="+ New" color="#FDB514" textColor="white" style={{ padding: '15px 40px', fontSize: '1rem', height: '40px', width: '150px' }} />
                     </div>
-                    <input type="text" placeholder="Search Message" style={{ fontSize: '0.85rem', marginTop: '10px', marginLeft: '10px' ,padding: '5px', width: '20%', height: '25px', borderRadius: '5px', border: '1px solid #ccc' }} />
+                    <input type="text" placeholder="Search Message" style={{ fontSize: '0.85rem', marginTop: '10px', marginLeft: '10px' ,padding: '5px', width: '29%', height: '25px', borderRadius: '5px', border: '1px solid #ccc' }} />
                 </div>
                 <div style={{ marginLeft: '30px', marginTop: '5px', display: 'flex', flexDirection: 'column', fontSize: '0.85rem', marginBottom: '-10px' }}>
                     <div className="message-role" style={{ marginBottom: '5px' }}>
