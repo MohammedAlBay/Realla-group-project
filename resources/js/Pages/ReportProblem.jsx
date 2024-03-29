@@ -6,8 +6,8 @@ const problems = [
   { id: 2, icon: '/images/smart-house.png', alt: 'Electricity' },
   { id: 3, icon: '/images/wash-basin.png', alt: 'Plumbing' },
   { id: 4, icon: '/images/alert.png', alt: 'Alert' },
-  { id: 5, icon: '/images/face-scan.png', alt: 'Security Issue' },
-  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Appliances Issue' },
+  { id: 5, icon: '/images/face-scan.png', alt: 'Security' },
+  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Appliances' },
   { id: 7, icon: '/images/solar-cell.png', alt: 'Solar panel' },
   { id: 8, icon: '/images/smarthome.png', alt: 'Network ' },
   { id: 9, icon: '/images/air-conditioner.png', alt: 'Cooling' },
@@ -54,8 +54,8 @@ const ReportProblem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-700 p-6 flex flex-col items-center justify-center" style={{ backgroundColor: '#1e2127' }}>
-      <div className="bg-gray-600 text-gray-200 p-10 rounded-lg w-full max-w-4xl" style={{ backgroundColor: '#444D57' }}>
+    <div className="min-h-screen p-6 flex flex-col items-center justify-center relative -mt-16 ml-10">
+      <div className="text-gray-200 p-10 rounded-lg w-full max-w-4xl">
         <h1 className="text-2xl font-bold text-center mb-8">Report a Problem</h1>
 
         {/* Carousel */}
