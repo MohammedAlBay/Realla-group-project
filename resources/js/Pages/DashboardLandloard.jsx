@@ -1,20 +1,17 @@
 import React from 'react';
-import "../../css/Dashboard.css"
+import "../../css/Dashboard.css";
 import DashboardLandloardLanding from "@/Pages/DashboardLandloardLanding.jsx";
 
 
-const DashboardLandloard = () => {
+
+const DashboardTenant = () => {
     return (
         <div className="dashboard">
-            <DashboardLandloard />
-
-            < DashboardLandloardLanding />
-
 
             <div className="content">
-
+                <DashboardLandloardLanding />
             </div>
         </div>
     );
 };
-export default DashboardLandloard;
+export default DashboardTenant;

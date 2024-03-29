@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Test = () => {
     return (
         <div>
@@ -8,5 +7,4 @@ const Test = () => {
         </div>
     );
 };
-
 export default Test;
