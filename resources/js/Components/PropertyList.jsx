@@ -4,7 +4,10 @@ import 'boxicons/css/boxicons.min.css';
 import "../../css/Home.css";
 
 const PropertyList = ({ searchQuery }) => {
+    const query = searchQuery || '';
+
     const [properties, setProperties] = useState([]);
+
 
     useEffect(() => {
         const fetchProperties = async () => {
@@ -41,11 +44,15 @@ const PropertyList = ({ searchQuery }) => {
         return searchQuery && property.location.toLowerCase().includes(searchQuery.toLowerCase());
     });
 
+
     console.log('filteredProperties:', filteredProperties);
+
+    const propertiesToDisplay = searchQuery ? filteredProperties : properties;
+
 
     return (
         <div className="all-cards">
-            {filteredProperties.map(property => (
+            {propertiesToDisplay.map(property => (
                 <div key={property.id} className="card-real-estates">
                     <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
                     <div className="overlay">
