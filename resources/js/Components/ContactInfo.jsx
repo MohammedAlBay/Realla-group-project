@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialMediaLinks from './SocialMediaLinks';
 
-function ContactInfo() {
+const ContactInfo = () => {
   return (
     <div className="contact-info-container">
       <div className="contact-info-header">
