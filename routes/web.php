@@ -6,6 +6,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\SearchResultsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookmarkController;
+use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -75,6 +77,9 @@ Route::get('/login-landlord', function () {
 Route::get('/login-tenant', function () {
     return Inertia::render('LoginPanelTenant');
 });
+
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users', [UserController::class, 'store']);
 
 Route::middleware('guest')->group(function () {
     // Show registration form

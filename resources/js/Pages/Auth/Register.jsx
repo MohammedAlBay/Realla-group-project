@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import Button from '../../Components/RegisterButton.jsx';
-import TextInput from '../../Components/RegisterTextInput.jsx';
-import Checkbox from '../../Components/RegisterCheckbox.jsx';
+import RegisterCheckbox from '../../Components/RegisterCheckbox.jsx';
 import '../../../css/register.css';
 import RegisterTextInput from "../../Components/RegisterTextInput.jsx";
+import { Link } from '@inertiajs/react';
+
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -11,11 +12,22 @@ const Register = () => {
         email: '',
         password: '',
         password_confirmation: '',
-        isLandlord: false,
-        agreeToPolicy: false
+        is_landlord: 0,
+         /*agreeToPolicy: false */
     });
 
     const [errors, setErrors] = useState({});
+
+    useEffect(() => {
+        fetch('api/users')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // This will log the fetched users to the console
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -26,15 +38,40 @@ const Register = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validateForm(formData);
         setErrors(validationErrors);
         if (Object.keys(validationErrors).length === 0) {
             console.log('Form submitted:', formData);
-            // You can call your API to submit the form data here
+            try {
+                const response = await fetch('api/users', {
+
+/*
+                    body: JSON.stringify({
+                        ...formData,
+                        is_landlord: formData.is_landlord ? 1 : 0, // Adjust boolean value to match database schema
+                    }),
+                    */
+
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Registration successful:', data);
+                    // Handle successful registration (e.g., redirect to dashboard)
+                } else {
+                    const errorData = await response.json();
+                    console.error('Registration failed:', errorData);
+                    // Handle registration error (e.g., display error message)
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                // Handle network error or other exceptions
+            }
         }
     };
+
 
     const validateForm = (data) => {
         let errors = {};
@@ -110,35 +147,50 @@ const Register = () => {
                     <div className="mb-4">
                         <label className="mr-4">Register as:</label>
                         <div className="flex items-center">
+                            {/*
                             <Checkbox
+                                label="Register as Landlord"
+                                checked={formData.is_landlord}
+                                onChange={(e) => setFormData(prevState => ({ ...prevState, is_landlord: e.target.checked }))}
+                            />
+
+
+                            */}
+                            <RegisterCheckbox
                                 label="Landlord"
                                 name="isLandlord"
-                                checked={formData.isLandlord}
-                                onChange={handleChange}
+                                checked={formData.is_landlord}
+                                onChange={(e) => setFormData(prevState => ({
+                                    ...prevState,
+                                    is_landlord: e.target.checked
+                                }))}
                             />
                             <div style={{ width: '2rem' }}></div>
-                            <Checkbox
+                            <RegisterCheckbox
                                 label="Tenant"
                                 name="isLandlord"
-                                checked={!formData.isLandlord}
-                                onChange={handleChange}
+                                checked={!formData.is_landlord}
+                                onChange={(e) => setFormData(prevState => ({
+                                    ...prevState,
+                                    is_landlord: !e.target.checked
+                                }))}
                             />
                         </div>
                     </div>
                     <div className="flex items-center mb-4">
-                        <Checkbox
+                        {/* <RegisterCheckbox
                             label={<span className="text-white">I agree to <span className="text-yellow-500">Realla Security</span> and <span className="text-yellow-500">Privacy Policy</span></span>}
                             name="agreeToPolicy"
                             checked={formData.agreeToPolicy}
                             onChange={handleChange}
-                            required
+
                             checkboxClassName="rounded-full"
-                        />
+                        />*/}
                     </div>
 
                     <Button type="submit">Get started</Button>
                 </form>
-                <p className="mt-4 text-center">I have an account? <a href="#" className="text-yellow-500">Login</a></p>
+                <p className="mt-4 text-center">I have an account? <Link href="/login" className="text-yellow-500">Login</Link></p>
             </div>
 
         </div>
