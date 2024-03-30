@@ -42,7 +42,7 @@ function Navigation() {
 
     return (
         <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
-            <nav className="nav container">
+            <nav className="nav">
                 <Logo />
 
                 {/* Desktop Menu */}

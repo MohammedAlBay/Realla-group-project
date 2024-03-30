@@ -1,5 +1,3 @@
-
-
 /*
 .header {
     position: fixed;
@@ -17,11 +15,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+    text-align: center;
 
 }
 
@@ -85,7 +86,6 @@
     gap: 3.5rem;
     flex-direction: row;
     justify-content: center;
-    padding: 5% ;
 }
 
 .nav__item {
@@ -96,7 +96,7 @@
     color: white;
     font-size: 18px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 800;
     background-color: transparent;
     text-align: center;
     justify-content: center;
@@ -172,7 +172,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 90%;
+        height: 75%;
         justify-content: center;
         align-items: center;
     }
@@ -183,7 +183,7 @@
 
     .nav__list {
         display: flex;
-        gap: 1rem;
+        gap: 0.2rem;
         flex-direction: column;
         text-align: center;
         margin-top: 0rem;
@@ -197,13 +197,14 @@
 
     .buttons{
         position: relative;
-        bottom: 1rem;
-        right:8rem;
+        right:1rem;
+        bottom: 2rem;
         display: flex;
         flex-direction: column;
         gap:2rem;
         align-items: center;
         justify-content: center;
+
     }
 
     .nav__actions i{
@@ -222,13 +223,26 @@
     }
 
 
+    .search-bar-gallery{
+        max-width: 70%;
+
+    }
+
+     #search {
+         position: absolute;
+         bottom: 7rem;
+         right: 0rem;
+         margin:auto;
+     }
+
+
 }
 
 @media screen and (max-width: 576px) {
 
     .buttons{
         position: relative;
-        top: 2rem;
+       bottom: -1rem;
         right: 0rem;
         flex-direction: column;
         gap:2rem;
@@ -242,7 +256,7 @@
         top: 0rem;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 70%;
         justify-content: center;
         align-items: center;
     }
@@ -250,7 +264,7 @@
         display: flex;
 
         text-align: center;
-        margin-right: 3rem;
+        margin-right: 0rem;
         margin-top: 3rem;
         font-size: 2rem;
         font-weight: bold;
@@ -262,6 +276,18 @@
         position: relative;
         left: 0;
         bottom: 0;
+    }
+
+    #search {
+        position: absolute;
+        bottom: 12rem;
+        right: 3rem;
+        margin:auto;
+    }
+
+    .search-bar-gallery{
+
+
     }
 
 }
