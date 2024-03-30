@@ -51,11 +51,12 @@ class RegisteredUserController extends Controller
         // Log a message before creating the user
         Log::info('Attempting to create a new user', ['user_data' => $request->only(['name', 'email'])]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        // Create a new user instance
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
 
         // Log a message after successfully creating the user
         Log::info('User created successfully', ['user_id' => $user->id]);
