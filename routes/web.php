@@ -86,6 +86,8 @@ Route::middleware('guest')->group(function () {
 });
 
 
+
+
 Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
 });

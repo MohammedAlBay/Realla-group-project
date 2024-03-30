@@ -66,7 +66,7 @@ const LoginPanelTenant = () => {
                         </div>
                         <Button type="submit">Login</Button>
                     </form>
-                    <p className="mt-4">Don’t have an account? <Link href="/register" className="text-yellow-500">Register</Link></p>
+                    <p className="mt-4">Don’t have an account? <Link href="/Auth/Register" className="text-yellow-500">Register</Link></p>
                 </div>
             </div>
         </div>

@@ -9,14 +9,14 @@
     transition: background-color 0.4s, box-shadow 0.4s;
 }
 */
-
-.bg-header {
+bg-header {
     background-color: #292F36;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 
+.
 .nav {
     display: flex;
     justify-content: space-between;
