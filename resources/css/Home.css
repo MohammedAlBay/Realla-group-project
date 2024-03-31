@@ -53,16 +53,17 @@ body{
 
 #search {
     display: inline-block;
-    padding: 11px 32px;
+    padding: 11px 60px;
     border-radius: 90px;
     background: rgba(255, 252, 252, 0.18);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
     color: #f0f3fd;
     letter-spacing: 1px;
     font-weight: 600;
-    width: 650px;
+    width: 380px;
     margin-left: 2rem;
 }
+
 
 #search:hover {
     color: #ECAA16;
@@ -350,6 +351,8 @@ body{
     margin:auto;
 }
 
+
+
 .search-bar-gallery__page{
     margin:0;
     z-index: 10;
@@ -365,20 +368,24 @@ body{
     font-size: 24px;
 }
 
-.search-bar-gallery {
+.search-bar-container  {
     position: relative;
     top: 9rem;
     left: 8rem;
     z-index: 10;
+    display: flex;
+    align-items: center;
 }
 
-.search-bar-gallery i {
+.search-bar-container  i {
     font-size: 30px;
     position: absolute;
     top: 0.5rem;
-    left: 40rem;
+    left: 22.5rem;
     z-index: 10;
 }
+
+
 
 .search-landing{
     position: relative;
@@ -420,29 +427,12 @@ body{
         line-height: 60px;
         letter-spacing: -2px;
         position: absolute;
-        top: 10rem;
+        top: 12rem;
         left: 3rem;
     }
 
-    .search-bar-gallery {
-        padding: 10px;
-        position: relative;
-        top: 3rem;
-        left: 5rem;
-    }
-
-    .search-bar-gallery i {
-        font-size: 30px;
-        position: absolute;
-        top: 1rem;
-        left: 25rem;
-        z-index: 10;
-    }
-
-    #search {
-        width: 400px;
-        padding: 8px;
-        font-size: 14px;
+    .search-landing{
+       display: none;
     }
 
     .home-img img {
@@ -454,9 +444,7 @@ body{
         z-index: 10;
     }
 
-    .search-btn{
-        margin-right: 2rem;
-    }
+
     .right-arrow {
         position: absolute;
         right: 2rem;
@@ -492,26 +480,11 @@ body{
         left: 3rem;
     }
 
-    .search-bar-gallery {
-        padding: 10px;
-        position: relative;
-        top: 11rem;
-        left: 7rem;
-    }
 
-    .search-bar-gallery i {
-        font-size: 30px;
-        position: absolute;
-        top: 1rem;
-        left: 19rem;
-        z-index: 10;
-    }
 
-    #search {
-        width: 300px;
-        padding: 8px;
-        font-size: 14px;
-    }
+
+
+
 
     .home-img img {
         position: absolute;

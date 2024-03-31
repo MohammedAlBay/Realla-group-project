@@ -10,7 +10,7 @@ class AuthController extends Controller
     {
         // Validate incoming request data
         $request->validate([
-            'fullName' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users|max:255',
             'password' => 'required|string|min:8|confirmed',
             'isLandlord' => 'boolean',
@@ -27,5 +27,15 @@ class AuthController extends Controller
         // Optionally, you can also issue a JWT token or perform any other action upon registration
 
         return response()->json(['message' => 'Registration successful'], 200);
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+      return redirect('dashboard-tenant');
     }
 }

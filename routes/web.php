@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\User;
+
 
 
 /*
@@ -70,6 +72,7 @@ Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 })->name('login');
 
+
 Route::get('/login-landlord', function () {
     return Inertia::render('LoginPanelLandlord');
 });
@@ -77,6 +80,16 @@ Route::get('/login-landlord', function () {
 Route::get('/login-tenant', function () {
     return Inertia::render('LoginPanelTenant');
 });
+
+Route::get('/login-tenant', function () {
+    // Example: Retrieve all users from the users table
+    $users = User::all();
+
+    // Perform any other necessary logic with the retrieved users data
+
+    return Inertia::render('LoginPanelTenant');
+});
+
 
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);

@@ -22,6 +22,7 @@ const Register = () => {
         fetch('api/users')
             .then(response => response.json())
             .then(data => {
+
                 console.log(data); // This will log the fetched users to the console
             })
             .catch(error => {

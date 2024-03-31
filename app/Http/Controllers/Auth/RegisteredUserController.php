@@ -59,6 +59,9 @@ class RegisteredUserController extends Controller
                 'password' => Hash::make($request->password),
                 'is_landlord' => $request->is_landlord ?? false, // Use the value determined above
             ]);
+
+            $userId = $user->id;
+
             dd($user);
             // Log a message after successfully creating the user
             Log::info('User created successfully', ['user_id' => $user->id]);
@@ -74,7 +77,8 @@ class RegisteredUserController extends Controller
 
             // Flash a success message to the session
             Session::flash('success', 'Registration successful!');
-            return redirect('/dashboard-tenant')->with('success', 'Registration successful!');
+
+           /* return redirect('/dashboard-tenant')->with('success', 'Registration successful!'); */
 
           /*  return redirect('/dashboard-tenant')->with('success', 'Registration successful!'); */
 
@@ -88,6 +92,13 @@ class RegisteredUserController extends Controller
                 return redirect()->route('dashboard-tenant')->with('success', 'Registration successful!');
             }
            */
+            // Return a JSON response indicating success
+            return response()->json(['message' => 'User created successfully', 'user_id' => $userId]);
+        } catch (\Exception $e) {
+            // Handle any exceptions that occur during user creation
+            return response()->json(['message' => 'Failed to create user', 'error' => $e->getMessage()], 500);
+        }
+        /*
         } catch (\Exception $e) {
             // Log an error message if an exception occurs
             Log::error('Error creating user', ['message' => $e->getMessage()]);
@@ -98,5 +109,7 @@ class RegisteredUserController extends Controller
             // Redirect the user back to the registration form with an error message
             return redirect()->back()->withInput()->withErrors(['registration_failed' => 'Registration failed. Please try again.']);
         }
+        */
     }
+
 }

@@ -42,8 +42,8 @@ function Navigation() {
 
     return (
         <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
-            <nav className="nav">
-                <Logo />
+            <nav className="nav container">
+                <Logo/>
 
                 {/* Desktop Menu */}
                 {isDesktop && (
@@ -55,15 +55,17 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/about" className="nav__link">About</Link>
                             </li>
-
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-                            
-                            <LoginRegisterButtons className="desktop"/>
+
                         </ul>
                     </div>
+
                 )}
+                <div className="buttons">
+                    <LoginRegisterButtons/>
+                </div>
 
                 {/* Mobile and Tablet Menu */}
                 {!isDesktop && (
@@ -80,23 +82,31 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>About</Link>
                             </li>
 
+
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link"
                                       onClick={() => setIsMenuOpen(false)}>Contact</Link>
                             </li>
 
-                            <div className="nav__actions">
-                                <SearchBarGallery />
-                            </div>
-
-                            <LoginRegisterButtons className="nav__item tablet"/>
-
                         </ul>
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
                             <i className='bx bx-x'></i>
                         </div>
+
+
+                        <div>
+                            <div>
+                                <LoginRegisterButtons className="nav__item tablet"/>
+                            </div>
+                            <div>
+                                <SearchBarGallery/>
+                            </div>
+                        </div>
+
+
                     </div>
                 )}
+
 
                 {/* Hamburger Menu Toggle */}
                 {!isDesktop && (
