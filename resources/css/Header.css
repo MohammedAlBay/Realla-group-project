@@ -281,16 +281,39 @@ nav.nav.container{
         bottom: 0;
     }
 
+
+
+
+    .search-bar-gallery {
+        position: relative;
+        bottom: 1rem;
+        right: 6.5rem;
+    }
     #search {
-        position: absolute;
-        bottom: 5rem;
-        right: 10rem;
-        margin:auto;
+        display: inline-block;
+        padding: 11px 100px;
+        border-radius: 90px;
+        background: rgba(255, 252, 252, 0.18);
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+        color: #f0f3fd;
+        letter-spacing: 1px;
+        font-weight: 600;
+        width: 300px;
+        margin-left: 2rem;
     }
 
-    .search-bar-gallery button i{
-    bottom: 10rem;
+    .search-bar-container  {
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
 
+    .search-bar-container  i {
+        font-size: 30px;
+        position: absolute;
+        top: 0.5rem;
+        left: 22.5rem;
+        z-index: 10;
     }
 
 
