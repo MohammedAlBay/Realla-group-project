@@ -26,13 +26,13 @@
 .Responsivnes-text {
     color: #FFF;
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
     letter-spacing: -1px;
     margin-top: 0;
-    margin-left: 0rem;
+    margin-left: 4rem;
 }
 
 .span1 {
@@ -49,10 +49,10 @@
 
 .Shadow {
     position: absolute;
-    top: 19rem;
+    top: 18rem;
     right: 0;
     bottom: 10rem;
-    left: 20rem;
+    left: 18rem;
     width: 500px;
     height: 300px;
     border-radius: 300px;
@@ -130,18 +130,18 @@
     }
 
     .Shadow {
-        top: 15rem;
-        left: 8rem;
+        top: 8rem;
+        left: 10rem;
     }
 
     .Shadow2 {
-        top: 28rem;
-        left: 20rem;
+        top:10rem;
+        left: 8rem;
     }
 
     .Shadow3 {
-        top: 25rem;
-        left: 20rem;
+        top: 10rem;
+        left: 10rem;
     }
 }
 
@@ -162,6 +162,7 @@
     .Responsivnes-text {
         font-size: 26px;
         margin-top: 2rem;
+        margin-right: 4rem;
     }
 
     .MockUp2Page::before {
@@ -171,21 +172,21 @@
     }
 
     .Shadow {
-        top: 15rem;
+        top: 10rem;
         left: 0rem;
-        width: 200px;
+        width: 150px;
     }
 
     .Shadow2 {
-        top: 18rem;
+        top: 12rem;
         left: 10rem;
-        width: 200px;
+        width: 150px;
     }
 
     .Shadow3 {
-        top: 15rem;
-        left: 8rem;
-        width: 200px;
+        top: 10rem;
+        left: 18rem;
+        width: 150px;
     }
 }
 

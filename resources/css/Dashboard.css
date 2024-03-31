@@ -108,28 +108,14 @@
     }
 
     .content {
-        width: 100%;
+        width: 100vw;
+        height: 75%;
+        overflow: auto;
     }
 
-    .sidebar {
-        width: 100%;
-        padding-left: 2rem;
-        padding-top: 7rem;
-        margin-bottom: 2rem;
-    }
+   
 
-    .user-info {
-        top: 10px;
-        right: 10px;
-    }
 
-    .sidebar-menu-item i {
-        font-size: 20px;
-    }
-
-    .sidebar-menu-link {
-        padding: 10px;
-    }
 }
 
 

@@ -78,6 +78,7 @@ nav.nav.container{
     display: flex;
 }
 
+.sidebar {display: none}
 /* Mobile and Tablet Menu */
 
 .nav__menu {
@@ -177,6 +178,8 @@ nav.nav.container{
     display: none;
 }
 
+
+
 @media screen and (max-width: 1150px) {
     .header {
         overflow-x: hidden;
@@ -184,6 +187,8 @@ nav.nav.container{
     .desktop-menu {
         display: none;
     }
+
+
 
     .nav__menu {
         position: fixed;
@@ -289,6 +294,7 @@ nav.nav.container{
         left: 22.5rem;
         z-index: 10;
     }
+
 
 
 }

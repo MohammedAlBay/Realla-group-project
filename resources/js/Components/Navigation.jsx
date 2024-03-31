@@ -5,10 +5,12 @@ import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 
 
-function Navigation() {
+
+function Navigation({ onPageChange }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150); // Set initial window width
@@ -96,7 +98,11 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>Contact</Link>
                             </li>
 
+
+                            <DashboardTenantBar onPageChange={onPageChange}/> {/* Pass onPageChange here */}
+
                         </ul>
+
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
                             <i className='bx bx-x'></i>
                         </div>
@@ -109,6 +115,7 @@ function Navigation() {
                             <div>
                                 <SearchBarGallery/>
                             </div>
+
                         </div>
 
 
