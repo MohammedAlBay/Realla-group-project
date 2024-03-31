@@ -1,6 +1,6 @@
 .home-img-dashboard img{
     position: absolute;
-    bottom: 3rem;
+    bottom: 3.5rem;
     right: 0rem;
     max-width: 100%;
     pointer-events: none;
@@ -8,32 +8,41 @@
     width: 45%;
 }
 
+
 .text-dashboard-landing {
     z-index: 100;
     color: #e0e0e0;
-    position: relative;
+    position: absolute;
     text-align: center;
     font-weight: 800;
     font-size: 50px;
     float:left;
-    margin-left: 3rem;
+    margin-left: 7rem;
     margin-top: 3rem;
 }
+
 
 .text-dashboard-landing span{
     z-index: 100;
     color: orange;
     position: relative;
     text-align: center;
+
 }
 
 .address-dashboard-landing {
     z-index: 100;
     color: #e0e0e0;
-    position: relative;
+    position: absolute;
     text-align: center;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 18px;
     float:left;
-    margin-left: 6rem;
+    margin-left: 24rem;
+    margin-top: 9rem;
 }
+
+.nav__item, .buttons{
+    display: none;
+}
+

@@ -58,7 +58,12 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
+                            <div className="header-user-name">
+                                <div className="user-info">
+                                    <i className='bx bxs-user-circle' style={{color: '#FDB414', fontSize: '35px'}}></i>
 
+                                </div>
+                            </div>
                         </ul>
                     </div>
 
