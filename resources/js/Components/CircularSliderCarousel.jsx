@@ -33,11 +33,14 @@ const CircularSliderCarousel = () => {
 
             <h1 className="text-dashboard-landing">Welcome <span>Olivia Janssens {/*{userAddress}*/} </span>!</h1>
             {/* Render user address with dynamic value */}
-            <h4 className="address-dashboard-landing"><i class='bx bxs-map' style={{color: '#FDB414', fontSize: '30px'}}></i> <span>Sint Niklass {userAddress} </span> </h4>
+            <h4 className="address-dashboard-landing"><i class='bx bxs-map'
+                                                         style={{color: '#FDB414', fontSize: '30px'}}></i> <span>Sint Niklass {userAddress} </span>
+            </h4>
 
             <div className="home-img-dashboard">
                 <img src="./images/Mask Group.png" alt="Bungalow"/>
             </div>
+            <div className="Shadow2"></div>
         </div>
     );
 };
