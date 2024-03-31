@@ -42,9 +42,12 @@
     margin-top: 9rem;
 }
 
+
 .nav__item, .buttons{
     display: none;
 }
+
+
 
 .Shadow2 {
     position: absolute;

@@ -1,17 +1,11 @@
 import React from 'react';
-import {Link} from "@inertiajs/react";
 
-const RightArrow2 = () => {
-
+const RightArrow2 = ({ onClick, disabled }) => {
     return (
-
-
-            <Link href="/mock-up-2" className="right-arrow">
-                <span><i className='bx bxs-right-arrow-circle' style={{color: '#ecaa16'}}></i></span>
-            </Link>
-
+        <button onClick={onClick} disabled={disabled} className="arrow-button right-arrow-2">
+            <i className='bx bx-chevron-right' style={{color: '#ecaa16'}}></i>
+        </button>
     );
 };
 
 export default RightArrow2;
-

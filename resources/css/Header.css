@@ -1,5 +1,15 @@
 
 
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.4s, box-shadow 0.4s;
+
+}
 
 .bg-header {
     background-color: #292F36;

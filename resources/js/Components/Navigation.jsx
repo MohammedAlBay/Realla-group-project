@@ -7,9 +7,13 @@ import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 
 
+
 function Navigation() {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150); // Set initial window width
+
+
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -41,7 +45,7 @@ function Navigation() {
     }, []);
 
     return (
-        <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
+        <div className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
             <nav className="nav container">
                 <Logo/>
 
@@ -61,7 +65,6 @@ function Navigation() {
                             <div className="header-user-name">
                                 <div className="user-info">
                                     <i className='bx bxs-user-circle' style={{color: '#FDB414', fontSize: '35px'}}></i>
-
                                 </div>
                             </div>
                         </ul>
@@ -122,7 +125,7 @@ function Navigation() {
 
 
             </nav>
-        </header>
+        </div>
     );
 }
 

@@ -85,14 +85,7 @@ const MockUp1 = () => {
                 y: 0,
                 ease: Power2.easeOut,
             },
-            {
-                selector: "#wallet",
-                duration: 3,
-                scale: 1,
-                x: -280,
-                y: 100,
-                ease: Power4.easeOut,
-            },
+
             {
                 selector: "#apple-tv",
                 duration: 3,
@@ -109,14 +102,7 @@ const MockUp1 = () => {
                 y: -50,
                 ease: Power2.easeOut,
             },
-            {
-                selector: "#socials",
-                duration: 3,
-                scale: 1,
-                x: 330,
-                y: 120,
-                ease: Power2.easeOut,
-            },
+
         ];
 
         const startTime = 2;
@@ -126,11 +112,16 @@ const MockUp1 = () => {
         animations.forEach((animation, index) => {
             const { selector, duration, scale, x, y, ease } = animation;
             const element = document.querySelector(selector);
-            masterTimeline.add(
-                gsap.to(element, { duration, scale, x, y, ease }),
-                startTime + (index % 3) / 2
-            );
+            if (element) {
+                masterTimeline.add(
+                    gsap.to(element, { duration, scale, x, y, ease }),
+                    startTime + (index % 3) / 2
+                );
+            } else {
+                console.error(`Element not found for selector: ${selector}`);
+            }
         });
+
 
         ScrollTrigger.create({
             animation: masterTimeline,
@@ -144,13 +135,15 @@ const MockUp1 = () => {
     return (
         <div className="animation">
             <section className="animation">
-                <img className="iphone" src="./images/Macbook.svg" alt="" />
+                <img className="iphone" src="./images/Macbook.svg" alt=""/>
+
                 <img
                     id="app-store"
                     className="widgets"
-                    src=""
+                    src="./images/payment-history.svg"
                     alt=""
                 />
+
                 <img
                     id="screen-time"
                     className="widgets"
@@ -198,12 +191,6 @@ const MockUp1 = () => {
                     id="apple-tv"
                     className="widgets"
                     src="https://assets.codepen.io/8292695/apple-tv.svg"
-                    alt=""
-                />
-                <img
-                    id="wallet"
-                    className="widgets"
-                    src="https://assets.codepen.io/8292695/wallet.svg"
                     alt=""
                 />
 
