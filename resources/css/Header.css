@@ -163,6 +163,9 @@ nav.nav.container{
 
 
 @media screen and (max-width: 1150px) {
+    .header {
+        overflow-x: hidden;
+    }
     .desktop-menu {
         display: none;
     }
@@ -172,7 +175,7 @@ nav.nav.container{
         top: 0;
         left: 0;
         width: 100%;
-        height: 90%;
+        height: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -197,9 +200,9 @@ nav.nav.container{
 
     .buttons{
         position: relative;
-        bottom: 1rem;
-        right:8rem;
-        display: flex;
+        top: 4rem;
+        right:0rem;
+        margin: auto;
         flex-direction: column;
         gap:2rem;
         align-items: center;
@@ -221,11 +224,64 @@ nav.nav.container{
         margin-left: 1rem;
         background-color: transparent!important;
     }
+    .nav__item{
+        list-style: none;
+        font-size: 25px;
+        background-color: transparent;
+        text-align: center;
+        color: #677685;
+        text-decoration: none;
+        font-weight: 800;
+        margin-left: 3rem;
+        margin-top: 6rem;
+    }
+    .nav__actions i{
+        font-size: 2rem;
+        color:orange;
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+
+    .search-bar-gallery {
+        position: relative;
+        bottom: 0rem;
+        right: -4rem;
+    }
+    #search {
+        display: inline-block;
+        padding: 11px 100px;
+        border-radius: 90px;
+        background: rgba(255, 252, 252, 0.18);
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+        color: #f0f3fd;
+        letter-spacing: 1px;
+        font-weight: 600;
+        width: 300px;
+        margin-left: 2rem;
+    }
+
+    .search-bar-container  {
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-bar-container  i {
+        font-size: 30px;
+        position: absolute;
+        top: 0.5rem;
+        left: 22.5rem;
+        z-index: 10;
+    }
 
 
 }
 
 @media screen and (max-width: 576px) {
+    header {
+        overflow-x: hidden;
+    }
 
     .buttons{
         position: relative;
@@ -281,27 +337,11 @@ nav.nav.container{
         bottom: 0;
     }
 
-
-
-
     .search-bar-gallery {
         position: relative;
         bottom: 1rem;
-        right: 6.5rem;
+        right: 7rem;
     }
-    #search {
-        display: inline-block;
-        padding: 11px 100px;
-        border-radius: 90px;
-        background: rgba(255, 252, 252, 0.18);
-        box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
-        color: #f0f3fd;
-        letter-spacing: 1px;
-        font-weight: 600;
-        width: 300px;
-        margin-left: 2rem;
-    }
-
     .search-bar-container  {
         z-index: 10;
         display: flex;
@@ -312,9 +352,24 @@ nav.nav.container{
         font-size: 30px;
         position: absolute;
         top: 0.5rem;
-        left: 22.5rem;
+        left: 10rem;
         z-index: 10;
     }
+
+
+    .search-bar-gallery #search {
+        display: inline-block;
+        padding: 11px 70px;
+        border-radius: 90px;
+        background: rgba(255, 252, 252, 0.18);
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+        color: #f0f3fd;
+        letter-spacing: 1px;
+        font-weight: 600;
+        width: 380px;
+        margin-left: 2rem;
+    }
+
 
 
 }
