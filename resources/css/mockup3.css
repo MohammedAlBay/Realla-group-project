@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     position: relative;
-    background-color: #F3F3F2;
+    background-color: #e1e1e1;
 }
 
 /* Testimonials Section*/

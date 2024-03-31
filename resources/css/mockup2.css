@@ -2,8 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    background-color: #e1e1e1;
+    overflow-y: hidden;
 }
 
 .Mockup2-content {
@@ -17,7 +19,7 @@
     max-height: 100%;
     position: relative;
     left: 7rem;
-    top: 10rem;
+    top: 6rem;
 }
 
 .Responsivnes-text{
@@ -28,7 +30,7 @@
     font-weight: 600;
     line-height: 120%;
     letter-spacing: -1px;
-    margin-top: 12rem;
+    margin-top:6rem;
 }
 
 .span1{
@@ -92,11 +94,12 @@
     right: 20rem;
     bottom: -10.8rem;
     width: 35vw;
-    hight: 200vw;
+    hight: 80px;
     background-color: #1E2127;
    /* background-color: #4b5563; */
     transform: skewX(-30deg);
     z-index: 0;
+
 }
 
 

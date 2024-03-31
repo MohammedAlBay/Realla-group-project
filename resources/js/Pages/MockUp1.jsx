@@ -144,11 +144,11 @@ const MockUp1 = () => {
     return (
         <div className="animation">
             <section className="animation">
-                <img className="iphone" src="./images/apple.svg" alt="" />
+                <img className="iphone" src="./images/Macbook.svg" alt="" />
                 <img
                     id="app-store"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/appstore-widget.svg"
+                    src=""
                     alt=""
                 />
                 <img

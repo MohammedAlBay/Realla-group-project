@@ -1,6 +1,10 @@
 .animation{
-    height: 110vh;
+    height: 100%;
     width: 100vw;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1;
+    background-color: #e1e1e1;
 }
 
 .right-arrow {
@@ -18,13 +22,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+     height: 100vh;
      width: 100vw;
 }
 
 .iphone {
     position: absolute;
-    height: 550px;
+    height: 500px;
 }
 
 .widgets {
@@ -39,7 +43,8 @@
     margin-top: 3rem;
 }
 #calendar{
-    width: 500px;
+    width: 400px;
+    margin-left: 2rem;
 }
 
 #screen-time{

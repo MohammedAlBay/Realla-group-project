@@ -163,7 +163,9 @@ nav.nav.container{
     cursor: pointer;
 }
 
-
+.user-info{
+    display: none;
+}
 
 @media screen and (max-width: 1150px) {
     .header {
