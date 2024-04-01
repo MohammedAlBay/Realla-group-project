@@ -26,9 +26,14 @@
 }
 
 .content {
-    width: 60vw;
-    height: 75%;
+    border-radius: 0 0 0 15%;
+    height: 94%;
     overflow: auto;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    width: 60vw;
 }
 
 .sidebar {
@@ -126,8 +131,12 @@
     }
 
     .content {
-        width: 93vw;
-        height: 75%;
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        bottom: 0rem;
+        width: 100vw;
+        height: 93%;
         overflow: auto;
     }
 

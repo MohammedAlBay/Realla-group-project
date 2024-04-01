@@ -45,47 +45,47 @@ const DocumentsPage = () => {
     return (
         <div className="body">
 
-        <div className="documents flex justify-center items-center grid">
-            <section>
-                <ul className='indexes'>
-                    <li data-index='0'>Contract</li>
-                    <li data-index='1'>Electric Contract</li>
-                    <li data-index='2'>Gas Contract</li>
-                    <li data-index='3'>Water Contract</li>
-                </ul>
-                <ul className='tabs'>
-                    <li className='tab'>
-                        <article className='tab-content'>
-                            <PdfViewer className="tab-image"
-                                       pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
-                        </article>
+            <div className="documents flex justify-center items-center grid">
+                <section>
+                    <ul className='indexes'>
+                        <li data-index='0'>Contract</li>
+                        <li data-index='1'>Electric Contract</li>
+                        <li data-index='2'>Gas Contract</li>
+                        <li data-index='3'>Water Contract</li>
+                    </ul>
+                    <ul className='tabs'>
+                        <li className='tab'>
+                            <article className='tab-content'>
+                                <PdfViewer className="tab-image"
+                                           pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                            </article>
 
-                    </li>
-                    <li className='tab'>
-                        <article className='tab-content'>
-                            <PdfViewer className="tab-image"
-                                       pdfUrl="https://legaltemplates.net/wp-content/uploads/electrical-service-contract.pdf"/>
-                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
-                        </article>
-                    </li>
-                    <li className='tab'>
-                        <article className='tab-content'>
-                            <PdfViewer className="tab-image"
-                                       pdfUrl="./images/energieovernamedocument.pdf"/>
-                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
-                        </article>
-                    </li>
-                    <li className='tab'>
-                        <article className='tab-content'>
-                            <PdfViewer className="tab-image"
-                                       pdfUrl="./images/samplewaterpurchase.pdf"/>
-                            <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-        </div>
+                        </li>
+                        <li className='tab'>
+                            <article className='tab-content'>
+                                <PdfViewer className="tab-image"
+                                           pdfUrl="https://legaltemplates.net/wp-content/uploads/electrical-service-contract.pdf"/>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                            </article>
+                        </li>
+                        <li className='tab'>
+                            <article className='tab-content'>
+                                <PdfViewer className="tab-image"
+                                           pdfUrl="./images/energieovernamedocument.pdf"/>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                            </article>
+                        </li>
+                        <li className='tab'>
+                            <article className='tab-content'>
+                                <PdfViewer className="tab-image"
+                                           pdfUrl="./images/samplewaterpurchase.pdf"/>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </div>
     );
 };
