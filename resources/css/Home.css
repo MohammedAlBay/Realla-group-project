@@ -398,6 +398,10 @@ body{
        display: none;
     }
 
+    .search-bar-container {
+        display: none;
+    }
+
     .home-img img {
         position: absolute;
         top: 12rem;
@@ -406,7 +410,6 @@ body{
         pointer-events: none;
         z-index: 10;
     }
-
 
     .right-arrow {
         position: absolute;
@@ -431,7 +434,6 @@ body{
 
   .home-page{
         overflow: hidden;
-
     }
 
     .home-content h1 {
@@ -495,5 +497,13 @@ body{
         margin-left: -1.8rem;
 
     }
+    .search-landing{
+        display: none;
+    }
+
+    .search-bar-container {
+        display: none;
+    }
+
 
 }
