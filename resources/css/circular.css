@@ -1,11 +1,11 @@
 .home-img-dashboard img {
     position: absolute;
-    bottom: 3.5rem;
+    bottom: 0rem;
     right: 0rem;
     max-width: 100%;
     pointer-events: none;
     z-index: 10;
-    width: 45%;
+    width: 85%;
 }
 
 .text-dashboard-landing {
@@ -15,8 +15,8 @@
     text-align: center;
     font-weight: 800;
     font-size: 50px;
-    margin-top: 3rem;
-    left: 50%;
+    margin-top: 9rem;
+    left: 20%;
     transform: translateX(-5%);
 }
 
@@ -34,7 +34,7 @@
     text-align: center;
     font-weight: 800;
     font-size: 18px;
-    margin-top: 9rem;
+    margin-top: 15rem;
     left: 50%;
     transform: translateX(-5%);
 }
@@ -48,7 +48,7 @@
     top: 30rem;
     right: 0;
     bottom: 0;
-    left: 56rem;
+    left: 16rem;
     width: 560px;
     height: 200px;
     border-radius: 300px;
@@ -96,31 +96,67 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .text-dashboard-landing {
     font-size: 60px;
-    margin-top: 10rem;
-    margin-left: 0;
+    margin-top: 8rem;
+    margin-left: 15rem;
     transform: translateX(-40%);
         width: 400px;
     }
 
     .address-dashboard-landing {
         font-size: 14px;
-        margin-top:27rem;
-        margin-left: 0;
+        margin-top:25rem;
+        margin-left: 1rem;
         left: 50%;
         transform: translateX(-30%);
     }
     .Shadow2 {
-        left: 35%;
-        width: 350px;
+        left: 30%;
+        width: 400px;
         height: 150px;
         top: 40rem;
         right: 0;
-        bottom: 0;
+        bottom: 0rem;
     }
 
     .home-img-dashboard img {
         position: absolute;
-        bottom: 3.9rem;
+        bottom: -1rem;
+        right: 0rem;
+        max-width: 100%;
+        pointer-events: none;
+        z-index: 10;
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-dashboard-landing {
+        font-size: 40px;
+        margin-top: 15rem;
+        margin-left: 5.5rem;
+        transform: translateX(-40%);
+        width: 400px;
+    }
+
+    .address-dashboard-landing {
+        font-size: 14px;
+        margin-top:23rem;
+        margin-left: -1rem;
+        left: 50%;
+        transform: translateX(-30%);
+    }
+    .Shadow2 {
+        left: 30%;
+        width: 400px;
+        height: 150px;
+        top: 40rem;
+        right: 0;
+        bottom: 0rem;
+    }
+
+    .home-img-dashboard img {
+        position: absolute;
+        bottom: -1rem;
         right: 0rem;
         max-width: 100%;
         pointer-events: none;
