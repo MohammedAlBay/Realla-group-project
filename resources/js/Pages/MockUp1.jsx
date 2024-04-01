@@ -135,7 +135,7 @@ const MockUp1 = () => {
     return (
         <div className="animation">
             <section className="animation">
-                <img className="iphone" src="./images/Macbook.svg" alt=""/>
+                <img className="iphone" src="./images/iPhone.svg" alt=""/>
 
                 <img
                     id="app-store"
