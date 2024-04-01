@@ -6,7 +6,7 @@ const MockUp2Page = () => {
     return (
         <div className="MockUp2Page">
             <div className="Mockup2-content">
-                <img className="Responsivnes" src="./images/Responsivnes.png" alt="Responsibilities on different devices"/>
+                <img className="Responsivnes" src="./images/responsiveness.png" alt="Responsibilities on different devices"/>
                 <div>
                     <h1 className="Responsivnes-text">
                         Access your real estates from

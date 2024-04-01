@@ -117,7 +117,7 @@
         top: 0rem;
         right: 0rem;
         bottom: 0rem;
-        width: 92vw;
+        width: 93vw;
         height: 94%;
         background: #444D57;
         border-radius: 0 0 0 15%;
@@ -126,7 +126,7 @@
     }
 
     .content {
-        width: 90vw;
+        width: 93vw;
         height: 75%;
         overflow: auto;
     }
@@ -139,8 +139,18 @@
         top: 10px;
         right: 10px;
     }
+    .sidebar {
+        width: 500px;
+        margin-right: auto;
+        display: flex;
+        padding-left: 4rem;
+        padding-top: 5rem;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+    }
     .sidebar-menu-link {
-      font-size: 15px;
+      font-size: 20px;
         color:#677685;
     }
     .search-bar-gallery {
@@ -175,6 +185,12 @@
         width: 380px;
         margin-left: 2rem;
     }
+    .sidebar-menu-content:hover {
+        width: 330px;
+        margin-left: 2rem;
+        text-align: center;
+        color: white;
+    }
 
 
 }
@@ -193,4 +209,16 @@
         left: 8rem;
         z-index: 10;
     }
+
+    .sidebar {
+        width: 400px;
+        margin-right: auto;
+        display: flex;
+        padding-left: 4rem;
+        padding-top: 0rem;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+    }
+
 }
