@@ -34,7 +34,6 @@
     right: 0rem;
     bottom: 0rem;
     width: 60vw;
-
 }
 
 .sidebar {
@@ -205,11 +204,10 @@
         text-align: center;
         color: white;
     }
-
-
 }
 
 @media screen and (max-width: 576px) {
+
     .search-bar-gallery {
         position: relative;
         bottom: 9rem;

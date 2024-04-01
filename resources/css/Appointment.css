@@ -37,17 +37,15 @@
 .calendar-container {
     height: 500px;
     width: 750px;
-    margin: 20px 10px; /* Adjust margin for spacing */
+    margin: 20px 10px;
 }
 
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
     .card-appointment {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: 90%; /* Adjust max-width for smaller screens */
+        width: 100%;
+        max-width: 90%;
         left: 42%;
-
-
         transform: translateY(-50%);
     }
 
@@ -62,7 +60,7 @@
         width: 300px;
     }
     .card-appointment {
-        width: 90%;
+        width: 100%;
         max-width: 790px;
         height: auto;
         position: absolute;
@@ -78,6 +76,21 @@
 }
 
 @media (max-width: 767px) {
+    .card-appointment {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 54%;
+        transform: translate(-50%, -50%);
+        padding:1rem;
+        background-color: #1e2127;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
+    }
+
     .calendar-container {
         height: 300px;
         width: 100%;

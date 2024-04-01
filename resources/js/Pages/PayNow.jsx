@@ -10,9 +10,7 @@ const PayNow = () => {
 
     const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
 
-    // Function to handle payment and show success message
     const handlePayment = () => {
-        // Perform payment logic here, and then set isPaymentSuccess to true
         setIsPaymentSuccess(true);
     };
 

@@ -19,7 +19,6 @@ html {
     background-color: transparent;
     margin: 0;
 
-
 }
 
 
@@ -113,8 +112,8 @@ h6 > span {
     width: 670px;
     height: 485px;
     position: absolute;
-    top: 48%;
-    left: 71%;
+    top: 50%;
+    left: 52%;
     background-color: #1E2127;
     overflow: hidden;
 
@@ -482,7 +481,6 @@ button:focus { outline:0; }
 }
 
 /*Payment Notification*/
-
 .success-message{
     z-index: 0;
     width: 370px;
@@ -514,42 +512,31 @@ button:focus { outline:0; }
 
 /* Responsive styling */
 @media only screen and (max-width: 768px) {
-    .paynow {
-        padding: 0 10px;
-        margin-top: 10rem;
 
-    }
 
     .checkout {
-        width: 55%;
-        max-width: 100%;
-        height: auto;
-        top: 3rem;
-        border-radius: 0;
-        margin-top: 29rem;
-
-    }
-
-    .order {
-        width: 100%;
-        max-width: 100%;
-        float: none;
-        padding: 0 20px;
+        max-width: 90%;
+        width: 670px;
+        height: 485px;
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        overflow-x: auto;
     }
 
     .card {
         width: 100%;
-        max-width: 100%;
+        max-width: 80%;
         float: none;
         margin-left: 2rem;
     }
 
     .payment {
-        width: 100%;
+        width: 90%;
         max-width: 100%;
         float: none;
-        top: 3rem;
-        right:2rem;
+        top: 4rem;
+        right:0rem;
         margin-bottom: 7rem;
     }
 
@@ -562,20 +549,19 @@ button:focus { outline:0; }
     }
 
     .button-cta  {
-    left: 3rem;
-       width: 90%;
-
+        left: 3rem;
+        width: 50%;
     }
 
-    .card-form input#cardnumber{
-
-        bottom: 1rem;
+    .card-form input#cardnumber {
+        bottom: 0rem;
         left: 1rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .checkout {
+        overflow-x: auto;
         padding: 0 10px;
     }
 
@@ -590,7 +576,8 @@ button:focus { outline:0; }
     .payment {
         padding: 0 10px;
     }
-    .card-form input#cardnumber{
+
+    .card-form input#cardnumber {
         padding-bottom: 2rem;
         bottom: 2rem;
         left: 1rem;
