@@ -198,7 +198,6 @@ div.testimonial:hover svg {
     padding: 1rem;
 }
 
-/* Adjust card width for smaller screens */
 @media (max-width: 768px) {
     .testimonials{
         padding-top: 28rem;
@@ -209,7 +208,7 @@ div.testimonial:hover svg {
 
 }
 
-/* Adjust card width for even smaller screens */
+
 @media (max-width: 576px) {
     .testimonials{
         padding-top: 42rem;

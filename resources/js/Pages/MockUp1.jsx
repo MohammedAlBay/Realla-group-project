@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { gsap, Power4, Power2 } from "gsap";
 import "../../css/gsap.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CloseMockUpIcon from "@/Components/NextArrow.jsx";
 
-import NextArrow from "@/Components/NextArrow.jsx";
 gsap.registerPlugin(ScrollTrigger);
 
 const MockUp1 = () => {
@@ -137,7 +137,7 @@ const MockUp1 = () => {
     return (
 
         <div className="animation">
-            <NextArrow />
+            <CloseMockUpIcon />
             <section className="animation">
                 <img className="iphone" src="./images/iPhone.svg" alt=""/>
 

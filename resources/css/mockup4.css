@@ -2,15 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
     position: relative;
-    background-color: #F3F3F2;
+    background-color: #e1e1e1;
+    height: 100vh;
 }
+
 .block {
-    width: 100vw;
+    width: 100%;
     height: 350px;
     background-color: #1E2127;
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -18,46 +19,47 @@
     right: 0;
 }
 
-.card {
+.cards {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    max-width: 100%;
-    border-radius: 25px;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 0rem;
+    z-index: 1;
 }
 
-
-.card1 {
+.subscribe-card {
+    flex: 1; /* Take equal space in a row */
+    max-width: 350px; /* Set max-width for responsiveness */
     border: 1px solid #F79D36;
     background: #F79D36;
     color: white;
-    padding-top: 50px;
-    width: 349px;
-    height: 290px;
-    margin: 20px;
+    padding: 50px 20px;
     border-radius: 25px;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 
-
-.card1 h3 {
+.card h3 {
     color: white;
     text-align: center;
     font-size: 32px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     margin-bottom: 2rem;
 }
 
-.card1 li {
+.card ul {
+    list-style: none;
+    padding: 0;
     text-align: center;
+}
+
+.card li {
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 div.card:hover {
@@ -78,13 +80,61 @@ div.card:hover svg {
     fill: white;
 }
 
+.card1 {
+    border: 1px solid #F79D36;
+    background: #F79D36;
+    color: white;
+    padding-top: 50px;
+    width: 349px;
+    height: 290px;
+    margin: 20px;
+    border-radius: 25px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.card1 h3 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.cards-heading{
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+.card1 h5 {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0rem;
+}
+
+
+.card1 li {
+    text-align: left;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
 .card2 {
     border: 1px solid #F79D36;
     background: #ea7f04;
     color: white;
     padding-top: 50px;
-    width: 400px;
-    height: 390px;
+    width: 500px;
+    height: 420px;
     margin: 30px;
     border-radius: 25px;
     display:flex;
@@ -93,21 +143,33 @@ div.card:hover svg {
 
 .card2 h3 {
     color: white;
+    text-align: left;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 0rem;
+}
+
+
+.card2 h5 {
+    color: white;
     text-align: center;
-    font-size: 32px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
 .card2 li {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     margin-bottom: 1rem;
+    padding-left: 2rem;
 }
 
 .card:hover .svg {
@@ -130,19 +192,30 @@ div.card:hover svg {
 .card3 h3 {
     color: white;
     text-align: center;
-    font-size: 32px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
-.card3 li {
+.card3 h5 {
+    color: white;
     text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0rem;
+}
+
+
+.card3 li {
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .subscribe {
@@ -150,10 +223,29 @@ div.card:hover svg {
     border: 1px solid #FFF;
     height: 40px;
     width: 100px;
-    margin: auto;
+    margin-top: 1rem;
+
 }
 
-.subscribe:hover{
+.subscribe:hover {
     background-color: white;
-    color:#F79D36;
+    color: #F79D36;
+}
+
+@media (max-width: 768px) {
+    .cards{
+        padding-top: 30rem;
+        flex-direction: column;
+    }
+    .card1, .card2, .card3{
+        margin-bottom: 0rem;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .cards{
+        padding-top: 42rem;
+    }
 }
