@@ -32,6 +32,8 @@ const DocumentsPage = () => {
             showTab(e.target.dataset.index);
         };
 
+
+
         const init = () => showTab(0);
 
         init(); // Initialize on load
@@ -53,12 +55,14 @@ const DocumentsPage = () => {
                         <li data-index='2'>Gas Contract</li>
                         <li data-index='3'>Water Contract</li>
                     </ul>
+
                     <ul className='tabs'>
                         <li className='tab'>
                             <article className='tab-content'>
                                 <PdfViewer className="tab-image"
                                            pdfUrl="https://eforms.com/download/2018/05/Residential-Real-Estate-Purchase-Agreement.pdf"/>
-                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt'></i>Edit</span>
+                                </button>
                             </article>
 
                         </li>
@@ -66,21 +70,24 @@ const DocumentsPage = () => {
                             <article className='tab-content'>
                                 <PdfViewer className="tab-image"
                                            pdfUrl="https://legaltemplates.net/wp-content/uploads/electrical-service-contract.pdf"/>
-                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt'></i>Edit</span>
+                                </button>
                             </article>
                         </li>
                         <li className='tab'>
                             <article className='tab-content'>
                                 <PdfViewer className="tab-image"
                                            pdfUrl="./images/energieovernamedocument.pdf"/>
-                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt'></i>Edit</span>
+                                </button>
                             </article>
                         </li>
                         <li className='tab'>
                             <article className='tab-content'>
                                 <PdfViewer className="tab-image"
                                            pdfUrl="./images/samplewaterpurchase.pdf"/>
-                                <button className="update-doc"><span><i className='bx bx-edit-alt' ></i>Edit</span></button>
+                                <button className="update-doc"><span><i className='bx bx-edit-alt'></i>Edit</span>
+                                </button>
                             </article>
                         </li>
                     </ul>

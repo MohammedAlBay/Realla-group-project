@@ -42,15 +42,27 @@ html {
 }
 
 
-.indexes, .tabs { list-style-type: none; z-index: 1 }
+.indexes,
+.tabs {
+    list-style-type: none;
+    z-index: 1;
+}
+
+
 
 .indexes {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 
     & li {
         padding: 1rem;
         border: 1px solid transparent;
         cursor: pointer;
+
     }
 }
 
@@ -224,6 +236,7 @@ button.update-doc:hover span:after {
         margin-bottom: 14rem;
         left: 0;
     }
+
 }
 
 
@@ -245,10 +258,17 @@ button.update-doc:hover span:after {
         height: 555px;
     }
 
-    .indexes {
+
+    .indexes  {
         position: absolute;
-        bottom: 30rem; /* Adjust the positioning as needed */
+        bottom: 38rem;
         left: 50%;
         transform: translateX(-50%);
+        flex-direction: row;
+        font-size: 0.9rem;
     }
+
+
+
+
 }
