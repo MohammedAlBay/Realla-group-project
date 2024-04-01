@@ -54,12 +54,16 @@ const DashboardTenantLanding = () => {
     return (
         <Router>
             <div className="dashboard">
-                <Navigation onPageChange={handlePageChange} />
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <div className="dashboard-bar-wrapper">
+                    <DashboardTenantBar onPageChange={handlePageChange}/>
+                </div>
 
-                <DashboardTenantBar onPageChange={handlePageChange} />
                 <div className="content">
                     {renderPage()}
                 </div>
+
+                {/* {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={handlePageChange} />} */}
 
             </div>
         </Router>

@@ -10,7 +10,7 @@ import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 
 
-function Navigation({ onPageChange }) {
+function Navigation({ onPageChange, currentPage }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150); // Set initial window width
@@ -99,7 +99,7 @@ function Navigation({ onPageChange }) {
                             </li>
 
 
-                            <DashboardTenantBar onPageChange={onPageChange}/> {/* Pass onPageChange here */}
+                              {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={onPageChange} />}
 
                         </ul>
 
