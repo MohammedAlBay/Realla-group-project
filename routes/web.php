@@ -118,6 +118,14 @@ Route::get('/mock-up-2', function () {
     return Inertia::render('MockUp2Page');
 });
 
+Route::get('/mock-up-3', function () {
+    return Inertia::render('MockUp3');
+});
+
+Route::get('/mock-up-4', function () {
+    return Inertia::render('MockUp4');
+});
+
 Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });

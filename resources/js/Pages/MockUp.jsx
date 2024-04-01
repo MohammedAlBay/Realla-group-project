@@ -9,7 +9,7 @@ import '../../css/MockUp.css';
 
 function MockUp() {
     const [currentPageIndex, setCurrentPageIndex] = useState(0);
-    const mockupPages = [ MockUp2Page, MockUp3, MockUp1, MockUp4];
+    const mockupPages = [ MockUp2Page, MockUp3, MockUp4, MockUp1,];
 
     const goToNextPage = () => {
         if (currentPageIndex < mockupPages.length - 1) {
