@@ -135,9 +135,10 @@
         top: 0rem;
         right: 0rem;
         bottom: 0rem;
-        width: 100vw;
+        width: 95vw;
         height: 93%;
         overflow: auto;
+        border-radius: 0 0 0 15%;
     }
 
     .search-nav{
