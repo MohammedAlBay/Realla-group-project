@@ -63,8 +63,8 @@ const ReportProblem = ({ onFollowUpClick }) => {
           {/* Carousel Items */}
           <div className="flex justify-center space-x-4 mx-16">
             {currentProblems.map((problem, index) => (
-              <div key={problem.id} className="flex-shrink-0 w-28 h-28 m-2 rounded-full bg-gray-700 flex flex-col items-center justify-center">
-                <img src={problem.icon} alt={problem.alt} className="w-full h-full object-cover" />
+              <div key={problem.id} className="flex-shrink-0 w-28 h-28 m-2 rounded-lg bg-gray-700 flex flex-col items-center justify-center">
+                <img src={problem.icon} alt={problem.alt} className="w-3/4 h-3/4 object-contain" />
                 <span className="text-sm text-white">{problem.alt}</span>
               </div>
             ))}
