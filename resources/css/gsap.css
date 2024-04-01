@@ -1,8 +1,6 @@
 .animation{
     height: 100%;
     width: 100vw;
-    position: absolute;
-    top: 1.5rem;
     z-index: 1;
     background-color: #e1e1e1;
 }
@@ -14,11 +12,13 @@
     align-items: center;
      height: 100vh;
      width: 100vw;
+     padding-top: 0rem;
 }
 
 .iphone {
     position: absolute;
-    height: 500px;
+    height: 550px;
+    margin-top: 4rem;
 }
 
 .widgets {

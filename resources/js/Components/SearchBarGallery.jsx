@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
+import '../../css/SearchBar.css';
 
 const SearchBarGallery = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +12,7 @@ const SearchBarGallery = () => {
     };
 
     return (
-        <div className="search-bar-gallery">
+
             <div className="search-bar-container">
                 <input
                     type="search"
@@ -21,10 +22,10 @@ const SearchBarGallery = () => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button onClick={handleSearch}>
-                    <i className='bx bx-search-alt' style={{ color: '#ecaa16' }}></i>
+                    <i className='bx bx-search-alt' style={{ color: '#ecaa16', fontSize: '25px' }}></i>
                 </button>
             </div>
-        </div>
+
     );
 };
 

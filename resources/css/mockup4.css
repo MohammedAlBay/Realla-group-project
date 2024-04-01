@@ -86,7 +86,7 @@ div.card:hover svg {
     color: white;
     padding-top: 50px;
     width: 349px;
-    height: 290px;
+    height: auto;
     margin: 20px;
     border-radius: 25px;
     display:flex;
@@ -123,9 +123,11 @@ div.card:hover svg {
     text-align: left;
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: 900;
     margin-bottom: 5px;
+    text-align: left;
+    padding-top: 2rem;
+    margin-left: 1rem;
 }
 
 .card2 {
@@ -134,7 +136,7 @@ div.card:hover svg {
     color: white;
     padding-top: 50px;
     width: 500px;
-    height: 420px;
+    height: auto;
     margin: 30px;
     border-radius: 25px;
     display:flex;
@@ -169,7 +171,8 @@ div.card:hover svg {
     font-weight: 600;
     line-height: normal;
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
 }
 
 .card:hover .svg {
@@ -182,7 +185,7 @@ div.card:hover svg {
     color: white;
     padding-top: 50px;
     width: 349px;
-    height: 290px;
+    height: auto;
     margin: 20px;
     border-radius: 25px;
     display:flex;
@@ -213,9 +216,11 @@ div.card:hover svg {
 .card3 li {
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     margin-bottom: 5px;
     text-align: left;
+    padding-top: 2rem;
+    margin-left: 1rem;
 }
 
 .subscribe {
@@ -234,7 +239,7 @@ div.card:hover svg {
 
 @media (max-width: 768px) {
     .cards{
-        padding-top: 30rem;
+        padding-top: 55rem;
         flex-direction: column;
     }
     .card1, .card2, .card3{
@@ -246,6 +251,6 @@ div.card:hover svg {
 
 @media (max-width: 576px) {
     .cards{
-        padding-top: 42rem;
+        padding-top: 65rem;
     }
 }

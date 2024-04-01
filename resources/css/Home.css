@@ -35,7 +35,7 @@ body{
 }
 
 .home-content h1 {
-    width: 4003px;
+    width: 700px;
     height: 235px;
     flex-shrink: 0;
     color: #FFF;
@@ -51,24 +51,12 @@ body{
     color: #ECAA16;
 }
 
-#search {
-    display: inline-block;
-    padding: 11px 60px;
-    border-radius: 90px;
-    background: rgba(255, 252, 252, 0.18);
-    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
-    color: #f0f3fd;
-    letter-spacing: 1px;
-    font-weight: 600;
-    width: 380px;
-    margin-left: 2rem;
+.search-landing{
+    position: relative;
+    bottom: 5rem;
+    right: 5.5rem;
 }
 
-
-#search:hover {
-    color: #ECAA16;
-    background: rgba(140, 140, 140, 0.18);
-}
 
 .login {
     color: whitesmoke;
@@ -338,7 +326,7 @@ body{
     font-size: 25px;
 }
 
-/*SEARCH BAR*/
+
 
 
 .galleryPage{
@@ -368,32 +356,7 @@ body{
     font-size: 24px;
 }
 
-.search-bar-container  {
-    position: relative;
-    top: 9rem;
-    left: 8rem;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-}
 
-.search-bar-container  i {
-    font-size: 30px;
-    position: absolute;
-    top: 0.5rem;
-    left: 22.5rem;
-    z-index: 10;
-}
-
-
-
-.search-landing{
-    position: relative;
-    bottom: 14rem;
-    right:10rem;
-    z-index: 10;
-    justify-content: center;
-}
 
 .search-options {
     margin-top: 3rem;

@@ -172,21 +172,43 @@
     }
 
     .Shadow {
-        top: 10rem;
-        left: 0rem;
+        top: 20rem;
+        left: 15rem;
         width: 150px;
     }
 
     .Shadow2 {
-        top: 12rem;
+        top: 18rem;
+        left: 20rem;
+        width: 150px;
+    }
+
+    .Shadow3 {
+        top: 15rem;
+        left: 26rem;
+        width: 150px;
+    }
+
+
+}
+
+
+@media (max-width: 576px) {
+    .Shadow {
+        top: 13rem;
+        left: 5rem;
+        width: 150px;
+    }
+
+    .Shadow2 {
+        top: 16rem;
         left: 10rem;
         width: 150px;
     }
 
     .Shadow3 {
-        top: 10rem;
-        left: 18rem;
+        top: 15rem;
+        left: 26rem;
         width: 150px;
     }
 }
-

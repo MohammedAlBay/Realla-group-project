@@ -131,6 +131,10 @@
         overflow: auto;
     }
 
+    .search-nav{
+        display:none;
+    }
+
     .dashboard-bar-wrapper {
             display: none;
     }

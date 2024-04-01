@@ -1,0 +1,35 @@
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#search {
+    display: inline-block;
+    padding: 11px 40px;
+    border-radius: 90px;
+    background: rgba(255, 252, 252, 0.18);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #f0f3fd;
+    letter-spacing: 1px;
+    font-weight: 600;
+    width: 80%;
+    max-width: 400px;
+
+}
+
+#search:hover {
+    color: #ECAA16;
+    background: rgba(140, 140, 140, 0.18);
+}
+
+.search-bar-container i {
+    position: absolute;
+    right: 7rem;
+    top: 13px;
+    color: #677685;
+    cursor: pointer;
+
+}

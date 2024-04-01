@@ -112,8 +112,8 @@ function Navigation({ onPageChange, currentPage }) {
                             <div>
                                 <LoginRegisterButtons className="nav__item tablet"/>
                             </div>
-                            <div>
-                                <SearchBarGallery/>
+                            <div className='search-nav'>
+                                <SearchBarGallery className="nav__item tablet"/>
                             </div>
 
                         </div>
