@@ -5,6 +5,7 @@
     height: 100vh;
     position: relative;
     background-color: #e1e1e1;
+    padding: 0 20px;
 }
 
 /* Testimonials Section*/
@@ -20,7 +21,7 @@
 /* Testimonial 1*/
 .testimonialsprofile-photos1 {
     position: absolute;
-    left: 5rem;
+    left: 4.5rem;
     bottom: 13rem;
     z-index: 10;
     max-width: 200px;
@@ -37,6 +38,7 @@
     position: relative;
     bottom:0;
     margin: 20px;
+    flex: 0 0 calc(33.33% - 40px);
 }
 
 
@@ -93,7 +95,7 @@ div.testimonial:hover svg {
 /* Testimonial 2*/
 .testimonials-profile-photos2 {
     position: absolute;
-    left: 5rem;
+    left: 4.5rem;
     bottom: 13rem;
     z-index: 10;
     max-width: 200px;
@@ -153,7 +155,7 @@ div.testimonial:hover svg {
 /* Testimonial 3*/
 .testimonials-profile-photos3 {
     position: absolute;
-    left: 5rem;
+    left: 4.5rem;
     bottom: 15rem;
     z-index: 10;
     max-width: 200px;
@@ -194,4 +196,22 @@ div.testimonial:hover svg {
     position: relative;
     top: 30px;
     padding: 1rem;
+}
+
+/* Adjust card width for smaller screens */
+@media (max-width: 768px) {
+    .testimonials{
+        padding-top: 28rem;
+    }
+    .testimonials1, .testimonials2, .testimonials3{
+        margin-bottom: 4rem;
+    }
+
+}
+
+/* Adjust card width for even smaller screens */
+@media (max-width: 576px) {
+    .testimonials{
+        padding-top: 42rem;
+    }
 }
