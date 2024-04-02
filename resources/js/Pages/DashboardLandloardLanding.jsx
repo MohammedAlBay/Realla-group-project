@@ -46,7 +46,7 @@ const DashboardLandloardLanding = () => {
             <div className="dashboard">
                 <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
                 <div className="dashboard-bar-wrapper">
-                    <DashboardTenantBar onPageChange={handlePageChange}/>
+                    <DashboardLandloardBar onPageChange={handlePageChange}/>
                 </div>
                 <div className="content">
                     {renderPage()}

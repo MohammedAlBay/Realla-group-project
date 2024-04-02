@@ -70,18 +70,18 @@ Route::get('/contact', function () {
 
 Route::get('/login', function () {
     return Inertia::render('LoginOptions');
-})->name('login');
+});
 
-
-Route::get('/login-landlord', function () {
+{/*
+Route::get('/login', function () {
     return Inertia::render('LoginPanelLandlord');
 });
 
-Route::get('/login-tenant', function () {
+Route::get('/login', function () {
     return Inertia::render('LoginPanelTenant');
 });
 
-Route::get('/login-tenant', function () {
+Route::get('/login', function () {
     // Example: Retrieve all users from the users table
     $users = User::all();
 
@@ -89,7 +89,7 @@ Route::get('/login-tenant', function () {
 
     return Inertia::render('LoginPanelTenant');
 });
-
+ */}
 
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);

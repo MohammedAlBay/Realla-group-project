@@ -2,47 +2,45 @@ import React, { useState } from 'react';
 import Button from '../Components/RegisterButton';
 import RegisterTextInput from '../Components/RegisterTextInput';
 import RegisterCheckbox from '../Components/RegisterCheckbox';
-import { Link, useHistory } from '@inertiajs/inertia-react'; // Updated import
+import { Link, usePage } from '@inertiajs/inertia-react'; // Updated import
 
 const LoginPanelTenant = () => {
-    const history = useHistory(); // Initialize useHistory hook
-
     // Define state variables to store form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+    const { post } = usePage(); // Destructure post from usePage hook
 
-    // Function to handle tenant login
     // Function to handle tenant login
     const handleTenantLogin = async () => {
-        const response = await fetch('/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password }),
-        });
+        try {
+            const response = await post('/api/login', {
+                email,
+                password
+            });
 
-        if (response.ok) {
-            // Redirect to tenant dashboard upon successful login
-            history.push('/dashboard-tenant');
-        } else {
-            // Handle login failure
-            console.error('Login failed');
+            if (response.ok) {
+                // Redirect to tenant dashboard upon successful login
+                window.location.href = '/dashboard-tenant';
+            } else {
+                // Handle login failure
+                console.error('Login failed');
+            }
+        } catch (error) {
+            console.error('Error logging in:', error);
         }
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        handleTenantLogin();
+        // Call handleTenantLogin to perform login
+        await handleTenantLogin();
     };
-
-
 
     // Function to handle click on the "Forgot Password?" link
     const handleForgotPasswordClick = () => {
         // Redirect to the forgot password page
-        history.push('/forgot-password'); // Redirect to the forgot password page
+        window.location.href = '/forgot-password';
     };
 
     return (

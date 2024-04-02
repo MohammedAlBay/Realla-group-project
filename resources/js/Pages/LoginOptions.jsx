@@ -1,4 +1,4 @@
-import React from 'react';
+{/*
 import { Link } from '@inertiajs/react';
 
 const LoginOptions = () => {
@@ -7,11 +7,11 @@ const LoginOptions = () => {
             <div className="relative w-2/3 ml-52" style={{ marginTop: '-4rem' }}>
                 <div style={{ position: 'relative', width: '500px', height: '725px', flexShrink: 0, borderRadius: '0px 0px 100px 100px', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#1E2127' }}></div>
             </div>
-            <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '6rem', zIndex: '1' }}> {/* Ensure this div is above the buttons */}
+            <div className="absolute inset-0 flex justify-start items-center" style={{ marginLeft: '6rem', zIndex: '1' }}>
                 <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-3/5 h-auto" style={{ marginTop: '-4rem' }}/> 
             </div>
             <div className="flex justify-center items-center">
-            <div className="flex flex-col justify-center items-center mr-28" style={{ zIndex: '2' }}> {/* Ensure this div is above the image */}
+            <div className="flex flex-col justify-center items-center mr-28" style={{ zIndex: '2' }}>
                 <button className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
                     <Link href="/login-landlord">Login as Landlord</Link>
                 </button>
@@ -24,13 +24,15 @@ const LoginOptions = () => {
     );
 };
 
+*/}
 
-{/* import React, { useState } from 'react';
+{/*
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import DashboardTenant from './DashboardTenant';
-import DashboardLandlord from './DashboardLandlord';
+import DashboardTenant from './DashboardTenant.jsx';
+import DashboardLandloard from './DashboardLandloard.jsx';
 
-function App() {
+function LoginOptions() {
   // Assuming you have some state to determine the user type (tenant or landlord)
   const [userType, setUserType] = useState(""); // "tenant" or "landlord"
 
@@ -41,21 +43,134 @@ function App() {
           {userType === "tenant" ? <DashboardTenant /> : <Redirect to="/" />}
         </Route>
         <Route path="/dashboard-landlord">
-          {userType === "landlord" ? <DashboardLandlord /> : <Redirect to="/" />}
+          {userType === "landlord" ? <DashboardLandloard /> : <Redirect to="/" />}
         </Route>
-        <Route exact path="/">
+          <Route exact path="/">
 
 
+              <div className="flex bg-gray-900 text-white p-8 pt-6 h-screen" style={{backgroundColor: '#292F36'}}>
+                  <div className="relative w-2/3 ml-52" style={{marginTop: '-4rem'}}>
+                      <div style={{
+                          position: 'relative',
+                          width: '500px',
+                          height: '725px',
+                          flexShrink: 0,
+                          borderRadius: '0px 0px 100px 100px',
+                          border: '3px solid rgba(0, 0, 0, 0.00)',
+                          background: '#1E2127'
+                      }}></div>
+                  </div>
+                  <div className="absolute inset-0 flex justify-start items-center"
+                       style={{marginLeft: '6rem', zIndex: '1'}}>
+                      <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-3/5 h-auto"
+                           style={{marginTop: '-4rem'}}/>
+                  </div>
+                  <div className="flex justify-center items-center">
+                      <div className="flex flex-col justify-center items-center mr-28" style={{zIndex: '2'}}>
+                          <button
+                              className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
+                              <button onClick={() => setUserType("landlord")}>Login as Landlord</button>
+                              {/*  <Link href="/login-landlord">Login as Landlord</Link>*/}
+{/*
+                          </button>
+                          <button
+                              className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
+                              {/*   <Link href="/login-tenant">Login as Tenant</Link>  */}
+                              {/*
+                              <button onClick={() => setUserType("tenant")}>Login as Tenant</button>
+                          </button>
+                      </div>
+                  </div>
+              </div>
 
-<button onClick={() => setUserType("tenant")}>Login as Tenant</button>
-<button onClick={() => setUserType("landlord")}>Login as Landlord</button>
-</Route>
-</Switch>
-</Router>
-);
+          </Route>
+      </Switch>
+    </Router>
+  );
 }
 
-export default App;
 
+export default LoginOptions;
 */}
+
+
+// LoginOptions.jsx
+import React, { useState } from 'react';
+
+const LoginOptions = () => {
+    const [userType, setUserType] = useState("");
+
+    const handleLogin = (type) => {
+        setUserType(type);
+    };
+
+    return (
+        <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+            <div className="relative w-2/3" style={{ maxWidth: '500px' }}>
+                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-full h-auto mb-8" />
+            </div>
+            <div className="flex flex-col items-center mb-8">
+                <button onClick={() => handleLogin("landlord")} className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
+                    Login as Landlord
+                </button>
+                <button onClick={() => handleLogin("tenant")} className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
+                    Login as Tenant
+                </button>
+            </div>
+            {userType && <LoginForm userType={userType} />}
+        </div>
+    );
+};
+
+const LoginForm = ({ userType }) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Perform login logic here based on userType
+        console.log(`Logging in as ${userType} with email: ${email} and password: ${password}`);
+        // Redirect to appropriate dashboard after login
+    };
+
+    return (
+        <div className="w-full max-w-md z-10">
+            <h2 className="text-2xl font-semibold mb-4">Login as {userType}</h2>
+            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                        Email
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="email"
+                        type="text"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                    />
+                </div>
+                <div className="mb-6">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                        Password
+                    </label>
+                    <input
+                        className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password"
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                    />
+                </div>
+                <div className="flex items-center justify-between">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+};
+
 export default LoginOptions;
