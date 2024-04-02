@@ -8,6 +8,8 @@ import MailboxLandlord from "@/Pages/MailboxLandlord.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
 import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
 import LandingLandloard from "@/Components/LandingLandloard.jsx";
+import Navigation from "@/Components/Navigation.jsx";
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 
 const DashboardLandloardLanding = () => {
 
@@ -42,7 +44,10 @@ const DashboardLandloardLanding = () => {
     return (
         <Router>
             <div className="dashboard">
-                <DashboardLandloardBar onPageChange={handlePageChange} />
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <div className="dashboard-bar-wrapper">
+                    <DashboardTenantBar onPageChange={handlePageChange}/>
+                </div>
                 <div className="content">
                     {renderPage()}
                 </div>

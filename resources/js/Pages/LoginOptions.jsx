@@ -24,4 +24,38 @@ const LoginOptions = () => {
     );
 };
 
+
+{/* import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import DashboardTenant from './DashboardTenant';
+import DashboardLandlord from './DashboardLandlord';
+
+function App() {
+  // Assuming you have some state to determine the user type (tenant or landlord)
+  const [userType, setUserType] = useState(""); // "tenant" or "landlord"
+
+  return (
+    <Router>
+      <Switch>
+        <Route path="/dashboard-tenant">
+          {userType === "tenant" ? <DashboardTenant /> : <Redirect to="/" />}
+        </Route>
+        <Route path="/dashboard-landlord">
+          {userType === "landlord" ? <DashboardLandlord /> : <Redirect to="/" />}
+        </Route>
+        <Route exact path="/">
+
+
+
+<button onClick={() => setUserType("tenant")}>Login as Tenant</button>
+<button onClick={() => setUserType("landlord")}>Login as Landlord</button>
+</Route>
+</Switch>
+</Router>
+);
+}
+
+export default App;
+
+*/}
 export default LoginOptions;

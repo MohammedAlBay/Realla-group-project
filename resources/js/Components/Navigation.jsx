@@ -6,6 +6,7 @@ import { Link } from '@inertiajs/react';
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 
 
 
@@ -13,7 +14,8 @@ import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 function Navigation({ onPageChange, currentPage }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150); // Set initial window width
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150);
+    const [userType, setUserType] = useState("");
 
 
 
@@ -99,8 +101,15 @@ function Navigation({ onPageChange, currentPage }) {
                             </li>
 
 
-                              {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={onPageChange} />}
+                            {/* {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={onPageChange} />} */}
 
+                            {/* Conditionally render dashboard links based on user type */}
+                            {userType === 'tenant' && currentPage === 'dashboard-tenant' && (
+                                <DashboardTenantBar onPageChange={onPageChange} />
+                            )}
+                            {userType === 'landlord' && currentPage === 'dashboard-landloard' && (
+                                <DashboardLandloardBar onPageChange={onPageChange} />
+                            )}
                         </ul>
 
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
