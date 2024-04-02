@@ -14,6 +14,7 @@ use App\Models\User;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +72,8 @@ Route::get('/contact', function () {
 Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 });
+
+Route::post('/login',  [AuthController::class, 'login'])->name('login');
 
 {/*
 Route::get('/login', function () {

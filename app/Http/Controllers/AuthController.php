@@ -3,39 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
-    {
-        // Validate incoming request data
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|string|min:8|confirmed',
-            'isLandlord' => 'boolean',
-        ]);
-
-        // Create new user
-        $user = User::create([
-            'name' => $request->fullName,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'is_landlord' => $request->isLandlord ?? false,
-        ]);
-
-        // Optionally, you can also issue a JWT token or perform any other action upon registration
-
-        return response()->json(['message' => 'Registration successful'], 200);
-    }
-
     public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $credentials = $request->only('email', 'password');
 
-      return redirect('dashboard-tenant');
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            $user = Auth::user();
+            if ($user->is_landloard) {
+                return redirect()->intended('/dashboard-landloard');
+            } else {
+                return redirect()->intended('/dashboard-tenant');
+            }
+        }
+
+        // Authentication failed...
+        return back()->withErrors(['email' => 'Invalid email or password.']);
     }
 }
