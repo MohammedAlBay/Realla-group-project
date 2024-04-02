@@ -6,8 +6,8 @@ import '../../css/Appointment.css'
 import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 import MailboxLandlord from "@/Pages/MailboxLandlord.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
-import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
+import LandingLandloard from "@/Components/LandingLandloard.jsx";
 
 const DashboardLandloardLanding = () => {
 
@@ -20,7 +20,7 @@ const DashboardLandloardLanding = () => {
     const renderPage = () => {
         switch (currentPage) {
             case 'dashboard-landloard':
-                return <CircularSliderCarousel/>;
+                return <LandingLandloard/>;
             case 'gallery':
                 return <Gallery />;
             case 'mailbox-landlord':
@@ -36,8 +36,7 @@ const DashboardLandloardLanding = () => {
             case 'profile-landlord':
                 return <ProfileLandlord />;
             default:
-                return <CircularSliderCarousel  />;
-        }
+                return <LandingLandloard/>;        }
     };
 
     return (
