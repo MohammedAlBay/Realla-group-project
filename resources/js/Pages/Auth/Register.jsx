@@ -18,17 +18,30 @@ const Register = () => {
 
     const [errors, setErrors] = useState({});
 
-    useEffect(() => {
-        fetch('api/users')
-            .then(response => response.json())
-            .then(data => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const validationErrors = validateForm(formData);
+        setErrors(validationErrors);
+        if (Object.keys(validationErrors).length === 0) {
+            console.log('Form submitted:', formData);
+            try {
+                const response = await fetch('api/register', {
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    setFormData(data);
+                    console.log('Registration successful:', data);
 
-                console.log(data); // This will log the fetched users to the console
-            })
-            .catch(error => {
-                console.error('Error fetching users:', error);
-            });
-    }, []);
+                } else {
+                    const errorData = await response.json();
+                    console.error('Registration failed:', errorData);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    };
+
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -40,38 +53,6 @@ const Register = () => {
     };
 
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const validationErrors = validateForm(formData);
-        setErrors(validationErrors);
-        if (Object.keys(validationErrors).length === 0) {
-            console.log('Form submitted:', formData);
-            try {
-                const response = await fetch('api/users', {
-
-/*
-                    body: JSON.stringify({
-                        ...formData,
-                        is_landlord: formData.is_landlord ? 1 : 0, // Adjust boolean value to match database schema
-                    }),
-                    */
-
-                });
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log('Registration successful:', data);
-                    // Handle successful registration (e.g., redirect to dashboard)
-                } else {
-                    const errorData = await response.json();
-                    console.error('Registration failed:', errorData);
-                    // Handle registration error (e.g., display error message)
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                // Handle network error or other exceptions
-            }
-        }
-    };
 
 
     const validateForm = (data) => {
@@ -108,6 +89,8 @@ const Register = () => {
                 <h2 className="text-2xl font-semibold mb-4">Create your Free Account</h2>
                 <p>Submit your data for registration</p>
                 <form onSubmit={handleSubmit} className="mt-4">
+                    @csrf
+
                     <RegisterTextInput
                         label="Name:"
                         type="text"

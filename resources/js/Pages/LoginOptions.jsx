@@ -1,3 +1,5 @@
+import RegisterTextInput from "@/Components/RegisterTextInput.jsx";
+
 {/*
 import { Link } from '@inertiajs/react';
 
@@ -94,38 +96,74 @@ export default LoginOptions;
 */}
 
 
-// LoginOptions.jsx
+
 import React, { useState } from 'react';
 import axios from 'axios';
+import Button from "@/Components/RegisterButton.jsx";
+
+import {Link} from "@inertiajs/inertia-react";
 
 const LoginOptions = () => {
     const [userType, setUserType] = useState("");
+    const [showLoginForm, setShowLoginForm] = useState(false);
 
     const handleLogin = (type) => {
         setUserType(type);
+        setShowLoginForm(true);
+    };
+
+    const handleBack = () => {
+        setShowLoginForm(false);
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
-            <div className="relative w-2/3" style={{ maxWidth: '500px' }}>
-                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-full h-auto mb-8" />
+        <div className="flex bg-gray-900 text-white p-8 pt-6 h-screen" style={{backgroundColor: '#292F36'}}>
+            <div className="relative w-2/3 ml-52" style={{marginTop: '-4rem'}}>
+                <div style={{
+                    position: 'relative',
+                    width: '500px',
+                    height: '725px',
+                    flexShrink: 0,
+                    borderRadius: '0px 0px 100px 100px',
+                    border: '3px solid rgba(0, 0, 0, 0.00)',
+                    background: '#1E2127'
+                }}></div>
             </div>
-            <div className="flex flex-col items-center mb-8">
-                <button onClick={() => handleLogin("landlord")} className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
-                    Login as Landlord
-                </button>
-                <button onClick={() => handleLogin("tenant")} className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
-                    Login as Tenant
-                </button>
+            <div className="absolute inset-0 flex justify-start items-center"
+                 style={{marginLeft: '6rem', zIndex: '1'}}>
+                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-3/5 h-auto"
+                     style={{marginTop: '-4rem'}}/>
             </div>
-            {userType && <LoginForm userType={userType} />}
+
+            <div className="flex justify-center items-center">
+                <div className="flex flex-col justify-center items-center mr-28" style={{zIndex: '2'}}>
+                    {/* Show login form only if userType is selected */}
+                    {showLoginForm ? (
+                        <LoginForm userType={userType} onBack={handleBack} />
+
+                    ) : (
+                        <>
+                            <button onClick={() => handleLogin("landlord")}
+                                    className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4 mb-4">
+                                Login as Landlord
+                            </button>
+                            <button onClick={() => handleLogin("tenant")}
+                                    className="w-72 h-12 rounded-full border-3 border-transparent bg-yellow-500 text-gray-900 py-2 px-4">
+                                Login as Tenant
+                            </button>
+                        </>
+                    )}
+                </div>
+            </div>
+
         </div>
     );
 };
 
-const LoginForm = ({ userType }) => {
+const LoginForm = ({userType, onBack}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -147,42 +185,46 @@ const LoginForm = ({ userType }) => {
     };
 
     return (
-        <div className="w-full max-w-md z-10">
-            <h2 className="text-2xl font-semibold mb-4">Login as {userType}</h2>
-            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                        Email
-                    </label>
-                    <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="email"
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Email"
-                    />
-                </div>
-                <div className="mb-6">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                        Password
-                    </label>
-                    <input
-                        className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                        id="password"
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
-                    />
-                </div>
-                <div className="flex items-center justify-between">
-                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                        Login
-                    </button>
-                </div>
-            </form>
+        <div className="w-4/5 max-w-md ml-auto mr-20 mt-24 mb-20">
+            <div>
+                <h2 className=" w-4/5 text-yellow-500 text-3xl font-semibold mb-4 mr-44">Welcome Back to REALLA!</h2>
+                <h2 className="text-2xl font-semibold mb-4">Login as {userType}</h2>
+                <form onSubmit={handleSubmit} className="mt-4">
+                    <div className="mb-4">
+                        
+                        <RegisterTextInput
+                            id="email"
+                            label="Your Email"
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div className="mb-6">
+
+                        <RegisterTextInput
+                            label="Password"
+                            id="password"
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                        />
+                    </div>
+                    <Button type="submit">Login</Button>
+
+                </form>
+                <p className="mt-4">Don’t have an account? <Link href="/Auth/Register"
+                                                                 className="text-yellow-500">Register</Link></p>
+            </div>
+            <button type="button" onClick={onBack}
+                    className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Back
+            </button>
         </div>
+
+
     );
 };
 

@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //DATABASE
 Route::get('/properties', [PropertyController::class, 'index']);
+Route::post('/register', [PropertyController::class, 'store']);
 
 
 

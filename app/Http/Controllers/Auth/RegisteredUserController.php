@@ -73,8 +73,11 @@ class RegisteredUserController extends Controller
             // Flash a success message to the session
             Session::flash('success', 'Registration successful!');
 
-            // Return a JSON response indicating success
-            return response()->json(['message' => 'User created successfully', 'user_id' => $user->id], 201);
+            // Determine the dashboard route based on user type
+            $dashboardRoute = $user->is_landlord ? 'dashboard-landloard' : 'dashboard-tenant';
+
+            // Redirect the user to the appropriate dashboard page
+            return Redirect::route($dashboardRoute)->with('success', 'Registration successful!');
         } catch (\Exception $e) {
             // Handle any exceptions that occur during user creation
             Log::error('Failed to create user', ['error' => $e->getMessage()]);

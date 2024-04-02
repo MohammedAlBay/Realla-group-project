@@ -98,15 +98,13 @@ Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);
 
 Route::middleware('guest')->group(function () {
-    // Show registration form
+
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
     // Handle registration form submission
     Route::post('register', [RegisteredUserController::class, 'store']);
 });
-
-
 
 
 Route::get('/forgot-password', function () {
