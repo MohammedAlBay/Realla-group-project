@@ -9,22 +9,41 @@ import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 
 
-
-
 function Navigation({ onPageChange, currentPage }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150);
     const [userType, setUserType] = useState("");
 
-
-
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-
     useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const response = await fetch('/api/user', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('token') // Assuming you have a token stored in localStorage
+                    }
+                });
+                if (response.ok) {
+                    const userData = await response.json();
+                    // Assuming your user object contains an `is_landlord` property
+                    setUserType(userData.is_landlord ? 'landlord' : 'tenant');
+                } else {
+                    // Handle error
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+                // Handle error
+            }
+        };
+
+        fetchUserData();
+
         const bgHeader = () => {
             const header = document.querySelector('.header');
             if (window.scrollY >= 50) {
@@ -47,6 +66,7 @@ function Navigation({ onPageChange, currentPage }) {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
 
     return (
         <div className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
