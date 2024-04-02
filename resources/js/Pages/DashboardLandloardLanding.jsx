@@ -11,7 +11,7 @@ import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
 
 const DashboardLandloardLanding = () => {
 
-    const [currentPage, setCurrentPage] = useState('dashboard-tenant');
+    const [currentPage, setCurrentPage] = useState('dashboard-landloard');
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
