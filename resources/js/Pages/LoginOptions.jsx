@@ -96,6 +96,7 @@ export default LoginOptions;
 
 // LoginOptions.jsx
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const LoginOptions = () => {
     const [userType, setUserType] = useState("");
@@ -126,11 +127,23 @@ const LoginForm = ({ userType }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         // Perform login logic here based on userType
         console.log(`Logging in as ${userType} with email: ${email} and password: ${password}`);
         // Redirect to appropriate dashboard after login
+
+        try {
+            const response = await axios.post('/login', {
+                email,
+                password
+            });
+
+            console.log(response.data); // Handle successful login response
+        } catch (error) {
+            console.error('Login error:', error.response.data);
+            // Handle login error (e.g., display error message to user)
+        }
     };
 
     return (
@@ -144,7 +157,7 @@ const LoginForm = ({ userType }) => {
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="email"
-                        type="text"
+                        type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Email"
@@ -164,7 +177,7 @@ const LoginForm = ({ userType }) => {
                     />
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                         Login
                     </button>
                 </div>
