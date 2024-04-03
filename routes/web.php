@@ -1,9 +1,20 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\SearchResultsController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BookmarkController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\User;
+
+
+
 
 
 /*
@@ -38,7 +49,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
 */
+
 
 
 Route::get('/', function () {
@@ -61,17 +75,54 @@ Route::get('/login', function () {
     return Inertia::render('LoginOptions');
 });
 
-Route::get('/login-landlord', function () {
+Route::post('/login',  [AuthController::class, 'login'])->name('login');
+Route::post('/register', function () {
+    dd('Hello World');
+});
+Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+/*Route::post('/register', [RegisteredUserController::class, 'store']); */
+
+
+{/*
+
+Route::middleware('guest')->group(function () {
+
+    Route::get('/register', [RegisteredUserController::class, 'create'])
+        ->name('register');
+
+    Route::post('/register', [RegisteredUserController::class, 'store']);
+});
+
+Route::get('/login', function () {
     return Inertia::render('LoginPanelLandlord');
 });
 
-Route::get('/login-tenant', function () {
+Route::get('/login', function () {
     return Inertia::render('LoginPanelTenant');
 });
 
-Route::get('/register', function () {
-    return Inertia::render('Register');
+Route::get('/login', function () {
+    // Example: Retrieve all users from the users table
+    $users = User::all();
+
+    // Perform any other necessary logic with the retrieved users data
+
+    return Inertia::render('LoginPanelTenant');
 });
+ */}
+
+// routes/web.php
+
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users', [UserController::class, 'store']);
+
+
+
 
 Route::get('/forgot-password', function () {
     return Inertia::render('ForgotPassword');
@@ -81,74 +132,116 @@ Route::get('/mock-up-1', function () {
     return Inertia::render('MockUp1');
 });
 
+Route::get('/mock-up-2', function () {
+    return Inertia::render('MockUp2Page');
+});
+
+Route::get('/mock-up-3', function () {
+    return Inertia::render('MockUp3');
+});
+
+Route::get('/mock-up-4', function () {
+    return Inertia::render('MockUp4');
+});
+
 Route::get('/mock-up', function () {
     return Inertia::render('MockUp');
 });
 
-Route::get('/property', function () {
-    return Inertia::render('MyPropertyPage');
+Route::get('/property/{id}', function () {
+    return Inertia::render('PropertyDetails');
 });
 
-Route::get('/search', function () {
-    return Inertia::render('SearchResults');
-});
+Route::get('/search-results', [SearchResultsController::class, 'index']);
+
+/*
+Route::middleware(['auth'])->group(function () {
+    */
+
+    /* DASHBOARD TENANT */
+    Route::get('/dashboard-tenant', function () {
+        return Inertia::render('DashboardTenantLanding');
+    });
 
 
-/*DASHBOARD TENANT*/
-Route::get('/dashboard-tenant', function () {
-    return Inertia::render('DashboardTenantLanding');
-});
+    Route::get('/tenant', function () {
+        return Inertia::render('DashboardTenant');
+    });
 
-Route::get('/tenant', function () {
-    return Inertia::render('DashboardTenant');
-});
-/*PAYMENT*/
+    Route::get('/profile-tenant', function () {
+        return Inertia::render('ProfileTenant');
+    });
 
-Route::get('/paynow', function () {
-    return Inertia::render('PayNow');
-});
+    Route::get('/edit-profile', function () {
+        return Inertia::render('EditProfile');
+    });
 
-Route::get('/payment-history', function () {
-    return Inertia::render('PaymentHistory');
-});
+    /* PAYMENT */
+    Route::get('/paynow', function () {
+        return Inertia::render('PayNow');
+    });
 
-/*DOCUMENTS*/
-Route::get('/documents', function () {
-    return Inertia::render('Documents');
-});
+    Route::get('/payment-history', function () {
+        return Inertia::render('PaymentHistory');
+    });
 
-Route::get('/mailbox-tenant', function () {
-    return Inertia::render('MailboxTenant');
-});
+    /* DOCUMENTS */
+    Route::get('/documents', function () {
+        return Inertia::render('Documents');
+    });
 
-/*DASHBOARD LANDLOARD */
-Route::get('/dashboard-landloard', function () {
-    return Inertia::render('DashboardLandloardLanding');
-});
+    Route::get('/mailbox-tenant', function () {
+        return Inertia::render('MailboxTenant');
+    });
 
-Route::get('/landloard', function () {
-    return Inertia::render('DashboardLandloard');
-});
+    Route::get('/appointment-tenant', function () {
+        return Inertia::render('AppointmentTenant');
+    });
 
-Route::get('/mailbox-landlord', function () {
-    return Inertia::render('MailboxLandlord');
+    Route::get('/calendar-tenant', function () {
+     return Inertia::render('CalendarTenant');
+    });
+
+    /*FOLLOW UP */
+    Route::get('/followup', function () {
+        return Inertia::render('FollowUp');
+    });
+
+    /* DASHBOARD LANDLORD */
+    Route::get('/dashboard-landloard', function () {
+        return Inertia::render('DashboardLandloardLanding');
+    });
+
+    Route::get('/landloard', function () {
+        return Inertia::render('DashboardLandloard');
+    });
+
+    Route::get('/mailbox-landlord', function () {
+        return Inertia::render('MailboxLandlord');
+    });
+
+    Route::get('/appointment-landlord', function () {
+        return Inertia::render('AppointmentLandlord');
+    });
+
+    Route::get('/calendar-landlord', function () {
+        return Inertia::render('CalendarLandlord');
+    });
+
+    /* REPORT PROBLEM */
+    Route::get('/reportproblem', function () {
+        return Inertia::render('ReportProblem');
+    });
+    Route::get('/profile-landlord', function () {
+         return Inertia::render('ProfileLandlord');
+    });
+
+    /*
 });
+*/
 
 Route::get('/test', function () {
     return Inertia::render('Test');
-});
-
-Route::get('/appointment-tenant', function () {
-    return Inertia::render('AppointmentTenant');
-});
-
-Route::get('/calendar', function () {
-    return Inertia::render('CalendarTenant');
-});
-
-/*REPORT PROBLEM*/
-Route::get('/reportproblem', function () {
-    return Inertia::render('ReportProblem');
 });
 
 /*ERROR PAGE*/

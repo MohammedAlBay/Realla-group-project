@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-
 }
 
 html {
@@ -12,7 +11,9 @@ html {
 }
 
 body{
-
+    background-color: #292F36;
+}
+.home-page{
     overflow-x: hidden;
     background-color: #292F36;
     transition: background-color 0.4s;
@@ -142,6 +143,67 @@ body{
     margin-bottom: 2rem;
 }
 
+.dashboard-gallery {
+    height: 200px;
+}
+
+.dashboard-gallery .all-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1px;
+    margin-top: 2rem;
+    height: 150px;
+}
+
+.dashboard-gallery .card-real-estates {
+    position: relative;
+    left: 1rem;
+    overflow: hidden;
+    width: 350px;
+    height: 300px;
+    margin: 1rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+
+
+.dashboard-gallery .overlay h4{
+    color:#ECAA16;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.dashboard-gallery .overlay .card-text{
+    margin: 0;
+    transition: bottom 0.3s;
+}
+
+.dashboard-gallery .overlay button {
+    display: none;
+    background-color: transparent;
+    border: 1px solid #ECAA16;
+    background-color: white ;
+    color: #ECAA16;
+    font-size: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin:auto;
+}
+
+.dashboard-gallery .card-real-estates:hover .overlay button {
+    display: block;
+}
+
+.dashboard-gallery .overlay button:hover {
+    background-color: #ECAA16;
+    color: white;
+}
+
 .galleryPage h1{
     color: white;
     font-size: 50px;
@@ -164,7 +226,7 @@ body{
     margin-top: 15rem;
 }
 
-.card {
+.card-real-estates {
     position: relative;
     overflow: hidden;
     width: 500px;
@@ -175,7 +237,7 @@ body{
 
 }
 
-.card img {
+.card-real-estates img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -202,7 +264,7 @@ body{
 
 }
 
-.card:hover .overlay {
+.card-real-estates:hover .overlay {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -240,7 +302,7 @@ body{
     margin:auto;
 }
 
-.card:hover .overlay button {
+.card-real-estates:hover .overlay button {
     display: block;
 }
 
@@ -475,13 +537,23 @@ body{
         margin-top: -8rem;
     }
 
-    .card {
-        position: relative;
-        right: 1rem;
+    .all-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 10% 0;
+        margin-top: 15rem;
+    }
+
+    .card-real-estates {
         overflow: hidden;
-        width: 350px;
-        height: 200px;
+        width: 500px;
+        height: 280px;
         border-radius: 1.2rem;
         cursor: pointer;
+        margin: auto;
+        margin-top: 3rem;
+
     }
 }

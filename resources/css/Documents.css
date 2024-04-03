@@ -24,19 +24,6 @@ html {
     overflow-y: hidden;
 }
 
-.body::before {
-    content: "";
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-    bottom: 0rem;
-    width: 60vw;
-    height: 94%;
-    background: #444D57;
-    border-radius: 0 0 0 15%   ;
-    overflow-y: hidden;
-    z-index: 0;
-}
 
 .documents {
     display: grid;
@@ -48,8 +35,7 @@ html {
     & section {
         display: flex;
         margin-bottom: 25%;
-
-        margin-right: 35rem;
+        margin-right: 30rem;
 
     }
 }
@@ -64,7 +50,6 @@ html {
         padding: 1rem;
         border: 1px solid transparent;
         cursor: pointer;
-
     }
 }
 
@@ -78,11 +63,12 @@ html {
     opacity: 0;
     background-color: #1E2127;
     overflow: hidden;
-    padding: 1rem;
+    padding:1rem;
     border-radius: 25px;
     align-items: center;
     justify-content: center;
-    margin-top: -7rem;
+    margin-top: -12rem;
+    margin-left: 1rem;
 }
 
 .tab-content {
@@ -221,3 +207,15 @@ button.update-doc:hover span:after {
 .active .tab          { opacity: 1; z-index: 5; border-color: orange; }
 .active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
 .active .tab-image    { animation: image 1s ease-out forwards; }
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    .documents {
+        width: 15%;
+    }
+
+    .tab {
+        margin-bottom: 14rem;
+        left: 8rem;
+    }
+}

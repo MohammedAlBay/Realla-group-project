@@ -1,8 +1,4 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 
 body,
 html {
@@ -14,14 +10,18 @@ html {
     background-color: #e1e1e1;
 }
 
+
+
 .paynow{
     height: 100vh;
     display: flex;
     align-items: center;
     background-color: transparent;
     margin: 0;
-    overflow-y: hidden;
+
+
 }
+
 
 .subject {
     font-family: 'Playfair Display', serif;
@@ -113,8 +113,8 @@ h6 > span {
     width: 670px;
     height: 485px;
     position: absolute;
-    top: 49%;
-    left: 72%;
+    top: 48%;
+    left: 71%;
     background-color: #1E2127;
     overflow: hidden;
 
@@ -130,21 +130,6 @@ h6 > span {
     box-shadow: 0 30px 48px rgba(37,44,65,0.32);
 }
 
-
-.paynow::before {
-    content: "";
-    position: absolute;
-    top: 0rem;
-    right: 0rem;
-    bottom: 0rem;
-    width: 60vw;
-    height: 94%;
-    background: #444D57;
-    border-radius:   0 0 0 15%   ;
-    overflow-y: hidden;
-    z-index: 0;
-}
-
 .order {
     width: 300px;
     height: 485px;
@@ -158,11 +143,11 @@ h6 > span {
     box-shadow: 0 15px 24px rgba(37,44,65,0.16);
 }
 
+
 ul.order-list {
     width: 100%;
     height: 205px;
     list-style: none;
-    overflow-y: scroll;
     padding-right: 12px;
 }
 
@@ -176,7 +161,6 @@ ul.order-list li {
 ul.order-list li > img {
     width: 60px;
     height: 60px;
-    float: left;
 }
 
 ul.order-list li > h4 {
@@ -199,7 +183,8 @@ ul.order-list li:hover > h4 {
  .list i {
      float:left;
      font-size: 25px;
-     margin: 1rem 3rem;
+     margin: 1rem;
+     margin-left: 6rem;
 }
 
 ul.order-list li > h5 {
@@ -225,14 +210,17 @@ ul.order-list li:hover > h5 {
 .payment {
     z-index: 0;
     width: 370px;
-    position: relative;
     float: right;
+    position: relative;
+    top: 4rem;
+
 }
 
 .card {
     width: 300px;
     height: 178px;
     position: relative;
+    bottom: 1rem;
     margin: 0 auto;
     background-color: #f1404b;
     overflow: hidden;
@@ -247,11 +235,13 @@ ul.order-list li:hover > h5 {
     box-shadow: 0 15px 24px rgba(37,44,65,0.32);
 }
 
-.card-content {
+.card-content-payment {
     width: 100%;
     padding: 10px 20px;
     position: relative;
+
     float: left;
+
     z-index: 1;
 }
 
@@ -261,6 +251,8 @@ ul.order-list li:hover > h5 {
     left: 190px;
     font-size: 70px;
     color: white;
+    z-index: 999;
+   margin-right: 20rem;
 }
 
 .card-form {
@@ -340,21 +332,22 @@ input[type=text]:focus {
 button:focus { outline:0; }
 
 
+
 .button-cta-2{
-    width: 45%;
-    height: 50px;
+    width: 89%;
+    height: 45px;
     padding: 10px 20px;
     background-color: rgba(37,44,65,0.32);
     border: 1px solid #FDB414;
     border-radius: 25px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    font-size: 20px;
-    color: #f4f5f9;
+    font-size: 17px;
+    color: #6d819c;
     z-index: -1;
     margin-bottom: 1rem;
+
     margin-top: 1rem;
-    margin-left: 2rem;
 
 
     -webkit-transition: all 0.3s;
@@ -371,7 +364,8 @@ button:focus { outline:0; }
 
 .button-cta-2 span {
     display: inline-block;
-    position: relative;
+
+
 
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -380,33 +374,14 @@ button:focus { outline:0; }
     transition: all 0.3s;
 }
 
-.button-cta-2 span:after {
-    content: '→';
-    color: #f4f5f9;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -30px;
-
-}
-
-.button-cta-2:hover span {
-    padding-right: 45px;
-}
-
-.button-cta-2:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
 
 .button-cta  {
     width: 55%;
-    height: 50px;
+    height: 40px;
     position: absolute;
     float: right;
     right: 5.5rem;
-    bottom: -50px;
+    bottom: -3rem;
     padding: 10px 20px;
     background-color: #FDB414;
     border: 1px solid #FDB414;
@@ -416,6 +391,7 @@ button:focus { outline:0; }
     font-size: 24px;
     color: #f4f5f9;
     z-index: -1;
+    text-align: center;
 
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -432,6 +408,7 @@ button:focus { outline:0; }
 .button-cta span {
     display: inline-block;
     position: relative;
+    bottom: 9px;
 
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -506,24 +483,19 @@ button:focus { outline:0; }
 
 /*Payment Notification*/
 
-.paid {
+.success-message{
     z-index: 0;
     width: 370px;
     position: relative;
+    bottom: 40px;
     float: right;
-    padding: 30px;
     text-align: center;
-    display: none;
-}
-
-.paid > h2 {
-    line-height: 1;
-    margin-top: 10px;
+    font-weight: bold;
     color: #3ac569;
+    background-color: rgba(245, 245, 245, 0.2);
 }
 
 /*Credits*/
-
 .icon-credits {
     width: 100%;
     position: absolute;
@@ -538,4 +510,89 @@ button:focus { outline:0; }
 .icon-credits a {
     text-decoration: none;
     color: rgba(0,0,0,0.12);
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    .paynow {
+        padding: 0 10px;
+        margin-top: 10rem;
+
+    }
+
+    .checkout {
+        width: 55%;
+        max-width: 100%;
+        height: auto;
+        top: 3rem;
+        border-radius: 0;
+        margin-top: 29rem;
+
+    }
+
+    .order {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        padding: 0 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        margin-left: 2rem;
+    }
+
+    .payment {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        top: 3rem;
+        right:2rem;
+        margin-bottom: 7rem;
+    }
+
+    h1.payment-text {
+        font-size: 32px;
+    }
+
+    h2.payment-text {
+        font-size: 24px;
+    }
+
+    .button-cta  {
+    left: 3rem;
+       width: 90%;
+
+    }
+
+    .card-form input#cardnumber{
+
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .checkout {
+        padding: 0 10px;
+    }
+
+    .order {
+        padding: 0 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .payment {
+        padding: 0 10px;
+    }
+    .card-form input#cardnumber{
+        padding-bottom: 2rem;
+        bottom: 2rem;
+        left: 1rem;
+    }
 }

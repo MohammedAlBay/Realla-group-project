@@ -42,7 +42,7 @@ function Navigation() {
     return (
         <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
             <nav className="nav container">
-                <Logo className="nav__logo"/>
+                <Logo />
 
                 {/* Desktop Menu */}
                 {isDesktop && (
@@ -64,7 +64,7 @@ function Navigation() {
                             <li className="nav__item">
                                 <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
                             </li>
-                            <LoginRegisterButtons className="nav__item desktop"/>
+                            <LoginRegisterButtons className="desktop"/>
                         </ul>
                     </div>
                 )}
@@ -123,4 +123,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
