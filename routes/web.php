@@ -187,15 +187,17 @@ Route::middleware(['auth'])->group(function () {
          return Inertia::render('ProfileLandlord');
     });
 
-    /*
-});
-*/
-
-Route::get('/test', function () {
+   
+    Route::get('/test', function () {
     return Inertia::render('Test');
 });
 
-/*ERROR PAGE*/
-Route::get('/{any}', function () {
+    /*FOLLOW PROBLEM*/
+    Route::get('/followproblem', function () {
+    return Inertia::render('FollowProblem');
+});
+
+    /*ERROR PAGE*/
+    Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
-})->where('any','.*');
+    })->where('any','.*');
