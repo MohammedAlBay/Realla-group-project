@@ -41,6 +41,14 @@ const PropertyList = () => {
         fetchBookmarks();
     }, []);
 
+    const handleToggleBookmark = async (propertyId) => {
+        try {
+            await toggleBookmarks(propertyId, bookmarks, setBookmarks);
+        } catch (error) {
+            console.error('Error toggling property bookmark status:', error);
+        }
+    };
+
     return (
             <div className="all-cards">
                 {properties.map(property => (
