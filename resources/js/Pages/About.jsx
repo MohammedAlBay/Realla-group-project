@@ -75,9 +75,9 @@ const About = () => {
         <section className="px-16 py-40">
             <div className="text-center">
             <div className="flex items-center justify-center mb-16"> 
-                <span className="inline-block w-60 h-0.5 bg-yellow-600"></span>
+                <span className="inline-block w-60 h-px bg-yellow-600"></span>
                 <h3 className="text-3xl font-bold mx-14">Our Team</h3>
-                <span className="inline-block w-60 h-0.5 bg-yellow-600"></span>
+                <span className="inline-block w-60 h-px bg-yellow-600"></span>
             </div>
         
             <p className="text-center text-m px-4 mb-4">Meet our dynamic team driving innovation at Realla.</p>
@@ -85,24 +85,32 @@ const About = () => {
             </div>
       
 
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
-                    {teamMembers.map(member => (
-                        <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"style={{ backgroundColor: '#444d57' }}>
-                            <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover" />
-                            <h4 className="text-lg font-semibold">{member.name}</h4>
-                            <p className="text-yellow-500">{member.position}</p>
-                            <p className="text-sm">{member.bio}</p>
-                        </div>
-                    ))}
+             {teamMembers.map((member) => (
+              <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl cursor-pointer" style={{ backgroundColor: '#444d57' }}
+    >
+                <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover"/>
+                    <h4 className="text-lg font-semibold">{member.name}</h4>
+                        <p className="text-yellow-500">{member.position}</p>
+                        <p className="text-sm">{member.bio}</p>
+               </div>    
+               ))}
             </div>
+
             <div className="text-white-600 p-6">
                 <div className="text-center p-10">
                     <h2 className="text-3xl font-bold text-yellow-600 mb-16">Want to join our team?</h2>
                     <p className="text-lg text-m px-12">
                     Working from home or in the office? The choice is yours. Although our office in Zuiderpoort is really worth it. It is a vibrant meeting place in Ghent. Junior or senior expertise? We are always looking for strong talent. Send us your CV and we will get in touch!
                     </p>
-                    </div>
+                </div>
             </div>
+
+            <div className="flex justify-center">
+                <span className="inline-block w-60 h-px bg-yellow-600"></span>
+            </div>
+
         </section>
         </div>
     );
