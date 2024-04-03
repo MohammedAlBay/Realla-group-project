@@ -24,6 +24,20 @@ const PropertyBookmarks = () => {
         fetchBookmarks();
     }, []);
 
+    const handleToggleBookmark = async (propertyId) => {
+        try {
+            await toggleBookmarks(propertyId, bookmarks, setBookmarks);
+        } catch (error) {
+            console.error('Error toggling property bookmark status:', error);
+        }
+    };
+  
+    useEffect(() => {
+          setTimeout(() => {
+              carouselBookmarks();
+          }, 100); // Delay execution by 100 milliseconds
+    }, []);
+
     return (
         <div className="bookmarks-container">
             <h2 className="bookmark-heading">Bookmark List</h2>
