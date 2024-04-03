@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="px-4 md:px-20 py-4 flex flex-col md:flex-row md:justify-between items-start space-y-6 md:space-y-0 md:space-x-6">
-  {/* Logo Image Section */}
+
   <div className="flex items-center">
     <img src="/images/realla_logo.png" alt="Logo" className="mr-2 h-14" />
     <div>
@@ -61,8 +61,6 @@ const Footer = () => {
     </ul>
   </div>
 </div>
-
-
 
       <div className="flex justify-between items-center bg-yellow-500 py-2 px-4 md:px-40" style={{ backgroundColor: '#fdb514' }}>
         <div className="text-sm">
