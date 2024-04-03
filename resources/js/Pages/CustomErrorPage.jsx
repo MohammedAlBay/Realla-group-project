@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@inertiajs/react';
 
 const CustomErrorPage = () => {
     return (
@@ -11,7 +12,7 @@ const CustomErrorPage = () => {
                     </div>
                 </div>
                 <p className="text-2xl text-yellow-400 mb-8">Oops! Page not found.</p>
-                <a href="/" className="text-lg text-blue-500 hover:underline">Go back home</a>
+                <Link href = "/" className="text-lg text-gray-500 hover:underline">Go back home</Link>
             </div>
         </div>
     );

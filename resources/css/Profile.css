@@ -8,76 +8,136 @@
   font-family: "Poppins", sans-serif;
 }
 
-.profile-heading {
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
-  position: absolute;
-  top: -50px;
-  left: 0;
-  /* transform: translateX(-50%); */
-  /* z-index: 1; */
+.profile-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 8rem;
 }
 
 .profile-section {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   color: rgba(0, 0, 0, 0.85);
   max-height: 400px;
   width: 80%;
   background-color: #fff;
-  margin: 0 auto;
+  margin: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   position: relative;
 }
 
-.cover-picture {
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 20px 10%;
+}
+
+.cover-picture-container {
   grid-column: span 4;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  max-height: 100%;
+  max-height: 380px !important;
   border: 1px solid #c2c2c2;
   border-radius: 8px;
 }
 
-.cover-picture img {
-  max-height: 90%;
-  max-width: 90%;
+.cover-outer img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-.cover-picture button {
+.cover-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2c2;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 8px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.cover-inner:hover {
   background-color: #FDB514;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  cursor: pointer;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  width: 50%;
-  font-size: 16px;
-  font-weight: 600;
 }
 
-.profile-avatar {
-  position: relative;
-  top: 30px;
-  right: 75px;
+#coverPictureInput {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-container {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid #FDB514;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 20px;
+  left: 370px;
+  background-color: #fff;
+  border-radius: 100%;
 }
 
-.profile-avatar img {
-  width: 100%;
-  height: auto;
+.avatar-outer {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  border-radius: 100%;
+  border: 2px solid #c2c2c2;
+}
+
+.avatar-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2c2;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.avatar-inner:hover {
+  background-color: #FDB514;
+}
+
+.avatarInput {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+
+.avatarInput + svg {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+label svg {
+  fill: #fff;
 }
 
 .user-info {
@@ -85,6 +145,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column: span 7;
   align-items: center;
+  margin-left: 100px;
 }
 
 .user-details {
@@ -158,3 +219,194 @@
   grid-row: 2/2;
 }
 
+.bookmarks-container {
+  display: flex;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.85);
+  max-height: 500px;
+  width: 80%;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bookmark-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+.back-button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 20px 10%;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel-inner {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  width: calc(100% + 20px); /* Account for margin-right of carousel items */
+}
+
+.carousel-item {
+  width: calc(33.33% - 30px); /* Adjust card width as needed */
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px; /* Adjust card margin */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: #fdb514;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 1; /* Ensure controls are above carousel items */
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.all-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 10% 0;
+  margin-top: 15rem;
+}
+
+.card-real-estates {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card-real-estates img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 47, 54, 0.63);
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: opacity 1s, transform 2s ease;
+}
+
+.card-real-estates:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay h3{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+.overlay h4{
+  color:#ECAA16;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.overlay .card-text{
+  margin: 0;
+  transition: bottom 0.3s;
+}
+.overlay:hover .card-text {
+  margin-top: 10rem;
+}
+
+.overlay button {
+  display: none;
+  background-color: transparent;
+  border: 1px solid #ECAA16;
+  background-color: white ;
+  color: #ECAA16;
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  margin-top: 2rem;
+  margin:auto;
+}
+
+.card-real-estates:hover .overlay button {
+  display: block;
+}
+
+.overlay button:hover {
+  background-color: #ECAA16;
+  color: white;
+}
+
+.overlay .card-mini-text {
+  display: none;
+  text-align: center;
+  position: relative;
+  top:2rem;
+}
+
+.overlay .card-mini-text p {
+  padding: 40px 10px;
+}
+
+.overlay:hover .card-mini-text {
+  color: #b0aeae;
+  display: flex;
+}
+
+.card-location {
+  display: flex;
+}
+
+.card-location  i{
+  font-size: 18px;
+}
