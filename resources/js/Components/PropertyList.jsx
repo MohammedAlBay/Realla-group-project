@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '@inertiajs/react';
 import 'boxicons/css/boxicons.min.css';
+import toggleBookmarks from '../utils/toggleBookmarks';
 import "../../css/Home.css";
 
 const PropertyList = () => {
     const [properties, setProperties] = useState([]);
+    const [bookmarks, setBookmarks] = useState([]);
 
     useEffect(() => {
         const fetchProperties = async () => {
@@ -23,17 +25,21 @@ const PropertyList = () => {
         fetchProperties();
     }, []);
 
-    const [bookmarkedProperties, setBookmarkedProperties] = useState(new Set());
-
-    const toggleBookmark = (id) => {
-        const updatedBookmarks = new Set(bookmarkedProperties);
-        if (updatedBookmarks.has(id)) {
-            updatedBookmarks.delete(id);
-        } else {
-            updatedBookmarks.add(id);
-        }
-        setBookmarkedProperties(updatedBookmarks);
-    };
+    useEffect(() => {
+        const fetchBookmarks = async () => {
+            try {
+                const response = await fetch('/api/bookmarks');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch bookmarks');
+                }
+                const data = await response.json();
+                setBookmarks(data);
+            } catch (error) {
+                console.error('Error fetching bookmarks:', error);
+            }
+        };
+        fetchBookmarks();
+    }, []);
 
     return (
             <div className="all-cards">
@@ -50,8 +56,8 @@ const PropertyList = () => {
                                 <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
                             </div>
 
-                            <button onClick={() => toggleBookmark(property.id)}>
-                            {bookmarkedProperties.has(property.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                            <button onClick={() => handleToggleBookmark(property.id)}>
+                            {bookmarks.some(bookmark => bookmark.property_id === property.id) ? 'Remove from Bookmarks' : 'Add to Bookmarks'}
                             </button>
 
                             <Link href={`/property/${property.id}`}>
