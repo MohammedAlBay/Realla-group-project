@@ -33,10 +33,11 @@ const Footer = () => {
         <div className="mb-6 md:mb-0 ml-16">
           <h3 className="text-yellow-500 font-bold mb-2">LINKS</h3>
           <ul className="text-white-500 text-sm space-y-3">
-            <li><a href="#">About</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/gallery">Gallery</a></li>
             <li><a href="#">Payments</a></li>
             <li><a href="#">Team</a></li>
-            <li><a href="#">Menu</a></li>
+            
           </ul>
         </div>
 
