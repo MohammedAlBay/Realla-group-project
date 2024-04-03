@@ -22,25 +22,33 @@ const Register = () => {
         e.preventDefault();
         const validationErrors = validateForm(formData);
         setErrors(validationErrors);
+
         if (Object.keys(validationErrors).length === 0) {
-            console.log('Form submitted:', formData);
             try {
                 const response = await fetch('api/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
                 });
+
                 if (response.ok) {
                     const data = await response.json();
-                    setFormData(data);
                     console.log('Registration successful:', data);
-
+                    // Handle successful registration (e.g., redirect user)
                 } else {
                     const errorData = await response.json();
                     console.error('Registration failed:', errorData);
+                    // Handle registration failure (e.g., display error message)
                 }
             } catch (error) {
                 console.error('Error:', error);
+                // Handle network or server error
             }
         }
     };
+
 
 
     const handleChange = (e) => {

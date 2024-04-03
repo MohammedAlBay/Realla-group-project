@@ -11,6 +11,9 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
+        // Hash the password before attempting authentication
+        $credentials['password'] = bcrypt($credentials['password']);
+
         if (Auth::attempt($credentials)) {
             // Authentication passed...
             $user = Auth::user();
@@ -24,4 +27,5 @@ class AuthController extends Controller
         // Authentication failed...
         return back()->withErrors(['email' => 'Invalid email or password.']);
     }
+
 }

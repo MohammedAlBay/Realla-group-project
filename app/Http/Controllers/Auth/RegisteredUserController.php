@@ -17,52 +17,37 @@ use Inertia\Response;
 
 class RegisteredUserController extends Controller
 {
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'is_landlord' => 'required|boolean',
-        ]);
-
-        $user = new User([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'is_landlord' => $request->is_landlord,
-        ]);
-
-        $user->save();
-
-        return response()->json(['message' => 'User registered successfully'], 201);
-    }
-
+    // Method to render the registration form
     public function create(): Response
     {
         return Inertia::render('Auth/Register')->with('flash', session('success'));
     }
 
+    // Method to handle the registration form submission
     public function store(Request $request)
     {
         // Validate the incoming request data
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password' => ['required', 'confirmed'],
             'is_landlord' => 'required|boolean',
         ]);
 
         try {
-            $user = User::create([
+            // Create a new user instance
+            $user = new User([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'is_landlord' => $request->is_landlord,
             ]);
 
-            // Log the user in
-            Auth::login($user);
+            // Save the user to the database
+            $user->save();
+
+            // Log the registration
+            Log::info('User registered successfully', ['email' => $user->email]);
 
             // Fire the Registered event
             event(new Registered($user));
@@ -77,11 +62,11 @@ class RegisteredUserController extends Controller
             $dashboardRoute = $user->is_landlord ? 'dashboard-landloard' : 'dashboard-tenant';
 
             // Redirect the user to the appropriate dashboard page
-            return Redirect::route($dashboardRoute)->with('success', 'Registration successful!');
+            return redirect()->route($dashboardRoute)->with('success', 'Registration successful!');
         } catch (\Exception $e) {
-            // Handle any exceptions that occur during user creation
-            Log::error('Failed to create user', ['error' => $e->getMessage()]);
-            return response()->json(['message' => 'Failed to create user', 'error' => $e->getMessage()], 500);
+            // Handle any exceptions that occur during user registration
+            Log::error('Failed to register user', ['error' => $e->getMessage()]);
+            return response()->json(['message' => 'Failed to register user', 'error' => $e->getMessage()], 500);
         }
     }
 }

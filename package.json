@@ -27,6 +27,7 @@
         "@inertiajs/inertia-react": "^0.8.1",
         "@inertiajs/vue3": "^1.0.15",
         "@react-google-maps/api": "^2.19.3",
+        "bcryptjs": "^2.4.3",
         "boxicons": "^2.1.4",
         "gsap": "^3.12.5",
         "jquery": "^3.7.1",

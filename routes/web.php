@@ -204,7 +204,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/appointment-landlord', function () {
-        return Inertia::render('AppointmentLandloard');
+        return Inertia::render('AppointmentLandlord');
     });
 
     Route::get('/calendar-landlord', function () {

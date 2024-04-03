@@ -9,7 +9,7 @@ import Gallery from "@/Pages/Gallery.jsx";
 import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
 import LandingLandloard from "@/Components/LandingLandloard.jsx";
 import Navigation from "@/Components/Navigation.jsx";
-import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import AppointmentLandlord from "@/Pages/AppointmentLandlord.jsx";
 
 const DashboardLandloardLanding = () => {
 
@@ -28,7 +28,7 @@ const DashboardLandloardLanding = () => {
             case 'mailbox-landlord':
                 return <MailboxLandlord />;
             case 'appointment-landlord':
-                return <AppointmentLandloard/>;
+                return <AppointmentLandlord/>;
             case 'search-real-estate':
                 return <FindRealEstate />;
             case 'search-tenant':

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "../../css/Appointment.css";
-import CalendarTenant from '@/Pages/CalendarTenant';
+import CalendarLandlord from '@/Pages/CalendarTenant';
 import FormCalendar from '@/Components/FormCalender.jsx';
 import EditAppointments from '@/Pages/EditAppointments.jsx';
-import ReminderTenant from "@/Pages/ReminderTenant.jsx";
 
-
-function AppointmentTenant() {
+function AppointmentLandlord() {
     const [editMode, setEditMode] = useState(false);
     const [appointments, setAppointments] = useState([]);
     const [showReminder, setShowReminder] = useState(false);
@@ -60,7 +58,7 @@ function AppointmentTenant() {
                             onReminderClick={handleReminderClick}
                         />
 
-                        <CalendarTenant appointments={appointments} />
+                        <CalendarLandlord appointments={appointments} />
 
                     </>
                 ) : (
@@ -75,4 +73,4 @@ function AppointmentTenant() {
     );
 }
 
-export default AppointmentTenant;
+export default AppointmentLandlord;

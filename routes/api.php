@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\Auth\RegisteredUserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,7 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //DATABASE
 Route::get('/properties', [PropertyController::class, 'index']);
-Route::post('/register', [PropertyController::class, 'store']);
+Route::post('/register', [RegisteredUserController::class, 'create']);
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
 
 
 
