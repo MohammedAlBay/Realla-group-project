@@ -45,7 +45,7 @@ const MailboxTenant = () => {
                         </div>
 
                         <div className='flex'>
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '117px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '190px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
                             <div className="message-role" style={{ marginTop: '15px', marginBottom: '5px' }}>
                             Cleaner
                             <span style={{ marginLeft: '100px' }}>11:15 AM</span>
@@ -54,7 +54,7 @@ const MailboxTenant = () => {
                         </div>
 
                         <div className='flex'>
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '117px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '260px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
                             <div className="message-role" style={{ marginTop: '15px', marginBottom: '5px' }}>
                             Landlord
                             <span style={{ marginLeft: '95px' }}>11:15 AM</span>
@@ -63,7 +63,7 @@ const MailboxTenant = () => {
                         </div>
 
                         <div className='flex'>
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '117px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '330px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
                             <div className="message-role" style={{ marginTop: '15px', marginBottom: '5px' }}>
                             Painter
                             <span style={{ marginLeft: '105px' }}>11:15 AM</span>
@@ -72,7 +72,7 @@ const MailboxTenant = () => {
                         </div>
 
                         <div className='flex'>
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '117px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '400px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
                             <div className="message-role" style={{ marginTop: '15px', marginBottom: '5px' }}>
                             Repair Man
                             <span style={{ marginLeft: '78px' }}>11:15 AM</span>
@@ -81,7 +81,7 @@ const MailboxTenant = () => {
                         </div>
 
                         <div className='flex'>
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '117px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', background: '#D9D9D9', position: 'absolute',  left: 'calc(18% - 120px)',  top: '470px', backgroundImage: 'url(gardener.png)', backgroundSize: 'cover', backgroundPosition: 'center', }}></div>   
                             <div className="message-role" style={{ marginTop: '15px', marginBottom: '5px' }}>
                             Electrician
                             <span style={{ marginLeft: '85px' }}>11:15 AM</span>
