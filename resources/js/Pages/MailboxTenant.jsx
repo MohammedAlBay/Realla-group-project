@@ -89,7 +89,6 @@ const MailboxTenant = () => {
                         </div>
                         </div>
 
-
                     </div>
                 </div> 
                 <Button text="Send" color="#FDB514" textColor="white" style={{ padding: '15px 40px', fontSize: '1rem', height: '40px', width: '150px' }} />
