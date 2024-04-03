@@ -1,8 +1,10 @@
-import React from 'react';
+import { React, useState }  from 'react';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 
 const ProfileInfo = () => {
+  const [avatar, setAvatar] = useState("../images/profile/avatar2.png");
+  const [coverPicture, setCoverPicture] = useState("../images/profile/profile-cover-image2.png")
 
   function toggleDropdown() {
     var dropdownContent = document.getElementById("myDropdown");
@@ -13,17 +15,52 @@ const ProfileInfo = () => {
     }
   }
 
+  function handleAvatarChange(event) {
+    const reader = new FileReader();
+    const file = event.target.files[0];
+
+    reader.onloadend = () => {
+      setAvatar(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function handleCoverPictureChange(event) {
+    const reader = new FileReader();
+    const file = event.target.files[0];
+
+    reader.onloadend = () => {
+      setCoverPicture(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+
   return (
-    <div className="container">
+    <div className="profile-info-container">
       <div className="profile-section">
-        <h2 className="profile-heading">My Profile</h2>
-        <div className="cover-picture">
-          <img src="../images/profile/profile-cover-image2.png" alt="Cover image of the profile" />
-          <button className="change-picture-button">Change Picture</button>
+        <div className="cover-picture-container">
+          <div className="cover-outer">
+            <img src={coverPicture} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Cover image of the profile"/>
+            <div className="cover-inner">
+              <input id="coverPictureInput" type="file" name="coverPicture" accept="image/*" onChange={handleCoverPictureChange}/>
+              <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c2c2c2" strokeWidth="2"><g transform="translate(2 3)"><path d="M20 16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2v11z"/><circle cx="10" cy="10" r="4"/></g></svg></label>
+            </div>
+          </div>
         </div>
-        <div className="profile-avatar">
-          <img src="../images/profile/avatar2.png" alt="avatar of the user" />
-          {/* Image of the user goes here */}
+        <div className="avatar-container">
+          <div className="avatar-outer">
+            <img src={avatar} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: "100%" }} alt="avatar of the user" />
+            <div className="avatar-inner">
+              <input className="avatarInput" type="file" name="avatar"  accept="image/*" onChange={handleAvatarChange}/>
+              <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg></label>
+            </div>
+          </div>
         </div>
         <div className="user-info">
           <div className="user-details">

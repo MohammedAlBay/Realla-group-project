@@ -10,7 +10,8 @@ return new class extends Migration
     {
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            // $table->unsignedBigInteger('user_id')->default(0); // Set a default value for user_id
             $table->unsignedBigInteger('property_id');
             $table->timestamps();
 
