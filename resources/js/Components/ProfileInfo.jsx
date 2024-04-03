@@ -1,8 +1,10 @@
-import React from 'react';
+import { React, useState }  from 'react';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 
 const ProfileInfo = () => {
+  const [avatar, setAvatar] = useState("../images/profile/avatar2.png");
+  const [coverPicture, setCoverPicture] = useState("../images/profile/profile-cover-image2.png")
 
   function toggleDropdown() {
     var dropdownContent = document.getElementById("myDropdown");
@@ -10,6 +12,32 @@ const ProfileInfo = () => {
         dropdownContent.style.display = "none";
     } else {
         dropdownContent.style.display = "grid";
+    }
+  }
+
+  function handleAvatarChange(event) {
+    const reader = new FileReader();
+    const file = event.target.files[0];
+
+    reader.onloadend = () => {
+      setAvatar(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function handleCoverPictureChange(event) {
+    const reader = new FileReader();
+    const file = event.target.files[0];
+
+    reader.onloadend = () => {
+      setCoverPicture(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
     }
   }
 
