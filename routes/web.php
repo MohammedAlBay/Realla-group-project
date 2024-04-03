@@ -236,17 +236,15 @@ Route::middleware(['auth'])->group(function () {
          return Inertia::render('ProfileLandlord');
     });
 
-   
-    Route::get('/test', function () {
+    /*
+});
+*/
+
+Route::get('/test', function () {
     return Inertia::render('Test');
 });
 
-    /*FOLLOW PROBLEM*/
-    Route::get('/followproblem', function () {
-    return Inertia::render('FollowProblem');
-});
-
-    /*ERROR PAGE*/
-    Route::get('/{any}', function () {
+/*ERROR PAGE*/
+Route::get('/{any}', function () {
     return Inertia::render('CustomErrorPage');
-    })->where('any','.*');
+})->where('any','.*');
