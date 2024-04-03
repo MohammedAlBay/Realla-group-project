@@ -30,8 +30,8 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255|unique:users',
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'is_landlord' => 'boolean', // Validate is_landlord as a boolean
+            'password' => 'required', 'confirmed',
+            'is_landlord' => 'required|boolean',
         ]);
 
         // If is_landlord is not present in the request data, default it to false

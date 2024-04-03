@@ -3,8 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\AuthController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,10 +28,33 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //DATABASE
 Route::get('/properties', [PropertyController::class, 'index']);
-Route::post('/register', [RegisteredUserController::class, 'create']);
 
-Route::post('/register', [RegisteredUserController::class, 'store']);
 
+
+
+
+
+
+
+Route::get('/', function () {
+    return Inertia::render('Home');
+});
+/*
+Route::get('/login', function () {
+    return Inertia::render('LoginOptions');
+});
+*/
+
+Route::get('/login',  [AuthController::class, 'create']);
+Route::post('/login',  [AuthController::class, 'login'])->name('login');
+
+Route::get('/dashboard-tenant', function () {
+    return Inertia::render('DashboardTenantLanding');
+});
+
+Route::get('/dashboard-landloard', function () {
+    return Inertia::render('DashboardLandloardLanding');
+});
 
 
 Route::get('/users', [UserController::class, 'index']);

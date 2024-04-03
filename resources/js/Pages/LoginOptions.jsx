@@ -68,22 +68,30 @@ const LoginForm = ({userType, onBack}) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // Perform login logic here based on userType
-        console.log(`Logging in as ${userType} with email: ${email} and password: ${password}`);
-        // Redirect to appropriate dashboard after login
 
         try {
-        const response = await axios.post('/login', {
-            email,
-            password,
-        });
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
 
-            console.log(response.data); // Handle successful login response
+            if (response.ok) {
+                const data = await response.json();
+                console.log('Login successful:', data);
+            } else {
+                // Throw an error if the response is not OK
+                throw new Error('Login failed');
+            }
         } catch (error) {
-            console.error('Login error:', error.response.data);
-            // Handle login error (e.g., display error message to user)
+            // Catch and handle errors that occur during the fetch
+            console.error('Error logging in:', error);
         }
     };
+
+
 
     return (
         <div className="w-4/5 max-w-md ml-auto mr-20 mt-24 mb-20">

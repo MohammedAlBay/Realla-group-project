@@ -7,10 +7,12 @@ use App\Http\Controllers\SearchResultsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\User;
+
 
 
 
@@ -74,8 +76,23 @@ Route::get('/login', function () {
 });
 
 Route::post('/login',  [AuthController::class, 'login'])->name('login');
+Route::post('/register', function () {
+    dd('Hello World');
+});
+Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+/*Route::post('/register', [RegisteredUserController::class, 'store']); */
+
 
 {/*
+
+Route::middleware('guest')->group(function () {
+
+    Route::get('/register', [RegisteredUserController::class, 'create'])
+        ->name('register');
+
+    Route::post('/register', [RegisteredUserController::class, 'store']);
+});
+
 Route::get('/login', function () {
     return Inertia::render('LoginPanelLandlord');
 });
@@ -94,17 +111,17 @@ Route::get('/login', function () {
 });
  */}
 
+// routes/web.php
+
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);
 
-Route::middleware('guest')->group(function () {
 
-    Route::get('register', [RegisteredUserController::class, 'create'])
-        ->name('register');
-
-    // Handle registration form submission
-    Route::post('register', [RegisteredUserController::class, 'store']);
-});
 
 
 Route::get('/forgot-password', function () {

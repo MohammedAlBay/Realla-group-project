@@ -26,6 +26,8 @@ class RegisteredUserController extends Controller
     // Method to handle the registration form submission
     public function store(Request $request)
     {
+        dd($request);
+
         // Validate the incoming request data
         $request->validate([
             'name' => 'required|string|max:255',
@@ -59,10 +61,15 @@ class RegisteredUserController extends Controller
             Session::flash('success', 'Registration successful!');
 
             // Determine the dashboard route based on user type
-            $dashboardRoute = $user->is_landlord ? 'dashboard-landloard' : 'dashboard-tenant';
+
+
+             $dashboardRoute = $user->is_landlord ? 'dashboard-landloard' : 'dashboard-tenant';
 
             // Redirect the user to the appropriate dashboard page
             return redirect()->route($dashboardRoute)->with('success', 'Registration successful!');
+
+
+
         } catch (\Exception $e) {
             // Handle any exceptions that occur during user registration
             Log::error('Failed to register user', ['error' => $e->getMessage()]);
