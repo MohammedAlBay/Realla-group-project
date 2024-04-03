@@ -31,25 +31,38 @@ html {
     width: 800px;
     height: 700px;
     font: 0.7rem impact,sans-serif;
+    margin-left: 2rem;
+    margin-top: 15rem;
 
     & section {
         display: flex;
         margin-bottom: 25%;
         margin-right: 30rem;
-
     }
 }
 
 
-.indexes, .tabs { list-style-type: none; z-index: 1 }
+.indexes,
+.tabs {
+    list-style-type: none;
+    z-index: 1;
+}
+
+
 
 .indexes {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 
     & li {
         padding: 1rem;
         border: 1px solid transparent;
         cursor: pointer;
+
     }
 }
 
@@ -58,7 +71,7 @@ html {
 .tab {
     position: absolute;
     display: flex;
-    width: 500px;
+    width: 400px;
     height: 555px;
     opacity: 0;
     background-color: #1E2127;
@@ -103,7 +116,6 @@ html {
         cursor: pointer;
         width: 100px;
     }
-
 
 }
 
@@ -211,11 +223,52 @@ button.update-doc:hover span:after {
 /* Responsive styling */
 @media only screen and (max-width: 768px) {
     .documents {
-        width: 15%;
+            display: grid;
+            place-items: center;
+            width: 800px;
+            height: 700px;
+            font: 0.7rem impact,sans-serif;
+            margin-left: 7rem;
+            margin-top: 13rem;
+        }
+
+    .tab {
+        margin-bottom: 14rem;
+        left: 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .documents {
+        display: grid;
+        place-items: center;
+        width: 800px;
+        height: 700px;
+        font: 0.7rem impact,sans-serif;
+        margin-left: 2rem;
+        margin-top: 4rem;
     }
 
     .tab {
         margin-bottom: 14rem;
-        left: 8rem;
+        left: 0;
+        width: 320px;
+        height: 555px;
     }
+
+
+    .indexes  {
+        position: absolute;
+        bottom: 38rem;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        font-size: 0.9rem;
+    }
+
+
+
+
 }

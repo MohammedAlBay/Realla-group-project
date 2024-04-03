@@ -13,6 +13,8 @@ import ReportProblem from "@/Pages/ReportProblem.jsx";
 import FollowUp from '@/Pages/FollowUp';
 import ProfileTenant from '@/Pages/ProfileTenant'
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
+import Navigation from '@/Components/Navigation';
+
 
 const DashboardTenantLanding = () => {
 
@@ -52,10 +54,17 @@ const DashboardTenantLanding = () => {
     return (
         <Router>
             <div className="dashboard">
-                <DashboardTenantBar onPageChange={handlePageChange} />
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <div className="dashboard-bar-wrapper">
+                    <DashboardTenantBar onPageChange={handlePageChange}/>
+                </div>
+
                 <div className="content">
                     {renderPage()}
                 </div>
+
+                {/* {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={handlePageChange} />} */}
+
             </div>
         </Router>
     );

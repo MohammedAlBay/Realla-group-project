@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../css/DashboardBar.css'
 
     const DashboardTenantBar = ({ onPageChange }) => {
         return (

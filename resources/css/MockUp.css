@@ -1,0 +1,21 @@
+
+
+.right-arrow-2 {
+    position: absolute;
+    right: 2rem;
+    bottom: 50%;
+    z-index: 10;
+    font-size: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.left-arrow{
+    position: absolute;
+    left: 2rem;
+    bottom: 50%;
+    z-index: 10;
+    font-size: 40px;
+    border: none;
+    background-color: transparent;
+}

@@ -31,7 +31,7 @@ function formatDate(date) {
         hour: 'numeric',
         minute: 'numeric',
         hour12: false,
-        timeZone: 'Europe/Berlin' // Set to Central European Time
+        timeZone: 'Europe/Berlin'
     };
     return new Date(date).toLocaleDateString('en-US', options);
 }

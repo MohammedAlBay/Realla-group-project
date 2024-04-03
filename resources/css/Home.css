@@ -35,7 +35,7 @@ body{
 }
 
 .home-content h1 {
-    width: 4003px;
+    width: 700px;
     height: 235px;
     flex-shrink: 0;
     color: #FFF;
@@ -51,23 +51,12 @@ body{
     color: #ECAA16;
 }
 
-#search {
-    display: inline-block;
-    padding: 11px 32px;
-    border-radius: 90px;
-    background: rgba(255, 252, 252, 0.18);
-    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
-    color: #f0f3fd;
-    letter-spacing: 1px;
-    font-weight: 600;
-    width: 650px;
-    margin-left: 2rem;
+.search-landing{
+    position: relative;
+    bottom: 5rem;
+    right: 5.5rem;
 }
 
-#search:hover {
-    color: #ECAA16;
-    background: rgba(140, 140, 140, 0.18);
-}
 
 .login {
     color: whitesmoke;
@@ -153,22 +142,20 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     padding: 1px;
-    margin-top: 2rem;
-    height: 150px;
+    margin-top: 5rem;
+    height: 100px;
 }
 
 .dashboard-gallery .card-real-estates {
     position: relative;
     left: 1rem;
     overflow: hidden;
-    width: 350px;
+    width: 300px;
     height: 300px;
     margin: 1rem;
     border-radius: 1.2rem;
     cursor: pointer;
 }
-
-
 
 .dashboard-gallery .overlay h4{
     color:#ECAA16;
@@ -278,6 +265,7 @@ body{
     color:#ECAA16;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .overlay .card-text{
     margin: 0;
@@ -336,7 +324,7 @@ body{
     font-size: 25px;
 }
 
-/*SEARCH BAR*/
+
 
 
 .galleryPage{
@@ -348,6 +336,8 @@ body{
     overflow-y: auto;
     margin:auto;
 }
+
+
 
 .search-bar-gallery__page{
     margin:0;
@@ -364,28 +354,7 @@ body{
     font-size: 24px;
 }
 
-.search-bar-gallery {
-    position: relative;
-    top: 9rem;
-    left: 8rem;
-    z-index: 10;
-}
 
-.search-bar-gallery i {
-    font-size: 30px;
-    position: absolute;
-    top: 0.5rem;
-    left: 40rem;
-    z-index: 10;
-}
-
-.search-landing{
-    position: relative;
-    bottom: 14rem;
-    right:10rem;
-    z-index: 10;
-    justify-content: center;
-}
 
 .search-options {
     margin-top: 3rem;
@@ -419,47 +388,31 @@ body{
         line-height: 60px;
         letter-spacing: -2px;
         position: absolute;
-        top: 10rem;
+        top: 13.5rem;
         left: 3rem;
     }
 
-    .search-bar-gallery {
-        padding: 10px;
-        position: relative;
-        top: 3rem;
-        left: 5rem;
+    .search-landing{
+       display: none;
     }
 
-    .search-bar-gallery i {
-        font-size: 30px;
-        position: absolute;
-        top: 1rem;
-        left: 25rem;
-        z-index: 10;
-    }
-
-    #search {
-        width: 400px;
-        padding: 8px;
-        font-size: 14px;
+    .search-bar-container {
+        display: none;
     }
 
     .home-img img {
         position: absolute;
-        top: 6.5rem;
+        top: 12rem;
         right: 0rem;
         min-width: 120%;
         pointer-events: none;
         z-index: 10;
     }
 
-    .search-btn{
-        margin-right: 2rem;
-    }
     .right-arrow {
         position: absolute;
         right: 2rem;
-        bottom: 24rem;
+        bottom: 20rem;
         z-index: 10;
         font-size: 40px;
     }
@@ -469,7 +422,7 @@ body{
         z-index: 1;
         text-align: center;
         margin:auto;
-        margin-top: -29rem;
+        margin-top: -23rem;
     }
 
 }
@@ -477,46 +430,29 @@ body{
 
 @media screen and (max-width: 576px) {
 
+  .home-page{
+        overflow: hidden;
+    }
+
     .home-content h1 {
         width: 4003px;
         height: 235px;
         color: #FFF;
-        font-size: 39px;
+        font-size: 40px;
         font-style: normal;
         font-weight: 700;
         line-height: 42px;
         letter-spacing: -2px;
         position: absolute;
-        top: 15rem;
+        top: 10rem;
         left: 3rem;
-    }
-
-    .search-bar-gallery {
-        padding: 10px;
-        position: relative;
-        top: 11rem;
-        left: 7rem;
-    }
-
-    .search-bar-gallery i {
-        font-size: 30px;
-        position: absolute;
-        top: 1rem;
-        left: 19rem;
-        z-index: 10;
-    }
-
-    #search {
-        width: 300px;
-        padding: 8px;
-        font-size: 14px;
     }
 
     .home-img img {
         position: absolute;
-        top: 26rem;
+        top: 13rem;
         right: 0rem;
-        min-width: 140%;
+        min-width: 130%;
         pointer-events: none;
         z-index: 10;
     }
@@ -524,17 +460,18 @@ body{
     .right-arrow {
         position: absolute;
         right: 2rem;
-        bottom: 2rem;
+        bottom: 18rem;
         z-index: 10;
         font-size: 40px;
     }
+
     .home-gallery {
         background-color: #1E2127;
         flex-grow: 1;
         z-index: 1;
         text-align: center;
         margin:auto;
-        margin-top: -8rem;
+        margin-top: -22rem;
     }
 
     .all-cards {
@@ -543,17 +480,28 @@ body{
         justify-content: center;
         flex-wrap: wrap;
         padding: 1rem 10% 0;
-        margin-top: 15rem;
+        margin-top: 8rem;
+
     }
 
     .card-real-estates {
         overflow: hidden;
-        width: 500px;
-        height: 280px;
+        width: 450px;
+        height: 300px;
         border-radius: 1.2rem;
         cursor: pointer;
         margin: auto;
         margin-top: 3rem;
+        margin-left: -1.8rem;
 
     }
+    .search-landing{
+        display: none;
+    }
+
+    .search-bar-container {
+        display: none;
+    }
+
+
 }

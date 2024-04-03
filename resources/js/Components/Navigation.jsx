@@ -4,18 +4,46 @@ import '../../css/Header.css';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
+import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
+import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
+import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 
 
-function Navigation() {
+function Navigation({ onPageChange, currentPage }) {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150); // Set initial window width
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150);
+    const [userType, setUserType] = useState("");
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-
     useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const response = await fetch('/api/user', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('token') // Assuming you have a token stored in localStorage
+                    }
+                });
+                if (response.ok) {
+                    const userData = await response.json();
+                    // Assuming your user object contains an `is_landlord` property
+                    setUserType(userData.is_landlord ? 'landlord' : 'tenant');
+                } else {
+                    // Handle error
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+                // Handle error
+            }
+        };
+
+        fetchUserData();
+
         const bgHeader = () => {
             const header = document.querySelector('.header');
             if (window.scrollY >= 50) {
@@ -39,10 +67,11 @@ function Navigation() {
         };
     }, []);
 
+
     return (
-        <header className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
+        <div className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
             <nav className="nav container">
-                <Logo />
+                <Logo/>
 
                 {/* Desktop Menu */}
                 {isDesktop && (
@@ -55,19 +84,20 @@ function Navigation() {
                                 <Link href="/about" className="nav__link">About</Link>
                             </li>
                             <li className="nav__item">
-                                <Link href="/gallery" className="nav__link">Gallery</Link>
-                            </li>
-                            <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-
-                            <li className="nav__item">
-                                <Link href="/dashboard-tenant" className="nav__link">Dashboard</Link>
-                            </li>
-                            <LoginRegisterButtons className="desktop"/>
+                            <div className="header-user-name">
+                                <div className="user-info">
+                                    <i className='bx bxs-user-circle' style={{color: '#FDB414', fontSize: '35px'}}></i>
+                                </div>
+                            </div>
                         </ul>
                     </div>
+
                 )}
+                <div className="buttons">
+                    <LoginRegisterButtons/>
+                </div>
 
                 {/* Mobile and Tablet Menu */}
                 {!isDesktop && (
@@ -84,11 +114,6 @@ function Navigation() {
                                       onClick={() => setIsMenuOpen(false)}>About</Link>
                             </li>
 
-                            <li className="nav__item">
-                                <Link href="/gallery" className="nav__link"
-                                      onClick={() => setIsMenuOpen(false)}>Gallery</Link>
-                            </li>
-
 
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link"
@@ -96,18 +121,36 @@ function Navigation() {
                             </li>
 
 
-                            <div className="nav__actions">
-                                <i className='bx bx-search-alt' style={{color: '#d2971b'}}></i>
-                            </div>
+                            {/* {currentPage === 'dashboard-tenant' && <DashboardTenantBar onPageChange={onPageChange} />} */}
 
-                            <LoginRegisterButtons className="nav__item tablet"/>
-
+                            {/* Conditionally render dashboard links based on user type */}
+                            {userType === 'tenant' && currentPage === 'dashboard-tenant' && (
+                                <DashboardTenantBar onPageChange={onPageChange} />
+                            )}
+                            {userType === 'landlord' && currentPage === 'dashboard-landloard' && (
+                                <DashboardLandloardBar onPageChange={onPageChange} />
+                            )}
                         </ul>
+
                         <div className="nav__close" id="nav-close" onClick={() => setIsMenuOpen(false)}>
                             <i className='bx bx-x'></i>
                         </div>
+
+
+                        <div>
+                            <div>
+                                <LoginRegisterButtons className="nav__item tablet"/>
+                            </div>
+                            <div className='search-nav'>
+                                <SearchBarGallery className="nav__item tablet"/>
+                            </div>
+
+                        </div>
+
+
                     </div>
                 )}
+
 
                 {/* Hamburger Menu Toggle */}
                 {!isDesktop && (
@@ -118,7 +161,7 @@ function Navigation() {
 
 
             </nav>
-        </header>
+        </div>
     );
 }
 

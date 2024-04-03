@@ -2,57 +2,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    background-color: #e1e1e1;
+    overflow-y: hidden;
 }
 
 .Mockup2-content {
     text-align: center;
     margin: 0 auto;
     z-index: 1;
+    margin-top: 3rem;
+
+
 }
 
 .Responsivnes {
-    max-width: 80%;
+    max-width: 65%;
     max-height: 100%;
-    position: relative;
-    left: 7rem;
-    top: 10rem;
+    margin: auto;
 }
 
-.Responsivnes-text{
-    color: #FFF;
+.Responsivnes-text {
+    color: #8b9eb0;
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
     letter-spacing: -1px;
-    margin-top: 12rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
 }
 
-.span1{
+.span1 {
     color: #ce7102;
 }
 
-.span2{
-    color:#F7931A;
+.span2 {
+    color: #f7931a;
 }
 
-.span3{
+.span3 {
     color: #f8ac56;
 }
 
 .Shadow {
     position: absolute;
-    top: 15rem;
+    top: 18rem;
     right: 0;
-    bottom: 0;
-    left: 14rem;
+    bottom: 10rem;
+    left: 18rem;
     width: 500px;
     height: 300px;
     border-radius: 300px;
-    background: #617FB8;
+    background: #617fb8;
     filter: blur(80px);
     z-index: 0;
 }
@@ -62,25 +66,25 @@
     top: 15rem;
     right: 0;
     bottom: 0;
-    left: 38rem;
+    left: 32rem;
     width: 500px;
     height: 300px;
     border-radius: 300px;
-    background: #C4A4E3;
+    background: #c4a4e3;
     filter: blur(100px);
     z-index: 0;
 }
 
 .Shadow3 {
     position: absolute;
-    top: 15rem;
+    top: 10rem;
     right: 0;
     bottom: 0;
-    left: 50rem;
+    left: 44rem;
     width: 500px;
     height: 300px;
     border-radius: 300px;
-    background: #617FB8;
+    background: #617fb8;
     filter: blur(90px);
     z-index: 0;
 }
@@ -94,9 +98,117 @@
     width: 35vw;
     hight: 200vw;
     background-color: #1E2127;
-   /* background-color: #4b5563; */
     transform: skewX(-30deg);
     z-index: 0;
 }
 
+/* For Tablet Devices */
+@media screen and (max-width: 1024px) {
+    .MockUp2Page{
+        overflow-x: hidden;
+    }
+    .Mockup2-content {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 6rem;
+    }
 
+    .Responsivnes {
+        max-width: 70%;
+        max-height: 100%;
+        margin-left: 3rem;
+    }
+
+    .Responsivnes-text {
+        font-size: 40px;
+        margin-top: 3rem;
+    }
+
+    .MockUp2Page::before {
+        right: 10rem;
+        width: 50vw;
+    }
+
+    .Shadow {
+        top: 8rem;
+        left: 10rem;
+    }
+
+    .Shadow2 {
+        top:10rem;
+        left: 8rem;
+    }
+
+    .Shadow3 {
+        top: 10rem;
+        left: 10rem;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .Mockup2-content {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .Responsivnes {
+        max-width: 80%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+
+    .Responsivnes-text {
+        font-size: 26px;
+        margin-top: 2rem;
+        margin-right: 4rem;
+    }
+
+    .MockUp2Page::before {
+        right: 6rem;
+        width: 65vw;
+        transform: skewX(-25deg);
+    }
+
+    .Shadow {
+        top: 20rem;
+        left: 15rem;
+        width: 150px;
+    }
+
+    .Shadow2 {
+        top: 18rem;
+        left: 20rem;
+        width: 150px;
+    }
+
+    .Shadow3 {
+        top: 15rem;
+        left: 26rem;
+        width: 150px;
+    }
+
+
+}
+
+
+@media (max-width: 576px) {
+    .Shadow {
+        top: 13rem;
+        left: 5rem;
+        width: 150px;
+    }
+
+    .Shadow2 {
+        top: 16rem;
+        left: 10rem;
+        width: 150px;
+    }
+
+    .Shadow3 {
+        top: 15rem;
+        left: 26rem;
+        width: 150px;
+    }
+}

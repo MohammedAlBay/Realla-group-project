@@ -1,54 +1,110 @@
-.reminder-panel {
+/*.reminder-panel {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1px;
-    width: 100%;
-    justify-self: center;
     justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
     margin: auto;
-    transition: all 0.3s ease;
-    z-index: 100;
-    max-width: 790px;
-    height: 100vh;
+    padding: 20px;
+    background-color: #1e2127;
+    border-radius: 12px;
+    box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
+}
+
+
+
+
+.reminder-heading-new {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.reminder-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+    .reminder-panel {
+        width: 80%;
+        max-width: 90%;
+    }
+}
+*/
+/*
+.reminder-panel {
     position: absolute;
-    top: 50%;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: #1e2127;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+.reminder-button-container {
+    position: relative;
+}
+
+.reminder-button-container:hover .reminder-panel {
+    display: block;
+}
+*/
+
+.reminder-panel {
+    position: absolute;
+    z-index: 999;
+    background-color: #1e2127;
+    width: 100%;
+    height: 555px;
+    max-width: 790px;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding:3rem;
-    background-color: #1e2127;
+    padding:1rem;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .reminder-box {
-    width: 180px;
+    width: 100%;
+    max-width: 160px;
     padding: 10px;
     background-color: #FDB514;
     color: white;
     border-radius: 25px;
     text-align: center;
     font-size: 18px;
-    margin: auto;
-}
-
-.reminder-heading {
-    margin-top: 3rem;
-    color: rgba(128, 131, 140, 0.63);
-    font-size: 30px;
-    text-align: center;
-    font-weight: 800;
+    margin-bottom: 15px;
 
 }
-.reminder-heading i {
-    color: rgba(128, 131, 140, 0.63);
+
+.reminder-statement {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: #292F36;
+    color: #666;
+    padding: 0.5rem;
+    border-radius: 25px;
+    font-weight: 600;
 }
 
 .reminder-text {
     font-weight: bold;
+
 }
 
 .reminder-deadline {
@@ -58,60 +114,49 @@
     color: #666;
 }
 
-.reminder-statement {
-    margin-top: 5px;
-    font-size: 14px;
-    background-color: #292F36;
-    color: #666;
-    padding: 0.5rem;
-    border-radius: 25px;
-    font-weight: 600;
+.reminder-panel input{
+    color: gray;
+    margin-bottom: 10px;
 }
 
-.add-new-reminder {
-    text-align: center;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-
-.delete-reminder {
-    font-size: 25px;
-    color: darkred;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.add-new {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.reminder-heading-new {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
-.add-new-button {
-    margin-top: 5px;
-    font-size: 14px;
+.add-reminder-button {
     background-color: #FDB514;
     color: white;
-    padding: 0.5rem;
-    width: 100px;
-    border-radius: 25px;
-    font-weight: 600;
-    text-align: center;
-    margin-left: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Responsive styling */
-@media only screen and (max-width: 768px) {
-    .reminder-panel {
-        width: 40%;
-        height: 60%;
-        right: 7%;
-        top: -3rem;
-    }
+.reminder-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.add-reminder-button,
+.close-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.add-reminder-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.close-button {
+    background-color: #f44336;
+    color: white;
 }

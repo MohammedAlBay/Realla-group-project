@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import Button from '../Components/RegisterButton'; 
-import TextInput from '../Components/RegisterTextInput'; 
-import Checkbox from '../Components/RegisterCheckbox'; 
-import { Link } from '@inertiajs/react'; 
+import RegisterTextInput from '../Components/RegisterTextInput';
+import RegisterCheckbox from '../Components/RegisterCheckbox';
+import { Link } from '@inertiajs/react';
+import {useHistory} from "@inertiajs/inertia-react";
 
 const LoginPanelLandlord = () => {
+
     // Define state variables to store form input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
+
+
     // Handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
+
         // Login logic
         console.log('Form submitted');
     };
@@ -31,20 +36,20 @@ const LoginPanelLandlord = () => {
                     <h2 className="text-2xl font-semibold mb-4 mr-44">Welcome Back to REALLA!</h2>
                     <p>Sign in your account</p>
                     <form onSubmit={handleSubmit} className="mt-4">
-                        <TextInput
+                        <RegisterTextInput
                             label="Your Email"
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <TextInput
+                        <RegisterTextInput
                             label="Password"
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <div className="flex items-center justify-between mb-4">
-                            <Checkbox
+                            <RegisterCheckbox
                                 label="Remember Me"
                                 checked={rememberMe}
                                 onChange={(e) => setRememberMe(e.target.checked)}
@@ -54,7 +59,7 @@ const LoginPanelLandlord = () => {
                         </div>
                         <Button type="submit">Login</Button>
                     </form>   
-                    <p className="mt-4">Don’t have an account? <Link href="/register" className="text-yellow-500">Register</Link></p>
+                    <p className="mt-4">Don’t have an account? <Link href="/Auth/Register" className="text-yellow-500">Register</Link></p>
                 </div>
             </div>
         </div>

@@ -4,9 +4,12 @@ import 'boxicons/css/boxicons.min.css';
 import toggleBookmarks from '../utils/toggleBookmarks';
 import "../../css/Home.css";
 
-const PropertyList = () => {
+const PropertyList = ({ searchQuery }) => {
+    const query = searchQuery || '';
+
     const [properties, setProperties] = useState([]);
     const [bookmarks, setBookmarks] = useState([]);
+
 
     useEffect(() => {
         const fetchProperties = async () => {
@@ -49,38 +52,53 @@ const PropertyList = () => {
         }
     };
 
-    return (
-            <div className="all-cards">
-                {properties.map(property => (
-                    <div key={property.id} className="card-real-estates">
-                        <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
-                        <div className="overlay">
+    const filteredProperties = properties.filter(property => {
+        console.log('property.location:', property.location);
+        console.log('searchQuery:', searchQuery);
+        return searchQuery && property.location.toLowerCase().includes(searchQuery.toLowerCase());
+    });
 
-                            <div className="card-text">
-                                <div className="card-location">
-                                    <i className='bx bxs-map' style={{color: '#ecaa16'}}></i>
-                                    <h3>{property.location}</h3>
-                                </div>
-                                <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
+
+    console.log('filteredProperties:', filteredProperties);
+
+    const propertiesToDisplay = searchQuery ? filteredProperties : properties;
+
+
+    return (
+        <div className="all-cards">
+            {propertiesToDisplay.map(property => (
+                <div key={property.id} className="card-real-estates">
+                    <img className={"gallery-image"} src={`/${property.image_path}`} alt={property.location}/>
+                    <div className="overlay">
+
+                        <div className="card-text">
+                            <div className="card-location">
+                                <i className='bx bxs-map' style={{color: '#ecaa16'}}></i>
+                                <h3>{property.location}</h3>
                             </div>
+                            <h4>{property.for_rent ? 'Rent' : 'Sale'}</h4>
+                        </div>
+
+
 
                             <button onClick={() => handleToggleBookmark(property.id)}>
                             {bookmarks.some(bookmark => bookmark.property_id === property.id) ? 'Remove from Bookmarks' : 'Add to Bookmarks'}
                             </button>
 
-                            <Link href={`/property/${property.id}`}>
-                                <button>View Details</button>
-                            </Link>
 
-                            <div className="card-mini-text">
-                                <p>{property.rooms} Rooms</p>
-                                <p>{property.square_meters} m²</p>
-                                <p>{property.bathrooms} bathrooms</p>
-                            </div>
+                        <Link href={`/property/${property.id}`}>
+                            <button>View Details</button>
+                        </Link>
+
+                        <div className="card-mini-text">
+                            <p>{property.rooms} Rooms</p>
+                            <p>{property.square_meters} m²</p>
+                            <p>{property.bathrooms} bathrooms</p>
                         </div>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
+        </div>
 
     );
 };

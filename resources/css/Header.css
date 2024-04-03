@@ -1,6 +1,5 @@
 
 
-/*
 .header {
     position: fixed;
     width: 100%;
@@ -9,12 +8,16 @@
     z-index: 1000;
     background-color: transparent;
     transition: background-color 0.4s, box-shadow 0.4s;
+
 }
-*/
 
 .bg-header {
     background-color: #292F36;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav.nav.container{
+    max-width: 100%;
 }
 
 .nav {
@@ -22,85 +25,46 @@
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+    padding: 0 2rem;
 
 }
 
-.logo{
+.logo {
     width: 90px;
-    transition: color 0.4s;
-    margin-left: 1rem;
-    background-color: transparent!important;
+    margin-right: 2rem;
 }
 
 .logo a {
     background-color: transparent!important;
 }
 
-
-.buttons{
+.buttons {
     display: flex;
     align-items: end;
-    z-index: 100;
-    position: relative;
-    justify-content: center;
-
 }
-
-
-.login-button {
-    color: whitesmoke;
-    background-color: #ecaa16;
-    text-align: center;
-    border-radius: 25px;
-    width: 150px;
-    font-size: 18px;
-    margin-left: 2rem;
-    font-weight: bold;
-}
-
-.register-button {
-    color: whitesmoke;
-    border: 2px solid #ecaa16;
-    border-radius: 25px;
-    width: 150px;
-    font-size: 18px;
-    margin-left: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
-
-.register-button:hover{
-    background-color: whitesmoke;
-    color: #ecaa16;
-}
-
-.login-button:hover{
-    background-color: whitesmoke;
-    color: #ecaa16;
-}
-
 
 .nav__list {
     display: flex;
-    gap: 3.5rem;
+    gap: 3rem;
     flex-direction: row;
     justify-content: center;
-    padding: 5% ;
+    margin-right: auto;
+
 }
 
+.user-info{
+   margin-top: -0.5rem;
+}
 .nav__item {
     list-style: none;
-}
-
-.nav__link {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 20px;
     background-color: transparent;
     text-align: center;
-    justify-content: center;
+    color:#677685;
+    text-decoration: none;
+    font-weight: 800;
 }
+
 .nav__link:hover {
     color:orange;
 }
@@ -110,12 +74,12 @@
     cursor: pointer;
 }
 
-/* Desktop Menu */
 .desktop-menu {
     display: flex;
 }
 
 /* Mobile and Tablet Menu */
+
 .nav__menu {
     position: fixed;
     top: 0;
@@ -151,18 +115,75 @@
     margin-right: 1.5rem;
 }
 
-/* Close Icon */
 .nav__close i {
     font-size: 3rem;
     color:orange;
 }
-/* Search icon */
+
 .nav__actions i{
     font-size: 2rem;
     color:orange;
 }
 
+.buttons{
+    display: flex;
+    align-items: end;
+    z-index: 100;
+}
+
+.login-button {
+    color: whitesmoke;
+    background-color: #ecaa16;
+    text-align: center;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    font-weight: bold;
+}
+
+.register-button {
+    color: whitesmoke;
+    border: 2px solid #ecaa16;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 18px;
+    margin-left: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register-button:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
+
+.login-button:hover{
+    background-color: whitesmoke;
+    color: #ecaa16;
+}
+
+
+.nav__link:hover {
+    color:orange;
+}
+
+.nav__toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.user-info{
+    display: none;
+}
+
+
+
 @media screen and (max-width: 1150px) {
+    .header {
+        overflow-x: hidden;
+    }
+
     .desktop-menu {
         display: none;
     }
@@ -172,7 +193,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 90%;
+        height: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -197,13 +218,14 @@
 
     .buttons{
         position: relative;
-        bottom: 1rem;
-        right:8rem;
-        display: flex;
+        top: 4rem;
+        right:0rem;
+        margin: auto;
         flex-direction: column;
         gap:2rem;
         align-items: center;
         justify-content: center;
+        display: none;
     }
 
     .nav__actions i{
@@ -220,22 +242,68 @@
         margin-left: 1rem;
         background-color: transparent!important;
     }
+    .nav__item{
+        list-style: none;
+        font-size: 25px;
+        background-color: transparent;
+        text-align: center;
+        color: #677685;
+        text-decoration: none;
+        font-weight: 800;
+        margin-left: 3rem;
+        margin-top: 6rem;
+    }
+    .nav__actions i{
+        font-size: 2rem;
+        color:orange;
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
 
+    .search-nav{
+        position: relative;
+        right: -1rem;
+    }
+
+    .search-bar-container  {
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding-top: 6rem;
+        margin-left: 2rem;
+
+    }
+
+    .search-bar-container  i {
+        font-size: 30px;
+        position: absolute;
+        left:28rem;
+        z-index: 10;
+        margin-top: 6rem;
+    }
+
+    #search {
+        display: inline-block;
+        padding: 11px 60px;
+    }
 
 }
 
 @media screen and (max-width: 576px) {
+    header {
+        overflow-x: hidden;
+    }
 
     .buttons{
         position: relative;
-        top: 2rem;
-        right: 0rem;
+        top: 4rem;
+        right: 1rem;
         flex-direction: column;
         gap:2rem;
         align-items: center;
         justify-content: center;
     }
-
 
     .nav__menu {
         position: fixed;
@@ -248,14 +316,26 @@
     }
     .nav__list {
         display: flex;
-
         text-align: center;
         margin-right: 3rem;
-        margin-top: 3rem;
+        margin-top: 5rem;
         font-size: 2rem;
         font-weight: bold;
 
     }
+
+    .nav__item{
+        list-style: none;
+        font-size: 25px;
+        background-color: transparent;
+        text-align: center;
+        color: #677685;
+        text-decoration: none;
+        font-weight: 800;
+        margin-left: 3rem;
+        margin-top: 2rem;
+    }
+
     .nav__actions i{
         font-size: 2rem;
         color:orange;
@@ -264,4 +344,25 @@
         bottom: 0;
     }
 
+    .search-nav{
+        position: relative;
+        right: 1rem;
+    }
+
+    .search-bar-container  i {
+        font-size: 30px;
+        position: absolute;
+        bottom: 10rem;
+        left:18rem;
+        z-index: 10;
+    }
+
+    #search {
+        display: inline-block;
+        padding: 11px 60px;
+    }
 }
+
+
+
+

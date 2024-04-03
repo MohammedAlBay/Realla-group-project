@@ -1,16 +1,8 @@
 .animation{
-    height: 110vh;
+    height: 100%;
     width: 100vw;
-}
-
-.right-arrow {
-    position: absolute;
-    right: 2rem;
-    bottom: -30rem;
-    z-index: 10;
-    font-size: 40px;
-    border: none;
-    background-color: transparent;
+    z-index: 1;
+    background-color: #e1e1e1;
 }
 
  .animation section {
@@ -18,13 +10,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+     height: 100vh;
      width: 100vw;
+     padding-top: 0rem;
 }
 
 .iphone {
     position: absolute;
     height: 550px;
+    margin-top: 4rem;
 }
 
 .widgets {
@@ -33,13 +27,13 @@
     scale: 0;
 }
 
-
 #payment{
     width: 300px;
     margin-top: 3rem;
 }
 #calendar{
-    width: 500px;
+    width: 400px;
+    margin-left: 2rem;
 }
 
 #screen-time{

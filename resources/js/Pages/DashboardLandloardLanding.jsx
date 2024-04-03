@@ -6,12 +6,14 @@ import '../../css/Appointment.css'
 import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
 import MailboxLandlord from "@/Pages/MailboxLandlord.jsx";
 import Gallery from "@/Pages/Gallery.jsx";
-import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
+import LandingLandloard from "@/Components/LandingLandloard.jsx";
+import Navigation from "@/Components/Navigation.jsx";
+import AppointmentLandlord from "@/Pages/AppointmentLandlord.jsx";
 
 const DashboardLandloardLanding = () => {
 
-    const [currentPage, setCurrentPage] = useState('dashboard-tenant');
+    const [currentPage, setCurrentPage] = useState('dashboard-landloard');
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -20,13 +22,13 @@ const DashboardLandloardLanding = () => {
     const renderPage = () => {
         switch (currentPage) {
             case 'dashboard-landloard':
-                return <CircularSliderCarousel/>;
+                return <LandingLandloard/>;
             case 'gallery':
                 return <Gallery />;
             case 'mailbox-landlord':
                 return <MailboxLandlord />;
             case 'appointment-landlord':
-                return <AppointmentLandloard/>;
+                return <AppointmentLandlord/>;
             case 'search-real-estate':
                 return <FindRealEstate />;
             case 'search-tenant':
@@ -36,14 +38,16 @@ const DashboardLandloardLanding = () => {
             case 'profile-landlord':
                 return <ProfileLandlord />;
             default:
-                return <CircularSliderCarousel  />;
-        }
+                return <LandingLandloard/>;        }
     };
 
     return (
         <Router>
             <div className="dashboard">
-                <DashboardLandloardBar onPageChange={handlePageChange} />
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <div className="dashboard-bar-wrapper">
+                    <DashboardLandloardBar onPageChange={handlePageChange}/>
+                </div>
                 <div className="content">
                     {renderPage()}
                 </div>

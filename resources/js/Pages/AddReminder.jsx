@@ -1,3 +1,5 @@
+
+{/*
 import React, { useState } from 'react';
 
 const AddReminder = ({ onAddReminder, onClose, onCancel }) => {
@@ -43,6 +45,48 @@ const AddReminder = ({ onAddReminder, onClose, onCancel }) => {
                 </button>
             </form>
 
+        </div>
+    );
+};
+
+export default AddReminder;
+*/}
+
+import React, { useState } from 'react';
+
+const AddReminder = ({ onAddReminder, onCancel }) => {
+    const [reminderText, setReminderText] = useState('');
+    const [reminderDeadline, setReminderDeadline] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newReminder = {
+            text: reminderText,
+            deadline: reminderDeadline,
+            statement: 'Not paid!'
+        };
+
+        onAddReminder(newReminder);
+
+        setReminderText('');
+        setReminderDeadline('');
+    };
+
+    return (
+        <div className='add-new'>
+            <form className='reminder-form' onSubmit={handleSubmit}>
+                <div>
+                    <input type="text" placeholder='Add new reminder...' value={reminderText} onChange={(e) => setReminderText(e.target.value)} />
+                </div>
+                <div>
+                    <input type="date" value={reminderDeadline} onChange={(e) => setReminderDeadline(e.target.value)} />
+                </div>
+                <div className="button-container">
+                    <button type="submit" className="add-reminder-button">Add</button>
+                    <button onClick={onCancel} className="close-button">Close</button>
+                </div>
+            </form>
         </div>
     );
 };

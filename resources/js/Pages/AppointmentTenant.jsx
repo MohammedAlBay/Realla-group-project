@@ -39,12 +39,13 @@ function AppointmentTenant() {
         setEditMode(false);
     };
 
+
     const handleReminderClick = () => {
-        setShowReminder(true); // Set showReminder state to true when reminder button is clicked
+        setShowReminder(true);
     };
 
     const handleReminderClose = () => {
-        setShowReminder(false); // Set showReminder state to false to close the reminder panel
+        setShowReminder(false);
     };
 
 
@@ -58,11 +59,14 @@ function AppointmentTenant() {
                             onEditAppointments={handleEditAppointments}
                             onReminderClick={handleReminderClick}
                         />
-                        {showReminder && <ReminderTenant onClose={handleReminderClose} />}
+
                         <CalendarTenant appointments={appointments} />
+
                     </>
                 ) : (
+
                     <EditAppointments appointments={appointments} onDelete={handleDeleteAppointment} onCancel={handleCancel} />
+
 
                 )}
 

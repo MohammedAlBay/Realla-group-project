@@ -1,0 +1,23 @@
+
+
+.register-image{
+    content: "";
+    position: relative;
+    top: -9rem;
+    margin-left: 13rem;
+    width: 500px;
+    height: 725px;
+
+    background-color: #1E2127;
+    border-radius: 0 0 100px 100px;
+    z-index: 0;
+}
+
+
+
+@media (min-width: 1024px) {
+
+
+
+}
+

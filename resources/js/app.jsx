@@ -12,7 +12,6 @@ import CustomErrorPage from "@/Pages/CustomErrorPage.jsx";
 
 
 
-
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
