@@ -35,20 +35,21 @@ const MailboxTenant = () => {
                         <div style={{ position: 'absolute', left: '35%', right: 0, bottom: '87.3%', height: '1px', background: '#ccc' }}></div>
                         {/* Horizontal grey line bottom */}
                         <div style={{ position: 'absolute', left: '35%', right: 0, bottom: '15%', height: '1px', background: '#ccc' }}></div>
+
                         {/* First textblock chat left */}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '75%' }}></div>
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '75%', padding: '8px' }}>Your text goes here</div>
                         {/* Second textblock chat left */}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '50%' }}></div>
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '50%' }}></div>
                         {/* Third textblock chat left*/}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '18%' }}></div>                  
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '18%' }}></div>                  
                         {/* First textblock chat right*/}
-                        <div style={{ width: '220px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '60%' }}></div>                   
+                        <div style={{ width: '220px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '60%' }}></div>                   
                         {/* Second textblock chat right*/}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '40%' }}></div>   
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '40%' }}></div>   
                         {/* Image left, chat right*/}
                         <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '25%' }}></div>  
                         {/* Image right, chat right*/}
-                        <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '25%' }}></div>                    
+                        <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '84%', bottom: '25%' }}></div>                    
                     </div>
                     <div style={{ marginLeft: '30px', display: 'flex', flexDirection: 'column', fontSize: '0.85rem', marginBottom: '-10px' }}>
 
