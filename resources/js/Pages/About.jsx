@@ -25,7 +25,7 @@ const About = () => {
             {
                 id: 3,
                 name: 'Sezin',
-                imgUrl: '', 
+                imgUrl: './images/Sezin.jpeg', 
                 position: 'Designer',
                 bio: 'Sezin creates amazing user experiences and designs...',
             },
@@ -45,6 +45,7 @@ const About = () => {
             <div className="relative  w-full overflow-hidden background-image" style={{ height: '32rem' }}>
                 <img src="./images/pexels-max-vakhtbovycn-70314084.jpg" alt="About Us" className="w-full h-full object-fit"/>  
             </div>
+                
                 {/* About Us Box */}
                 <div className="absolute bottom-[120px] left-[calc(35%-90px)] transform -translate-x-1/2 bg-orange-500 py-20 p-12 w-full md:w-1/2 lg:w-1/3 text-center rounded-lg block relative" style={{ backgroundColor: '#f7931a' }}>
                     <h2 className="text-3xl font-bold">About Us</h2>
@@ -91,8 +92,8 @@ const About = () => {
               <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl cursor-pointer" style={{ backgroundColor: '#444d57' }}
     >
                 <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover"/>
-                    <h4 className="text-lg font-semibold">{member.name}</h4>
-                        <p className="text-yellow-500">{member.position}</p>
+                    <h4 className="text-lg font-semibold text-yellow-500">{member.name}</h4>
+                        <p className="text-white-500">{member.position}</p>
                         <p className="text-sm">{member.bio}</p>
                </div>    
                ))}
