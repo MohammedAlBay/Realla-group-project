@@ -102,8 +102,8 @@ const ReportProblem = () => {
               <span className="text-white font-bold ml-4">Add a photo</span>
             </div>
             <div className="flex space-x-4 mx-14">
-              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
-              <Link href="/followup" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</Link>
+              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
+              <Link href="/followup" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</Link>
             </div>
           </div>
         </form>
