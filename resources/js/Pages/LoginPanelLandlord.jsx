@@ -3,7 +3,7 @@ import Button from '../Components/RegisterButton';
 import RegisterTextInput from '../Components/RegisterTextInput';
 import RegisterCheckbox from '../Components/RegisterCheckbox';
 import { Link } from '@inertiajs/react';
-import {useHistory} from "@inertiajs/inertia-react";
+import {useHistory} from "@inertiajs/react";
 
 const LoginPanelLandlord = () => {
 
