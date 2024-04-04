@@ -23,6 +23,10 @@ class User extends Authenticatable
         'email',
         'password',
         'is_landlord',
+        'address',
+        'phone',
+        'avatar',
+        'cover_picture'
     ];
 
     /**
@@ -48,8 +52,8 @@ class User extends Authenticatable
     /**
      * Get the bookmarks for the user.
      */
-    // public function bookmarks()
-    // {
-    //     return $this->hasMany(Bookmark::class);
-    // }
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
 }
