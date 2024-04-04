@@ -19,7 +19,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): Response
     {
-        return Inertia::render('LoginOptions', [
+        return Inertia::render('Auth/Login', [
             'canResetPassword' => Route::has('password.request'),
             'status' => session('status'),
         ]);
@@ -34,8 +34,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        // Redirect to the appropriate dashboard based on user type
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended('dashboard-tenant');
     }
 
     /**

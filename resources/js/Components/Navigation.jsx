@@ -22,7 +22,7 @@ function Navigation({ onPageChange, currentPage }) {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch('/api/user', {
+                const response = await fetch('/api/users', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

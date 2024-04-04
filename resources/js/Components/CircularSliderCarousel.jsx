@@ -1,38 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/circular.css"
+import "../../css/circular.css";
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
-const CircularSliderCarousel = () => {
+const CircularSliderCarousel = ({ user }) => {
     // Define state variables for user name and address
     const [userName, setUserName] = useState("");
     const [userAddress, setUserAddress] = useState("");
 
-    // Fetch user data (name and address) from an API or other data source
+    // Fetch user data (name and address) from the user object passed from the controller
     useEffect(() => {
-        // Example: Fetch user data from an API
-        fetchUserData()
-            .then(data => {
-                setUserName(data.name);
-                setUserAddress(data.address);
-            })
-            .catch(error => console.error("Error fetching user data:", error));
-    }, []);
-
-    // Example function to fetch user data from an API
-    const fetchUserData = async () => {
-        // Example API endpoint to fetch user data
-        const response = await fetch('/api/user');
-        if (!response.ok) {
-            throw new Error('Failed to fetch user data');
+        if (user) {
+            setUserName(user.name);
+            setUserAddress(user.address);
         }
-        return await response.json();
-    };
+    }, [user]);
 
     return (
+
         <div className="circular-slider-carousel">
             {/* Render user name with dynamic value */}
-            <h1 className="text-dashboard-landing">Welcome <span>Olivia Janssens {/*{userAddress}*/} </span>!</h1>
+            <h1 className="text-dashboard-landing">Welcome <span>{userName}</span>!</h1>
             {/* Render user address with dynamic value */}
-            <h4 className="address-dashboard-landing"><i className='bx bxs-map' style={{ color: '#FDB414', fontSize: '30px' }}></i> <span>Sint Niklass {userAddress} </span>
+            <h4 className="address-dashboard-landing"><i className='bx bxs-map' style={{ color: '#FDB414', fontSize: '30px' }}></i> <span>{userAddress}</span>
             </h4>
 
             <div className="home-img-dashboard">
@@ -40,6 +29,7 @@ const CircularSliderCarousel = () => {
             </div>
             <div className="Shadow2"></div>
         </div>
+
     );
 };
 

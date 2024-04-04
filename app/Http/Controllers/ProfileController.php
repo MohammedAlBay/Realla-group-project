@@ -13,9 +13,6 @@ use Inertia\Response;
 
 class ProfileController extends Controller
 {
-
-
-
     /**
      * Display the user's profile form.
      */
