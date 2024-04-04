@@ -135,8 +135,8 @@ Route::get('/profile-tenant', function () {
     return Inertia::render('ProfileTenant');
 });
 
-Route::get('/edit-profile', function () {
-    return Inertia::render('EditProfile');
+Route::get('/profile-tenant/edit', function () {
+        return Inertia::render('ProfileEdit');
 });
 
 /* PAYMENT */
@@ -194,6 +194,14 @@ Route::get('/calendar-landlord', function () {
     return Inertia::render('CalendarLandlord');
 });
 
+Route::get('/profile-landlord', function () {
+    return Inertia::render('ProfileLandlord');
+});
+
+Route::get('/profile-landlord/edit', function () {
+    return Inertia::render('ProfileEdit');
+});
+
 /* REPORT PROBLEM */
 Route::get('/reportproblem', function () {
     return Inertia::render('ReportProblem');
@@ -201,6 +209,7 @@ Route::get('/reportproblem', function () {
 Route::get('/profile-landlord', function () {
     return Inertia::render('ProfileLandlord');
 });
+
 
 /*
 });

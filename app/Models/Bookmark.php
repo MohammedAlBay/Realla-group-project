@@ -11,10 +11,10 @@ class Bookmark extends Model
 
     protected $fillable = ['user_id', 'property_id'];
 
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function property()
     {

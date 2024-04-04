@@ -21,6 +21,10 @@ class User extends Authenticatable
         'email',
         'password',
         'is_landlord',
+        'address',
+        'phone',
+        'avatar',
+        'cover_picture'
     ];
 
     /**
@@ -47,6 +51,12 @@ class User extends Authenticatable
      *
      * @return bool
      */
+  
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
+  
     public function isLandlord()
     {
         return $this->is_landlord;
