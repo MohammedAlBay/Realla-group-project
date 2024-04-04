@@ -25,6 +25,9 @@
     display: none;
 }
 
+.buttons .dashboard-button{
+    display: block;
+}
 .content {
     border-radius: 0 0 0 15%;
     height: 94%;
