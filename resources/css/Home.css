@@ -142,7 +142,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     padding: 1px;
-    margin-top: 5rem;
+    margin-top: 2rem;
     height: 100px;
 }
 
@@ -160,6 +160,7 @@ body{
 .dashboard-gallery .overlay h4{
     color:#ECAA16;
     font-weight: bold;
+    margin-right: 1rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -191,6 +192,11 @@ body{
     color: white;
 }
 
+
+.dashboard-gallery .card-location  i{
+    margin-top: 7px;
+    font-size: 25px;
+}
 .galleryPage h1{
     color: white;
     font-size: 50px;
@@ -200,7 +206,7 @@ body{
 
 .gallery-card{
     position: relative;
-    bottom: 13rem;
+    bottom: 0rem;
 }
 
 /* CARDS OF GALLERY-GALLERY PAGE */
@@ -221,7 +227,6 @@ body{
     margin: 2rem;
     border-radius: 1.2rem;
     cursor: pointer;
-
 }
 
 .card-real-estates img {
@@ -229,7 +234,6 @@ body{
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
-
 }
 
 
@@ -320,7 +324,7 @@ body{
 }
 
 .card-location  i{
-    margin-top: 8px;
+    margin-top: 0px;
     font-size: 25px;
 }
 
