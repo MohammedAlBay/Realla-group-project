@@ -67,10 +67,13 @@ Route::get('/dashboard-landloard', function () {
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users', [UserController::class, 'store']);
 
-// CRUD operations for bookmarks API
+// CRUD operations for bookmarks
 Route::get('/bookmarks', [BookmarkController::class, 'index']);
 Route::get('/bookmarks/{id}', [BookmarkController::class, 'show']);
 Route::post('/bookmarks', [BookmarkController::class, 'store']);
 Route::put('/bookmarks/{id}', [BookmarkController::class, 'update']);
 Route::delete('/bookmarks/{id}', [BookmarkController::class, 'destroy']);
 
+// Route to update user profile
+Route::get('/profile-tenant', [UserController::class, 'update']);
+Route::put('/profile-tenant/edit', [UserController::class, 'update']);
