@@ -35,6 +35,18 @@ const MailboxTenant = () => {
                         <div style={{ position: 'absolute', left: '35%', right: 0, bottom: '87.3%', height: '1px', background: '#ccc' }}></div>
                         {/* Horizontal grey line bottom */}
                         <div style={{ position: 'absolute', left: '35%', right: 0, bottom: '15%', height: '1px', background: '#ccc' }}></div>
+                        {/* First textblock chat left */}
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '75%' }}></div>
+                        {/* Second textblock chat left */}
+                        <div style={{ width: '220px', height: '40px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '50%' }}></div>
+                        {/* Third textblock chat left*/}
+                        <div style={{ width: '220px', height: '40px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '18%' }}></div>                  
+                        {/* First textblock chat right*/}
+                        <div style={{ width: '220px', height: '65px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '60%' }}></div>                   
+                        {/* Second textblock chat right*/}
+                        <div style={{ width: '220px', height: '40px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '40%' }}></div>   
+                        {/* Image left chat right*/}
+                        <div style={{ width: '100px', height: '50px', flexShrink: 0, borderRadius: '15px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '30%' }}></div>                      
                     </div>
                     <div style={{ marginLeft: '30px', display: 'flex', flexDirection: 'column', fontSize: '0.85rem', marginBottom: '-10px' }}>
 
@@ -85,8 +97,8 @@ const MailboxTenant = () => {
                             <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
                         </div>
                         </div>
-                        <div style={{ marginTop: '10px', marginLeft: '30px' }}>
-                        <button style={{ marginBottom: '50px', marginLeft: '650px', padding: '10px 20px', fontSize: '1rem', borderRadius: '5px', border: 'none', cursor: 'pointer', backgroundColor: '#FDB514', color: 'white' }}>Send</button>
+                        <div style={{ marginLeft: '430px', position: 'absolute', left: '35%', bottom: '17px', height: '40px', width: '150px' }}>
+                            <button style={{ padding: '5px 10px', fontSize: '0.75rem', borderRadius: '20px', border: 'none', cursor: 'pointer', backgroundColor: '#FDB514', color: 'white' }}>Send</button>
                         </div>
                     </div> 
                     <div>
