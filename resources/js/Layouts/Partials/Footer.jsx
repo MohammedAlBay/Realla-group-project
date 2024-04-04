@@ -34,12 +34,12 @@ const Footer = () => {
 
       <div className="px-4 md:px-20 py-10 flex flex-col md:flex-row md:justify-between items-start space-y-6 md:space-y-0 md:space-x-6">
         <div className="flex items-center">
-          <img src="/images/realla_logo.png" alt="Logo" className="mr-2 mt-6 ml-28 h-14" />
+          <img src="/images/realla_logo.png" alt="Logo" className="mr-8 mt-8 ml-28 h-14" />
         </div>
 
         <div className="flex flex-col"> 
             <h3 className="text-yellow-500 font-bold mb-2">CONTACT</h3>
-            <p className="text-sm space-y-4">
+            <p className="text-sm space-y-3">
               <span className="flex items-center"><i className='bx bx-phone icon text-yellow-500 mr-2'></i>123 456 789</span>
               <span className="flex items-center"><i className='bx bx-envelope icon text-yellow-500 mr-3'></i>info@realla.com</span>
               <span className="flex items-center"><i className='bx bx-map icon text-yellow-500 mr-3'></i>9050 Gent, Belgium</span>
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <h3 className="text-yellow-500 font-bold mb-2 ">DISCOVER</h3>
+          <h3 className="text-yellow-500 font-bold mb-2">DISCOVER</h3>
           <ul className="text-sm space-y-3">
             <li><Link href="/about">About</Link></li>
             <li><Link href="/gallery">Gallery</Link></li>
