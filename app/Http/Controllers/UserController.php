@@ -71,6 +71,6 @@ class UserController extends Controller
             'user' => $user->fresh(),
         ]);
 
-        return Redirect::route('ProfileEdit');
+        return Redirect::route('Profile-tenant');
     }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Button from "@/Components/RegisterButton.jsx";
-import {Link} from "@inertiajs/inertia-react";
+import {Link} from "@inertiajs/react";
 import RegisterTextInput from "@/Components/RegisterTextInput.jsx";
 
 
