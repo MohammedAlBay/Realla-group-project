@@ -30,22 +30,7 @@ Route::get('/', function () {
     ]);
 });
 
-/*
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-*/
-/*
-Route::get('/dashboard', function () {
-    // Check if the authenticated user is a tenant or a landlord
-    if (auth()->user()->isLandlord()) {
-        return app(DashboardLandlordController::class)->__invoke();
-    } else {
-        return app(DashboardTenantController::class)->__invoke();
-    }
-})->middleware(['auth', 'verified'])->name('dashboard');
-*/
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
@@ -64,23 +49,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
-
-
-/*
-Route::middleware(['auth', 'verified'])->group(function () {
-    // Dashboard route
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Conditional dashboard routes based on user type
-    Route::middleware('isLandlord')->group(function () {
-        Route::get('/landlord/dashboard', [LandlordDashboardController::class, 'index'])->name('landlord.dashboard');
-    });
-
-    Route::middleware('isTenant')->group(function () {
-        Route::get('/tenant/dashboard', [TenantDashboardController::class, 'index'])->name('tenant.dashboard');
-    });
-});
-*/
 
 
 

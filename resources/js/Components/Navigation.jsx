@@ -7,16 +7,27 @@ import LoginRegisterButtons from "@/Components/LoginRegisterButtons.jsx";
 import SearchBarGallery from "@/Components/SearchBarGallery.jsx";
 import DashboardTenantBar from "@/Components/DashboardTenantBar.jsx";
 import DashboardLandloardBar from "@/Components/DashboardLandloardBar.jsx";
+import Dropdown from '@/Components/Dropdown';
+import ResponsiveNavLink from "@/Components/ResponsiveNavLink.jsx";
 
 
-function Navigation({ onPageChange, currentPage }) {
+
+function Navigation({ onPageChange, currentPage, auth, user, }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1150);
     const [userType, setUserType] = useState("");
+    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const handleLogout = () => {
+
+        // Then redirect to the home page or perform other actions
+        window.location.href = '/';
     };
 
     useEffect(() => {
@@ -69,12 +80,14 @@ function Navigation({ onPageChange, currentPage }) {
 
 
     return (
+
         <div className={`header ${isMenuOpen ? 'bg-header' : ''}`}>
             <nav className="nav container">
                 <Logo/>
 
                 {/* Desktop Menu */}
                 {isDesktop && (
+
                     <div className="desktop-menu">
                         <ul className="nav__list">
                             <li className="nav__item">
@@ -86,15 +99,35 @@ function Navigation({ onPageChange, currentPage }) {
                             <li className="nav__item">
                                 <Link href="/contact" className="nav__link">Contact</Link>
                             </li>
-                            <div className="header-user-name">
-                                <div className="user-info">
-                                    <i className='bx bxs-user-circle' style={{color: '#FDB414', fontSize: '35px'}}></i>
+
+
+                            <Dropdown>
+                                <div className='usernav'>
+                                    <Dropdown.Trigger>
+                                        {user && (
+                                            <div>
+                                            <div className="user-info">
+                                                <span>Welcome, {user.name}</span>
+                                                <i className='bx bxs-user-circle' style={{ color: '#FDB414', fontSize: '35px' }}></i>
+                                            </div>
+
+                                            </div>
+                                    )}
+                                    </Dropdown.Trigger>
                                 </div>
-                            </div>
+                                <Dropdown.Content>
+                                    <Dropdown.Link onClick={handleLogout}>Log Out</Dropdown.Link>
+                                </Dropdown.Content>
+                            </Dropdown>
+
+
                         </ul>
                     </div>
 
                 )}
+
+
+
                 <div className="buttons">
                     <LoginRegisterButtons/>
                 </div>
@@ -125,10 +158,10 @@ function Navigation({ onPageChange, currentPage }) {
 
                             {/* Conditionally render dashboard links based on user type */}
                             {userType === 'tenant' && currentPage === 'dashboard-tenant' && (
-                                <DashboardTenantBar onPageChange={onPageChange} />
+                                <DashboardTenantBar onPageChange={onPageChange}/>
                             )}
                             {userType === 'landlord' && currentPage === 'dashboard-landloard' && (
-                                <DashboardLandloardBar onPageChange={onPageChange} />
+                                <DashboardLandloardBar onPageChange={onPageChange}/>
                             )}
                         </ul>
 

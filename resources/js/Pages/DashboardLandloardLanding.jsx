@@ -11,7 +11,7 @@ import LandingLandloard from "@/Components/LandingLandloard.jsx";
 import Navigation from "@/Components/Navigation.jsx";
 import AppointmentLandlord from "@/Pages/AppointmentLandlord.jsx";
 
-const DashboardLandloardLanding = () => {
+const DashboardLandloardLanding = ({ auth }) => {
 
     const [currentPage, setCurrentPage] = useState('dashboard-landloard');
 
@@ -44,7 +44,7 @@ const DashboardLandloardLanding = () => {
     return (
         <Router>
             <div className="dashboard">
-                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage} user={auth.user}/>
                 <div className="dashboard-bar-wrapper">
                     <DashboardLandloardBar onPageChange={handlePageChange}/>
                 </div>

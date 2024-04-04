@@ -6,7 +6,7 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import RegisterCheckbox from "@/Components/RegisterCheckbox.jsx";
 
 export default function Register() {
@@ -36,16 +36,31 @@ export default function Register() {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Register" />
+        <div className="flex bg-gray-900  p-8 pt-6 h-screen" style={{backgroundColor: '#292F36'}}>
+            <div className="relative w-2/3 ml-52" style={{marginTop: '-4rem'}}>
+                <div style={{
+                    position: 'relative',
+                    width: '500px',
+                    height: '725px',
+                    flexShrink: 0,
+                    borderRadius: '0px 0px 100px 100px',
+                    border: '3px solid rgba(0, 0, 0, 0.00)',
+                    background: '#1E2127'
+                }}></div>
+            </div>
 
-            <div className="flex flex-col lg:flex-row bg-gray-900 text-white p-8 pt-24 relative" style={{ backgroundColor: '#292F36' }}>
-                <div className="register-left lg:w-1/2 lg:ml-0 lg:mt-0 lg:mb-0 relative m-10">
-                    <img src="/images/RegisterImage.png" alt="LoginOptions" className="object-cover w-full h-auto lg:absolute lg:inset-0  lg:h-full z-1" style={{ position: 'absolute', top: '40%', left: '70%', transform: 'translate(-50%, -50%)', zIndex: '1' }} />
-                    <div className='register-image'></div>
-                </div>
+            <div className="absolute w-3/5 inset-0 flex justify-start items-center"
+                 style={{marginLeft: '9rem', zIndex: '1'}}>
+                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-4/5 h-auto"
+                     style={{marginTop: '-4rem'}}/>
+            </div>
+
+            <div className="w-4/5 justify-center flex  items-center max-w-md ml-auto mr-20 mt-24 mb-20">
+
+                <Head title="Register"/>
+
                 <div
-                    className="w-full max-w-md lg:w-1/2 lg:max-w-md lg:ml-auto lg:mr-20 mt-4 lg:mt-0 lg:mb-0 lg:ml-28 lg:mr-0">
+                    className="w-full text-white max-w-md lg:w-1/2 lg:max-w-md lg:ml-auto lg:mr-20 mt-4 lg:mt-0 lg:mb-0 lg:ml-28 lg:mr-0">
                     <h2 className="text-2xl font-semibold mb-4">Create your Free Account</h2>
                     <p>Submit your data for registration</p>
 
@@ -160,7 +175,8 @@ export default function Register() {
 
                 </div>
             </div>
-        </GuestLayout>
+
+        </div>
     );
 };
 

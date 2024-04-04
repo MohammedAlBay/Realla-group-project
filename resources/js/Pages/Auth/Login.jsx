@@ -27,14 +27,32 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Log in" />
+        <div className="flex bg-gray-900 text-gray-800 p-8 pt-6 h-screen" style={{backgroundColor: '#292F36'}}>
+            <div className="relative w-2/3 ml-52" style={{marginTop: '-4rem'}}>
+                <div style={{
+                    position: 'relative',
+                    width: '500px',
+                    height: '725px',
+                    flexShrink: 0,
+                    borderRadius: '0px 0px 100px 100px',
+                    border: '3px solid rgba(0, 0, 0, 0.00)',
+                    background: '#1E2127'
+                }}></div>
+            </div>
+            <div className="absolute w-3/5 inset-0 flex justify-start items-center"
+                 style={{marginLeft: '9rem', zIndex: '1'}}>
+                <img src="/images/LoginOptionsImage.png" alt="LoginOptions" className="object-cover w-4/5 h-auto"
+                     style={{marginTop: '-4rem'}}/>
+            </div>
+            <div className="w-4/5 justify-center flex  items-center max-w-md ml-auto mr-20 mt-24 mb-20">
+
+            <Head title="Log in"/>
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="email" value="Email" />
+                    <InputLabel htmlFor="email" value="Email"/>
 
                     <TextInput
                         id="email"
@@ -47,11 +65,11 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('email', e.target.value)}
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+                    <InputError message={errors.email} className="mt-2"/>
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Password"/>
 
                     <TextInput
                         id="password"
@@ -63,7 +81,7 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('password', e.target.value)}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password} className="mt-2"/>
                 </div>
 
                 <div className="block mt-4">
@@ -92,6 +110,8 @@ export default function Login({ status, canResetPassword }) {
                     </PrimaryButton>
                 </div>
             </form>
-        </GuestLayout>
-    );
+            </div>
+        </div>
+    )
+        ;
 }
