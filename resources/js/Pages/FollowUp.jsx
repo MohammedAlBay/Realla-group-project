@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@inertiajs/react';
 
 const timelineData = [
   { id: 1, text: 'The problem report sent', date: '01.04.24', time: '8:00 AM' },
@@ -33,8 +34,8 @@ const FollowUp = ({ onBackClick }) => {
         </div>
 
         <div className="flex justify-end mt-24 space-x-8" style={{ marginTop: '8rem' }}>
-            <button className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-12 rounded-lg" style={{ backgroundColor: '#fdb514' }} onClick={onBackClick}>Back</button>
-            <button className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#fdb514' }}>See Details</button>
+        <Link href="/reportproblem" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-12 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Back</Link>
+        <Link href= "/mailboxtenant" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#fdb514' }}>See More</Link>
         </div>
       </div>
     </div>
