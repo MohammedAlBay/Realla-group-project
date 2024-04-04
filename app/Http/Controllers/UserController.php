@@ -48,4 +48,29 @@ class UserController extends Controller
         // Optionally, you can return a response indicating success
         return response()->json(['message' => 'User created successfully', 'user' => $user]);
     }
+
+    public function update(Request $request, User $user): RedirectResponse
+    {
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|lowercase|email|max:255|unique:users,email,'.$User->$id,
+        'address' => 'nullable|string|max:255',
+        'phone' => 'nullable|string|max:20',
+        ]);
+
+        $user->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'address' => $request->input('address'),
+            'phone' => $request->input('phone'),
+        ]);
+
+        return response()->json([
+            'message' => 'User profile updated successfully',
+            'user' => $user->fresh(),
+        ]);
+
+        return Redirect::route('ProfileEdit');
+    }
 }
