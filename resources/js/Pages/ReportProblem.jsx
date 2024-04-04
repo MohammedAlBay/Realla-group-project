@@ -70,7 +70,7 @@ const ReportProblem = () => {
         {/* Carousel */}
         <div className="flex items-center justify-center mb-6">
           {/* Previous Button */}
-          <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Previous problem">&lt;</button>
+          <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#ff9f0d' }} aria-label="Previous problem">&lt;</button>
 
           {/* Carousel Items */}
           <div className="flex justify-center space-x-4 mx-6">
@@ -83,7 +83,7 @@ const ReportProblem = () => {
           </div>
 
           {/* Next Button */}
-          <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Next problem">&gt;</button>
+          <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#ff9f0d' }} aria-label="Next problem">&gt;</button>
         </div>
 
         {/* Form */}
@@ -95,15 +95,15 @@ const ReportProblem = () => {
           {/* Buttons */}
           <div className="flex justify-between items-center w-full mt-4">
             <div className="flex items-center mx-14">
-              <label htmlFor="upload-photo" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#fdb514', cursor: 'pointer' }} aria-label="Add a photo">
+              <label htmlFor="upload-photo" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#ff9f0d', cursor: 'pointer' }} aria-label="Add a photo">
                 <span className="text-xl">+</span>
                 <input id="upload-photo" type="file" className="hidden" onChange={handlePhotoUpload} />
               </label>
               <span className="text-white font-bold ml-4">Add a photo</span>
             </div>
             <div className="flex space-x-4 mx-14">
-              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
-              <Link href="/followup" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</Link>
+              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>Send</button>
+              <Link href="/followup" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>Follow up</Link>
             </div>
           </div>
         </form>
