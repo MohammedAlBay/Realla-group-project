@@ -8,7 +8,7 @@ const problems = [
   { id: 3, icon: '/images/wash-basin.png', alt: 'Plumbing' },
   { id: 4, icon: '/images/alert.png', alt: 'Alert' },
   { id: 5, icon: '/images/face-scan.png', alt: 'Security' },
-  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Appliances' },
+  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Devices' },
   { id: 7, icon: '/images/solar-cell.png', alt: 'Solar panel' },
   { id: 8, icon: '/images/smarthome.png', alt: 'Network ' },
   { id: 9, icon: '/images/air-conditioner.png', alt: 'Cooling' },
@@ -63,7 +63,7 @@ const ReportProblem = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 flex flex-col items-center justify-center relative -mt-8 ml-10">
+    <div className="min-h-screen p-6 flex flex-col items-center justify-center relative -mt-8 ml-10" style={{ backgroundColor: '#1e2127' }}>
       <div className="text-gray-200 p-10 rounded-lg w-full max-w-4xl">
         <h1 className="text-2xl font-bold text-center mb-8">Report a Problem</h1>
 
