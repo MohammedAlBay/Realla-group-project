@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../../css/app.css'
 import '../../css/Documents.css';
@@ -16,7 +17,7 @@ import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 import Navigation from '@/Components/Navigation';
 
 
-const DashboardTenantLanding = () => {
+const DashboardTenantLanding = ({ auth }) => {
 
     const [currentPage, setCurrentPage] = useState('dashboard-tenant');
 
@@ -52,9 +53,10 @@ const DashboardTenantLanding = () => {
     };
 
     return (
+
         <Router>
             <div className="dashboard">
-                <Navigation onPageChange={handlePageChange} currentPage={currentPage}/>
+                <Navigation onPageChange={handlePageChange} currentPage={currentPage} user={auth.user}/>
                 <div className="dashboard-bar-wrapper">
                     <DashboardTenantBar onPageChange={handlePageChange}/>
                 </div>
@@ -67,6 +69,7 @@ const DashboardTenantLanding = () => {
 
             </div>
         </Router>
+
     );
 };
 

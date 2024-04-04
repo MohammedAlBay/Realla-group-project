@@ -89,16 +89,18 @@
 
 .user-info {
     position: absolute;
-    top: 35px;
-    right: 20px;
+    bottom: -9px;
+    right: -10rem;
     display: flex;
     align-items: center;
     color: whitesmoke;
     font-weight: bold;
+    width: 400px;
+
 }
 
 .user-info span {
-    margin-right: 4rem;
+    margin-right: 0rem;
 }
 
 .user-info i {

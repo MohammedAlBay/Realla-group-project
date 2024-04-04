@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Bookmark;
 
 class User extends Authenticatable
 {
@@ -46,14 +44,21 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
     ];
 
     /**
-     * Get the bookmarks for the user.
+     * Determine if the user is a landlord.
+     *
+     * @return bool
      */
+  
     public function bookmarks()
     {
         return $this->hasMany(Bookmark::class);
+    }
+  
+    public function isLandlord()
+    {
+        return $this->is_landlord;
     }
 }
