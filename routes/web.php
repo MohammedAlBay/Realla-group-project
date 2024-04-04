@@ -31,7 +31,7 @@ Route::get('/', function () {
 });
 
 
-
+/*
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         // Check if the user is authenticated
@@ -48,7 +48,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         }
     })->name('dashboard');
 });
+*/
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 
 
