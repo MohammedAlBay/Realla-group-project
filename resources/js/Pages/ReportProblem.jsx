@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@inertiajs/react'; 
 import '../../css/app.css';
 
 const problems = [
@@ -16,9 +17,11 @@ const problems = [
   { id: 12, icon: '/images/toilet.png', alt: 'Leak' },
 ];
 
-const ReportProblem = ({ onFollowUpClick }) => {
+const ReportProblem = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const problemsPerPage = 4;
+  const [problemDescription, setProblemDescription] = useState('');
+  const [uploadedPhotos, setUploadedPhotos] = useState([]);
 
   const indexOfLastProblem = (currentPage + 1) * problemsPerPage;
   const indexOfFirstProblem = indexOfLastProblem - problemsPerPage;
@@ -44,21 +47,19 @@ const ReportProblem = ({ onFollowUpClick }) => {
     });
   };
   
-  const [problemDescription, setProblemDescription] = useState('');
-  const [uploadedPhotos, setUploadedPhotos] = useState([]);
-
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle submit action 
+    e.preventDefault(); 
   };
 
   const handlePhotoUpload = (e) => {
     const file = e.target.files[0];
     setUploadedPhotos(prevPhotos => [...prevPhotos, file]);
-    setProblemDescription(prevDescription => {
-      const plural = uploadedPhotos.length > 1 ? 's' : '';
-      return prevDescription ? `${prevDescription}\n${uploadedPhotos.length} photo${plural} added` : `${uploadedPhotos.length} photo${plural} added`;
-    });
+    const plural = uploadedPhotos.length + 1 > 1 ? 's' : '';
+    setProblemDescription(prevDescription => prevDescription ? `${prevDescription}\n${uploadedPhotos.length + 1} photo${plural} added` : `${uploadedPhotos.length + 1} photo${plural} added`);
+  };
+
+  const handleSend = () => {
+    alert("Problem description sent!");
   };
 
   return (
@@ -68,6 +69,7 @@ const ReportProblem = ({ onFollowUpClick }) => {
 
         {/* Carousel */}
         <div className="flex items-center justify-center mb-6">
+          {/* Previous Button */}
           <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Previous problem">&lt;</button>
 
           {/* Carousel Items */}
@@ -80,27 +82,28 @@ const ReportProblem = ({ onFollowUpClick }) => {
             ))}
           </div>
 
+          {/* Next Button */}
           <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Next problem">&gt;</button>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="mt-12">
           <div className="mb-10 mx-8 px-6">
             <textarea id="problem" value={problemDescription} onChange={(e) => setProblemDescription(e.target.value)} rows="4" className="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400 text-gray-600" placeholder="Provide a detailed description of the problem..."></textarea>
           </div>
 
-          <div className="flex justify-between items-center w-full">
-            <div className="flex items-center mx-14 mt-[-24px]">
-              {/* Input element for file upload */}
+          {/* Buttons */}
+          <div className="flex justify-between items-center w-full mt-4">
+            <div className="flex items-center mx-14">
               <label htmlFor="upload-photo" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#fdb514', cursor: 'pointer' }} aria-label="Add a photo">
                 <span className="text-xl">+</span>
-                {/* Hidden input element for file upload */}
                 <input id="upload-photo" type="file" className="hidden" onChange={handlePhotoUpload} />
               </label>
               <span className="text-white font-bold ml-4">Add a photo</span>
             </div>
-            <div className="flex space-x-4 mx-14 mt-[-24px]">
-              <button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
-              <button type="button" onClick={onFollowUpClick} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</button>
+            <div className="flex space-x-4 mx-14">
+              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
+              <Link href="/followup" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</Link>
             </div>
           </div>
         </form>
