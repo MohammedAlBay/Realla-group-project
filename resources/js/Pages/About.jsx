@@ -11,14 +11,14 @@ const About = () => {
             {
                 id: 1,
                 name: 'Jana',
-                imgUrl: '', 
+                imgUrl: './images/Jana.jpg', 
                 position: 'CEO & Founder',
                 bio: 'Jana has over 10 years of experience in real estate...',
             },
             {
                 id: 2,
                 name: 'Mohammed',
-                imgUrl: '', 
+                imgUrl: './images/Mohammed.jpg', 
                 position: 'CTO',
                 bio: 'Mohammed is a leading expert in property technology...',
             },
