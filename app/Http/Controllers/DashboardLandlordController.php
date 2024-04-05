@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User; // Import the User model
+
 use Inertia\Inertia;
 
 class DashboardLandlordController extends Controller
@@ -31,7 +32,6 @@ class DashboardLandlordController extends Controller
             'properties' => $properties,
         ]);
     }
-
     */
 
     public function index()

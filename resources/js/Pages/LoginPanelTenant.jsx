@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Components/RegisterButton';
 import RegisterTextInput from '../Components/RegisterTextInput';
 import RegisterCheckbox from '../Components/RegisterCheckbox';
-import { Link, usePage } from '@inertiajs/inertia-react'; // Updated import
+import { Link, usePage } from '@inertiajs/react'; // Updated import
 
 const LoginPanelTenant = () => {
     // Define state variables to store form input values

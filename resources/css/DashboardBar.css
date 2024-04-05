@@ -42,9 +42,11 @@
     text-align: center;
     color: white;
 }
+
 .dashboard-bar-wrapper {
-    display: none; /* Hide by default */
+    display: none;
 }
+
 
 @media only screen and (max-width: 768px) {
 
