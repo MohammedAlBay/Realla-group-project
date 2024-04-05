@@ -8,7 +8,7 @@ const problems = [
   { id: 3, icon: '/images/wash-basin.png', alt: 'Plumbing' },
   { id: 4, icon: '/images/alert.png', alt: 'Alert' },
   { id: 5, icon: '/images/face-scan.png', alt: 'Security' },
-  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Appliances' },
+  { id: 6, icon: '/images/smart-washing-machine.png', alt: 'Devices' },
   { id: 7, icon: '/images/solar-cell.png', alt: 'Solar panel' },
   { id: 8, icon: '/images/smarthome.png', alt: 'Network ' },
   { id: 9, icon: '/images/air-conditioner.png', alt: 'Cooling' },
@@ -63,14 +63,14 @@ const ReportProblem = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 flex flex-col items-center justify-center relative -mt-8 ml-10">
+    <div className="min-h-screen p-6 flex flex-col items-center justify-center relative -mt-8 ml-10" style={{ backgroundColor: '#1e2127' }}>
       <div className="text-gray-200 p-10 rounded-lg w-full max-w-4xl">
         <h1 className="text-2xl font-bold text-center mb-8">Report a Problem</h1>
 
         {/* Carousel */}
         <div className="flex items-center justify-center mb-6">
           {/* Previous Button */}
-          <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Previous problem">&lt;</button>
+          <button onClick={goToPrevPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#ff9f0d' }} aria-label="Previous problem">&lt;</button>
 
           {/* Carousel Items */}
           <div className="flex justify-center space-x-4 mx-6">
@@ -83,7 +83,7 @@ const ReportProblem = () => {
           </div>
 
           {/* Next Button */}
-          <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#fdb514' }} aria-label="Next problem">&gt;</button>
+          <button onClick={goToNextPage} className="flex items-center justify-center p-0 rounded-full w-8 h-8 bg-yellow-600 text-white-600" style={{ backgroundColor: '#ff9f0d' }} aria-label="Next problem">&gt;</button>
         </div>
 
         {/* Form */}
@@ -95,15 +95,15 @@ const ReportProblem = () => {
           {/* Buttons */}
           <div className="flex justify-between items-center w-full mt-4">
             <div className="flex items-center mx-14">
-              <label htmlFor="upload-photo" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#fdb514', cursor: 'pointer' }} aria-label="Add a photo">
+              <label htmlFor="upload-photo" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center" style={{ backgroundColor: '#ff9f0d', cursor: 'pointer' }} aria-label="Add a photo">
                 <span className="text-xl">+</span>
                 <input id="upload-photo" type="file" className="hidden" onChange={handlePhotoUpload} />
               </label>
               <span className="text-white font-bold ml-4">Add a photo</span>
             </div>
             <div className="flex space-x-4 mx-14">
-              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Send</button>
-              <Link href="/followup" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Follow up</Link>
+              <button type="submit" onClick={handleSend} className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-10 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>Send</button>
+              <Link href="/followup" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>Follow up</Link>
             </div>
           </div>
         </form>
