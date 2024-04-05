@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardTenantController;
 use App\Http\Controllers\DashboardLandlordController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SearchResultsController;
+use App\Http\Controllers\UserController;
 
 
 use Illuminate\Foundation\Application;

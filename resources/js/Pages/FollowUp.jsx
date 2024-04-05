@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from '@inertiajs/react';
 
 const timelineData = [
-  { id: 1, text: 'The problem report sent', date: '01.04.24', time: '8:00 AM' },
-  { id: 2, text: 'The landlord contacted a repairman', date: '02.04.24', time: '9:15 AM' },
-  { id: 3, text: 'The repairman made an appointment', date: '02.04.24', time: '1:00 PM' },
-  { id: 4, text: 'The repairman is on the way', date: '03.04.24', time: '2:30 PM', current: true },
+  { id: 1, text: 'The problem has been reported.', date: '01.04.24', time: '8:00 AM' },
+  { id: 2, text: 'The repairer has been contacted.', date: '02.04.24', time: '9:15 AM' },
+  { id: 3, text: 'The repairer made an appointment.', date: '02.04.24', time: '1:00 PM' },
+  { id: 4, text: 'The repairer is on the way to the residence.', date: '03.04.24', time: '2:30 PM', current: true },
 ];
 
-const FollowUp = ({ onBackClick }) => {
+const FollowUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen relative -mt-14 ml-10">
+    <div className="flex justify-center items-center min-h-screen relative -mt-14 ml-10" style={{ backgroundColor: '#1e2127' }}>
       <div className="w-full max-w-4xl rounded-lg p-24" style={{ minHeight: '500px' }}>
         <h2 className="text-2xl font-bold text-center text-white mb-32">Follow The Reported Problem</h2>
         <div className="relative" style={{ top: '-40px' }}>
@@ -18,9 +18,8 @@ const FollowUp = ({ onBackClick }) => {
           <div className="flex justify-between items-center">
             {timelineData.map((item, index) => (
              <div key={item.id} className="relative flex flex-col items-center">
-             <div className={`w-10 h-10 rounded-full shadow-md ${item.current ? 'bg-yellow-500' : 'bg-white border-4 border-#292f36'}`} />
-            
-             <div className="absolute mt-16 text-center bg-white p-4 rounded shadow-lg z-10 transition duration-200 transform hover:scale-105 border border-solid" style={{ minWidth: '200px', minHeight: '80px', padding: '8px', borderColor: '#fdb514' }}>
+             <div className={`w-10 h-10 rounded-full shadow-md ${item.current ? 'bg-yellow-600' : 'bg-white border-4 border-#292f36'}`} />
+             <div className="absolute mt-16 text-center bg-white p-4 rounded shadow-lg z-10 transition duration-200 transform hover:scale-105 border border-solid" style={{ minWidth: '200px', minHeight: '80px', padding: '10px', borderColor: '#ff9f0d', boxShadow: '2px 2px 4px 0px rgba(253, 181, 20, 0.5)'}}>
                <p className="font-semibold text-gray-700 text-sm leading-tight">{item.text}</p>
                <time className="text-sm text-gray-500">{item.date}</time>&nbsp;
                <span className="text-sm text-gray-500">{item.time}</span>
@@ -34,8 +33,8 @@ const FollowUp = ({ onBackClick }) => {
         </div>
 
         <div className="flex justify-end mt-24 space-x-8" style={{ marginTop: '8rem' }}>
-        <Link href="/reportproblem" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-12 rounded-lg" style={{ backgroundColor: '#fdb514' }}>Back</Link>
-        <Link href= "/mailboxtenant" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#fdb514' }}>See More</Link>
+        <Link href="/reportproblem" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-12 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>Back</Link>
+        <Link href= "/mailboxtenant" className="bg-yellow-500 hover:bg-gray-500 text-white font-bold py-2 px-8 rounded-lg" style={{ backgroundColor: '#ff9f0d' }}>See More</Link>
         </div>
       </div>
     </div>
