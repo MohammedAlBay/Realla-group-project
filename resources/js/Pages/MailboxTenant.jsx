@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Components/MailboxButton';
 import { Link } from '@inertiajs/react';
-import DashboardLandlordBar from '@/Components/DashboardTenantBar.jsx';
+import DashboardTenantBar from '@/Components/DashboardTenantBar.jsx';
 
 const MailboxTenant = () => {
     const [selectedPerson, setSelectedPerson] = useState(null);
