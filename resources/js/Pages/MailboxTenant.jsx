@@ -37,15 +37,19 @@ const MailboxTenant = () => {
                         <div style={{ position: 'absolute', left: '35%', right: 0, bottom: '15%', height: '1px', background: '#ccc' }}></div>
 
                         {/* First textblock chat left */}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '75%', padding: '8px' }}>Your text goes here</div>
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '75%', padding: '5px 15px' }}>What can we do for you?</div>
+                        <span style={{ fontSize: '0.60rem', marginLeft: '250px', position: 'absolute', top: '21.5%' }}>11:15</span>
                         {/* Second textblock chat left */}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '50%' }}></div>
+                        <div style={{ width: '215px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '50%', padding: '5px 15px' }}>What needs to be done?</div>
+                        <span style={{ fontSize: '0.60rem', marginLeft: '245px', position: 'absolute', top: '46.5%' }}>11:15</span>                      
                         {/* Third textblock chat left*/}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '18%' }}></div>                  
+                        <div style={{ width: '255px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '38%', bottom: '18%', padding: '5px 15px' }}>This will be done by next week.</div>                  
+                        <span style={{ fontSize: '0.60rem', marginLeft: '285px', position: 'absolute', top: '78.5%' }}>11:15</span>                                              
                         {/* First textblock chat right*/}
-                        <div style={{ width: '220px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '60%' }}></div>                   
+                        <div style={{ width: '200px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '71.5%', bottom: '60%', padding: '10px 15px' }}>I'm contacting you for some lawn maintenance.</div>                   
+                        <span style={{ fontSize: '0.60rem', marginLeft: '488px', position: 'absolute', top: '36.3%' }}>11:15</span>                                              
                         {/* Second textblock chat right*/}
-                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '40%' }}></div>   
+                        <div style={{ width: '220px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '40%', padding: '5px 15px' }}> Mowing, edging and watering.</div>   
                         {/* Image left, chat right*/}
                         <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', backgroundColor: '#C2C2C2', position: 'absolute', left: '69%', bottom: '25%' }}></div>  
                         {/* Image right, chat right*/}
