@@ -8,7 +8,7 @@ const Footer = () => {
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    alert(`Subscribed with email: ${email}`);
+    alert('Subscribed successfully!');
     setEmail('');
   };
 
@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="py-8 px-4 md:flex md:items-center md:justify-between md:px-48">
         <div className="md:flex-1 md:mr-12">
           <p className="text-yellow-500 text-sm font-bold mb-1">STAY INFORMED</p>
-          <p className="text-sm mb-2 md:mb-0">Don't wait, subscribe now and receive the latest news, special offers and updates!"</p>
+          <p className="text-sm mb-2 md:mb-0">Don't wait, subscribe now and receive special offers and the latest updates!"</p>
         </div>
 
         <div className="flex items-center">
@@ -72,7 +72,7 @@ const Footer = () => {
             <li><Link href="#">Terms</Link></li>
             <li><Link href="#">Privacy</Link></li>
             <li><Link href="#">Cookies</Link></li>
-            <li><Link href="#">FAQ</Link></li>
+            <li><Link href="#">Info</Link></li>
           </ul>
         </div>
       </div>
