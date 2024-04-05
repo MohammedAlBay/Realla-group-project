@@ -8,7 +8,6 @@
     z-index: 1000;
     background-color: transparent;
     transition: background-color 0.4s, box-shadow 0.4s;
-
 }
 
 .bg-header {
@@ -18,7 +17,6 @@
 
 nav.nav.container{
     max-width: 100%;
-
 }
 
 .nav {
@@ -27,7 +25,6 @@ nav.nav.container{
     align-items: center;
     height: 6rem;
     padding: 0 2rem;
-
 }
 
 .logo {
@@ -50,7 +47,6 @@ nav.nav.container{
     flex-direction: row;
     justify-content: center;
     margin-right: auto;
-
 }
 
 .user-info{
