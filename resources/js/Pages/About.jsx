@@ -12,28 +12,28 @@ const About = () => {
                 id: 1,
                 name: 'Jana',
                 imgUrl: './images/Jana.jpg', 
-                position: 'CEO & Founder',
+                position: 'Full Stack Web Developer',
                 bio: 'Jana has over 10 years of experience in real estate...',
             },
             {
                 id: 2,
                 name: 'Mohammed',
                 imgUrl: './images/Mohammed.jpg', 
-                position: 'CTO',
+                position: 'Full Stack Web Developer',
                 bio: 'Mohammed is a leading expert in property technology...',
             },
             {
                 id: 3,
                 name: 'Sezin',
-                imgUrl: './images/Sezin.jpeg', 
-                position: 'Designer',
+                imgUrl: './images/sezinnew.jpg',
+                position: 'Full Stack Web Developer/Project Manager',
                 bio: 'Sezin creates amazing user experiences and designs...',
             },
             {
                 id: 4,
                 name: 'Funda',
                 imgUrl: './images/IMG_1842.JPG', 
-                position: 'Marketing Director',
+                position: 'Full Stack Web Developer',
                 bio: 'Funda has a strong track record in digital marketing...',
             },
         ];
@@ -91,7 +91,7 @@ const About = () => {
              {teamMembers.map((member) => (
               <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl cursor-pointer" style={{ backgroundColor: '#444d57' }}
     >
-                <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover"/>
+                <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-contain"/>
                     <h4 className="text-lg font-semibold text-yellow-500">{member.name}</h4>
                         <p className="text-white-500">{member.position}</p>
                         <p className="text-sm">{member.bio}</p>
