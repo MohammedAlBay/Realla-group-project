@@ -25,7 +25,7 @@ const About = () => {
             {
                 id: 3,
                 name: 'Sezin',
-                imgUrl: './images/Sezin.jpeg', 
+                imgUrl: './images/sezinnew.jpg',
                 position: 'Designer',
                 bio: 'Sezin creates amazing user experiences and designs...',
             },
@@ -91,7 +91,7 @@ const About = () => {
              {teamMembers.map((member) => (
               <div key={member.id} className="bg-gray-800 p-4 rounded-lg shadow-lg text-white transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl cursor-pointer" style={{ backgroundColor: '#444d57' }}
     >
-                <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-cover"/>
+                <img src={member.imgUrl} alt={member.name} className="h-48 w-full mb-4 rounded-md object-contain"/>
                     <h4 className="text-lg font-semibold text-yellow-500">{member.name}</h4>
                         <p className="text-white-500">{member.position}</p>
                         <p className="text-sm">{member.bio}</p>
