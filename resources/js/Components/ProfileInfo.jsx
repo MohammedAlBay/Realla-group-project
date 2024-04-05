@@ -2,9 +2,19 @@ import { React, useState }  from 'react';
 import 'boxicons/css/boxicons.min.css';
 import { Link } from '@inertiajs/react';
 
-const ProfileInfo = () => {
-  const [avatar, setAvatar] = useState("../images/profile/avatar2.png");
-  const [coverPicture, setCoverPicture] = useState("../images/profile/profile-cover-image2.png")
+const ProfileInfo = ({ user }) => {
+  const [avatar, setAvatar] = useState(user.avatar || "../images/profile/avatar2.png");
+  const [coverPicture, setCoverPicture] = useState(user.coverPicture || "../images/profile/profile-cover-image2.png");
+  const [joinedAgo, setJoinedAgo] = useState('');
+
+  useEffect(() => {
+    // Calculate the duration since the user joined
+    const joinedDate = new Date(user.created_at);
+    const currentDate = new Date();
+    const diffTime = Math.abs(currentDate - joinedDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    setJoinedAgo(`${diffDays} days ago`);
+  }, [user.created_at]);
 
   function toggleDropdown() {
     var dropdownContent = document.getElementById("myDropdown");
@@ -64,27 +74,27 @@ const ProfileInfo = () => {
         </div>
         <div className="user-info">
           <div className="user-details">
-            <h3 className="user-name">Alvert Flore</h3>
-            <p className="timestamp">Joined 6 months ago</p>
+            <h3 className="user-name">{user.name}</h3>
+            <p className="timestamp">Joined {joinedAgo}</p>
           </div>
           <div className="dropdown">
             <button className="dropdown-button" onClick={toggleDropdown}>&#8226;&#8226;&#8226;</button>
             <div className="dropdown-content" id="myDropdown">
-              <Link href="/edit-profile" className="profile-dropdown-links"><i className="bx bxs-edit-alt" style={{color:'#fdb514'}}></i>Edit Profile</Link>
+              <Link href="/profile-tenant/edit" className="profile-dropdown-links"><i className="bx bxs-edit-alt" style={{color:'#fdb514'}}></i>Edit Profile</Link>
               <Link href="/documents" className="profile-dropdown-links"><i className="bx bxs-file" style={{color:'#fdb514'}}></i>Documents</Link>
             </div>
           </div>
           <div className="contact-info">
             <div className="contact-address">
-              <p><i className='bx bxs-map' style={{color:'#fdb514'}}></i>0000 Gallifry Lane, Galaxy 0000</p>
+              <p><i className='bx bxs-map' style={{color:'#fdb514'}}></i>{user.address}</p>
               <small className="data-description">Address</small>
             </div>
             <div className="contact-mail">
-              <p><i className='bx bxs-envelope' style={{color:'#fdb514'}}></i>Example@example.com</p>
+              <p><i className='bx bxs-envelope' style={{color:'#fdb514'}}></i>{user.email}</p>
               <small className="data-description">Email</small>
             </div>
             <div className="contact-number">
-              <p><i className='bx bxs-phone' style={{color:'#fdb514'}}></i>0123 456 789</p>
+              <p><i className='bx bxs-phone' style={{color:'#fdb514'}}></i>{user.phone}</p>
               <small className="data-description">Phone</small>
             </div>
           </div>
