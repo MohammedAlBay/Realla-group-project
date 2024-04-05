@@ -10,7 +10,7 @@ const timelineData = [
 
 const FollowUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen relative -mt-14 ml-10" style={{ backgroundColor: '#1e2127' }}>
+    <div className="flex justify-center items-center min-h-screen relative -mt-14 ml-10">
       <div className="w-full max-w-4xl rounded-lg p-24" style={{ minHeight: '500px' }}>
         <h2 className="text-2xl font-bold text-center text-white mb-32">Follow The Reported Problem</h2>
         <div className="relative" style={{ top: '-40px' }}>
