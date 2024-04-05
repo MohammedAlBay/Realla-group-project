@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Components/MailboxButton';
 import { Link } from '@inertiajs/react';
-import DashboardLandlordBar from '@/Components/DashboardTenantBar.jsx';
+import DashboardLandlordBar from '@/Components/DashboardLandlordBar.jsx';
 
 const MailboxLandlord = () => {
     const [selectedPerson, setSelectedPerson] = useState(null);
@@ -43,21 +43,17 @@ const MailboxLandlord = () => {
                         <div style={{ width: '215px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#E5E5E5', position: 'absolute', left: '38%', bottom: '50%', padding: '5px 15px' }}>What needs to be done?</div>
                         <span style={{ fontSize: '0.60rem', marginLeft: '245px', position: 'absolute', top: '46.5%' }}>11:40</span>                      
                         {/* Third textblock chat left*/}
-                        <div style={{ width: '255px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#E5E5E5', position: 'absolute', left: '38%', bottom: '18%', padding: '5px 15px' }}>This will be done by next week.</div>                  
+                        <div style={{ width: '255px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 20px 0px', border: 'none', fontSize: '0.85rem', backgroundColor: '#E5E5E5', position: 'absolute', left: '38%', bottom: '18%', padding: '5px 15px' }}>I will be there tomorrow at noon.</div>                  
                         <span style={{ fontSize: '0.60rem', marginLeft: '285px', position: 'absolute', top: '78.5%' }}>12:17</span>                                              
                         {/* First textblock chat right*/}
-                        <div style={{ width: '200px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#FFF0CF', position: 'absolute', left: '71.5%', bottom: '60%', padding: '10px 15px' }}>I'm contacting you for some lawn maintenance.</div>                   
+                        <div style={{ width: '200px', height: '60px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#FFF0CF', position: 'absolute', left: '71.5%', bottom: '60%', padding: '10px 15px' }}>My tenant has repair issues in her house.</div>                   
                         <span style={{ fontSize: '0.60rem', marginLeft: '492px', position: 'absolute', top: '36.3%' }}>11:32</span>                                              
                         {/* Second textblock chat right*/}
-                        <div style={{ width: '245px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#FFF0CF', position: 'absolute', left: '65.5%', bottom: '40%', padding: '5px 15px' }}> Mowing, edging and watering.</div>   
-                        <span style={{ fontSize: '0.60rem', marginLeft: '492px', position: 'absolute', top: '56.7%' }}>11:56</span>                                                                      
-                        {/* Image left, chat right*/}
-                        <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', position: 'absolute', left: '69%', bottom: '27%' }}>
-                            <img src="/images/MailboxTenantGrass.jpg" alt="Grass" style={{ width: '100%', height: '100%', borderRadius: '15px' }} />
-                        </div>  
+                        <div style={{ width: '245px', height: '30px', flexShrink: 0, borderRadius: '20px 20px 0px 20px', border: 'none', fontSize: '0.85rem', backgroundColor: '#FFF0CF', position: 'absolute', left: '65.5%', bottom: '40%', padding: '5px 15px' }}> This wall needs to be fixed.</div>   
+                        <span style={{ fontSize: '0.60rem', marginLeft: '492px', position: 'absolute', top: '56.7%' }}>11:56</span>                                                                       
                         {/* Image right, chat right*/}
                         <div style={{ width: '100px', height: '60px', flexShrink: 0, borderRadius: '15px', border: 'none', position: 'absolute', left: '84%', bottom: '27%' }}>
-                            <img src="/images/MailboxTenantEdging.jpg" alt="Grass" style={{ width: '100%', height: '100%', borderRadius: '15px' }} />                        
+                            <img src="/images/MailboxLandlordWall.jpg" alt="Grass" style={{ width: '100%', height: '100%', borderRadius: '15px' }} />                        
                         </div>                    
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', fontSize: '0.85rem', marginBottom: '-10px' }}>
