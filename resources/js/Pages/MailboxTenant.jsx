@@ -20,7 +20,8 @@ const MailboxTenant = () => {
                         {/* Input */}
                         <input type="text" placeholder="Write message down here ..." style={{ fontSize: '0.85rem', marginBottom: '20px', marginLeft: '20px', padding: '5px', width: '50%', height: '35px', borderRadius: '5px', border: '1px solid #ccc', position: 'absolute', left: '35%', bottom: '5px' }} />
                         {/* Profile picture */}
-                        <div style={{ width: '42px', height: '42px', flexShrink: 0, borderRadius: '50%', border: '3px solid rgba(0, 0, 0, 0.00)', position: 'absolute', left: 'calc(52% - 120px)', top: '15px', backgroundImage: 'url(/images/MailboxTenantGardener.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                        <div style={{ width: '42px', height: '42px', flexShrink: 0, position: 'absolute', left: 'calc(52% - 120px)', top: '15px', overflow: 'hidden'  }}>
+                        <img src="/images/MailboxTenantGardener.png" alt="Profile" style={{  width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'  }} /></div>
                         {/* Green dot and Online text */}
                         <div style={{ fontSize: '0.85rem', display: 'flex', alignItems: 'center', position: 'absolute', left: 'calc(59% - 120px)', top: '35px' }}>
                             <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'green', marginRight: '5px' }}></div>
@@ -61,10 +62,10 @@ const MailboxTenant = () => {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', fontSize: '0.85rem', marginBottom: '-10px' }}>
                         <div className='flex'>
-                            <div className="message-role" style={{ backgroundColor: '#FDB514', borderRadius: '20px', padding: '10px 10px 3px 10px', marginBottom: '5px', marginLeft: '20px' }}>
+                            <div className="message-role" style={{ backgroundColor: '#FDB514', borderRadius: '20px', padding: '10px 10px 3px 10px', marginLeft: '20px' }}>
                             Gardener
                             <span style={{ fontSize: '0.70rem', marginLeft: '98px' }}>12:17 AM</span>
-                            <div className="message-role" style={{ marginTop: '5px', marginBottom: '10px' }}>What’s the progress on that task?</div>
+                            <div className="message-role" style={{ marginTop: '5px', marginBottom: '10px' }}>This will be done by next week.</div>
                         </div>
                         </div>
 
@@ -72,7 +73,7 @@ const MailboxTenant = () => {
                             <div className="message-role" style={{ marginLeft: '30px', marginTop: '15px', marginBottom: '5px' }}>
                             Cleaner
                             <span style={{ fontSize: '0.70rem', marginLeft: '108px' }}>11:09 AM</span>
-                            <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
+                            <div className="message-role" style={{ marginBottom: '10px' }}>Thank you for the help.</div>
                         </div>
                         </div>
 
@@ -80,7 +81,7 @@ const MailboxTenant = () => {
                             <div className="message-role" style={{ marginLeft: '30px', marginTop: '15px', marginBottom: '5px' }}>
                             Landlord
                             <span style={{ fontSize: '0.70rem', marginLeft: '103px' }}>19:32 AM</span>
-                            <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
+                            <div className="message-role" style={{ marginBottom: '10px' }}>How did it go with the repair?</div>
                         </div>
                         </div>
 
@@ -88,13 +89,13 @@ const MailboxTenant = () => {
                             <div className="message-role" style={{ marginLeft: '30px', marginTop: '15px', marginBottom: '5px' }}>
                             Painter
                             <span style={{ fontSize: '0.70rem', marginLeft: '112px' }}>11:15 AM</span>
-                            <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
+                            <div className="message-role" style={{ marginBottom: '10px' }}>When will the painting be done?</div>
                         </div>
                         </div>
 
                         <div className='flex'>
                             <div className="message-role" style={{ marginLeft: '30px', marginTop: '15px', marginBottom: '5px' }}>
-                            Repair Man
+                            Repairman
                             <span style={{  fontSize: '0.70rem', marginLeft: '83px' }}>16:43 AM</span>
                             <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
                         </div>
@@ -104,7 +105,7 @@ const MailboxTenant = () => {
                             <div className="message-role" style={{ marginLeft: '30px', marginTop: '15px', marginBottom: '5px' }}>
                             Electrician
                             <span style={{ fontSize: '0.70rem', marginLeft: '93px' }}>10:26 AM</span>
-                            <div className="message-role" style={{ marginBottom: '10px' }}>What’s the progress on that task?</div>
+                            <div className="message-role" style={{ marginBottom: '10px' }}>I will be there this weekend.</div>
                         </div>
                         </div>
                         <div style={{ marginLeft: '430px', position: 'absolute', left: '35%', bottom: '17px', height: '40px', width: '150px' }}>
