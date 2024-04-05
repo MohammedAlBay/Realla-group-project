@@ -7,7 +7,7 @@ const CustomErrorPage = () => {
             <div className="text-center">
                 <div className="flex justify-center mb-6">
                     {/* Icon */}
-                    <div className="rounded-full border-4 border-yellow-600 inline-flex items-center justify-center shadow-xl bg-gray-800 hover:bg-gray-700 transition duration-700 ease-in-out animate-pulse" style={{ width: '300px', height: '300px' }}>
+                    <div className="rounded-full border-4 inline-flex items-center justify-center shadow-xl bg-gray-800 hover:bg-gray-700 transition duration-700 ease-in-out animate-pulse" style={{ width: '300px', height: '300px', borderColor: '#ff9f0d'}}>
                         <h1 className="text-9xl font-bold text-white">404</h1>
                     </div>
                 </div>
