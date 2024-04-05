@@ -10,8 +10,8 @@ import ProfileLandlord from "@/Pages/ProfileLandlord.jsx";
 import LandingLandloard from "@/Components/LandingLandloard.jsx";
 import Navigation from "@/Components/Navigation.jsx";
 import AppointmentLandlord from "@/Pages/AppointmentLandlord.jsx";
-import AuthenticatedLayout
-    from "../../../vendor/laravel/breeze/stubs/inertia-vue-ts/resources/js/Layouts/AuthenticatedLayout.vue";
+// import AuthenticatedLayout
+//     from "../../../vendor/laravel/breeze/stubs/inertia-vue-ts/resources/js/Layouts/AuthenticatedLayout.vue";
 
 const DashboardLandloardLanding = ({ auth }) => {
 
