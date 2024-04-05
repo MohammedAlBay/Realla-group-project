@@ -15,6 +15,7 @@ import FollowUp from '@/Pages/FollowUp';
 import ProfileTenant from '@/Pages/ProfileTenant'
 import CircularSliderCarousel from "@/Components/CircularSliderCarousel.jsx";
 import Navigation from '@/Components/Navigation';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.jsx'
 
 
 const DashboardTenantLanding = ({ auth }) => {

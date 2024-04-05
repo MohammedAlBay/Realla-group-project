@@ -113,6 +113,7 @@ function Navigation({ onPageChange, currentPage, auth, user, }) {
 
                                             </div>
                                     )}
+
                                     </Dropdown.Trigger>
                                 </div>
                                 <Dropdown.Content>

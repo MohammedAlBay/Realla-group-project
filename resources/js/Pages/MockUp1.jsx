@@ -144,7 +144,7 @@ const MockUp1 = () => {
                 <img
                     id="app-store"
                     className="widgets"
-                    src="./images/payment-history.svg"
+                    src="./images/follow_up.png"
                     alt=""
                 />
 
@@ -166,7 +166,6 @@ const MockUp1 = () => {
                     src="./images/payment.svg"
                     alt=""
                 />
-
                 <img
                     id="calendar"
                     className="widgets"
@@ -176,25 +175,25 @@ const MockUp1 = () => {
                 <img
                     id="fitness"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/fitness-widget.svg"
+                    src="./images/fllw-up.png"
                     alt=""
                 />
                 <img
                     id="find-my"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/find-my-widget.svg"
+                    src=""
                     alt=""
                 />
                 <img
                     id="sleep"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/sleep-widget.svg"
+                    src="fllw-up.png"
                     alt=""
                 />
                 <img
                     id="apple-tv"
                     className="widgets"
-                    src="https://assets.codepen.io/8292695/apple-tv.svg"
+                    src="./images/explore.png"
                     alt=""
                 />
 
@@ -205,3 +204,4 @@ const MockUp1 = () => {
 };
 
 export default MockUp1;
+

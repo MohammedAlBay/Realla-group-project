@@ -28,9 +28,10 @@
 }
 
 #payment{
-    width: 300px;
-    margin-top: 3rem;
+    width: 450px;
+    margin-top: 8rem;
 }
+
 #calendar{
     width: 400px;
     margin-left: 2rem;
@@ -38,7 +39,23 @@
 
 #screen-time{
     width: 300px;
+
 }
 #weather {
+    width: 300px;
+    margin-bottom: 15rem;
+}
+
+#app-store{
+    width: 300px;
+    margin-right: 23rem;
+}
+
+#fitness{
+    width: 250px;
+    margin-left: 8rem;
+}
+
+#apple-tv{
     width: 300px;
 }

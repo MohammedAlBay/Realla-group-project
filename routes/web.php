@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardTenantController;
 use App\Http\Controllers\DashboardLandlordController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SearchResultsController;
+use App\Http\Controllers\UserController;
 
 
 use Illuminate\Foundation\Application;
@@ -31,7 +33,7 @@ Route::get('/', function () {
 });
 
 
-
+/*
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         // Check if the user is authenticated
@@ -48,7 +50,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         }
     })->name('dashboard');
 });
+*/
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 
 
