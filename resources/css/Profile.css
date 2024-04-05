@@ -232,6 +232,7 @@ label svg {
   padding: 10px;
   overflow: hidden;
   position: relative;
+  height: 200px;
 }
 
 .bookmark-heading {
